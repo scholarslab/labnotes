@@ -453,22 +453,13 @@ table {
 html {
     border-top: 2px solid #444;
     background: url('images/stain2.png') top left no-repeat, url('images/subtle_freckles.png') top left;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom:60px;
-    min-width: 320px;
 }
 
 body {
     font: 87.5%/1.5 Georgia, serif;
     color: #333;
-    background-color: rgba(255,255,255,0.5);
     margin:0;
-    padding:0;
-    border: 1px dotted rgba(0,0,0,0.25);
-    border-width: 0 1px;
-    min-width: 800px;
-
+    padding:0; 
 }
 
 a:link,
@@ -500,13 +491,15 @@ blockquote {
     font-style:italic;
 }
 
-nav ul,
 .menu ul {
     list-style:none;
     margin:0;
     padding:0;
 }
 
+.menu li {
+    display:inline;
+}
 .deck {
     font-style:italic;
     color: #555;
@@ -514,8 +507,104 @@ nav ul,
 }
 
 header[role="banner"] {
+    border-bottom: 1px dotted rgba(0,0,0,0.25);
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+div[role="main"] {
+    padding-left:20px;
+    padding-right: 20px;
+}
+
+article:not(:first-child) {
+    padding-top: 1em;
+    border-top: 1px dotted #ccc;
+}
+
+article h1 {
+margin:0;
+font-size: 200%;
+}
+
+article .post-meta {
+margin:0;
+font: 80% Verdana, sans-serif;
+font-weight:bold;
+color: #555;
+}
+
+.single article header {
+    margin-bottom: 50px;
+}
+
+.wp-caption-text {
+    font-size: 88%;
+    font-style:italic;
+    color: #555;
+    margin:0 0 2em;
+}
+
+nav.pagination {
+clear:both;
+overflow:hidden;
+border-top:1px dotted rgba(0,0,0,0.25);
+padding-top:1em;
+}
+
+nav.pagination ul {
+margin-left:0;
+padding-left:0;
+}
+
+nav.pagination li {
+    float:left;
     display:block;
-    width: 300px;
+    width: 50%;
+}
+nav.pagination li.newer {
+    float:right;
+    text-align:right;
+}
+
+#comments {
+    clear:both;
+}
+}
+
+@media screen and (min-width: 500px) {
+    article { overflow:hidden; *zoom: 1; }
+
+    .blog article footer,
+    .single article footer {
+        float:right;
+        width: 25%;
+        margin-top: 1em;
+    }
+
+    .blog article .entry-content,
+    .single article .entry-content {
+        float:left;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+html {
+    padding-left: 60px;
+    padding-bottom:60px;
+}
+
+body {
+    border: 1px dotted rgba(0,0,0,0.25);
+    border-width: 0 1px;
+    background-color: rgba(255,255,255,0.5);
+
+}
+
+header[role="banner"] {
+    display:block;
+    width: 260px;
     padding: 0;
     float:left;
     background:rgba(255,255,255,0.5);
@@ -536,10 +625,33 @@ header[role="banner"] .menu ul {
     margin: 60px 30px 30px;
 }
 
+header[role="banner"] .menu li {
+    display:block;
+    border: 1px dotted #ddd;
+    border-width: 1px 0 0;
+}
 header[role="banner"] .menu a {
     text-decoration:none;
+    display:block;
+    padding: 10px 0;
 }
 
+header[role="banner"] .menu li:last-child {
+    border-width: 1px 0;
+}
+
+header[role="banner"] .menu li.current-menu-item a {
+    color: #333;
+    font-weight:bold;
+}
+
+header[role="banner"] .menu li.current-menu-item a:after {
+    content: " ☛";
+    float:right;
+    text-align:right;
+    font-size: 125%;
+    color: rgba(0,0,0,0.25);
+}
 #rotunda {
     display:block;
     line-height:0;
@@ -579,69 +691,12 @@ opacity:1 !important;
 }
 
 div[role="main"] {
-margin-left:300px;
-padding: 110px 50px 2em;
+margin-left:260px;
+padding: 100px 30px 2em;
 border: 1px dotted rgba(0,0,0,0.35);
 border-width: 0 0 0 1px;
 }
 
-article:not(:first-child) {
-    padding-top: 1em;
-border-top: 1px dotted #ccc;
-}
-
-article img {
-max-width: 100%;
-}
-
-article h1 {
-margin:0;
-font-size: 200%;
-}
-
-article .post-meta {
-margin:0;
-font: 80% Verdana, sans-serif;
-font-weight:bold;
-color: #666;
-}
-
-.single article header {
-    margin-bottom: 50px;
-}
-
-.wp-caption-text {
-    font-size: 88%;
-    font-style:italic;
-    color: #555;
-    margin:0 0 2em;
-}
-
-nav.pagination {
-clear:both;
-overflow:hidden;
-border-top:1px dotted rgba(0,0,0,0.25);
-padding-top:1em;
-}
-
-nav.pagination ul {
-margin-left:0;
-padding-left:0;
-}
-
-nav.pagination li {
-    float:left;
-    display:block;
-    width: 50%;
-}
-nav.pagination li.newer {
-    float:right;
-    text-align:right;
-}
-
-#comments {
-    clear:both;
-}
 footer[role="contentinfo"] {
 clear:both;
 margin:0 -60px;
@@ -670,24 +725,9 @@ footer[role="contentinfo"] .menu a {
     text-decoration:none;
     font-weight:bold;
 }
-
-/* Contain floats: h5bp.com/q */
-
-article { overflow:hidden; *zoom: 1; }
 }
-
-@media screen and (min-width: 700px) {
-    
-    .blog article footer,
-    .single article footer {
-        float:right;
-        width: 25%;
-        margin-top: 1em;
-    }
-
-    .blog article .entry-content,
-    .single article .entry-content {
-        float:left;
-        width: 70%;
+@media screen and (min-width:820px) {
+    html {
+        padding-right: 60px;
     }
 }

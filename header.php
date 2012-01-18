@@ -17,7 +17,7 @@
 
       <div id="uvalib-header">
           <a href="http://lib.virginia.edu">
-            <span id="rotunda"><img src="<?php echo get_template_directory_uri(); ?>/images/rotunda.gif" alt="University of Virginia Library"></span>
+            <span id="rotunda"><img src="<?php echo get_template_directory_uri(); ?>/images/rotunda.gif" alt="The Rotunda"></span>
             <span id="uvalib-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/uvalib-logo-transparent.gif" alt="University of Virginia Library"></span>
           </a>
       </div>
@@ -29,8 +29,6 @@
     
         </a>
       </h1>
-
-
 <?php wp_nav_menu( 
         array(
           'theme_location' => 'header',
