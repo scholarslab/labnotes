@@ -22,11 +22,13 @@
                 </div>
                 <?php if (!is_page()): ?>
                     <footer>
-                        <p><?php echo get_avatar(get_the_author_meta('ID')); ?><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="byline"><?php echo(get_the_author_meta('user_firstname') . '&nbsp;' . get_the_author_meta('user_lastname')); ?></a> </p>
+                        <?php echo get_avatar(get_the_author_meta('ID')); ?><p><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="byline"><?php echo(get_the_author_meta('user_firstname') . '&nbsp;' . get_the_author_meta('user_lastname')); ?></a> </p>
                     </footer>
                 <?php endif; ?>
             </article>
+            <?php if(is_single()): comments_template(); endif; ?>
         <?php endwhile; ?>
+        <?php if (!is_page()): ?>
         <nav class="pagination">
             <ul>
                 <li class="older"><?php next_posts_link('&larr; Older Posts') ?></li>
@@ -35,5 +37,6 @@
                 <?php endif; ?>
             </ul>
         </nav>
+        <?php endif; ?>
     <?php endif; ?>
 <?php get_footer(); ?>
