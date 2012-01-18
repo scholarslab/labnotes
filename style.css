@@ -610,11 +610,6 @@ color: #666;
     margin-bottom: 50px;
 }
 
-.post-author {
-    display:block;
-    float:right;
-    width: 20%;
-}
 .wp-caption-text {
     font-size: 88%;
     font-style:italic;
@@ -677,18 +672,21 @@ footer[role="contentinfo"] .menu a {
 }
 
 /* Contain floats: h5bp.com/q */
-article:before, article:after { content:""; display:table;}
-article:after {clear: both; height: 0; visibility: hidden;}
-article { *zoom: 1; }
+
+article { overflow:hidden; *zoom: 1; }
 }
 
 @media screen and (min-width: 700px) {
     
-    article footer {
+    .blog article footer,
+    .single article footer {
         float:right;
         width: 25%;
+        margin-top: 1em;
     }
-    article .entry-content {
+
+    .blog article .entry-content,
+    .single article .entry-content {
         float:left;
         width: 70%;
     }
