@@ -105,7 +105,6 @@ function labnotes_comment( $comment, $args, $depth ) {
 	?>
 	<li class="post pingback">
 		<p><?php _e( 'Pingback:', 'labnotes' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'labnotes' ), '<span class="edit-link">', '</span>' ); ?></p>
-	</li>
 	<?php
 			break;
 		default :
@@ -136,7 +135,6 @@ function labnotes_comment( $comment, $args, $depth ) {
 			    <?php comment_text(); ?>
 			</div>
 		</article><!-- #comment-## -->
-    </li>
 	<?php
 			break;
 	endswitch;
