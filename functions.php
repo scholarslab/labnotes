@@ -1,7 +1,62 @@
 <?php
 
+/**
+ * Adds theme support for page excerpts.
+ */
 add_post_type_support('page', 'excerpt');
 
+/**
+ * Filters page content to display a list of page children.
+ */
+function labnotes_display_page_children($content)
+{
+    global $post;
+
+    if (is_page()) {
+        $html = '';
+
+        $args = array(
+            'post_status' => 'publish',
+            'post_type' => 'page',
+            'post_parent' => $post->ID,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+            'nopaging' => true,
+        );
+
+        query_posts($args);
+        if (have_posts()) {
+            $html = '<ul>';
+            while (have_posts()) {
+                the_post();
+                $url = get_permalink(get_the_ID());
+
+                $html .= '<li><a href="'.$url.'">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
+            }
+            $html .= '</ul>';
+            wp_reset_query();
+        }
+        $content = $content . $html;
+    }
+    return $content;
+}
+
+add_filter('the_content', 'labnotes_display_page_children');
+
+/**
+ * Filters the 'excerpt_more' to provide a 'Continue reading' link.
+ */
+function labnotes_excerpt_more($more) {
+    global $post;
+    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">Continue reading...</a>';
+    return $more;
+}
+
+add_filter('excerpt_more', 'labnotes_excerpt_more');
+
+/**
+ * Register our navigation menus
+ */
 if ( function_exists('register_nav_menus') ) {
 
 register_nav_menus( array(
@@ -11,6 +66,9 @@ register_nav_menus( array(
 
 }
 
+/**
+ * Register our sidebar.
+ */
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array( 'name' => 'FooterSidebar',
                             'id' => 'footer-sidebar',
@@ -27,99 +85,18 @@ if ( function_exists('register_sidebar') ) {
  * @todo Add parameter to skip users with specific IDs
  * @todo Add parameter to skip users with an empty last name.
  */
-function slab_get_users_order_by_usermeta($metaKey = 'last_name', $sortDir = 'ASC')
+function labnotes_get_users_order_by_usermeta($metaKey = 'last_name', $sortDir = 'ASC')
 {
   global $wpdb;
 
-  $select = "SELECT * FROM $wpdb->users 
-             INNER JOIN $wpdb->usermeta ON ($wpdb->users.ID = $wpdb->usermeta.user_id) 
-             WHERE $wpdb->usermeta.meta_key = '$metaKey' 
+  $select = "SELECT * FROM $wpdb->users
+             INNER JOIN $wpdb->usermeta ON ($wpdb->users.ID = $wpdb->usermeta.user_id)
+             WHERE $wpdb->usermeta.meta_key = '$metaKey'
              ORDER BY $wpdb->usermeta.meta_value $sortDir";
 
   $users = $wpdb->get_results($select);
-  
+
   return $users;
-}
-
-/**
- * Return a formatted list of users.
- *
- * @uses labnotes_get_users_order_by_usermeta()
- * @return string HTML
- */
-function slab_display_users_list($sortDir = 'ASC')
-{
-
-}
-
-/**
- * Display or retrieve list of pages with optional home link.
- *
- * The arguments are listed below and part of the arguments are for {@link
- * wp_list_pages()} function. Check that function for more info on those
- * arguments.
- *
- * <ul>
- * <li><strong>sort_column</strong> - How to sort the list of pages. Defaults
- * to page title. Use column for posts table.</li>
- * <li><strong>menu_class</strong> - Class to use for the div ID which contains
- * the page list. Defaults to 'menu'.</li>
- * <li><strong>echo</strong> - Whether to echo list or return it. Defaults to
- * echo.</li>
- * <li><strong>link_before</strong> - Text before show_home argument text.</li>
- * <li><strong>link_after</strong> - Text after show_home argument text.</li>
- * <li><strong>show_home</strong> - If you set this argument, then it will
- * display the link to the home page. The show_home argument really just needs
- * to be set to the value of the text of the link.</li>
- * </ul>
- *
- * @since 2.7.0
- *
- * @param array|string $args
- */
-function labnotes_wp_page_menu( $args = array() ) {
-	$defaults = array('sort_column' => 'menu_order, post_title', 'menu_class' => 'menu', 'echo' => true, 'link_before' => '', 'link_after' => '', 'container' => 'div');
-	$args = wp_parse_args( $args, $defaults );
-	$args = apply_filters( 'wp_page_menu_args', $args );
-
-	$menu = '';
-
-	$list_args = $args;
-
-	// Show Home in the menu
-	if ( ! empty($args['show_home']) ) {
-		if ( true === $args['show_home'] || '1' === $args['show_home'] || 1 === $args['show_home'] )
-			$text = __('Home');
-		else
-			$text = $args['show_home'];
-		$class = '';
-		if ( is_front_page() && !is_paged() )
-			$class = 'class="current_page_item"';
-		$menu .= '<li ' . $class . '><a href="' . home_url( '/' ) . '" title="' . esc_attr($text) . '">' . $args['link_before'] . $text . $args['link_after'] . '</a></li>';
-		// If the front page is a page, add it to the exclude list
-		if (get_option('show_on_front') == 'page') {
-			if ( !empty( $list_args['exclude'] ) ) {
-				$list_args['exclude'] .= ',';
-			} else {
-				$list_args['exclude'] = '';
-			}
-			$list_args['exclude'] .= get_option('page_on_front');
-		}
-	}
-
-	$list_args['echo'] = false;
-	$list_args['title_li'] = '';
-	$menu .= str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages($list_args) );
-
-	if ( $menu )
-		$menu = '<ul>' . $menu . '</ul>';
-
-	$menu = '<div class="' . esc_attr($args['menu_class']) . '">' . $menu . "</div>\n";
-	$menu = apply_filters( 'wp_page_menu', $menu, $args );
-	if ( $args['echo'] )
-		echo $menu;
-	else
-		return $menu;
 }
 
 function labnotes_comment( $comment, $args, $depth ) {
