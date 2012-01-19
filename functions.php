@@ -124,7 +124,7 @@ function labnotes_comment( $comment, $args, $depth ) {
 			        ?>
                 </li>
 				<?php edit_comment_link( __( 'Edit this Comment' ), '<li class="edit-link">', '</li>' ); ?>
-                <li class>
+                <li class="reply-link">
                     <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'labnotes' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			    </li>
 			</ul>
