@@ -630,6 +630,36 @@ nav.pagination li.newer {
 .comment-content {
     margin-right: 30%;
 }
+
+#respond {
+    border-top: 1px dotted rgba(0,0,0,0.25);
+}
+
+#commentform input,
+#commentform textarea {
+    display:block;
+}
+
+#commentform .required {
+    color: #900;
+}
+
+.comment-form-comment,
+.form-allowed-tags {
+    float:left;
+    width: 48%;
+    margin:0;
+}
+.form-allowed-tags {
+    margin-left: 0;
+    margin-top: 1em;
+    color:rgba(0,0,0,0.5);
+    font-size:90%;
+}
+.form-submit {
+    clear:both;
+    padding-top: 2em;
+}
 }
 
 @media screen and (min-width: 500px) {
