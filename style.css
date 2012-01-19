@@ -503,7 +503,7 @@ blockquote {
 .deck {
     font-style:italic;
     color: #555;
-    font-size:12px;
+    font-size:90%;
 }
 
 header[role="banner"] {

@@ -6,6 +6,9 @@
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header>
+                    <?php if(is_page() && $parent = get_page($post->post_parent)): ?>
+                    <em class="deck"><?php echo $parent->post_title; ?></em>
+                    <?php endif; ?>
                     <h1><a href="<?php the_permalink(); ?>" rel="permalink" title="Permanent link for <?php the_title(); ?>"><?php the_title(); ?></a></h1>
                 <?php if (is_single() || is_home() || is_archive()): ?>
                     <p class="post-meta"><?php the_time('F j, Y'); ?> &middot; <?php the_category(', '); ?></p>
