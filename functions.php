@@ -29,14 +29,12 @@ function labnotes_display_page_children($content)
             $html = '<ul>';
             while (have_posts()) {
                 the_post();
-                $url = get_permalink(get_the_ID());
-
-                $html .= '<li><a href="'.$url.'">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
+                $html .= '<li><a href="'.get_permalink(get_the_ID()).'">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
             }
             $html .= '</ul>';
-            wp_reset_query();
         }
         $content = $content . $html;
+        wp_reset_query();
     }
     return $content;
 }
