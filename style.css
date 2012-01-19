@@ -719,7 +719,8 @@ header[role="banner"] .menu li:last-child {
     border-width: 1px 0;
 }
 
-header[role="banner"] .menu li.current-menu-item a {
+header[role="banner"] .menu li.current-menu-item a,
+header[role="banner"] .menu li.current-page-ancestor a {
     color: #333;
     font-weight:bold;
 }
@@ -729,7 +730,8 @@ header[role="banner"] .menu a:hover {
 }
 
 
-header[role="banner"] .menu li.current-menu-item a:after {
+header[role="banner"] .menu li.current-menu-item a:after,
+header[role="banner"] .menu li.current-page-ancestor a:after {
     content: "➸";
     float:right;
     text-align:right;
