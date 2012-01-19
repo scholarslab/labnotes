@@ -7,12 +7,15 @@ add_post_type_support('page', 'excerpt');
 
 /**
  * Filters page content to display a list of page children.
+ *
+ * Checks to see if a custom post meta field called 'show children' is set to
+ * true.
  */
 function labnotes_display_page_children($content)
 {
     global $post;
 
-    if (is_page()) {
+    if (get_post_meta($post->ID, 'show_children', 'true') == true) {
         $html = '';
 
         $args = array(
@@ -58,8 +61,8 @@ add_filter('excerpt_more', 'labnotes_excerpt_more');
 if ( function_exists('register_nav_menus') ) {
 
 register_nav_menus( array(
-	'header' => __( 'Header Navigation', 'labnotes' ),
-	'footer' => __( 'Footer Navigation', 'labnotes' ),
+    'header' => __( 'Header Navigation', 'labnotes' ),
+    'footer' => __( 'Footer Navigation', 'labnotes' ),
 ) );
 
 }
@@ -142,4 +145,45 @@ function labnotes_comment( $comment, $args, $depth ) {
         <?php
         break;
     endswitch;
+}
+
+add_action( 'show_user_profile', 'labnotes_edit_extra_profile_fields' );
+add_action( 'edit_user_profile', 'labnotes_edit_extra_profile_fields' );
+
+function labnotes_edit_extra_profile_fields( $user ) { ?>
+
+    <h3>Extra User Information</h3>
+
+    <table class="form-table">
+
+        <tr>
+            <th><label for="twitter">Twitter</label></th>
+
+            <td>
+                <input type="text" name="twitter" id="twitter" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter your Twitter username.</span>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="title">Title</label></th>
+
+            <td>
+                <input type="text" name="title" id="title" value="<?php echo esc_attr( get_the_author_meta( 'title', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter your job title.</span>
+            </td>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'personal_options_update', 'labnotes_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'labnotes_save_extra_profile_fields' );
+
+function labnotes_save_extra_profile_fields( $user_id ) {
+
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+
+    update_usermeta( $user_id, 'twitter', $_POST['twitter'] );
+    update_usermeta( $user_id, 'title', $_POST['title'] );
+
 }
