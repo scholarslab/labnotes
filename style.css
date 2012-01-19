@@ -633,7 +633,7 @@ header[role="banner"] .menu li {
 header[role="banner"] .menu a {
     text-decoration:none;
     display:block;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 header[role="banner"] .menu li:last-child {
@@ -645,13 +645,20 @@ header[role="banner"] .menu li.current-menu-item a {
     font-weight:bold;
 }
 
+header[role="banner"] .menu a:hover {
+    background:rgba(255,255,255,1);
+}
+
+
 header[role="banner"] .menu li.current-menu-item a:after {
-    content: " ☛";
+    content: "➸";
     float:right;
     text-align:right;
-    font-size: 125%;
-    color: rgba(0,0,0,0.25);
+    font-size: 150%;
+    line-height:1;
+    color: rgba(0,0,0,0.15);
 }
+
 #rotunda {
     display:block;
     line-height:0;
@@ -699,8 +706,8 @@ border-width: 0 0 0 1px;
 
 footer[role="contentinfo"] {
 clear:both;
-margin:0 -60px;
-padding: 20px 112px;
+margin:0 0 0 -60px;
+padding: 30px;
 border: 1px dotted rgba(0,0,0,0.35);
 border-width: 1px 0;
 background: rgba(255,255,255,0.2);
@@ -709,11 +716,13 @@ text-align:right;
 
 footer[role="contentinfo"] .menu ul {
     font: 80% Verdana, sans-serif;
+    padding:0;
+    margin:0;
+    
 }
 
 footer[role="contentinfo"] .menu li {
     display:inline;
-    text-align:right;
 }
 
 footer[role="contentinfo"] .menu li:not(:first-child):before {
@@ -729,5 +738,10 @@ footer[role="contentinfo"] .menu a {
 @media screen and (min-width:820px) {
     html {
         padding-right: 60px;
+    }
+
+    footer[role="contentinfo"] {
+        margin: 0 -60px;
+        padding: 20px 90px;
     }
 }
