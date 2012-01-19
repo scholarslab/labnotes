@@ -26,10 +26,10 @@ function labnotes_display_page_children($content)
 
         query_posts($args);
         if (have_posts()) {
-            $html = '<ul>';
+            $html = '<ul class="page-children labnotes-page-children">';
             while (have_posts()) {
                 the_post();
-                $html .= '<li><a href="'.get_permalink(get_the_ID()).'">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
+                $html .= '<li><a href="'.get_permalink(get_the_ID()).'" class="permalink">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
             }
             $html .= '</ul>';
         }
@@ -46,7 +46,7 @@ add_filter('the_content', 'labnotes_display_page_children');
  */
 function labnotes_excerpt_more($more) {
     global $post;
-    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">Continue reading.</a>';
+    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">More.</a>';
     return $more;
 }
 
