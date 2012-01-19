@@ -46,7 +46,7 @@ add_filter('the_content', 'labnotes_display_page_children');
  */
 function labnotes_excerpt_more($more) {
     global $post;
-    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">Continue reading...</a>';
+    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">Continue reading.</a>';
     return $more;
 }
 
