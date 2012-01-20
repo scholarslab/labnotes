@@ -662,6 +662,7 @@ nav.pagination li.newer {
     article { overflow:hidden; *zoom: 1; }
 
     .blog article footer,
+    .archive article footer,
     .single article footer {
         float:right;
         width: 25%;
@@ -669,6 +670,7 @@ nav.pagination li.newer {
     }
 
     .blog article .entry-content,
+    .archive article .entry-content,
     .single article .entry-content {
         float:left;
         width: 70%;
@@ -808,6 +810,7 @@ border-width: 0 0 0 1px;
 .authors .author-meta {
     margin-left: 155px;
 }
+
 footer[role="contentinfo"] {
 clear:both;
 margin:0 0 0 -60px;
