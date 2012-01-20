@@ -473,8 +473,10 @@ a:focus {
     color: #700;
 }
 h1 {
-    margin:0;
+    font-size:200%;
+    line-height: 1.2;
 }
+
 h1,
 h2,
 h3 {
@@ -529,10 +531,8 @@ article:not(:first-child) {
 }
 
 article h1 {
-margin:0;
-font-size: 200%;
+    margin: 0 0 0.5em;
 }
-
 article .post-meta {
 margin:0;
 font: 80% Verdana, sans-serif;
@@ -541,7 +541,7 @@ color: #555;
 }
 
 .single article header {
-    margin-bottom: 50px;
+    margin-bottom:60px;
 }
 
 .wp-caption-text {
