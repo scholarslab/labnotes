@@ -794,6 +794,20 @@ border: 1px dotted rgba(0,0,0,0.35);
 border-width: 0 0 0 1px;
 }
 
+.blog article footer,
+.archive article footer,
+.single article footer {
+    float:none;
+    width: auto;
+}
+
+.blog article .entry-content,
+.archive article .entry-content,
+.single article .entry-content {
+    float:none;
+    width: auto;
+}
+
 .authors li {
     overflow:hidden;
 }
@@ -842,9 +856,24 @@ footer[role="contentinfo"] .menu a {
     font-weight:bold;
 }
 }
-@media screen and (min-width:820px) {
+@media screen and (min-width:900px) {
     html {
         padding-right: 60px;
+    }
+
+    .blog article footer,
+    .archive article footer,
+    .single article footer {
+        float:right;
+        width: 25%;
+        margin-top: 1em;
+    }
+
+    .blog article .entry-content,
+    .archive article .entry-content,
+    .single article .entry-content {
+        float:left;
+        width: 70%;
     }
 
     footer[role="contentinfo"] {
