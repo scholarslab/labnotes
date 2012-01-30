@@ -1,8 +1,8 @@
 <?php get_header(); ?>
+<?php if (is_search()): ?>
+    <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'labnotes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+<?php endif; ?>
     <?php if (have_posts()) : ?>
-        <?php if (is_search()): ?>
-            <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'labnotes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-        <?php endif; ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header>
@@ -41,5 +41,11 @@
             </ul>
         </nav>
         <?php endif; ?>
+    <?php else: ?>
+        <p>We couldn't find the posts you were looking for.</p>
+        <h2>Recent Posts</h2>
+        <?php wp_get_archives('type=postbypost&limit=20&format=custom'); ?>
+        <h2>Categories</h2>
+        <?php wp_list_categories('title_li='); ?>
     <?php endif; ?>
 <?php get_footer(); ?>

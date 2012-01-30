@@ -40,7 +40,7 @@
         ) 
       ); 
 ?>
-
+<?php get_search_form(); ?>
   </header>
 
   <div role="main">

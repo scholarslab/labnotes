@@ -68,17 +68,6 @@ register_nav_menus( array(
 }
 
 /**
- * Register our sidebar.
- */
-if ( function_exists('register_sidebar') ) {
-    register_sidebar(array( 'name' => 'FooterSidebar',
-                            'id' => 'footer-sidebar',
-                            'description' => 'Widgets in this area will be shown in the footer.',
-                            'before_title' => '',
-                            'after_title' => ''));
-}
-
-/**
  * Returns users ordered by a given key.
  *
  * @param string The meta_key to order by. Default is 'last_name'.
@@ -187,3 +176,15 @@ function labnotes_save_extra_profile_fields( $user_id ) {
     update_usermeta( $user_id, 'title', $_POST['title'] );
 
 }
+
+function labnotes_search_form($html) {
+    $html = '<form role="search" method="get" id="search" action="' . home_url( '/' ) . '" >'
+          . '<label for="s">' . __('Search for') . '</label>'
+          . '<input type="search" value="' . get_search_query() . '" name="s" id="s" />'
+          . '<input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />'
+          . '</form>';
+
+    return $html;
+}
+
+add_filter( 'get_search_form', 'labnotes_search_form' );
