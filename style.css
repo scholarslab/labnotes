@@ -575,9 +575,7 @@ form#search input[type="search"] {
 #search input[type="search"]:focus + input[type="submit"],
 .search #search input[type="submit"] {
     background-color: rgba(0,0,0,0.75);
-    color: rgba(255,255,255,0.75);
-    font-family: sans-serif;
-    font-style:normal;
+    color: rgba(255,255,255,0.85);
     font-weight:bold;
     border-style:solid;
     border-width: 1px;
