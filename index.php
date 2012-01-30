@@ -44,8 +44,12 @@
     <?php else: ?>
         <p>We couldn't find the posts you were looking for.</p>
         <h2>Recent Posts</h2>
-        <?php wp_get_archives('type=postbypost&limit=20&format=custom'); ?>
+        <ul class="postbypost">
+        <?php wp_get_archives('type=postbypost&limit=20'); ?>
+        </ul>
         <h2>Categories</h2>
+        <ul class="categories">
         <?php wp_list_categories('title_li='); ?>
+        </ul>
     <?php endif; ?>
 <?php get_footer(); ?>
