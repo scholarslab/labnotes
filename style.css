@@ -746,6 +746,32 @@ nav.pagination li.newer {
     padding:0;
 }
 
+.posts-list {
+  list-style:none;
+  padding-left:0;
+}
+
+.posts-list li:not(:last-child) {
+  border-bottom: 1px dotted rgba(0,0,0,0.25);
+  padding-bottom:0.5em;
+  margin-bottom:0.5em;
+  overflow:hidden;
+}
+.posts-list a {
+  font-weight:bold;
+  text-decoration:none;
+  float:left;
+  width: 65%;
+}
+
+.posts-list span {
+  float:right;
+  text-align:right;
+  color: rgba(0,0,0,0.5);
+  font-style:italic;
+  width: 30%;
+}
+
 }
 
 @media screen and (min-width: 500px) {
@@ -767,6 +793,16 @@ nav.pagination li.newer {
   article .entry-content {
       float:left;
       width: 70%;
+  }
+
+  body.author .avatar {
+    float:right;
+    margin-left: 2em;
+    margin-bottom:2em;
+  } 
+
+  body.author .entry-content {
+    margin-right: 180px;
   }
 }
 
