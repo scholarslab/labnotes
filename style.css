@@ -795,12 +795,19 @@ nav.pagination li.newer {
       width: 70%;
   }
 
-  body.author .avatar {
+  body.author .author-meta {
     float:right;
+    width: 150px;
     margin-left: 2em;
     margin-bottom:2em;
   } 
 
+  .author-meta ul {
+    list-style:none;
+    padding-left:0;
+    font-size: 90%;
+    color: rgba(0,0,0,0.5);
+  }
   body.author .entry-content {
     margin-right: 180px;
   }
