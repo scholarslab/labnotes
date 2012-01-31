@@ -918,6 +918,12 @@ article .entry-content {
     margin-left: 155px;
 }
 
+.author-links span:not(:first-child):before {
+    content: "·";
+    padding: 0 0.25em;
+    color:rgba(0,0,0,0.5);
+}
+
 footer[role="contentinfo"] {
     clear:both;
     margin:0 0 0 -60px;

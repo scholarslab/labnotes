@@ -21,9 +21,8 @@ foreach ($authors as $author):
     <?php echo get_avatar($authorId, 125); ?>
     <div class="author-meta">
         <?php echo wpautop($authorInfo->description); ?>
-        <p>
+        <p class="author-links">
         <?php if ($twitter = get_the_author_meta('twitter', $authorId)): ?><span>Twitter: <a href="http://twitter.com/<?php echo $twitter; ?>">@<?php echo $twitter; ?></a></span><?php endif; ?>
-        <?php if ($twitter = get_the_author_meta('twitter', $authorId) && $url = get_the_author_meta('user_url', $authorId)): ?><span>&nbsp;|&nbsp;</span><?php endif; ?>
         <?php if ($url = get_the_author_meta('user_url', $authorId)): ?><span>Site: <a href="<?php echo $url; ?>"><?php echo $authorInfo->user_firstname; ?>&#8217;s Site</a></span><?php endif; ?>
         </p>
     </div>
