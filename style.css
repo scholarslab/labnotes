@@ -594,6 +594,7 @@ article:not(:first-child) {
 article h1 {
     margin: 0 0 0.5em;
 }
+
 article .post-meta {
 margin:0;
 font: 80% Verdana, sans-serif;
@@ -610,6 +611,34 @@ color: #555;
     font-style:italic;
     color: #555;
     margin:0 0 2em;
+}
+
+article .author-name a {
+  text-decoration:none;
+  color: #444;
+  font-weight:bold;
+  font-size: 87%;
+}
+
+article .author-name:before {
+  content: "by ";
+  font-style:italic;
+  font-size: 75%;
+  color: rgba(0,0,0,0.7);
+}
+
+article .author-description p {
+  font-size: 87%;
+  font-style:italic;
+  color: rgba(0,0,0,0.7);
+}
+
+article .avatar {
+  margin-bottom:1em;
+}
+
+article footer p {
+  margin: 0 0 1em;
 }
 
 nav.pagination {
@@ -720,8 +749,15 @@ nav.pagination li.newer {
 }
 
 @media screen and (min-width: 500px) {
-    article { overflow:hidden; *zoom: 1; }
-
+    article:after {
+      content: "";
+      clear:right;
+      height: 0;
+      overflow:hidden;
+      visibility:hidden;
+      float:none;
+      display:block;
+    }
     article footer {
         float:right;
         width: 25%;
