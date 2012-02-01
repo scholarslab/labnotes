@@ -617,14 +617,14 @@ article .author-name a {
     text-decoration:none;
     color: #444;
     font-weight:bold;
-    font-size: 87%;
 }
 
 article .author-name:before {
     content: "by ";
     font-style:italic;
-    font-size: 75%;
-    color: rgba(0,0,0,0.7);
+    font-size: 87%;
+    color: rgba(0,0,0,0.5);
+    margin-right: 0.1em
 }
 
 article .author-description p {
@@ -637,6 +637,13 @@ article .avatar {
     margin-bottom:1em;
 }
 
+.single article .avatar {
+  float:left;
+  display:block;
+  margin:0 1em 0 0;
+  width: 72px;
+  height:72px;
+}
 article footer p {
     margin: 0 0 1em;
 }
