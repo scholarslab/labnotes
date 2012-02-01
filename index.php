@@ -25,8 +25,8 @@
                 </div>
                 <?php if (!is_page()): ?>
                     <footer>
-                        <p class="author-name"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="byline"><?php echo(get_the_author_meta('user_firstname') . '&nbsp;' . get_the_author_meta('user_lastname')); ?></a></p>
-<?php echo get_avatar(get_the_author_meta('ID'),120); ?>
+                        <p class="author-name"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="byline" title="See all posts by <?php echo get_the_author_meta('user_firstname'); ?>"><?php echo(get_the_author_meta('user_firstname') . '&nbsp;' . get_the_author_meta('user_lastname')); ?></a></p>
+                          <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" title="See all posts by <?php echo get_the_author_meta('user_firstname'); ?>"><?php echo get_avatar(get_the_author_meta('ID'),120); ?></a>
                         <?php if (is_single() && $description = get_the_author_meta('user_description')): ?>
                         <div class="author-description"><?php echo wpautop($description); ?></div>
                         <?php endif; ?>

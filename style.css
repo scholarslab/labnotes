@@ -641,8 +641,9 @@ article .avatar {
   float:left;
   display:block;
   margin:0 1em 0 0;
-  width: 72px;
-  height:72px;
+  width: 60px;
+  height:60px;
+  padding: 2px;
 }
 article footer p {
     margin: 0 0 1em;
