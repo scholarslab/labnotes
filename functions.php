@@ -188,3 +188,28 @@ function labnotes_search_form($html) {
 }
 
 add_filter( 'get_search_form', 'labnotes_search_form' );
+
+/*
+ * Adds scripts to WordPress's scripts queue.
+ *
+ */
+if (!is_admin()) {
+    wp_enqueue_script('slab-respond', get_bloginfo('template_url') . '/lib/respond/respond.min.js', null, null);
+}
+
+/**
+ * HTML5 Shiv Markup 
+ *
+ * Adds markup for the HTM5 shiv, which helps versions of IE 8 and
+ * order recognize and style HTML5 elements. By Remy Sharp.
+ *
+ **/
+function labnotes_add_html5shiv_markup() {
+?>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<?php
+}
+
+add_action('wp_head', 'labnotes_add_html5shiv_markup');
