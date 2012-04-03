@@ -8,7 +8,17 @@
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom" href="<?php bloginfo('atom_url'); ?>">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS" href="<?php bloginfo('rss2_url'); ?>">
-
+    <!-- Modernizr and Friends -->
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/modernizr.min.js"></script>
+    <script>
+      Modernizr.load([
+        {
+          test: Modernizr.mq(),
+          nope: ['<?php echo get_stylesheet_directory_uri(); ?>/javascripts/respond.min.js',
+          '<?php echo get_stylesheet_directory_uri(); ?>/javascripts/selectivizr.min.js']
+        }
+      ]);
+    </script>
 <?php wp_head(); ?>
 
 </head>
