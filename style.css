@@ -279,7 +279,6 @@ nav ol {
 img {
     border: 0; /* 1 */;
     -ms-interpolation-mode: bicubic; /* 2 */;
-    max-width: 100%;
 }
 
 /*
@@ -498,6 +497,12 @@ blockquote {
     color: #777;
 }
 
+img {
+  max-width: 100% !important;
+  width: auto;
+  height: auto;
+}
+
 input[type="submit"] {
     border:none;
     background:none;
@@ -605,6 +610,15 @@ article .post-meta {
 
 .single article header {
     margin-bottom:60px;
+}
+
+.wp-caption {
+
+  /**
+   * Ensure captions are always, at most, the width of their container.
+   * See http://wordpress.stackexchange.com/questions/32931/removing-image-and-caption-dimension-attributes
+   */
+  max-width: 100%;
 }
 
 .wp-caption-text {
