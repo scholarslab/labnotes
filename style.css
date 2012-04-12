@@ -544,6 +544,9 @@ input {
     vertical-align:middle;
 }
 
+textarea {
+  max-width: 100%;
+}
 form#search {
     font-size: 87%;
 }
