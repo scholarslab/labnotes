@@ -651,6 +651,11 @@ article .author-description p {
     color: rgba(0,0,0,0.7);
 }
 
+article .author-description em,
+article .author-description i {
+    font-style:normal;
+}
+
 article .avatar {
     margin-bottom:1em;
 }
