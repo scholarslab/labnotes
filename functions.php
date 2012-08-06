@@ -6,6 +6,11 @@
 add_post_type_support('page', 'excerpt');
 
 /**
+ * Add theme support for post thumbnails.
+ */
+add_theme_support( 'post-thumbnails' );
+
+/**
  * Filters page content to display a list of page children.
  *
  * Checks to see if a custom post meta field called 'show children' is set to
@@ -188,3 +193,160 @@ function labnotes_search_form($html) {
 }
 
 add_filter( 'get_search_form', 'labnotes_search_form' );
+
+/**
+ * Custom Post Type for People
+ */
+function labnotes_register_post_types() {
+    register_post_type( 'people',
+        array(
+            'labels' => array(
+                'name' => __( 'People' ),
+                'singular_name' => __( 'Person' )
+              ),
+            'public' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes'),
+            'menu_position' => 20,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'show_in_nav_menus' => true,
+            'rewrite' => array('slug' => 'people')
+        )
+    );
+}
+
+add_action( 'init', 'labnotes_register_post_types' );
+
+/**
+ * Adds our post meta boxes for the 'sp_workshop' post type.
+ */
+function labnotes_add_meta_boxes() {
+    add_meta_box("wp-user-information", __('Personal Info'), "labnotes_meta_box", "people", "side", "high");
+}
+
+add_action( 'admin_init', 'labnotes_add_meta_boxes');
+
+function labnotes_meta_fields() {
+  return array(
+    'person_title',
+    'person_email',
+    'person_phone',
+    'person_twitter',
+    'person_url',
+    'person_user_id',
+    'person_family_name',
+    'person_given_name',
+    'person_degree',
+    'person_category',
+    'person_department'
+  );
+}
+
+/**
+ * Meta box for personal information.
+ */
+function labnotes_meta_box(){
+    global $post;
+    $custom = get_post_custom($post->ID);
+
+    $fields = labnotes_meta_fields();
+
+    $categoryOptions = array('staff' => 'Staff', 'graduate_fellow' => 'Graduate Fellow');
+
+    $departmentOptions = array(
+      'administration' => 'Administration',
+      'reseach_and_development' => 'Research & Development',
+      'public_service' => 'Public Service',
+      'gis_data' => 'Geospatial Information and Data Services',
+      'its_research' => 'ITS Research Computing'
+    );
+
+?>
+
+<?php foreach ($fields as $field): if ($field == 'person_user_id' || $field == 'person_category' || $field == 'person_department') continue; ?>
+    <p><label for="<?php echo $field; ?>"><?php echo ucwords(str_replace('_', ' ', str_replace('person_', ' ', $field))); ?></label></p>
+    <p><input type="text" value="<?php echo @$custom[$field][0]; ?>" name="<?php echo $field; ?>" /></p>
+<?php endforeach; ?>
+
+    <p><label for="person_user_id">User</label></p>
+    <p><?php wp_dropdown_users(array('name' => 'person_user_id', 'selected' => @$custom['person_user_id'][0])); ?></p>
+
+    <p><label for="person_category">Category</label></p>
+    <p>
+      <select name="person_category">
+      <option>Choose a Category</option>
+      <?php foreach ($categoryOptions as $name => $label): ?>
+      <option value="<?php echo $name; ?>"<?php if (@$custom['person_category'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
+      <?php endforeach; ?>
+      </select>
+    </p>
+
+    <p><label for="person_department">Department</label></p>
+    <p>
+      <select name="person_department">
+      <option>Choose a Department</option>
+      <?php foreach ($departmentOptions as $name => $label): ?>
+      <option value="<?php echo $name; ?>"<?php if (@$custom['person_department'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
+      <?php endforeach; ?>
+      </select>
+    </p>
+
+<?php
+}
+
+/**
+* Saves our custom post metadata. Used on the 'save_post' hook.
+*/
+function labnotes_save_post(){
+  global $post;
+
+  $fields = labnotes_meta_fields();
+  foreach ($fields as $field) {
+    if ( array_key_exists($field, $_POST)) {
+        update_post_meta($post->ID, $field, $_POST[$field]);
+    }
+  }
+}
+
+add_action( 'save_post','labnotes_save_post');
+
+/**
+ * Function to create 'people' type posts from users.
+ */
+function labnotes_add_user_people_posts() {
+    $users = get_users();
+
+    try {
+        foreach ($users as $user) {
+            if ($user->display_name == 'admin') continue;
+
+            $userData = get_userdata($user->ID);
+
+            $postTitle = $userData->first_name ? $userData->first_name . ' ' . $userData->last_name : $userData->display_name;
+
+            $postData = array(
+              'post_content' => $userData->user_description,
+              'post_title' => $postTitle,
+              'post_type' => 'people',
+              'post_status' => 'publish'
+            );
+
+            $postId = wp_insert_post($postData);
+
+            update_post_meta($postId, 'person_family_name', $userData->last_name);
+            update_post_meta($postId, 'person_given_name', $userData->first_name);
+            update_post_meta($postId, 'person_title', $userData->title);
+            update_post_meta($postId, 'person_url', $user->user_url);
+            update_post_meta($postId, 'person_twitter', $userData->twitter);
+            update_post_meta($postId, 'person_email', $user->user_email);
+            update_post_meta($postId, 'person_user_id', $user->ID);
+
+        }
+        $message = 'Posts successfuly created!';
+
+    } catch (Exception $e) {
+        $message = 'Posts were not created!';
+    }
+
+    return $message;
+}
