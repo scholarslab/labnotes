@@ -269,7 +269,7 @@ function labnotes_meta_box(){
 <?php endforeach; ?>
 
     <p><label for="person_user_id">User</label></p>
-    <p><?php wp_dropdown_users(array('name' => 'person_user_id', 'selected' => @$custom['person_user_id'][0])); ?></p>
+    <p><?php wp_dropdown_users(array('show_option_none' => 'No User', 'name' => 'person_user_id', 'selected' => @$custom['person_user_id'][0])); ?></p>
 
     <p><label for="person_category">Category</label></p>
     <p>
