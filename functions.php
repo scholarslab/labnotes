@@ -259,6 +259,16 @@ function labnotes_people_meta_fields() {
   );
 }
 
+function labnotes_people_departments() {
+  return array(
+      'administration' => 'Administration',
+      'reseach_and_development' => 'Research & Development',
+      'public_service' => 'Public Service',
+      'gis_data' => 'Geospatial Information and Data Services',
+      'its_research' => 'ITS Research Computing'
+  );
+}
+
 /**
  * Meta box for personal information.
  */
@@ -270,13 +280,7 @@ function labnotes_people_meta_box(){
 
     $categoryOptions = array('staff' => 'Staff', 'graduate_fellow' => 'Graduate Fellow');
 
-    $departmentOptions = array(
-      'administration' => 'Administration',
-      'reseach_and_development' => 'Research & Development',
-      'public_service' => 'Public Service',
-      'gis_data' => 'Geospatial Information and Data Services',
-      'its_research' => 'ITS Research Computing'
-    );
+    $departmentOptions = labnotes_people_departments(); 
 
 ?>
 
@@ -353,7 +357,7 @@ function labnotes_research_meta_box(){
 function labnotes_save_post(){
   global $post;
 
-  if ( 'people' == $_POST['post_type'] ) {
+  if ( 'people' == @$_POST['post_type'] ) {
     $fields = labnotes_people_meta_fields();
     foreach ($fields as $field) {
       if ( array_key_exists($field, $_POST)) {
@@ -362,7 +366,7 @@ function labnotes_save_post(){
     }
   }
 
-  if ( 'research' == $_POST['post_type'] ) {
+  if ( 'research' == @$_POST['post_type'] ) {
     $fields = labnotes_research_meta_fields();
     foreach ($fields as $field) {
       if ( array_key_exists($field, $_POST)) {
