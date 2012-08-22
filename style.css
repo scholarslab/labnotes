@@ -1007,6 +1007,42 @@ article .entry-content {
     color:rgba(0,0,0,0.5);
 }
 
+.column {
+  float:left;
+  width: 30%;
+  margin-right: 3%;
+}
+
+.staff {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
+
+.staff h3 {
+  margin:0;
+  font-weight:bold;
+}
+
+.staff h3 a {
+  text-decoration:none;
+}
+
+.staff .title {
+  margin:0;
+  font-style:italic;
+}
+
+.staff li ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+  font-size: 90%;
+}
+
+.staff > li:not(:last-child) {
+  margin-bottom: 3em;
+}
 footer[role="contentinfo"] {
     clear:both;
     margin:0 0 0 -60px;
