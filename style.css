@@ -600,7 +600,7 @@ article:not(:first-child) {
     border-top: 1px dotted #ccc;
 }
 
-article h1 {
+div[role="main"] h1 {
     margin: 0 0 0.5em;
 }
 
