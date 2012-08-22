@@ -212,6 +212,21 @@ function labnotes_register_post_types() {
             'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'people')
         )
+      );
+    register_post_type( 'research',
+        array(
+            'labels' => array(
+                'name' => __( 'Research' ),
+                'singular_name' => __( 'Research Project' )
+              ),
+            'public' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt'),
+            'menu_position' => 20,
+            'hierarchical' => false,
+            'has_archive' => true,
+            'show_in_nav_menus' => true,
+            'rewrite' => array('slug' => 'research')
+        )
     );
 }
 
@@ -221,12 +236,14 @@ add_action( 'init', 'labnotes_register_post_types' );
  * Adds our post meta boxes for the 'sp_workshop' post type.
  */
 function labnotes_add_meta_boxes() {
-    add_meta_box("wp-user-information", __('Personal Info'), "labnotes_meta_box", "people", "side", "high");
+  add_meta_box("wp-user-information", __('Personal Info'), "labnotes_people_meta_box", "people", "side", "high");
+  add_meta_box("wp-user-information", __('Project Info'), "labnotes_research_meta_box", "research", "side", "high");
+  
 }
 
 add_action( 'admin_init', 'labnotes_add_meta_boxes');
 
-function labnotes_meta_fields() {
+function labnotes_people_meta_fields() {
   return array(
     'person_title',
     'person_email',
@@ -245,11 +262,11 @@ function labnotes_meta_fields() {
 /**
  * Meta box for personal information.
  */
-function labnotes_meta_box(){
+function labnotes_people_meta_box(){
     global $post;
     $custom = get_post_custom($post->ID);
 
-    $fields = labnotes_meta_fields();
+    $fields = labnotes_people_meta_fields();
 
     $categoryOptions = array('staff' => 'Staff', 'graduate_fellow' => 'Graduate Fellow');
 
@@ -294,18 +311,66 @@ function labnotes_meta_box(){
 <?php
 }
 
+function labnotes_research_meta_fields() {
+  return array(
+    'research_url',
+    'research_status'
+  );
+}
+
+/**
+ * Meta box for personal information.
+ */
+function labnotes_research_meta_box(){
+    global $post;
+    $custom = get_post_custom($post->ID);
+
+    $fields = labnotes_people_meta_fields();
+
+    $statusOptions = array('current' => 'Current Research', 'archived' => 'Past Research');
+
+?>
+
+    <p><label for="research_url">Project URL</label></p>
+    <p><input type="text" value="<?php echo @$custom['research_url'][0]; ?>" name="research_url" /></p>
+
+    <p><label for="research_status">Status</label></p>
+    <p>
+      <select name="research_status">
+      <option>Choose a Status</option>
+      <?php foreach ($statusOptions as $name => $label): ?>
+      <option value="<?php echo $name; ?>"<?php if (@$custom['research_status'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
+      <?php endforeach; ?>
+      </select>
+    </p>
+
+<?php
+}
+
 /**
 * Saves our custom post metadata. Used on the 'save_post' hook.
 */
 function labnotes_save_post(){
   global $post;
 
-  $fields = labnotes_meta_fields();
-  foreach ($fields as $field) {
-    if ( array_key_exists($field, $_POST)) {
-        update_post_meta($post->ID, $field, $_POST[$field]);
+  if ( 'people' == $_POST['post_type'] ) {
+    $fields = labnotes_people_meta_fields();
+    foreach ($fields as $field) {
+      if ( array_key_exists($field, $_POST)) {
+          update_post_meta($post->ID, $field, $_POST[$field]);
+      }
     }
   }
+
+  if ( 'research' == $_POST['post_type'] ) {
+    $fields = labnotes_research_meta_fields();
+    foreach ($fields as $field) {
+      if ( array_key_exists($field, $_POST)) {
+          update_post_meta($post->ID, $field, $_POST[$field]);
+      }
+    }
+  }
+
 }
 
 add_action( 'save_post','labnotes_save_post');
