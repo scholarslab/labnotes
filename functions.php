@@ -263,7 +263,7 @@ function labnotes_people_departments() {
   return array(
       'administration' => 'Administration',
       'reseach_and_development' => 'Research & Development',
-      'public_service' => 'Public Service',
+      'public_service' => 'Outreach & Public Service',
       'gis_data' => 'Geospatial Information and Data Services',
       'its_research' => 'ITS Research Computing'
   );
