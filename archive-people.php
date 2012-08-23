@@ -78,7 +78,7 @@ if (have_posts()) : ?>
     <li class="email"><a href="<?php echo 'mailto:'.$email; ?>" class="email"><?php echo $email; ?></a></li>
     <?php endif; ?>
     <?php if ($phone = $customFields['person_phone'][0]): ?>
-    <li class="tel"><?php echo $phone; ?></li>
+    <li class="tel"><?php echo labnotes_format_phone($phone); ?></li>
     <?php endif; ?>
     <?php if ($twitter = $customFields['person_twitter'][0]): ?>
     <li class="twitter"><a href="http://twitter.com/<?php echo $twitter; ?>" class="url"><?php echo '@'.$twitter; ?></a> on Twitter</li>
