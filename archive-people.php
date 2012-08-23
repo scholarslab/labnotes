@@ -81,7 +81,7 @@ if (have_posts()) : ?>
     <li class="tel"><?php echo labnotes_format_phone($phone); ?></li>
     <?php endif; ?>
     <?php if ($twitter = $customFields['person_twitter'][0]): ?>
-    <li class="twitter"><a href="http://twitter.com/<?php echo $twitter; ?>" class="url"><?php echo '@'.$twitter; ?></a> on Twitter</li>
+    <li class="twitter"><a href="http://twitter.com/<?php echo $twitter; ?>" class="url"><?php echo '@'.$twitter; ?></a></li>
     <?php endif; ?>
 
     </ul>
