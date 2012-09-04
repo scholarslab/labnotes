@@ -534,6 +534,12 @@ img.avatar {
     padding: 4px;
 }
 
+.vcard abbr {
+  border:none;
+  text-decoration:none;
+  font-style:normal;
+}
+
 header[role="banner"] {
     border-bottom: 1px dotted rgba(0,0,0,0.25);
     padding: 0 10px;
@@ -812,6 +818,16 @@ nav.pagination li.newer {
   width: 30%;
 }
 
+footer[role="contentinfo"] {
+    padding:20px 0;
+    border-top: 1px dotted rgba(0,0,0,0.25);
+    margin: 20px;
+}
+
+#slab-vcard {
+  margin-bottom: 1em;
+}
+
 }
 
 @media screen and (min-width: 500px) {
@@ -1043,13 +1059,25 @@ article .entry-content {
 .staff > li:not(:last-child) {
   margin-bottom: 3em;
 }
+
 footer[role="contentinfo"] {
     clear:both;
     margin:0 0 0 -60px;
-    padding: 30px;
+    padding: 30px 30px 30px 90px;
     border: 1px dotted rgba(0,0,0,0.35);
     border-width: 1px 0;
     background: rgba(255,255,255,0.2);
+    overflow:hidden;
+}
+
+#slab-vcard {
+    font: 80% Verdana, sans-serif;
+    float:left;
+    line-height: 1.5em;
+}
+
+footer[role="contentinfo"] .menu {
+    float:right;
     text-align:right;
 }
 
@@ -1057,7 +1085,6 @@ footer[role="contentinfo"] .menu ul {
     font: 80% Verdana, sans-serif;
     padding:0;
     margin:0;
-    
 }
 
 footer[role="contentinfo"] .menu li {
