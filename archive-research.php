@@ -8,13 +8,12 @@ $query_string = $query_string . '&posts_per_page=-1&meta_key=research_status&ord
 query_posts( $query_string . '&meta_value=current' );
 if (have_posts()) : ?>
 <div id="current-research">
-<h2>Current Research</h2>
-<ul class="projects people">
+<ul class="projects labnotes-page-children">
 <?php while (have_posts()) : the_post(); ?>
 <li>
-<a href="<?php the_permalink(); ?>">
-<h3><?php the_title(); ?></h3>
-</a>
+  <p><a href="<?php the_permalink(); ?>" class="permalink"><?php the_title(); ?></a> &ndash; 
+  <?php echo get_the_excerpt(); ?>
+  </p>
 </li>
 <?php endwhile; ?>
 </ul>
@@ -27,13 +26,12 @@ query_posts( $query_string . '&meta_value=archived' );
 if (have_posts()) : ?>
 <div id="archived-research">
 <h2>Previous Research</h2>
-<ul class="projects people">
+<ul class="projects labnotes-page-children">
 <?php while (have_posts()) : the_post(); ?>
 <li>
-<a href="<?php the_permalink(); ?>">
-
-<h3><?php the_title(); ?></h3>
-</a>
+  <p><a href="<?php the_permalink(); ?>" class="permalink"><?php the_title(); ?></a> &ndash; 
+  <?php echo get_the_excerpt(); ?>
+  </p>
 </li>
 <?php endwhile; ?>
 </ul>
