@@ -17,6 +17,20 @@
 
     <?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => 'nav', 'container_class' => 'menu', 'depth' => '1' ) ); ?>
 
+  <div id="social-media">
+<?php
+$socialMedia = array(
+  'twitter' => 'http://twitter.com/scholarslab',
+  'facebook' => 'https://www.facebook.com/scholarslab',
+  'googleplus' => 'https://plus.google.com/114472010795641313811',
+  'vimeo' => 'https://vimeo.com/scholarslab',
+  'github' => 'http://github.com/scholarslab/'
+);
+
+foreach ($socialMedia as $n => $v): ?>
+    <a href="<?php echo $v; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $n; ?>.png"></a>
+<?php endforeach; ?>
+  </div>
     <?php wp_footer(); ?>
   </footer>
 </body>

@@ -822,18 +822,39 @@ footer[role="contentinfo"] {
     padding:20px 0;
     border-top: 1px dotted rgba(0,0,0,0.25);
     margin: 20px;
+    text-align:center;
 }
 
 #slab-vcard {
   font: 80% Verdana, sans-serif;
   line-height: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 30px;
+}
+
+#social-media a {
+}
+
+#social-media a:not(:last-child) {
+  margin-right: 0.25em;
+}
+
+#social-media a:link,
+#social-media a:visited {
+  opacity: 0.5;
+}
+
+#social-media a:hover {
+  opacity: 0.75;
+}
+
+#social-media a:active {
+  opacity: 0.9;
 }
 
 footer[role="contentinfo"] .menu ul {
     font: 80% Verdana, sans-serif;
     padding:0;
-    margin:0;
+    margin:0 0 30px;
 }
 
 footer[role="contentinfo"] .menu li {
@@ -1090,6 +1111,7 @@ footer[role="contentinfo"] {
     border-width: 1px 0;
     background: rgba(255,255,255,0.2);
     overflow:hidden;
+    text-align:left;
 }
 
 #slab-vcard {
@@ -1101,6 +1123,20 @@ footer[role="contentinfo"] .menu {
     text-align:right;
 }
 
+#social-media {
+  float:right;
+  text-align:right;
+  clear:right;
+}
+
+#social-media a {
+  display:block;
+  float:left;
+  width: 40px;
+}
+
+#social-media a:not(:last-child) {
+  margin-right: 0.25em;
 }
 
 @media screen and (min-width:900px) {
