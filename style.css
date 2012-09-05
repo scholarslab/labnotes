@@ -1139,6 +1139,8 @@ footer[role="contentinfo"] .menu {
   margin-right: 0.25em;
 }
 
+}
+
 @media screen and (min-width:900px) {
 html {
     padding-right: 60px;
