@@ -67,7 +67,7 @@ if ( function_exists('register_nav_menus') ) {
 
 register_nav_menus( array(
     'header' => __( 'Header Navigation', 'labnotes' ),
-    'footer' => __( 'Footer Navigation', 'labnotes' ),
+    'footer' => __( 'Footer Navigation', 'labnotes' )
 ) );
 
 }
@@ -394,3 +394,22 @@ function labnotes_format_phone($number) {
 
   return $string;
 }
+
+// Register widgets.
+function labnotes_widgets_init() {
+    $beforeTitle = '<h2>';
+    $afterTitle = '</h2>';
+
+    register_sidebar( array(
+        'name' => __( 'Home Page Widget Area', 'labnotes' ),
+        'id' => 'homepage-widget-area',
+        'description' => __( 'The home page widget area', 'labnotes' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => $beforeTitle,
+        'after_title' => $afterTitle
+      ) );
+}
+
+add_action('widgets_init', 'labnotes_widgets_init');
+

@@ -451,15 +451,15 @@ table {
 }
 
 html {
-    border-top: 2px solid #444;
     background: url('images/stain2.png') top left no-repeat, url('images/subtle_freckles.png') top left;
+    max-width: 1100px;
 }
 
 body {
     font: 87.5%/1.5 Georgia, serif;
     color: #333;
     margin:0;
-    padding:0; 
+    padding:0;
 }
 
 a:link,
@@ -540,6 +540,12 @@ img.avatar {
   font-style:normal;
 }
 
+/* Removes list formatting for Google Calendar Events plugin lists. */
+.gce-list {
+  list-style:none;
+  padding-left:0;
+}
+
 header[role="banner"] {
     border-bottom: 1px dotted rgba(0,0,0,0.25);
     padding: 0 10px;
@@ -599,6 +605,62 @@ form#search input[type="search"] {
 div[role="main"] {
     padding-left:20px;
     padding-right: 20px;
+}
+
+#homepage-blurb {
+    margin: -20px -20px 0px;
+    color: #fff;
+    background-color: #333;
+    background-image: 
+      -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      -ms-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+
+    background-size: cover;
+    background-position: top left, center center;
+    background-repeat:no-repeat;
+}
+
+#homepage-blurb .content {
+    background: rgba(0,0,0,0.25);
+    padding: 20px;
+}
+
+#homepage-blurb .menu {
+    list-style:none;
+    padding-left:0;
+    text-align:right;
+}
+
+#homepage-blurb .menu li {
+    display:inline-block;
+    line-height: 3em;
+}
+
+#homepage-blurb .menu a {
+  text-decoration:none;
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  padding: 10px;
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+#homepage-blurb .menu a:hover {
+  background: rgb(0,0,0);
 }
 
 article:not(:first-child) {
@@ -792,7 +854,8 @@ nav.pagination li.newer {
     padding:0;
 }
 
-.posts-list {
+.posts-list,
+.recent-posts{
   list-style:none;
   padding-left:0;
 }
@@ -874,6 +937,17 @@ footer[role="contentinfo"] .menu a {
 }
 
 @media screen and (min-width: 500px) {
+
+#events,
+#recent-posts {
+  width: 48%;
+  float:left;
+}
+
+#recent-posts {
+  float:right;
+}
+
   article:after {
     content: "";
     clear:right;
@@ -958,6 +1032,10 @@ header[role="banner"] .menu a {
     text-decoration:none;
     display:block;
     padding: 10px;
+    -webkit-transition: background 0.2s linear;
+    -moz-transition: background 0.2s linear;
+    -o-transition: background 0.2s linear;
+    transition: background 0.2s linear;
 }
 
 header[role="banner"] .menu li:last-child {
@@ -992,7 +1070,7 @@ form#search {
     display:block;
     line-height:0;
     position:absolute;
-    top:10px;
+    top:0;
     left: 0;
     width: 100%;
     border-bottom: 1px dotted rgba(0,0,0,0.25);
@@ -1000,11 +1078,10 @@ form#search {
 
 /* Bump down the absolutely-positioned rotunda mark if the admin bar is present.*/
 .admin-bar #rotunda {
-    top: 34px;
+    top: 28px;
 }
 #rotunda img {
-    margin-left: 9px;
-    padding-bottom:9px;
+    padding:10px;
 }
 
 #uvalib-logo {
@@ -1016,6 +1093,14 @@ form#search {
 #uvalib-logo img {
     margin:0;
 }
+
+#uvalib-header img {
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+
 #uvalib-header a:link img,
 #uvalib-header a:visited img {
     opacity:0.5;
@@ -1028,9 +1113,14 @@ form#search {
 
 div[role="main"] {
     margin-left:260px;
-    padding: 100px 30px 2em;
+    padding: 90px 30px 2em;
     border: 1px dotted rgba(0,0,0,0.35);
     border-width: 0 0 0 1px;
+}
+
+#homepage-blurb {
+  margin: -30px -30px 30px;
+  padding: 30px;
 }
 
 article footer {
