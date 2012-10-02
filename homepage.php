@@ -18,7 +18,7 @@
 <?php endwhile; endif; ?>
 <div id="events">
 <h2>Events</h2>
-<?php echo do_shortcode( '[google-calendar-events id="1, 3" type="list" title="" max="3"]' ); ?>
+<?php echo do_shortcode( '[google-calendar-events id="1" type="list" max="3"]' ); ?>
 </div>
 
 <div id="recent-posts">
