@@ -524,6 +524,10 @@ input[type="submit"] {
     font-size:90%;
 }
 
+.deck + * {
+  margin-top:0 !important;
+}
+
 .alignright {
     float:right;
     margin-left: 1em;
@@ -609,7 +613,7 @@ div[role="main"] {
 
 #homepage-blurb {
     margin: -20px -20px 0px;
-    color: #fff;
+    color: #eee;
     background-color: #333;
     background-image: 
       -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
@@ -648,19 +652,61 @@ div[role="main"] {
     line-height: 3em;
 }
 
-#homepage-blurb .menu a {
-  text-decoration:none;
+#homepage-blurb a {
   background: rgba(0,0,0,0.25);
   color: #fff;
-  padding: 10px;
+  font-weight:bold;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
 
-#homepage-blurb .menu a:hover {
+#homepage-blurb a:link,
+#homepage-blurb a:visited {
+  color: #fff;
+  background: rgba(0,0,0,0.25);
+}
+#homepage-blurb a:hover,
+#homepage-blurb a:active {
+  color: #fff;
   background: rgb(0,0,0);
+}
+
+#homepage-blurb .menu a {
+  padding: 10px;
+  text-decoration:none;
+}
+
+#events li,
+#recent-posts li {
+  margin-bottom:1em;
+  padding-bottom:1em;
+  border-bottom: 1px dotted #ccc;
+}
+
+#events a {
+  text-decoration:none;
+  font-weight:bold;
+}
+
+#recent-posts h3 {
+  font-weight:bold;
+}
+
+#recent-posts a {
+  text-decoration:none;
+}
+
+#recent-posts .byline {
+  display:block;
+  float:right;
+  width: 20%;
+  font-size: 85%;
+  margin-left: 10px;
+  margin-bottom:10px;
+  color: #999;
+  
 }
 
 article:not(:first-child) {
