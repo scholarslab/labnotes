@@ -678,18 +678,44 @@ div[role="main"] {
   text-decoration:none;
 }
 
-#events li,
+.gce-page-list li,
 #recent-posts li {
   margin-bottom:1em;
   padding-bottom:1em;
   border-bottom: 1px dotted #ccc;
 }
 
-#events a {
+.gce-page-list a {
   text-decoration:none;
   font-weight:bold;
 }
 
+.gce-page-list .date {
+  display:block;
+  float:left;
+  padding: 0.5em 1em 1em;
+  background: #fff;
+  color: #555;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  text-align:center;
+  border-top: 5px solid #900;
+}
+
+.gce-page-list .day {
+  font-size: 1.75em;
+  display:block;
+  margin:0;
+  line-height:1em;
+}
+
+.gce-page-list .event-full .details {
+  margin-left: 5em;
+}
+
+.gce-page-list .event-full strong {
+  display:block;
+  margin-bottom:1em;
+}
 #recent-posts h3 {
   font-weight:bold;
 }
