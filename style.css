@@ -949,10 +949,6 @@ nav.pagination li.newer {
   padding-left:0;
 }
 
-#author-posts {
-  clear:both;
-}
-
 .posts-list li:not(:last-child) {
   border-bottom: 1px dotted rgba(0,0,0,0.25);
   padding-bottom:0.5em;
@@ -1006,10 +1002,11 @@ nav.pagination li.newer {
   font-size: 90%;
 }
 
-.single-people .author-meta {
+.single-people .avatar {
   float:right;
-  width: 25%;
-  margin-left: 20px;
+  margin-left: 10px;
+  width: 72px;
+  height: 72px;
 }
 
 .author-meta ul {
@@ -1400,6 +1397,16 @@ html {
 .people li .fn,
 .people li ul {
   margin-right: 70px;
+}
+
+.single-people .avatar {
+  margin:0;
+  width: auto;
+  height: auto;
+}
+
+.single-people .entry-content {
+  margin-right: 130px;
 }
 
 footer[role="contentinfo"] {

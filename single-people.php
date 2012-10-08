@@ -4,18 +4,18 @@
 <?php $customFields = get_post_custom(); ?>
 
   <h1><?php the_title(); ?></h1>
-  <div class="author-meta">
   <?php echo get_avatar($customFields['person_email'][0], 150); ?>
 
+  <div class="entry-content">
+
+  <?php the_content(); ?>
+    <div class="author-meta">
   <ul>
         <?php if ($twitter = $customFields['person_twitter'][0]): ?><li>Twitter: <a href="http://twitter.com/<?php echo $twitter; ?>">@<?php echo $twitter; ?></a></li><?php endif; ?>
         <?php if ($url = $customFields['person_url'][0]): ?><li>Site: <a href="<?php echo $url; ?>"><?php echo $customFields['person_given_name'][0]; ?>&#8217;s Site</a></li><?php endif; ?>
   </ul>
   </div>
-  <div class="entry-content">
 
-  <?php the_content(); ?>
-  
 <?php if ($userId = $customFields['person_user_id'][0]) : ?>
 
 <?php
