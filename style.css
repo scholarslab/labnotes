@@ -559,8 +559,20 @@ img.avatar {
 
 header[role="banner"] {
     border-bottom: 1px dotted rgba(0,0,0,0.25);
-    padding: 0 10px;
+    padding: 0 10px 2em;
     margin-bottom: 20px;
+    text-align:center;
+}
+
+header[role="banner"] a {
+  text-decoration:none;
+  border:none;
+}
+
+header[role="banner"] h1 {
+  width: 60%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #search {
@@ -963,6 +975,7 @@ footer[role="contentinfo"] {
     border-top: 1px dotted rgba(0,0,0,0.25);
     margin: 20px;
     text-align:center;
+    clear:both;
 }
 
 #slab-vcard {
@@ -1081,14 +1094,15 @@ header[role="banner"] {
     width: 260px;
     padding: 0;
     float:left;
-    background:rgba(255,255,255,0.5);
-    border-bottom:1px dotted rgba(0,0,0,0.25);
+    text-align:left;
+    border:none;
 }
 
 header[role="banner"] h1 {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    width: auto;
 }
 
 header[role="banner"] img {
@@ -1101,22 +1115,19 @@ header[role="banner"] .menu ul {
 
 header[role="banner"] .menu li {
     display:block;
-    border: 1px dotted #ddd;
-    border-width: 1px 0 0;
+}
+header[role="banner"] .menu li + li {
+    border-top: 1px dotted #ddd;
 }
 
 header[role="banner"] .menu a {
     text-decoration:none;
     display:block;
     padding: 10px;
-    -webkit-transition: background 0.2s linear;
-    -moz-transition: background 0.2s linear;
-    -o-transition: background 0.2s linear;
-    transition: background 0.2s linear;
-}
-
-header[role="banner"] .menu li:last-child {
-    border-width: 1px 0;
+    -webkit-transition: background 0.2s linear, color 0.2s linear;
+    -moz-transition: background 0.2s linear,color 0.2s linear;
+    -o-transition: background 0.2s linear, color 0.2s linear;
+    transition: background 0.2s linear, color 0.2s linear;
 }
 
 header[role="banner"] .menu li.current-menu-item a,
@@ -1126,7 +1137,8 @@ header[role="banner"] .menu li.current-page-ancestor a {
 }
 
 header[role="banner"] .menu a:hover {
-    background:rgba(255,255,255,1);
+    color: #333;
+    background:rgba(255,255,255,0.75);
 }
 
 header[role="banner"] .menu li.current-menu-item a:after,
