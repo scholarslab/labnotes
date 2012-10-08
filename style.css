@@ -949,6 +949,10 @@ nav.pagination li.newer {
   padding-left:0;
 }
 
+#author-posts {
+  clear:both;
+}
+
 .posts-list li:not(:last-child) {
   border-bottom: 1px dotted rgba(0,0,0,0.25);
   padding-bottom:0.5em;
@@ -1000,6 +1004,19 @@ nav.pagination li.newer {
   margin-left:0;
   padding-left:0;
   font-size: 90%;
+}
+
+.single-people .author-meta {
+  float:right;
+  width: 25%;
+  margin-left: 20px;
+}
+
+.author-meta ul {
+  list-style:none;
+  padding-left:0;
+  font-size: 90%;
+  color: rgba(0,0,0,0.5);
 }
 
 footer[role="contentinfo"] {
@@ -1097,12 +1114,6 @@ footer[role="contentinfo"] .menu a {
     margin-bottom:2em;
   } 
 
-  .author-meta ul {
-    list-style:none;
-    padding-left:0;
-    font-size: 90%;
-    color: rgba(0,0,0,0.5);
-  }
   body.author .entry-content {
     margin-right: 180px;
   }
