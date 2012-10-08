@@ -542,7 +542,7 @@ input[type="submit"] {
 
 img.avatar {
     border: 1px dotted rgba(0,0,0,0.25);
-    padding: 4px;
+    padding: 2px;
 }
 
 .vcard abbr {
@@ -970,6 +970,38 @@ nav.pagination li.newer {
   width: 30%;
 }
 
+.people {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+  overflow:hidden;
+  zoom:1;
+}
+
+.post-type-archive-people h2,
+.people .fn {
+  margin:0;
+  font-weight:bold;
+  font-size: 1em;
+}
+
+.people .fn a {
+  text-decoration:none;
+}
+
+.people .title {
+  margin:0;
+  font-style:italic;
+  font-size:0.9em;
+}
+
+.people li ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+  font-size: 90%;
+}
+
 footer[role="contentinfo"] {
     padding:20px 0;
     border-top: 1px dotted rgba(0,0,0,0.25);
@@ -1074,6 +1106,14 @@ footer[role="contentinfo"] .menu a {
   body.author .entry-content {
     margin-right: 180px;
   }
+
+.people > li {
+  float:left;
+  width: 28%;
+  margin-right: 2%;
+  height:280px;
+}
+
 }
 
 @media screen and (min-width: 720px) {
@@ -1253,39 +1293,15 @@ article .entry-content {
 
 .column {
   float:left;
-  width: 30%;
-  margin-right: 3%;
+  width: 28%;
+  margin-right: 5%;
 }
 
-.staff {
-  list-style:none;
-  margin-left:0;
-  padding-left:0;
-}
-
-.staff h3 {
-  margin:0;
-  font-weight:bold;
-}
-
-.staff h3 a {
-  text-decoration:none;
-}
-
-.staff .title {
-  margin:0;
-  font-style:italic;
-}
-
-.staff li ul {
-  list-style:none;
-  margin-left:0;
-  padding-left:0;
-  font-size: 90%;
-}
-
-.staff > li:not(:last-child) {
-  margin-bottom: 3em;
+.staff > li {
+  float:none;
+  width: auto;
+  height:auto;
+  margin:0 0 1em;
 }
 
 footer[role="contentinfo"] {
@@ -1326,7 +1342,7 @@ footer[role="contentinfo"] .menu {
 
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1000px) {
 html {
     padding-right: 60px;
 }
@@ -1348,6 +1364,31 @@ html {
 .single article .entry-content {
     float:left;
     width: 70%;
+}
+
+.people > li {
+  padding: 1em 0;
+}
+
+.people > li {
+  border-top: 1px dotted #ccc;
+}
+
+.graduate_fellows > li {
+  width: 25%;
+  height: 100px;
+}
+
+.people img {
+  float:right;
+  width: 50px;
+  height: 50px;
+}
+
+.people li .title,
+.people li .fn,
+.people li ul {
+  margin-right: 70px;
 }
 
 footer[role="contentinfo"] {
