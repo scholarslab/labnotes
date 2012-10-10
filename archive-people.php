@@ -76,7 +76,7 @@ if (have_posts()) : ?>
     <?php if ($title = str_replace(' | ', '<br>',$customFields['person_title'][0])): ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
-    <?php echo get_avatar($customFields['person_email'][0],120); ?></a>
+    <?php echo get_person_image(); ?></a>
     <ul>
     <?php if ($email = antispambot($customFields['person_email'][0])): ?>
     <li class="email"><a href="<?php echo 'mailto:'.$email; ?>" class="email"><?php echo $email; ?></a></li>

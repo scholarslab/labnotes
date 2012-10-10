@@ -4,7 +4,7 @@
 <?php $customFields = get_post_custom(); ?>
 
   <h1><?php the_title(); ?></h1>
-  <?php echo get_avatar($customFields['person_email'][0], 150); ?>
+  <?php echo get_person_image(); ?>
 
   <div class="entry-content">
 

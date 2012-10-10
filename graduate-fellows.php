@@ -38,7 +38,7 @@ if (have_posts()) : ?>
 <?php $customFields = get_post_custom(); ?>
   <li class="vcard">
     <h2 class="fn"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php echo get_avatar($customFields['person_email'][0],120); ?></a>
+    <?php echo get_person_image(); ?></a>
     <?php if ($title = str_replace(' | ', '<br>',$customFields['person_title'][0])): ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>

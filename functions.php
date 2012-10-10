@@ -413,3 +413,21 @@ function labnotes_widgets_init() {
 
 add_action('widgets_init', 'labnotes_widgets_init');
 
+function get_person_image($size = '150') {
+  global $post;
+
+  $postId = $post->ID;
+
+  $customFields = get_post_custom($postId);
+
+  $html = '';
+
+  if (has_post_thumbnail($postId)) {
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postId ), 'thumbnail' );
+    $html = '<img src="'.$image[0].'" class="avatar">';
+  } else {
+    $html = get_avatar($customFields['person_email'][0],$size);
+  }
+
+  return $html;
+}
