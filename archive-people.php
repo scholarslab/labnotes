@@ -38,11 +38,12 @@ if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
   <li class="vcard">
-    <?php echo get_avatar($customFields['person_email'][0],120); ?></a> 
     <h2 class="fn"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <?php echo get_avatar($customFields['person_email'][0],120); ?></a>
     <?php if ($title = str_replace(' | ', '<br>',$customFields['person_title'][0])): ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
+
   </li>
 <?php endwhile; ?>
 </ul>
@@ -116,11 +117,11 @@ if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
   <li class="vcard">
-    <?php echo get_avatar($customFields['person_email'][0],120); ?></a> 
     <h3 class="fn"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     <?php if ($title = str_replace(' | ', '<br>',$customFields['person_title'][0])): ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
+    <?php echo get_avatar($customFields['person_email'][0],120); ?></a>
     <ul>
     <?php if ($email = antispambot($customFields['person_email'][0])): ?>
     <li class="email"><a href="<?php echo 'mailto:'.$email; ?>" class="email"><?php echo $email; ?></a></li>
