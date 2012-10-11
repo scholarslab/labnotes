@@ -433,19 +433,12 @@ License: Apache License, version 2.0
     padding: 0;
   }
 
-  a:link,
-  a:visited {
-    color: #900;
+  /* Headings 1-6 */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
   }
-
-  a:hover,
-  a:active,
-  a:focus {
-    color: #700;
-  }
-
-  *:focus {
-    outline: none;
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none;
   }
 
   h1 {
@@ -453,15 +446,15 @@ License: Apache License, version 2.0
     line-height: 1.2;
   }
 
-  h1,
-  h2,
-  h3 {
-    font-weight: normal;
+  a:link, a:visited {
+    color: #900;
+  }
+  a:hover, a:active, a:focus {
+    color: #700;
   }
 
-  h1 a,
-  h2 a {
-    text-decoration: none;
+  *:focus {
+    outline: none;
   }
 
   blockquote {
@@ -477,15 +470,14 @@ License: Apache License, version 2.0
   input {
     vertical-align: middle;
   }
-
-  textarea {
-    max-width: 100%;
-  }
-
   input[type="submit"] {
     border: none;
     background: none;
     border: 1px solid #ccc;
+  }
+
+  textarea {
+    max-width: 100%;
   }
 
   .menu ul {
@@ -493,7 +485,6 @@ License: Apache License, version 2.0
     margin: 0;
     padding: 0;
   }
-
   .menu li {
     display: inline;
   }
@@ -503,7 +494,6 @@ License: Apache License, version 2.0
     color: #555;
     font-size: 90%;
   }
-
   .deck + * {
     margin-top: 0 !important;
   }
@@ -536,12 +526,10 @@ License: Apache License, version 2.0
     margin-bottom: 20px;
     text-align: center;
   }
-
   header[role="banner"] a {
     text-decoration: none;
     border: none;
   }
-
   header[role="banner"] h1 {
     width: 60%;
     margin-left: auto;
@@ -994,21 +982,17 @@ License: Apache License, version 2.0
     margin-bottom: 30px;
   }
 
-  #social-media a:not(:last-child) {
-    margin-right: 0.25em;
-  }
-
-  #social-media a:link,
-  #social-media a:visited {
+  #social-media a:link, #social-media a:visited {
     opacity: 0.5;
   }
-
-  #social-media a:hover {
+  #social-media a:hover, #social-media a:focus {
     opacity: 0.75;
   }
-
   #social-media a:active {
     opacity: 0.9;
+  }
+  #social-media a + a {
+    margin-left: 0.25em;
   }
 
   footer[role="contentinfo"] .menu ul {
@@ -1016,16 +1000,13 @@ License: Apache License, version 2.0
     padding: 0;
     margin: 0 0 30px;
   }
-
   footer[role="contentinfo"] .menu li {
     display: inline;
   }
-
-  footer[role="contentinfo"] .menu li:not(:first-child):before {
+  footer[role="contentinfo"] .menu li + li:before {
     content: " · ";
     color: rgba(0, 0, 0, 0.25);
   }
-
   footer[role="contentinfo"] .menu a {
     text-decoration: none;
     font-weight: bold;
