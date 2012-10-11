@@ -47,7 +47,7 @@ function labnotes_display_page_children($content)
     return $content;
 }
 
-add_filter('the_content', 'labnotes_display_page_children');
+// add_filter('the_content', 'labnotes_display_page_children');
 
 /**
  * Filters the 'excerpt_more' to provide a 'Continue reading' link. Currently
