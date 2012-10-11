@@ -1,0 +1,49 @@
+
+#events,
+#recent-posts {
+width: 48%;
+float:left;
+}
+
+#recent-posts {
+float:right;
+}
+
+article:after {
+  content: "";
+  clear:right;
+  height: 0;
+  overflow:hidden;
+  visibility:hidden;
+  float:none;
+  display:block;
+}
+article footer {
+    float:right;
+    width: 25%;
+    margin-top: 1em;
+}
+
+article .entry-content {
+    float:left;
+    width: 70%;
+}
+
+body.author .author-meta {
+  float:right;
+  width: 150px;
+  margin-left: 2em;
+  margin-bottom:2em;
+} 
+
+body.author .entry-content {
+  margin-right: 180px;
+}
+
+.people > li {
+float:left;
+width: 28%;
+margin-right: 2%;
+height:280px;
+}
+

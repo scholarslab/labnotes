@@ -1,0 +1,92 @@
+
+html {
+    padding-right: 60px;
+}
+
+#search {
+  right: 90px;
+}
+
+.blog article footer,
+.archive article footer,
+.single article footer {
+    float:right;
+    width: 25%;
+    margin-top: 1em;
+}
+
+.blog article .entry-content,
+.archive article .entry-content,
+.single article .entry-content {
+    float:left;
+    width: 70%;
+}
+
+.people > li {
+  padding: 1em;
+  border: 1px dotted #ccc;
+  background: #fefefe;
+  box-sizing:border-box;
+  zoom:1;
+}
+
+.people > li:before,
+.people > li:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.people > li:after {
+    clear: both;
+}
+
+.graduate_fellows > li {
+  width: 31%;
+  height: 180px;
+  margin-bottom:1em;
+}
+
+.people img {
+  float:left;
+  width: 60px;
+  height: 60px;
+}
+
+.people .fn {
+  font-size: 110%;
+}
+
+.people .title {
+  margin-bottom:1em;
+  color: #555;
+}
+
+.people li ul {
+  margin: 0 0 0 80px;
+  font-size: 82.5%;
+}
+
+.graduate_fellows .fn {
+  margin-bottom:1em;
+}
+
+.graduate_fellows .title {
+  margin-left: 80px;
+  margin-bottom:0;
+}
+
+.single-people .avatar {
+  margin:0;
+  width: auto;
+  height: auto;
+}
+
+.single-people .entry-content {
+  margin-right: 180px;
+}
+
+footer[role="contentinfo"] {
+    margin: 0 -60px;
+    padding: 20px 90px;
+}
+

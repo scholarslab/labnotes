@@ -1,0 +1,623 @@
+* {
+  word-wrap: break-word;
+}
+
+html {
+    background: url('images/stain2.png') top left no-repeat, url('images/subtle_freckles.png') top left;
+}
+
+body {
+    font: 87.5%/1.5 Georgia, serif;
+    color: #333;
+    margin:0;
+    padding:0;
+}
+
+a:link,
+a:visited {
+    color: #900;    
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #700;
+}
+
+*:focus {
+    outline:none;
+}
+
+h1 {
+    font-size:200%;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3 {
+    font-weight:normal;
+}
+
+h1 a,
+h2 a {
+    text-decoration:none;
+}
+
+blockquote {
+    color: #777;
+}
+
+img {
+  max-width: 100% !important;
+  width: auto;
+  height: auto;
+}
+
+input {
+    vertical-align:middle;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+input[type="submit"] {
+    border:none;
+    background:none;
+    border: 1px solid #ccc;
+}
+
+.menu ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.menu li {
+    display:inline;
+}
+.deck {
+    font-style:italic;
+    color: #555;
+    font-size:90%;
+}
+
+.deck + * {
+  margin-top:0 !important;
+}
+
+.alignright {
+    float:right;
+    margin-left: 1em;
+}
+
+img.avatar {
+    border: 1px dotted rgba(0,0,0,0.25);
+    padding: 2px;
+}
+
+.vcard abbr {
+  border:none;
+  text-decoration:none;
+  font-style:normal;
+}
+
+/* Removes list formatting for Google Calendar Events plugin lists. */
+.gce-list {
+  list-style:none;
+  padding-left:0;
+}
+
+header[role="banner"] {
+    border-bottom: 1px dotted rgba(0,0,0,0.25);
+    padding: 0 10px 2em;
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+header[role="banner"] a {
+  text-decoration:none;
+  border:none;
+}
+
+header[role="banner"] h1 {
+  width: 60%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#search {
+    font-size: 87%;
+}
+
+#search label {
+    display:none;
+}
+
+#search input[type="search"] {
+    width: 132px;
+    padding:4px 60px 4px 5px;
+    border: 1px dotted rgba(0,0,0,0.25);
+    border-width: 1px;
+}
+
+#search input[type="submit"] {
+    width: 60px;
+    margin-left: -60px;
+    border:0;
+    padding:4px 0;
+    background-color: transparent;
+    border: 1px dotted rgba(0,0,0,0.25);
+    border-width: 0 0 0 1px;
+    color: rgba(0,0,0,0.5);
+    font-style:italic;
+    font-family:serif;
+
+}
+
+#search input[type="search"]:focus {
+    border-color: rgba(0,0,0,0.25);
+    border-style:solid;
+}
+
+#search input[type="search"]:focus + input[type="submit"],
+.search #search input[type="submit"] {
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(255,255,255,0.85);
+    font-weight:bold;
+    border-style:solid;
+    border-width: 1px;
+}
+
+div[role="main"] {
+    padding-left:20px;
+    padding-right: 20px;
+}
+
+#homepage-blurb {
+    margin: -20px -20px 0px;
+    color: #eee;
+    background-color: #333;
+    background-image: url('images/slab/rotate.php');
+    background-image: 
+      -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      -ms-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('images/slab/rotate.php');
+
+    background-size: cover;
+    background-position: top left, center center;
+    background-repeat:no-repeat;
+}
+
+#homepage-blurb .content {
+    background: rgba(0,0,0,0.25);
+    padding: 20px;
+}
+
+.lt-ie10 #homepage-blurb .content {
+  background: rgba(0,0,0,0.5);
+}
+
+#homepage-blurb .menu {
+    list-style:none;
+    padding-left:0;
+    text-align:right;
+}
+
+#homepage-blurb .menu li {
+    display:inline-block;
+    line-height: 3em;
+}
+
+#homepage-blurb a {
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  font-weight:bold;
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+#homepage-blurb a:link,
+#homepage-blurb a:visited {
+  color: #fff;
+  background: rgba(0,0,0,0.25);
+}
+#homepage-blurb a:hover,
+#homepage-blurb a:active {
+  color: #fff;
+  background: rgb(0,0,0);
+}
+
+#homepage-blurb .menu a {
+  padding: 10px;
+  text-decoration:none;
+}
+
+.gce-page-list li,
+#recent-posts li {
+  margin-bottom:1em;
+  padding-bottom:1em;
+  border-bottom: 1px dotted #ccc;
+}
+
+.gce-page-list a {
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.gce-page-list .date {
+  display:block;
+  float:left;
+  padding: 0.5em 1em 1em;
+  background: #fff;
+  color: #555;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  text-align:center;
+  border-top: 5px solid #900;
+}
+
+.gce-page-list .day {
+  font-size: 1.75em;
+  display:block;
+  margin:0;
+  line-height:1em;
+}
+
+.gce-page-list .event-full .details {
+  margin-left: 5em;
+}
+
+.gce-page-list .event-full strong {
+  display:block;
+  margin-bottom:1em;
+}
+#recent-posts h3 {
+  font-weight:bold;
+}
+
+#recent-posts a {
+  text-decoration:none;
+}
+
+#recent-posts .byline {
+  display:block;
+  float:right;
+  width: 20%;
+  font-size: 85%;
+  margin-left: 10px;
+  margin-bottom:10px;
+  color: #999;
+  
+}
+
+article:not(:first-child) {
+    padding-top: 1em;
+    border-top: 1px dotted #ccc;
+}
+
+div[role="main"] h1 {
+    margin: 0 0 0.5em;
+}
+
+article .post-meta {
+    margin:0;
+    font: 80% Verdana, sans-serif;
+    font-weight:bold;
+    color: #555;
+}
+
+.single article header {
+    margin-bottom:60px;
+}
+
+.wp-caption {
+
+  /**
+   * Ensure captions are always, at most, the width of their container.
+   * See http://wordpress.stackexchange.com/questions/32931/removing-image-and-caption-dimension-attributes
+   */
+  max-width: 100%;
+}
+
+.wp-caption-text {
+    font-size: 88%;
+    font-style:italic;
+    color: #555;
+    margin:0 0 2em;
+}
+
+article .author-name a {
+    text-decoration:none;
+    color: #444;
+    font-weight:bold;
+}
+
+article .author-name:before {
+    content: "by ";
+    font-style:italic;
+    font-size: 87%;
+    color: rgba(0,0,0,0.5);
+    margin-right: 0.1em
+}
+
+article .author-description p {
+    font-size: 87%;
+    font-style:italic;
+    color: rgba(0,0,0,0.7);
+}
+
+article .author-description em,
+article .author-description i {
+    font-style:normal;
+}
+
+article .avatar {
+    margin-bottom:1em;
+}
+
+.single article .avatar {
+  float:left;
+  display:block;
+  margin:0 1em 0 0;
+  width: 60px;
+  height:60px;
+  padding: 2px;
+}
+article footer p {
+    margin: 0 0 1em;
+}
+
+nav.pagination {
+    clear:both;
+    overflow:hidden;
+    border-top:1px dotted rgba(0,0,0,0.25);
+    padding-top:1em;
+}
+
+nav.pagination ul {
+    margin-left:0;
+    padding-left:0;
+}
+
+nav.pagination li {
+    float:left;
+    display:block;
+    width: 50%;
+}
+nav.pagination li.newer {
+    float:right;
+    text-align:right;
+}
+
+.labnotes-page-children {
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+}
+
+.labnotes-page-children li:not(:last-child) {
+    margin-bottom:1em;
+}
+
+.labnotes-page-children li:before {
+    content: "···";
+    color:rgba(0,0,0,0.25);
+    display:block;
+    text-align:center;
+    margin: 1em 0;
+}
+
+.labnotes-page-children .permalink {
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#comments {
+    clear:both;
+    border-top: 1px dotted rgba(0,0,0,0.25);
+    margin-top:1em;
+}
+
+#comments-title {
+  font-style:italic;
+  color: rgba(0,0,0,0.5);
+  font-size:1.25em;
+  margin-bottom:2em;
+}
+
+.commentlist {
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+}
+
+.commentlist > li:not(:last-child) {
+    margin-bottom:1em;
+    border-bottom:1px dotted rgba(0,0,0,0.25);
+}
+
+.comment-meta {
+    float:right;
+    width: 25%;
+    list-style:none;
+    margin:1em 0;
+    padding:0;
+    font-size: 87.5%;
+}
+
+.comment-meta img {
+    margin-bottom: 1em;
+}
+
+.comment-meta a {
+    text-decoration:none;
+}
+
+.comment-content {
+    margin-right: 30%;
+}
+
+#respond {
+    border-top: 1px dotted rgba(0,0,0,0.25);
+}
+
+#commentform input,
+#commentform textarea {
+    display:block;
+}
+
+#commentform .required {
+    color: #900;
+}
+
+.form-allowed-tags {
+    color:rgba(0,0,0,0.5);
+    font-size:90%;
+}
+
+.authors {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.posts-list,
+.recent-posts{
+  list-style:none;
+  padding-left:0;
+}
+
+.posts-list li:not(:last-child) {
+  border-bottom: 1px dotted rgba(0,0,0,0.25);
+  padding-bottom:0.5em;
+  margin-bottom:0.5em;
+  overflow:hidden;
+}
+.posts-list a {
+  font-weight:bold;
+  text-decoration:none;
+  float:left;
+  width: 65%;
+}
+
+.posts-list span {
+  float:right;
+  text-align:right;
+  color: rgba(0,0,0,0.5);
+  font-style:italic;
+  width: 30%;
+}
+
+.people {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+  overflow:hidden;
+  zoom:1;
+}
+
+.post-type-archive-people h2,
+.people .fn {
+  margin:0;
+  font-weight:bold;
+  font-size: 1em;
+}
+
+.people .fn a {
+  text-decoration:none;
+}
+
+.people .title {
+  margin:0;
+  font-style:italic;
+  font-size:0.9em;
+}
+
+.people li ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+  font-size: 90%;
+}
+
+.single-people .avatar {
+  float:right;
+  margin-left: 10px;
+  width: 72px;
+  height: 72px;
+}
+
+.author-meta ul {
+  list-style:none;
+  padding-left:0;
+  font-size: 90%;
+  color: rgba(0,0,0,0.5);
+}
+
+footer[role="contentinfo"] {
+    padding:20px 0;
+    border-top: 1px dotted rgba(0,0,0,0.25);
+    margin: 20px;
+    text-align:center;
+    clear:both;
+}
+
+#slab-vcard {
+  font: 80% Verdana, sans-serif;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+#social-media a {
+}
+
+#social-media a:not(:last-child) {
+  margin-right: 0.25em;
+}
+
+#social-media a:link,
+#social-media a:visited {
+  opacity: 0.5;
+}
+
+#social-media a:hover {
+  opacity: 0.75;
+}
+
+#social-media a:active {
+  opacity: 0.9;
+}
+
+footer[role="contentinfo"] .menu ul {
+    font: 80% Verdana, sans-serif;
+    padding:0;
+    margin:0 0 30px;
+}
+
+footer[role="contentinfo"] .menu li {
+    display:inline;
+}
+
+footer[role="contentinfo"] .menu li:not(:first-child):before {
+    content: " · ";
+    color: rgba(0,0,0,0.25);
+}
+
+footer[role="contentinfo"] .menu a {
+    text-decoration:none;
+    font-weight:bold;
+}

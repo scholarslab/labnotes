@@ -1,0 +1,32 @@
+/* 
+Theme Name: Lab Notes
+Theme URI: http://github.com/scholarslab/labnotes
+Description: 
+Version: 1.0 
+Author: Jeremy Boggs 
+Author URI: http://scholarslab.org 
+License: Apache License, version 2.0
+*/
+
+@import "base";
+
+@media screen {
+  @import "normalize";
+  @import "media/screen";
+}
+
+@media screen and (min-width: 500px) {
+  @import "media/screen_500";
+}
+
+@media screen and (min-width: 720px) {
+  @import "media/screen_720";
+}
+
+@media screen and (min-width:1000px) {
+  @import "media/screen_1000";
+}
+
+@media print {
+  @import "media/print";
+}
