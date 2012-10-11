@@ -47,3 +47,11 @@ margin-right: 2%;
 height:280px;
 }
 
+.research li {
+  float:left;
+  width: 48%;
+}
+
+.research li:nth-child(even) {
+  float:right;
+}

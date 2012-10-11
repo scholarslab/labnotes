@@ -802,29 +802,6 @@ License: Apache License, version 2.0
     text-align: right;
   }
 
-  .labnotes-page-children {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .labnotes-page-children li:not(:last-child) {
-    margin-bottom: 1em;
-  }
-
-  .labnotes-page-children li:before {
-    content: "···";
-    color: rgba(0, 0, 0, 0.25);
-    display: block;
-    text-align: center;
-    margin: 1em 0;
-  }
-
-  .labnotes-page-children .permalink {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
   #comments {
     clear: both;
     border-top: 1px dotted rgba(0, 0, 0, 0.25);
@@ -995,6 +972,38 @@ License: Apache License, version 2.0
     margin-left: 0.25em;
   }
 
+  .research {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    overflow: hidden;
+    zoom: 1;
+  }
+  .research li a {
+    color: #404040;
+    text-decoration: none;
+  }
+  .research li a:link, .research li a:visited {
+    opacity: 0.9;
+  }
+  .research li a:hover, .research li a:focus, .research li a:active {
+    opacity: 1.0;
+  }
+  .research li a h2 {
+    color: #900;
+    font-size: 125%;
+  }
+  .research li a img {
+    border: 1px dotted #ccc;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+  }
+  .research li .excerpt {
+    color: #555;
+    font-weight: normal !important;
+  }
+
   footer[role="contentinfo"] .menu ul {
     font: 80% Verdana, sans-serif;
     padding: 0;
@@ -1060,6 +1069,15 @@ License: Apache License, version 2.0
     width: 28%;
     margin-right: 2%;
     height: 280px;
+  }
+
+  .research li {
+    float: left;
+    width: 48%;
+  }
+
+  .research li:nth-child(even) {
+    float: right;
   }
 }
 @media screen and (min-width: 720px) {

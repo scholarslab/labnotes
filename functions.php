@@ -211,7 +211,7 @@ function labnotes_register_post_types() {
             'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes'),
             'menu_position' => 20,
             'hierarchical' => false,
-            'has_archive' => true,
+            'has_archive' => false,
             'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'people')
         )
@@ -226,7 +226,7 @@ function labnotes_register_post_types() {
             'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt'),
             'menu_position' => 20,
             'hierarchical' => false,
-            'has_archive' => true,
+            'has_archive' => false,
             'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'research')
         )
