@@ -50,12 +50,15 @@ function labnotes_display_page_children($content)
 add_filter('the_content', 'labnotes_display_page_children');
 
 /**
- * Filters the 'excerpt_more' to provide a 'Continue reading' link.
+ * Filters the 'excerpt_more' to provide a 'Continue reading' link. Currently
+ * only updates the link for 'post' post types.
  */
 function labnotes_excerpt_more($more) {
-    global $post;
+  global $post;
+  if ($post->post_type == 'post') {
     $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">More.</a>';
-    return $more;
+  }
+  return $more;
 }
 
 add_filter('excerpt_more', 'labnotes_excerpt_more');
