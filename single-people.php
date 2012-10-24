@@ -16,13 +16,14 @@
   </ul>
   </div>
 
-<?php if ($userId = $customFields['person_user_id'][0]) : ?>
-
 <?php
+
+if ($customFields['person_user_id'][0] > 0) :
+
 // Create a posts query for all the current author's posts.
 $args = array(
 'posts_per_page' => -1,
-'author' => $userId
+'author' => $customFields['person_user_id'][0]
 );
 
 query_posts($args);
@@ -39,8 +40,11 @@ if (have_posts()) : ?>
 </ul>
 </div>
 <?php endif; ?>
-</div>
 <?php wp_reset_query(); ?>
-<?php endif; endwhile; endif; ?>
+
+<?php endif; ?>
+</div>
+
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
