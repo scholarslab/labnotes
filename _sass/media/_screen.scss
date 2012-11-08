@@ -197,7 +197,8 @@ div[role="main"] {
 }
 
 #homepage-blurb {
-    margin: -20px -20px 0px;
+    margin: -20px -20px 20px;
+
     color: #eee;
     background-color: #333;
     @include background(
@@ -258,7 +259,7 @@ div[role="main"] {
 }
 
 #homepage-blurb .content {
-    margin: -30px;
+    margin: 0;
     background: rgba(0,0,0,0.6);
     padding:30px;
 

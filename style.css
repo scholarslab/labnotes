@@ -601,7 +601,7 @@ License: Apache License, version 2.0
   }
 
   #homepage-blurb {
-    margin: -20px -20px 0px;
+    margin: -20px -20px 20px;
     color: #eee;
     background-color: #333;
     background: url("images/slab/rotate.php") center center no-repeat;
@@ -648,7 +648,7 @@ License: Apache License, version 2.0
   }
 
   #homepage-blurb .content {
-    margin: -30px;
+    margin: 0;
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
   }
@@ -1243,7 +1243,6 @@ License: Apache License, version 2.0
 
   #homepage-blurb {
     margin: -30px -30px 30px;
-    padding: 30px;
   }
   #homepage-blurb .menu li {
     display: block;
