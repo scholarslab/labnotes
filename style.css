@@ -706,7 +706,8 @@ License: Apache License, version 2.0
     font-weight: bold;
   }
 
-  #recent-posts a {
+  #recent-posts a,
+  #events a {
     text-decoration: none;
   }
 
