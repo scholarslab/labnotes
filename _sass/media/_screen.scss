@@ -201,71 +201,74 @@ div[role="main"] {
     color: #eee;
     background-color: #333;
     background-image: url('images/slab/rotate.php');
-    background-image: 
-      -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('images/slab/rotate.php');
-    background-image: 
-      -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('images/slab/rotate.php');
-    background-image: 
-      -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('images/slab/rotate.php');
-    background-image: 
-      -ms-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('images/slab/rotate.php');
-    background-image: 
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('images/slab/rotate.php');
+    @include background(
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) top left,
+      url('images/slab/rotate.php') center center
+    );
 
     background-size: cover;
-    background-position: top left, center center;
     background-repeat:no-repeat;
+
+    a {
+      font-weight:bold;
+      -webkit-transition: background 0.2s linear;
+      -moz-transition: background 0.2s linear;
+      -o-transition: background 0.2s linear;
+      transition: background 0.2s linear;
+
+      &:link,
+      &:visited {
+        color: #eee;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+      }
+    }
+
+    .menu {
+      list-style:none;
+      padding-left:0;
+      text-align:right;
+      font-size: 1.25em;
+      margin-top: 2em;
+      li {
+        display:block;
+        line-height: 3em;
+        margin-bottom:2px;
+      }
+
+      a {
+        padding: 10px;
+        text-decoration:none;
+        display:block;
+        text-align:center;
+        font-weight:normal;
+        text-transform:lowercase;
+        &:link,
+        &:visited {
+          background: rgba(0,0,0,0.5);
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: rgb(0,0,0);
+        }
+
+      }
+    }
 }
 
 #homepage-blurb .content {
     background: rgba(0,0,0,0.25);
-    padding: 20px;
+    padding: 40px;
 }
 
 .lt-ie10 #homepage-blurb .content {
   background: rgba(0,0,0,0.5);
-}
-
-#homepage-blurb .menu {
-    list-style:none;
-    padding-left:0;
-    text-align:right;
-}
-
-#homepage-blurb .menu li {
-    display:inline-block;
-    line-height: 3em;
-}
-
-#homepage-blurb a {
-  background: rgba(0,0,0,0.25);
-  color: #fff;
-  font-weight:bold;
-  -webkit-transition: background 0.2s linear;
-  -moz-transition: background 0.2s linear;
-  -o-transition: background 0.2s linear;
-  transition: background 0.2s linear;
-}
-
-#homepage-blurb a:link,
-#homepage-blurb a:visited {
-  color: #fff;
-  background: rgba(0,0,0,0.25);
-}
-#homepage-blurb a:hover,
-#homepage-blurb a:active {
-  color: #fff;
-  background: rgb(0,0,0);
-}
-
-#homepage-blurb .menu a {
-  padding: 10px;
-  text-decoration:none;
 }
 
 .gce-page-list li,

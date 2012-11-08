@@ -1,4 +1,18 @@
 
+#homepage-blurb {
+  .menu {
+    text-align:center;
+
+    li {
+      display:inline-block;
+    }
+
+    a {
+      padding: 0 1em;
+    }
+  }
+}
+
 #events,
 #recent-posts {
 width: 48%;

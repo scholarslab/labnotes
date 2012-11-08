@@ -7,6 +7,14 @@ html {
   right: 90px;
 }
 
+#homepage-blurb {
+  .menu {
+    li {
+      display:inline-block;
+    }
+  }
+}
+
 .blog article footer,
 .archive article footer,
 .single article footer {
