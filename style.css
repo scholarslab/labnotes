@@ -604,15 +604,8 @@ License: Apache License, version 2.0
     margin: -20px -20px 0px;
     color: #eee;
     background-color: #333;
-    background-image: url("images/slab/rotate.php");
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.5))) top left, url("images/slab/rotate.php") center center;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) top left, url("images/slab/rotate.php") center center;
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) top left, url("images/slab/rotate.php") center center;
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) top left, url("images/slab/rotate.php") center center;
-    background: -ms-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) top left, url("images/slab/rotate.php") center center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) top left, url("images/slab/rotate.php") center center;
+    background: url("images/slab/rotate.php") center center no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
   }
   #homepage-blurb a {
     font-weight: bold;
@@ -655,12 +648,12 @@ License: Apache License, version 2.0
   }
 
   #homepage-blurb .content {
-    background: rgba(0, 0, 0, 0.25);
-    padding: 40px;
+    margin: -30px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
   }
-
-  .lt-ie10 #homepage-blurb .content {
-    background: rgba(0, 0, 0, 0.5);
+  #homepage-blurb .content h1 {
+    line-height: 2.25;
   }
 
   .gce-page-list li,
@@ -727,7 +720,8 @@ License: Apache License, version 2.0
   }
 
   div[role="main"] h1 {
-    margin: 0 0 0.5em;
+    line-height: 2.25;
+    margin: 0;
   }
 
   article .post-meta {

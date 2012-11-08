@@ -200,15 +200,10 @@ div[role="main"] {
     margin: -20px -20px 0px;
     color: #eee;
     background-color: #333;
-    background-image: url('images/slab/rotate.php');
     @include background(
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) top left,
-      url('images/slab/rotate.php') center center
+      url('images/slab/rotate.php') center center no-repeat
     );
-
-    background-size: cover;
-    background-repeat:no-repeat;
-
+    background-size:cover;
     a {
       font-weight:bold;
       -webkit-transition: background 0.2s linear;
@@ -263,12 +258,13 @@ div[role="main"] {
 }
 
 #homepage-blurb .content {
-    background: rgba(0,0,0,0.25);
-    padding: 40px;
-}
+    margin: -30px;
+    background: rgba(0,0,0,0.6);
+    padding:30px;
 
-.lt-ie10 #homepage-blurb .content {
-  background: rgba(0,0,0,0.5);
+    h1 {
+      line-height:2.25;
+    }
 }
 
 .gce-page-list li,
@@ -335,7 +331,8 @@ article:not(:first-child) {
 }
 
 div[role="main"] h1 {
-    margin: 0 0 0.5em;
+    line-height:2.25;
+    margin: 0;
 }
 
 article .post-meta {
