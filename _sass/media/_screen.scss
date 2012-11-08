@@ -67,6 +67,25 @@ textarea {
   max-width: 100%;
 }
 
+table {
+  width: 100%;
+  margin:1em 0;
+
+  th {
+    text-align:left;
+    color: #999;
+    font-weight:normal;
+    border-bottom: 1px solid #ccc;
+    font-style:italic;
+    padding: 0 0.5em;
+  }
+
+  td {
+    border-bottom: 1px dotted #ccc;
+    padding: 1em 0.5em;
+  }
+}
+
 .menu {
   ul {
     list-style:none;
