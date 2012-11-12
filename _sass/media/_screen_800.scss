@@ -40,6 +40,9 @@ header[role="banner"] .main-nav {
 
       & + li {
           border-top: 1px dotted #ddd;
+          &:before {
+            content:none;
+          }
       }
   }
 

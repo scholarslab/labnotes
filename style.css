@@ -1153,6 +1153,9 @@ License: Apache License, version 2.0
   header[role="banner"] .main-nav li + li {
     border-top: 1px dotted #ddd;
   }
+  header[role="banner"] .main-nav li + li:before {
+    content: none;
+  }
   header[role="banner"] .main-nav a {
     text-decoration: none;
     display: block;
