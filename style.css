@@ -1186,6 +1186,7 @@ License: Apache License, version 2.0
     position: absolute;
     right: 20px;
     float: right;
+    top: 15px;
   }
   .admin-bar #search, .admin-bar
   .courtesy-nav {
