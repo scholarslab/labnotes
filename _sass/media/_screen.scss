@@ -139,12 +139,20 @@ header[role="banner"] {
   a {
     text-decoration:none;
     border:none;
+        @include transition (background 0.3s linear, color 0.3s linear);
   }
 
   h1 {
     width: 60%;
     margin-left:auto;
     margin-right:auto;
+  }
+
+  nav {
+    li + li:before {
+      content: "· ";
+      color: #999;
+    }
   }
 }
 
