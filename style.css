@@ -1103,7 +1103,7 @@ License: Apache License, version 2.0
     float: right;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 800px) {
   html {
     padding-left: 60px;
     padding-bottom: 60px;
@@ -1173,14 +1173,30 @@ License: Apache License, version 2.0
     color: rgba(0, 0, 0, 0.15);
   }
 
-  #search {
+  #search,
+  .courtesy-nav {
     position: absolute;
-    top: 10px;
+    right: 20px;
+    float: right;
+  }
+  .admin-bar #search, .admin-bar
+  .courtesy-nav {
+    top: 45px;
+  }
+
+  #search {
     right: 20px;
   }
 
-  .admin-bar #search {
-    top: 45px;
+  .courtesy-nav {
+    font-size: 11px;
+    line-height: 24px;
+    text-align: right;
+    right: 240px;
+  }
+  .courtesy-nav li + li:before {
+    content: "· ";
+    color: #ccc;
   }
 
   #rotunda {
@@ -1332,6 +1348,10 @@ License: Apache License, version 2.0
 
   #search {
     right: 90px;
+  }
+
+  .courtesy-nav {
+    right: 310px;
   }
 
   #homepage-blurb .menu li {

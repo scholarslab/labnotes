@@ -74,14 +74,30 @@ header[role="banner"] .main-nav {
 
 }
 
-#search {
+#search,
+.courtesy-nav {
   position:absolute;
-  top: 10px;
+  right: 20px;
+  float:right;
+  .admin-bar & {
+    top:45px;
+  }
+}
+
+#search {
   right: 20px;
 }
 
-.admin-bar #search {
-  top: 45px;
+.courtesy-nav {
+  font-size: 11px;
+  line-height: 24px;
+  text-align:right;
+  right: 240px;
+
+  li + li:before {
+    content: "· ";
+    color: #ccc;
+  }
 }
 
 #rotunda {
