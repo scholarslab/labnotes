@@ -70,6 +70,7 @@ if ( function_exists('register_nav_menus') ) {
 
 register_nav_menus( array(
     'header' => __( 'Header Navigation', 'labnotes' ),
+    'courtesy' => __( 'Courtesy Navigation', 'labnotes' ),
     'footer' => __( 'Footer Navigation', 'labnotes' )
 ) );
 

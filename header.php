@@ -50,10 +50,19 @@
         array(
           'theme_location' => 'header',
           'container' => 'nav',
-          'container_class' => 'menu',
+          'container_class' => 'menu main-nav',
           'depth' => '1'
         ) 
       ); 
+?>
+<?php wp_nav_menu(
+        array(
+          'theme_location' => 'courtesy',
+          'container' => 'nav',
+          'container_class' => 'menu courtesy-nav',
+          'depth' => '1'
+        )
+      );
 ?>
 <?php get_search_form(); ?>
   </header>
