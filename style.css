@@ -1135,41 +1135,36 @@ License: Apache License, version 2.0
     max-width: 100%;
   }
 
-  header[role="banner"] .menu ul {
+  header[role="banner"] .main-nav ul {
     margin: 60px 30px 30px;
   }
-
-  header[role="banner"] .menu li {
+  header[role="banner"] .main-nav li {
     display: block;
   }
-
-  header[role="banner"] .menu li + li {
+  header[role="banner"] .main-nav li + li {
     border-top: 1px dotted #ddd;
   }
-
-  header[role="banner"] .menu a {
+  header[role="banner"] .main-nav a {
     text-decoration: none;
     display: block;
     padding: 10px;
-    -webkit-transition: background 0.2s linear, color 0.2s linear;
-    -moz-transition: background 0.2s linear,color 0.2s linear;
-    -o-transition: background 0.2s linear, color 0.2s linear;
-    transition: background 0.2s linear, color 0.2s linear;
+    -webkit-transition: background 0.3s linear, color 0.3s linear;
+    -moz-transition: background 0.3s linear, color 0.3s linear;
+    -ms-transition: background 0.3s linear, color 0.3s linear;
+    -o-transition: background 0.3s linear, color 0.3s linear;
+    transition: background 0.3s linear, color 0.3s linear;
   }
-
-  header[role="banner"] .menu li.current-menu-item a,
-  header[role="banner"] .menu li.current-page-ancestor a {
-    color: #333;
-    font-weight: bold;
-  }
-
-  header[role="banner"] .menu a:hover {
+  header[role="banner"] .main-nav a:hover {
     color: #333;
     background: rgba(255, 255, 255, 0.75);
   }
-
-  header[role="banner"] .menu li.current-menu-item a:after,
-  header[role="banner"] .menu li.current-page-ancestor a:after {
+  header[role="banner"] .main-nav .current-menu-item a,
+  header[role="banner"] .main-nav .current-page-ancestor a {
+    color: #333;
+    font-weight: bold;
+  }
+  header[role="banner"] .main-nav .current-menu-item a:after,
+  header[role="banner"] .main-nav .current-page-ancestor a:after {
     content: "➸";
     float: right;
     text-align: right;
