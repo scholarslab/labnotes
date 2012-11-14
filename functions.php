@@ -486,3 +486,13 @@ function labnotes_people_query($attrs) {
   wp_reset_query();
   return html_entity_decode($html);
 }
+
+function labnotes_add_slug_to_body_class($classes) {
+  if (!is_front_page()) {
+    global $post;
+    $classes[] = $post->post_name;
+  }
+  return $classes;
+}
+
+add_filter('body_class', 'labnotes_add_slug_to_body_class');
