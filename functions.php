@@ -435,3 +435,54 @@ function get_person_image($size = '150') {
 
   return $html;
 }
+
+add_shortcode('labnotes_people', 'labnotes_people_query');
+
+function labnotes_people_query($attrs) {
+  extract(
+    shortcode_atts(
+      array(
+        'category' => 'staff',
+      ),
+      $attrs
+    )
+  );
+
+
+  $params = array(
+    'post_type' => 'people',
+    'posts_per_page' => '-1',
+    'meta_key' => 'person_family_name',
+    'orderby' => 'meta_value',
+    'order' => 'asc'
+  );
+
+  $category = $attrs['category'];
+  $params['meta_query'] = array(
+        array(
+          'key' => 'person_category',
+          'value' => $category
+        )
+      );
+
+
+  query_posts($params);
+  $html = '';
+  if (have_posts()) {
+        $html = '<ul class="people graduate_fellows">';
+        while (have_posts()) {
+          the_post();
+          $id = get_the_ID();
+            $html .= '<li class="vcard">'
+                   . '<a href="'. get_permalink($id) .'">'
+                   . get_person_image($id)
+                   . get_the_title($id)
+                   .'</a>'
+                   . '</li>';
+        }
+        $html = $html . '</ul>';
+    }
+
+  wp_reset_query();
+  return html_entity_decode($html);
+}
