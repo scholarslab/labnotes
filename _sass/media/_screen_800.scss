@@ -153,6 +153,8 @@ div[role="main"] {
     padding: 90px 30px 2em;
     border: 1px dotted rgba(0,0,0,0.35);
     border-width: 0 0 0 1px;
+    overflow:hidden;
+    zoom:1;
 }
 
 #homepage-blurb {
@@ -200,15 +202,38 @@ article .entry-content {
 
 .column {
   float:left;
-  width: 28%;
-  margin-right: 5%;
+  width: 48%;
+
+  overflow:hidden;
+  zoom:1;
+
+  &:nth-child(odd) {
+    float:right;
+  }
 }
 
 .staff > li {
   float:none;
   width: auto;
   height:auto;
-  margin:0 0 1em;
+  margin:0 0 2em;
+}
+
+.people > li {
+  width: 48%;
+  &:nth-child(3n) {
+    margin-right: auto;
+  }
+
+  &:nth-child(even) {
+    margin-right:0;
+  }
+
+  img {
+    display:block;
+    margin:0 0 10px;
+    max-height: 70%;
+  }
 }
 
 footer[role="contentinfo"] {

@@ -43,7 +43,7 @@ $departments = array(array('administration' => 'Administration', 'its_research' 
 ?>
 
 <?php foreach ($departments as $departmentArray):?>
-<div class="column">
+<div class="department">
 <?php foreach ($departmentArray as $field => $title):
   
   // Add additional argument so that 'person_department' equals our current 
@@ -65,27 +65,15 @@ $args = array_merge($defaultArgs, $deptArgs);
 query_posts($args);
 if (have_posts()) : ?>
 <h2><?php echo $title; ?></h2>
-<ul class="people staff">
+<ul class="staff">
 <?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
   <li class="vcard">
+    <a href="<?php the_permalink(); ?>"><?php echo get_person_image(); ?></a>
     <h3 class="fn"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     <?php if ($title = str_replace(' | ', '<br>',$customFields['person_title'][0])): ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
-    <?php echo get_person_image(); ?></a>
-    <ul>
-    <?php if ($email = antispambot($customFields['person_email'][0])): ?>
-    <li class="email"><a href="<?php echo 'mailto:'.$email; ?>" class="email"><?php echo $email; ?></a></li>
-    <?php endif; ?>
-    <?php if ($phone = $customFields['person_phone'][0]): ?>
-    <li class="tel"><?php echo labnotes_format_phone($phone); ?></li>
-    <?php endif; ?>
-    <?php if ($twitter = $customFields['person_twitter'][0]): ?>
-    <li class="twitter"><a href="http://twitter.com/<?php echo str_replace('@', '', $twitter); ?>" class="url"><?php echo '@'.$twitter; ?></a></li>
-    <?php endif; ?>
-
-    </ul>
   </li>
 <?php endwhile; ?>
 </ul>

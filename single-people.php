@@ -5,16 +5,23 @@
 
   <h1><?php the_title(); ?></h1>
   <?php echo get_person_image(); ?>
-
-  <div class="entry-content">
-
-  <?php the_content(); ?>
-    <div class="author-meta">
+  <div class="author-meta">
   <ul>
-        <?php if ($twitter = $customFields['person_twitter'][0]): ?><li>Twitter: <a href="http://twitter.com/<?php echo $twitter; ?>">@<?php echo $twitter; ?></a></li><?php endif; ?>
-        <?php if ($url = $customFields['person_url'][0]): ?><li>Site: <a href="<?php echo $url; ?>"><?php echo $customFields['person_given_name'][0]; ?>&#8217;s Site</a></li><?php endif; ?>
+    <?php if ($email = antispambot($customFields['person_email'][0])): ?>
+    <li class="email"><a href="<?php echo 'mailto:'.$email; ?>" class="email"><?php echo $email; ?></a></li>
+    <?php endif; ?>
+    <?php if ($phone = $customFields['person_phone'][0]): ?>
+    <li class="tel"><?php echo labnotes_format_phone($phone); ?></li>
+    <?php endif; ?>
+    <?php if ($twitter = $customFields['person_twitter'][0]): ?>
+    <li class="twitter"><a href="http://twitter.com/<?php echo str_replace('@', '', $twitter); ?>" class="url"><?php echo '@'.$twitter; ?></a></li>
+    <?php endif; ?>
+    <?php if ($url = $customFields['person_url'][0]): ?><li><a href="<?php echo $url; ?>">Personal Site</a></li><?php endif; ?>
   </ul>
   </div>
+
+  <div class="entry-content">
+  <?php the_content(); ?>
 
 <?php
 

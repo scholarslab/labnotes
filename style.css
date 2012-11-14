@@ -928,43 +928,91 @@ License: Apache License, version 2.0
     overflow: hidden;
     zoom: 1;
   }
+  .people > li {
+    box-sizing: border-box;
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  .people > li a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .people > li img {
+    display: block;
+    margin: 0 0 10px;
+    max-height: 80%;
+  }
 
   .page-template-staff-php h2,
-  .people .fn {
+  .staff .fn {
     margin: 0;
     font-weight: bold;
     font-size: 1em;
   }
 
-  .people .fn a {
+  .staff {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .staff .fn a {
     text-decoration: none;
   }
-
-  .people .title {
+  .staff .title {
     margin: 0;
     font-style: italic;
     font-size: 0.825em;
   }
+  .staff ul {
+    margin: 0;
+  }
+  .staff > li {
+    margin: 0 0 2em;
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+  }
+  .staff img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 1em 0 0;
+    float: left;
+  }
 
-  .people li ul {
+  .staff li ul {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
     font-size: 90%;
   }
 
+  .single-people .author-meta ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 90%;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .single-people .author-meta ul a {
+    text-decoration: none;
+    color: #777;
+  }
+  .single-people .author-meta ul li {
+    display: inline;
+  }
+  .single-people .author-meta ul li + li:before {
+    content: "· ";
+    color: rgba(0, 0, 0, 0.5);
+  }
   .single-people .avatar {
     float: right;
     margin-left: 10px;
     width: 72px;
     height: 72px;
-  }
-
-  .author-meta ul {
-    list-style: none;
-    padding-left: 0;
-    font-size: 90%;
-    color: rgba(0, 0, 0, 0.5);
+    margin: 1em 0 1em 1em;
   }
 
   footer[role="contentinfo"] {
@@ -1080,7 +1128,7 @@ License: Apache License, version 2.0
     margin-top: 1em;
   }
 
-  article .entry-content {
+  .single article .entry-content {
     float: left;
     width: 70%;
   }
@@ -1097,10 +1145,37 @@ License: Apache License, version 2.0
   }
 
   .people > li {
+    width: 32%;
+    height: 120px;
+    margin-bottom: 30px;
+    margin-right: 1%;
+  }
+  .people > li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .people > li img {
+    display: block;
+    margin: 0 0 10px;
+    max-height: 80%;
+  }
+
+  .single-people .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Class for department columns on staff listing. */
+  .department {
     float: left;
     width: 28%;
-    margin-right: 2%;
-    height: 280px;
+    margin-right: 5%;
+  }
+
+  .staff > li img {
+    float: none;
+    width: auto;
+    height: auto;
+    margin: 0 0 0.5em;
   }
 
   .research li {
@@ -1259,6 +1334,8 @@ License: Apache License, version 2.0
     padding: 90px 30px 2em;
     border: 1px dotted rgba(0, 0, 0, 0.35);
     border-width: 0 0 0 1px;
+    overflow: hidden;
+    zoom: 1;
   }
 
   #homepage-blurb {
@@ -1303,15 +1380,34 @@ License: Apache License, version 2.0
 
   .column {
     float: left;
-    width: 28%;
-    margin-right: 5%;
+    width: 48%;
+    overflow: hidden;
+    zoom: 1;
+  }
+  .column:nth-child(odd) {
+    float: right;
   }
 
   .staff > li {
     float: none;
     width: auto;
     height: auto;
-    margin: 0 0 1em;
+    margin: 0 0 2em;
+  }
+
+  .people > li {
+    width: 48%;
+  }
+  .people > li:nth-child(3n) {
+    margin-right: auto;
+  }
+  .people > li:nth-child(even) {
+    margin-right: 0;
+  }
+  .people > li img {
+    display: block;
+    margin: 0 0 10px;
+    max-height: 70%;
   }
 
   footer[role="contentinfo"] {
@@ -1382,65 +1478,20 @@ License: Apache License, version 2.0
     width: 70%;
   }
 
-  .people > li {
-    padding: 1em;
-    border: 1px dotted #ccc;
-    background: #fefefe;
-    box-sizing: border-box;
-    zoom: 1;
-  }
-
-  .people > li:before,
-  .people > li:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-  }
-
-  .people > li:after {
-    clear: both;
-  }
-
-  .graduate_fellows > li {
-    width: 31%;
-    height: 180px;
-    margin-bottom: 1em;
-  }
-
-  .people img {
-    float: left;
-    width: 60px;
-    height: 60px;
-  }
-
-  .people .fn {
-    font-size: 110%;
-  }
-
-  .people .title {
-    margin-bottom: 1em;
-    color: #555;
-  }
-
-  .people li ul {
-    margin: 0 0 0 80px;
-    font-size: 82.5%;
-  }
-
-  .graduate_fellows .fn {
-    margin-bottom: 1em;
-  }
-
-  .graduate_fellows .title {
-    margin-left: 80px;
-    margin-bottom: 0;
-  }
-
   .single-people .avatar {
     margin: 0;
     width: auto;
     height: auto;
+  }
+
+  .people > li {
+    width: 32%;
+  }
+  .people > li:nth-child(even) {
+    margin-right: auto;
+  }
+  .people > li:nth-child(3n) {
+    margin-right: 0;
   }
 
   .single-people .entry-content {

@@ -38,7 +38,7 @@ article footer {
     margin-top: 1em;
 }
 
-article .entry-content {
+.single article .entry-content {
     float:left;
     width: 70%;
 }
@@ -55,11 +55,47 @@ body.author .entry-content {
 }
 
 .people > li {
-float:left;
-width: 28%;
-margin-right: 2%;
-height:280px;
+  width: 32%;
+  height:120px;
+  margin-bottom: 30px;
+  margin-right: 1%;
+
+  &:nth-child(3n) {
+    margin-right:0;
+  }
+
+  img {
+    display:block;
+    margin:0 0 10px;
+    max-height: 80%;
+  }
 }
+
+.single-people {
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* Class for department columns on staff listing. */
+.department {
+  float:left;
+  width: 28%;
+  margin-right: 5%;
+}
+
+.staff {
+  > li {
+    img {
+      float:none;
+      width: auto;
+      height: auto;
+      margin: 0 0 0.5em;
+    }
+  }
+}
+
 
 .research li {
   float:left;
