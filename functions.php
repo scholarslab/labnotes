@@ -462,23 +462,14 @@ function labnotes_people_query($attrs) {
     )
   );
 
-
   $params = array(
     'post_type' => 'people',
     'posts_per_page' => '-1',
     'meta_key' => 'person_family_name',
     'orderby' => 'meta_value',
-    'order' => 'asc'
+    'order' => 'asc',
+    'people-category' => $attrs['category']
   );
-
-  $category = $attrs['category'];
-  $params['meta_query'] = array(
-        array(
-          'key' => 'person_category',
-          'value' => $category
-        )
-      );
-
 
   query_posts($params);
   $html = '';

@@ -23,12 +23,7 @@
 $defaultArgs = array(
   'post_type' => 'people',
   'posts_per_page' => '-1',
-  'meta_query' => array(
-    array(
-      'key' => 'person_category',
-      'value' => 'staff'
-    )
-  ),
+  'people-category' => 'staff',
   'orderby' => 'menu_order',
   'order' => 'asc'
 );
