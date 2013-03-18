@@ -103,6 +103,10 @@ header[role="banner"] .main-nav {
   }
 }
 
+#uvalib-header {
+  display:inline;
+}
+
 #rotunda {
     display:block;
     line-height:0;
@@ -117,6 +121,7 @@ header[role="banner"] .main-nav {
 .admin-bar #rotunda {
     top: 28px;
 }
+
 #rotunda img {
     padding:10px;
 }

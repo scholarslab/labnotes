@@ -562,6 +562,10 @@ License: Apache License, version 2.0
     color: #999;
   }
 
+  #uvalib-header {
+    display: none;
+  }
+
   #search {
     font-size: 87%;
   }
@@ -1281,6 +1285,10 @@ License: Apache License, version 2.0
   .courtesy-nav li + li:before {
     content: "· ";
     color: #ccc;
+  }
+
+  #uvalib-header {
+    display: inline;
   }
 
   #rotunda {
