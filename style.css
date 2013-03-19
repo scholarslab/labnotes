@@ -443,7 +443,7 @@ License: Apache License, version 2.0
 
   h1 {
     font-size: 200%;
-    line-height: 1.2;
+    line-height: 1;
   }
 
   h3 {
@@ -756,8 +756,8 @@ License: Apache License, version 2.0
   }
 
   div[role="main"] h1 {
-    line-height: 2.25;
-    margin: 0;
+    line-height: 1.25;
+    margin: 0.25em 0 0.5em;
   }
 
   article .post-meta {
