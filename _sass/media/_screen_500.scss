@@ -23,16 +23,6 @@ float:left;
 float:right;
 }
 
-article:after {
-  content: "";
-  clear:right;
-  height: 0;
-  overflow:hidden;
-  visibility:hidden;
-  float:none;
-  display:block;
-}
-
 article footer {
     float:right;
     width: 25%;

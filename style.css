@@ -727,6 +727,17 @@ License: Apache License, version 2.0
     color: #999;
   }
 
+  article:before, article:after {
+    content: "";
+    display: table;
+  }
+  article:after {
+    clear: both;
+  }
+  article, .ie article {
+    *zoom: 1;
+  }
+
   article:not(:first-child) {
     padding-top: 1em;
     border-top: 1px dotted #ccc;
@@ -1114,16 +1125,6 @@ License: Apache License, version 2.0
 
   #recent-posts {
     float: right;
-  }
-
-  article:after {
-    content: "";
-    clear: right;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    float: none;
-    display: block;
   }
 
   article footer {

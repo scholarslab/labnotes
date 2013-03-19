@@ -338,6 +338,10 @@ div[role="main"] {
   
 }
 
+article {
+  @include clearfix;
+}
+
 article:not(:first-child) {
     padding-top: 1em;
     border-top: 1px dotted #ccc;
