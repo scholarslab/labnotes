@@ -451,8 +451,6 @@ License: Apache License, version 2.0
     font-weight: bold;
     color: rgba(60, 60, 60, 0.75);
     line-height: 1em;
-    border-left: 1em solid #ccc;
-    padding-left: 0.5em;
   }
   h3 + * {
     margin-top: 0;
