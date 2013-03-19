@@ -1,7 +1,17 @@
 <?php get_header(); ?>
+<div id="articles">
 <?php if (is_search()): ?>
     <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'labnotes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 <?php endif; ?>
+<?php if (is_category()): ?>
+    <header class="archive-header">
+    <h1 class="page-title"><?php echo single_cat_title( '', false); ?></h1>
+    <?php if ( category_description() ) : // Show an optional category description ?>
+	<div class="archive-meta"><?php echo category_description(); ?></div>
+	<?php endif; ?>
+    </header>
+<?php endif; ?>
+
     <?php if (have_posts()) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -47,13 +57,31 @@
         <?php endif; ?>
     <?php else: ?>
         <p>We couldn't find the posts you were looking for.</p>
-        <h2>Recent Posts</h2>
-        <ul class="postbypost">
-        <?php wp_get_archives('type=postbypost&limit=20'); ?>
-        </ul>
-        <h2>Categories</h2>
-        <ul class="categories">
-        <?php wp_list_categories('title_li='); ?>
-        </ul>
     <?php endif; ?>
+    </div>
+    <div id="blog-archives">
+        <h2>Archives</h2>
+        <div id="by-taxonomy">
+            <h3>Categories</h3>
+            <ul class="categories">
+            <?php wp_list_categories('title_li='); ?>
+            </ul>
+
+            <h3>Tags</h3>
+            <?php wp_tag_cloud(); ?>
+        </div>
+
+        <div id="by-date">
+            <h3>Recent Posts</h3>
+            <ul class="postbypost">
+            <?php wp_get_archives('type=postbypost&limit=10'); ?>
+            </ul>
+
+            <h3>Posts by Year</h3>
+            <ul class="yearly">
+            <?php wp_get_archives('type=yearly'); ?>
+            </ul>
+        </div>
+
+    </div>
 <?php get_footer(); ?>

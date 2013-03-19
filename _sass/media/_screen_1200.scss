@@ -1,0 +1,21 @@
+.blog,
+.archive {
+
+  #articles {
+    float:left;
+    width: 70%;
+  }
+
+  #blog-archives {
+    float:right;
+    width: 25%;
+    margin:0;
+    padding:0;
+    border:none;
+
+    & > div {
+      @include reset-columns;
+    }
+  }
+}
+

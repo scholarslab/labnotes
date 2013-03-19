@@ -27,6 +27,10 @@ License: Apache License, version 2.0
   @import "media/screen_1000";
 }
 
+@media screen and (min-width:1200px) {
+  @import "media/screen_1200";
+}
+
 @media print {
   @import "media/print";
 }

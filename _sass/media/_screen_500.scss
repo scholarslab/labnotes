@@ -23,6 +23,33 @@ float:left;
 float:right;
 }
 
+#blog-archives {
+  margin: 20px -20px -20px;
+  padding: 20px;
+  border-top: 1px dotted #ccc;
+  @include clearfix;
+
+  & > div {
+    font-size: 90%;
+    @include span-columns (3, 6);
+
+    &:last-child {
+      @include span-columns (3 omega, 6);
+    }
+  }
+
+  ul {
+    list-style:none;
+    padding-left:0;
+  }
+  li a {
+    border-bottom: 1px dotted #ccc;
+    text-decoration:none;
+    padding: 8px 0;
+    display:block;
+  }
+}
+
 article footer {
     float:right;
     width: 25%;

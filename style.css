@@ -446,6 +446,18 @@ License: Apache License, version 2.0
     line-height: 1.2;
   }
 
+  h3 {
+    margin: 1.75em 0 0.875em;
+    font-weight: bold;
+    color: rgba(60, 60, 60, 0.75);
+    line-height: 1em;
+    border-left: 1em solid #ccc;
+    padding-left: 0.5em;
+  }
+  h3 + * {
+    margin-top: 0;
+  }
+
   a:link, a:visited {
     color: #900;
   }
@@ -1127,6 +1139,46 @@ License: Apache License, version 2.0
     float: right;
   }
 
+  #blog-archives {
+    margin: 20px -20px -20px;
+    padding: 20px;
+    border-top: 1px dotted #ccc;
+  }
+  #blog-archives:before, #blog-archives:after {
+    content: "";
+    display: table;
+  }
+  #blog-archives:after {
+    clear: both;
+  }
+  #blog-archives, .ie #blog-archives {
+    *zoom: 1;
+  }
+  #blog-archives > div {
+    font-size: 90%;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    display: inline;
+  }
+  #blog-archives > div:last-child {
+    width: 48.57143%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -2%;
+    display: inline;
+  }
+  #blog-archives ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #blog-archives li a {
+    border-bottom: 1px dotted #ccc;
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+  }
+
   article footer {
     float: right;
     width: 25%;
@@ -1354,6 +1406,11 @@ License: Apache License, version 2.0
     display: block;
   }
 
+  #blog-archives {
+    margin: 30px -30px -30px;
+    padding: 30px;
+  }
+
   article footer {
     float: none;
     width: auto;
@@ -1510,6 +1567,29 @@ License: Apache License, version 2.0
   footer[role="contentinfo"] {
     margin: 0 -60px;
     padding: 20px 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .blog #articles,
+  .archive #articles {
+    float: left;
+    width: 70%;
+  }
+  .blog #blog-archives,
+  .archive #blog-archives {
+    float: right;
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .blog #blog-archives > div,
+  .archive #blog-archives > div {
+    float: none;
+    width: auto;
+    margin-right: auto;
+    #margin-left: auto;
+    display: block;
   }
 }
 @media print {

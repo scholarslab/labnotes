@@ -27,6 +27,19 @@ h1 {
     line-height: 1.2;
 }
 
+h3 {
+  margin: rhythm(1) 0 rhythm(0.5);
+  font-weight:bold;
+  color: $default-color-light;
+  line-height:1em;
+  border-left: 1em solid #ccc;
+  padding-left: 0.5em;
+
+  & + * {
+    margin-top:0;
+  }
+}
+
 a {
   &:link,
   &:visited {
