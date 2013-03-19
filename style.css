@@ -1132,7 +1132,7 @@ License: Apache License, version 2.0
     margin-top: 1em;
   }
 
-  .single article .entry-content {
+  article .entry-content {
     float: left;
     width: 70%;
   }
