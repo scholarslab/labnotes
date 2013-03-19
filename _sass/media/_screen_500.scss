@@ -115,11 +115,14 @@ body.author .entry-content {
 }
 
 
-.research li {
-  float:left;
-  width: 48%;
-}
+ul.research {
 
-.research li:nth-child(even) {
-  float:right;
+  li {
+    float:left;
+    width: 48%;
+
+    &:nth-child(even) {
+      float:right;
+    }
+  }
 }

@@ -1235,12 +1235,11 @@ License: Apache License, version 2.0
     margin: 0 0 0.5em;
   }
 
-  .research li {
+  ul.research li {
     float: left;
     width: 48%;
   }
-
-  .research li:nth-child(even) {
+  ul.research li:nth-child(even) {
     float: right;
   }
 }
