@@ -1486,6 +1486,7 @@ License: Apache License, version 2.0
 
   #slab-vcard {
     float: left;
+    margin: 0;
   }
 
   footer[role="contentinfo"] .menu {
