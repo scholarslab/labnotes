@@ -5,9 +5,10 @@
 <?php endif; ?>
 <?php if (is_category()): ?>
     <header class="archive-header">
+    <em class="deck">Category</em>
     <h1 class="page-title"><?php echo single_cat_title( '', false); ?></h1>
     <?php if ( category_description() ) : // Show an optional category description ?>
-	<div class="archive-meta"><?php echo category_description(); ?></div>
+	<div class="archive-meta"><?php echo wpautop(category_description()); ?></div>
 	<?php endif; ?>
     </header>
 <?php endif; ?>

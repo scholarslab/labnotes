@@ -111,8 +111,9 @@ table {
 
 .deck {
   font-style:italic;
-  color: #555;
+  color: $default-color-light;
   font-size:90%;
+  margin-bottom:0;
 
   & + * {
     margin-top:0 !important;
@@ -451,6 +452,14 @@ nav.pagination li {
 nav.pagination li.newer {
     float:right;
     text-align:right;
+}
+
+.archive-meta {
+  color: $default-color-light;
+  p {
+    font-style:italic;
+    @include adjust-font-size-to(18px);
+  }
 }
 
 #comments {

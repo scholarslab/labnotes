@@ -518,8 +518,9 @@ License: Apache License, version 2.0
 
   .deck {
     font-style: italic;
-    color: #555;
+    color: rgba(60, 60, 60, 0.75);
     font-size: 90%;
+    margin-bottom: 0;
   }
   .deck + * {
     margin-top: 0 !important;
@@ -847,6 +848,15 @@ License: Apache License, version 2.0
   nav.pagination li.newer {
     float: right;
     text-align: right;
+  }
+
+  .archive-meta {
+    color: rgba(60, 60, 60, 0.75);
+  }
+  .archive-meta p {
+    font-style: italic;
+    font-size: 1.125em;
+    line-height: 1.55556em;
   }
 
   #comments {
