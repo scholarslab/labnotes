@@ -120,9 +120,10 @@ ul.research {
   li {
     float:left;
     width: 48%;
-
+    clear:left;
     &:nth-child(even) {
       float:right;
+      clear:right;
     }
   }
 }

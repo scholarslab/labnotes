@@ -736,7 +736,7 @@ ul.research {
         border: 1px dotted #ccc;
         padding: 10px;
         background: #fff;
-        box-sizing:border-box;
+        @include box-sizing(border-box);
       }
     }
     .excerpt {

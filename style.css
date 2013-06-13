@@ -1102,6 +1102,8 @@ License: Apache License, version 2.0
     border: 1px dotted #ccc;
     padding: 10px;
     background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   ul.research li .excerpt {
@@ -1246,9 +1248,11 @@ License: Apache License, version 2.0
   ul.research li {
     float: left;
     width: 48%;
+    clear: left;
   }
   ul.research li:nth-child(even) {
     float: right;
+    clear: right;
   }
 }
 @media screen and (min-width: 800px) {
