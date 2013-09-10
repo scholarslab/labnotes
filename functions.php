@@ -501,3 +501,19 @@ function labnotes_add_slug_to_body_class($classes) {
 }
 
 add_filter('body_class', 'labnotes_add_slug_to_body_class');
+
+/**
+ * If the content is empty for a Person post, see if there is an associated user
+ * and set the content to the user's bio field.
+ */
+function user_bio_the_content($content) {
+  if (is_singular('people') && empty($content)) {
+    if ($user = get_userdata(get_post_meta(get_the_ID(), 'person_user_id', true))) {
+      $content = $user->user_description;
+    }
+  }
+
+  return $content;
+}
+
+add_filter('the_content', 'user_bio_the_content');
