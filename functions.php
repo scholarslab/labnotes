@@ -431,20 +431,32 @@ function labnotes_widgets_init() {
 
 add_action('widgets_init', 'labnotes_widgets_init');
 
-function get_person_image($size = '150') {
+function get_person_image($postId = null, $options = array()) {
   global $post;
 
-  $postId = $post->ID;
+  $html = '';
 
+  // Set the size option if it isn't set.
+  $size = isset($options['size']) ? $options['size'] : '150';
+
+  // Set the post ID
+  $postId = $postId ? $postId : $post->ID;
+
+  // Get the post custom fields.
   $customFields = get_post_custom($postId);
 
-  $html = '';
+  // If the post has a custom field for person_user_id.
+  if($userId = $customFields['person_user_id'][0]) {
+    $user = get_userdata($userId);
+  }
+
+  $userEmail = $userId ? $user->user_email : $customFields['person_email'][0];
 
   if (has_post_thumbnail($postId)) {
     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postId ), 'thumbnail' );
     $html = '<img src="'.$image[0].'" class="avatar">';
   } else {
-    $html = get_avatar($customFields['person_email'][0],$size);
+    $html = get_avatar($userEmail, $size);
   }
 
   return $html;
