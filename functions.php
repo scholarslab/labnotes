@@ -567,3 +567,14 @@ function filter_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
 }
 
 add_filter( 'get_avatar', 'filter_get_avatar', 10, 5);
+
+/**
+ * Safe Pasting for TinyMCE (automatically clean up MS Word HTML)
+ * http://www.kevinleary.net/clean-up-microsoft-word-pasted-html-tinymce/
+ */
+function tinymce_paste_options($init) {
+  $init['paste_auto_cleanup_on_paste'] = true;
+  return $init;
+}
+
+if( is_admin() ) add_filter('tiny_mce_before_init', 'tinymce_paste_options');
