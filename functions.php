@@ -529,3 +529,18 @@ function user_bio_the_content($content) {
 }
 
 add_filter('the_content', 'user_bio_the_content');
+
+function people_author_link($link, $author_id, $author_nicename) {
+    $args = array(
+      'post_type' => 'people',
+      'meta_key' => 'person_user_id',
+      'meta_value' => $author_id
+    );
+
+    if ($person = reset(get_posts($args))) {
+      $link = get_permalink($person->ID);
+    }
+    return $link;
+}
+
+add_filter( 'author_link', 'people_author_link', 10, 3);
