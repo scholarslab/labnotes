@@ -544,3 +544,26 @@ function people_author_link($link, $author_id, $author_nicename) {
 }
 
 add_filter( 'author_link', 'people_author_link', 10, 3);
+
+
+function filter_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
+
+    if (is_numeric($id_or_email)) {
+      $args = array(
+        'post_type' => 'people',
+        'meta_key' => 'person_user_id',
+        'meta_value' => $id_or_email
+      );
+
+      if ($person = reset(get_posts($args))) {
+        if (has_post_thumbnail($person->ID)) {
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $person->ID ), 'thumbnail' );
+          $avatar = '<img src="'.$image[0].'" class="avatar" alt="'.$alt.'">';
+        }
+      }
+    }
+    return $avatar;
+
+}
+
+add_filter( 'get_avatar', 'filter_get_avatar', 10, 5);
