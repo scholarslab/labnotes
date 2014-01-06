@@ -1005,16 +1005,15 @@ License: Apache License, version 2.0
     margin: 0;
   }
   .staff > li {
-    margin: 0 0 2em;
+    display: block;
     clear: both;
-    overflow: hidden;
-    zoom: 1;
+    margin: 0 0 2em;
   }
   .staff img {
     display: block;
-    width: 80px;
-    height: 80px;
-    margin: 0 1em 0 0;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 0 1em 1em 0;
     float: left;
   }
 
@@ -1232,17 +1231,19 @@ License: Apache License, version 2.0
   }
 
   /* Class for department columns on staff listing. */
-  .department {
-    float: left;
-    width: 28%;
-    margin-right: 5%;
+  .staff {
+    justify-content: space-between;
   }
-
+  .staff > li {
+    display: inline-block;
+    width: 22%;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 0 2em;
+  }
   .staff > li img {
     float: none;
-    width: auto;
-    height: auto;
-    margin: 0 0 0.5em;
+    margin: 0 auto 0.5em;
   }
 
   ul.research li {
@@ -1463,13 +1464,6 @@ License: Apache License, version 2.0
   }
   .column:nth-child(odd) {
     float: right;
-  }
-
-  .staff > li {
-    float: none;
-    width: auto;
-    height: auto;
-    margin: 0 0 2em;
   }
 
   .people > li {

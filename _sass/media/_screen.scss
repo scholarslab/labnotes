@@ -614,17 +614,16 @@ nav.pagination li.newer {
   }
 
   > li {
-    margin: 0 0 2em;
+    display:block;
     clear:both;
-    overflow:hidden;
-    zoom:1;
+    margin: 0 0 2em;
   }
 
   img {
     display:block;
-    width: 80px;
-    height: 80px;
-    margin: 0 1em 0 0;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 0 1em 1em 0;
     float:left;
   }
 

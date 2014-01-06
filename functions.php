@@ -293,16 +293,6 @@ function labnotes_people_meta_box(){
     <p><label for="person_user_id">User</label></p>
     <p><?php wp_dropdown_users(array('show_option_none' => 'No User', 'name' => 'person_user_id', 'selected' => @$custom['person_user_id'][0])); ?></p>
 
-    <p><label for="person_department">Department</label></p>
-    <p>
-      <select name="person_department">
-      <option>Choose a Department</option>
-      <?php foreach ($departmentOptions as $name => $label): ?>
-      <option value="<?php echo $name; ?>"<?php if (@$custom['person_department'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
-      <?php endforeach; ?>
-      </select>
-    </p>
-
 <?php
 }
 
