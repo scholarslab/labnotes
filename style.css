@@ -769,6 +769,8 @@ License: Apache License, version 2.0
   .single article header {
     margin-bottom: 60px;
   }
+  
+  .ss-form-heading {display:none !important;}
 
   .wp-caption {
     /**
