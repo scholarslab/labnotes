@@ -1,8 +1,0 @@
-rvm use 1.9.3@labnotes
-
-if ! command -v bundle ; then
-  gem install bundler
-fi
-
-bundle install
-
