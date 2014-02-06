@@ -527,7 +527,9 @@ function people_author_link($link, $author_id, $author_nicename) {
       'meta_value' => $author_id
     );
 
-    if ($person = reset(get_posts($args))) {
+    $people = get_posts($args);
+    $person = reset($people);
+    if ($person) {
       $link = get_permalink($person->ID);
     }
     return $link;
@@ -545,7 +547,9 @@ function filter_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
         'meta_value' => $id_or_email
       );
 
-      if ($person = reset(get_posts($args))) {
+      $people = get_posts($args);
+      $person = reset($people);
+      if ($person) {
         if (has_post_thumbnail($person->ID)) {
           $image = wp_get_attachment_image_src( get_post_thumbnail_id( $person->ID ), 'thumbnail' );
           $avatar = '<img src="'.$image[0].'" class="avatar" alt="'.$alt.'">';
