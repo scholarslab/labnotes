@@ -9,28 +9,6 @@ License: Apache License, version 2.0
 */
 
 @import "base";
-
-@media screen {
-  @import "normalize";
-  @import "media/screen";
-}
-
-@media screen and (min-width: 500px) {
-  @import "media/screen_500";
-}
-
-@media screen and (min-width: 800px) {
-  @import "media/screen_800";
-}
-
-@media screen and (min-width:1000px) {
-  @import "media/screen_1000";
-}
-
-@media screen and (min-width:1200px) {
-  @import "media/screen_1200";
-}
-
-@media print {
-  @import "media/print";
-}
+@import "normalize";
+@import "media/screen";
+@import "media/print";
