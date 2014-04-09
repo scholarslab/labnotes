@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width">
 <title><?php bloginfo('site_title'); ?></title>
 
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700|Source+Code+Pro:400' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom" href="<?php bloginfo('atom_url'); ?>">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS" href="<?php bloginfo('rss2_url'); ?>">
@@ -42,7 +43,7 @@
       <h1>
         <a href="<?php bloginfo('url'); ?>" rel="home">
 
-          <img src="http://static.scholarslab.org/images/logos/slab/slab-logo-rgb-350px.png" alt="<?php bloginfo('site_title'); ?>">
+          <img id="slab-logo" src="http://static.scholarslab.org/images/logos/slab/slab-logo-rgb-350px.png" alt="<?php bloginfo('site_title'); ?>">
     
         </a>
       </h1>

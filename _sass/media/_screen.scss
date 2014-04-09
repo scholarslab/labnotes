@@ -1,3 +1,334 @@
+$grid: hide;
+
 @media screen {
+
+
+@include establish-baseline;
+
+html {
+    background: #f0f0f0;
+    margin:0;
+    padding:0 gutter();
+}
+
+body {
+    @include container($grid);
+    margin:0;
+    padding:0;
+    font-family: $default-font;
+    color: $default-color;
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+    height:auto;
+
+    &#slab-logo {
+        max-height: rhythm(2);
+    }
+
+}
+
+a {
+    @include link-colors(
+        $link-color,
+        $link-hover-color,
+        $link-active-color,
+        $link-visited-color,
+        $link-focus-color
+    );
+
+    @include transition(
+        color $default-transition-duration,
+        background-color $default-transition-duration
+    );
+
+    &:before {
+        @include single-transition(color);
+    }
+
+    img {
+        @include single-transition(opacity);
+    }
+}
+
+#{headings()} {
+
+    a {
+        text-decoration:none;
+    }
+}
+
+h1 {
+    @include adjust-font-size-to(63px);
+    @include adjust-leading-to(3,72px);
+    font-weight:200;
+}
+
+h2 {
+    @include adjust-font-size-to(24px);
+    @include leader(2, 24px);
+    color: $default-color-lighter;
+
+    h1 + &,
+    h1 ~ * &:first-child {
+        @include leader(1, 24px);
+    }
+
+}
+
+h3 {
+    @include adjust-font-size-to(20px);
+    color: $default-color-light;
+    font-weight:normal;
+    @include leader(2, 20px);
+
+    h2 + & {
+        @include leader(1, 20px);
+    }
+}
+
+h4 {
+    @include adjust-font-size-to($base-font-size);
+    @include leader(2);
+    h3 + & {
+        @include leader(1);
+    }
+}
+
+h5 {
+    @include adjust-font-size-to($base-font-size);
+    color: $default-color-light;
+    @include leader(2);
+    h4 + & {
+        @include leader(1);
+    }
+}
+
+h6 {
+    @include adjust-font-size-to($base-font-size);
+    color: $default-color-light;
+    @include leader(2);
+    h5 + & {
+        @include leader(1);
+    }
+}
+
+#{headings(3,6)} {
+    + * {
+        margin-top:0 !important;
+    }
+}
+
+p {
+    margin: rhythm(1) 0;
+}
+
+blockquote {
+    @include adjust-font-size-to(24px);
+    @include adjust-leading-to(1.5,24px);
+    font-weight: 200;
+}
+
+ul {
+  list-style:disc;
+}
+
+ol {
+  list-style:decimal;
+}
+
+ul,ol {
+  padding:0;
+  margin: rhythm(1) 0 rhythm(1) rhythm(1);
+
+  nav & {
+    margin-left:0;
+  }
+
+  ul {
+    list-style: circle;
+  }
+
+  ol {
+    list-style: upper-alpha;
+  }
+
+  ul, ol {
+    margin: 0 0 0 rhythm(1);
+
+    ul {
+      list-style:square;
+    }
+
+    ol {
+      list-style:lower-alpha;
+    }
+  }
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+th,
+td {
+  padding: rhythm(1) rhythm(0.5) 0;
+  @include trailing-border(1px);
+  border-color: rgba($default-color,.2);
+}
+
+th {
+  @include trailing-border(3px);
+  text-align:left;
+}
+
+img {
+  max-width:100%;
+  width:auto;
+  height:auto;
+}
+
+code {
+  font-family: $code-font;
+  @include adjust-font-size-to(16px);
+  color: $code-color;
+}
+
+del {
+  color: $default-color-lighter;
+}
+
+ins {
+  text-decoration:none;
+  background: $ins-color;
+}
+
+address {
+  font-style:normal;
+  margin: rhythm(1) 0;
+}
+
+br {
+  margin:0;
+  line-height:0;
+}
+
+hr {
+  border:none;
+  text-align:center;
+  &:before {
+    display:block;
+    content: " · · · · · ";
+    color: rgba($default-color-light, 0.5);
+  }
+}
+
+textarea {
+    width: 100%;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+em,
+i {
+    font-style:italic;
+}
+
+[role=main] {
+    background-color: #fafafa;
+    background-color: rgba(white, 0.8);
+    padding: rhythm(1) gutter();
+}
+
+.gce-list li {
+
+    margin: 0;
+    padding: rhythm(1) 0;
+    
+    & + li {
+        border-top: 1px dotted #ccc;
+    }
+
+    p.date {
+        margin:0;
+        font-weight:200;
+    }
+
+    h2 {
+        margin:0;
+    }
+
+    strong {
+        display:block;
+        @include trailer(2);
+        font-weight:200;
+        color: #666;
+    }
+
+}
+
+.post-meta {
+    @include adjust-font-size-to(14px);
+    @include adjust-leading-to(1, 14px);
+    @include trailer(2, 14px);
+}
+
+
+// Media query for 640px. Sets layout to 8 columns.
+@include susy-breakpoint('600px', 8) {
+
+
+body {
+    @include container($grid);
+    padding-left: gutter(4);
+    padding-right: gutter(4);
+
+}
+
+[role=main] {
+    @include padding-leader(3);
+    @include pad(1);
+
+    blockquote {
+        @include bleed(1);
+        padding-left:0;
+        padding-right:0;
+    }
+}
+
+
+}
+
+
+// Media query for 940px. Sets layout to 16 columns.
+@include susy-breakpoint('940px', 16) {
+
+body {
+    @include container($grid);
+    margin:0 auto;
+    padding-left: gutter(8);
+    padding-right: gutter(8);
+    max-width: 1000px;
+}
+
+[role=main] {
+    @include pad(3);
+
+    blockquote {
+        @include bleed(2);
+        padding-left:0;
+        padding-right:0;
+    }
+
+}
+
+
+}
 
 }
