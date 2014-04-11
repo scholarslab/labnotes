@@ -60,29 +60,5 @@
         <p>We couldn't find the posts you were looking for.</p>
     <?php endif; ?>
     </div>
-    <div id="blog-archives">
-        <h2>Archives</h2>
-        <div id="by-taxonomy">
-            <h3>Categories</h3>
-            <ul class="categories">
-            <?php wp_list_categories('title_li='); ?>
-            </ul>
-
-            <h3>Tags</h3>
-            <?php wp_tag_cloud(); ?>
-        </div>
-
-        <div id="by-date">
-            <h3>Recent Posts</h3>
-            <ul class="postbypost">
-            <?php wp_get_archives('type=postbypost&limit=10'); ?>
-            </ul>
-
-            <h3>Posts by Year</h3>
-            <ul class="yearly">
-            <?php wp_get_archives('type=yearly'); ?>
-            </ul>
-        </div>
-
-    </div>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
