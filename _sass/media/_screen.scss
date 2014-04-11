@@ -2,13 +2,12 @@ $grid: hide;
 
 @media screen {
 
-
 @include establish-baseline;
 
 html {
-    background: #f0f0f0;
+    background: #404040;
     margin:0;
-    padding:0 gutter();
+    padding:0;
 }
 
 body {
@@ -26,6 +25,7 @@ img {
 
     &#slab-logo {
         max-height: rhythm(2);
+        display:none;
     }
 
 }
@@ -61,9 +61,30 @@ a {
 }
 
 h1 {
-    @include adjust-font-size-to(63px);
-    @include adjust-leading-to(3,72px);
-    font-weight:200;
+    font-weight: 200;
+
+    @include adjust-font-size-to(36px);
+    @include adjust-leading-to(2,36px);
+
+    .archive article &,
+    .blog article & {
+        @include adjust-font-size-to(30px);
+        @include adjust-leading-to(2,30px);
+    }
+
+    @include susy-breakpoint(600px, 8) {
+
+        @include adjust-font-size-to(63px);
+        @include adjust-leading-to(3,63px);
+
+        .archive article &,
+        .blog article & {
+            @include adjust-font-size-to(45px);
+            @include adjust-leading-to(2,45px);
+        }
+
+    }
+
 }
 
 h2 {
@@ -240,10 +261,157 @@ i {
     font-style:italic;
 }
 
-[role=main] {
-    background-color: #fafafa;
-    background-color: rgba(white, 0.8);
+/* Utility classes */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.skip {
+    @extend .visuallyhidden;
+}
+
+#slab-vcard {
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(0.75,16px);
+}
+
+.author_image {
+    display:block;
+    float:left;
+    width: span(2);
+    height: span(2);
+
+    img {
+        @include border-radius(span(2));
+    }
+
+}
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: rhythm() 0 rhythm() gutter();
+}
+
+.alignleft {
+    float: left;
+    margin: rhythm() gutter() rhythm() 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: rhythm() auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: rhythm() 0 rhythm() gutter();
+}
+
+a img.alignnone {
+    margin: rhythm() auto;
+}
+
+a img.alignleft {
+    float: left;
+    margin: rhythm() gutter() rhythm() 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    max-width: 100%; /* Image does not overflow the content area */
+
+    img {
+        margin-bottom:0 !important;
+    }
+}
+
+.wp-caption.alignnone {}
+
+.wp-caption.alignleft {}
+
+.wp-caption.alignright {}
+
+.wp-caption p {
+    @include adjust-font-size-to(15px);
+    color: $default-color-light;
+    @include adjust-leading-to(1, 15px);
+    margin-top:0;
+}
+
+[role=banner],
+[role=main],
+[role=contentinfo] {
     padding: rhythm(1) gutter();
+
+    @include susy-breakpoint(600px, 8) {
+        @include pad(1);
+    }
+
+    @include susy-breakpoint(940px, 16) {
+        @include pad(3);
+    }
+
+    @include susy-breakpoint(1200px, 20) {
+        @include pad(5);
+    }
+
+}
+
+[role=banner] {
+    background-color: #fafafa;
+}
+
+[role=contentinfo] {
+    background-color: #404040;
+    color: #fafafa;
+}
+
+nav {
+    ul {
+        list-style:none;
+        padding-left:0;
+        margin:0;
+        word-spacing: rhythm(1);
+        text-transform:uppercase;
+        letter-spacing: 1px;
+        @include adjust-font-size-to(14px);
+        @include adjust-leading-to(1,14px);
+    }
+
+    li {
+        display:inline;
+        word-spacing: normal;
+    }
+
+    a {
+        text-decoration:none;
+    }
+}
+
+[role=main] {
+    background-color: #f4f4f4;
 }
 
 .gce-list li {
@@ -286,14 +454,11 @@ i {
 
 body {
     @include container($grid);
-    padding-left: gutter(4);
-    padding-right: gutter(4);
-
 }
 
 [role=main] {
+    
     @include padding-leader(3);
-    @include pad(1);
 
     blockquote {
         @include bleed(1);
@@ -311,24 +476,28 @@ body {
 
 body {
     @include container($grid);
-    margin:0 auto;
-    padding-left: gutter(8);
-    padding-right: gutter(8);
-    max-width: 1000px;
 }
 
 [role=main] {
-    @include pad(3);
 
-    blockquote {
+    blockquote,
+    #homepage-blurb h1 {
         @include bleed(2);
         padding-left:0;
         padding-right:0;
     }
 
+    #homepage-blurb h1 {
+        @include bleed(3);
+        padding-left:0;
+        padding-right:0;
+
+        text-align:center;
+    }
+
 }
 
-
 }
+
 
 }
