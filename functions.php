@@ -435,12 +435,14 @@ function get_person_image($postId = null, $options = array()) {
   // Get the post custom fields.
   $customFields = get_post_custom($postId);
 
+  $userEmail = $customFields['person_email'][0];
+  $userId = $customFields['person_user_id'][0];
+  
   // If the post has a custom field for person_user_id.
-  if($userId = $customFields['person_user_id'][0]) {
-    $user = get_userdata($userId);
+  if($userId > 0) {
+      $user = get_userdata($userId);
+      $userEmail = $user->user_email;
   }
-
-  $userEmail = $userId ? $user->user_email : $customFields['person_email'][0];
 
   if (has_post_thumbnail($postId)) {
     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postId ), 'thumbnail' );
