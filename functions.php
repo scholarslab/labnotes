@@ -449,7 +449,7 @@ function get_person_image($postId = null, $options = array()) {
     $html = get_avatar($userEmail, $size);
   }
 
-  return $html;
+  return '<span class="person_image">' . $html . '</span>';
 }
 
 add_shortcode('labnotes_people', 'labnotes_people_query');
@@ -556,7 +556,7 @@ function filter_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
         }
       }
     }
-    return $avatar;
+    return '<span class="author_image">' . $avatar . '</span>';
 
 }
 
