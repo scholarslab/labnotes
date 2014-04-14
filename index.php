@@ -22,7 +22,7 @@
                     <?php endif; ?>
                     <h1><a href="<?php the_permalink(); ?>" rel="permalink" title="Permanent link for <?php the_title(); ?>"><?php the_title(); ?></a></h1>
                 <?php if (is_single() || is_home() || is_archive()): ?>
-                    <p class="post-meta"><?php the_time('F j, Y'); ?> &middot; <?php the_category(', '); ?></p>
+                    <p class="post-meta">By <?php the_author(); ?> &middot; <?php the_time('F j, Y'); ?> &middot; <?php the_category(', '); ?></p>
                 <?php endif; ?>
                 </header>
                 <div class="entry-content">
@@ -34,7 +34,7 @@
                     endif;
                 ?>
                 </div>
-                <?php if (!is_page()): ?>
+                <?php if (is_single()): ?>
                     <footer>
                         <p class="author-name"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="byline" title="See all posts by <?php echo get_the_author_meta('user_firstname'); ?>"><?php echo(get_the_author_meta('user_firstname') . '&nbsp;' . get_the_author_meta('user_lastname')); ?></a></p>
                           <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" title="See all posts by <?php echo get_the_author_meta('user_firstname'); ?>"><?php echo get_avatar(get_the_author_meta('ID'),120); ?></a>
