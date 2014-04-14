@@ -347,7 +347,8 @@ i {
     height: rhythm(2);
 
     img {
-        @include border-radius(30px);
+        @include border-radius(rhythm(1));
+        vertical-align:middle;
     }
 
 }
@@ -543,14 +544,55 @@ article + article:before {
     margin-left:0;
 
     > li {
-        background: #fafafa;
-        background: rgba(white, 0.9);
-        padding: rhythm(1);
-        margin-bottom: rhythm(1);
+        margin-bottom: rhythm(1, 20);
+    }
+
+    .comment-content {
+        :first-child {
+            margin-top:0;
+        }
+    }
+
+    .comment-meta {
+        list-style:none;
+        padding-left:0;
+        margin:0;
+        word-spacing:0;
+
+        a {
+            text-decoration:none;
+        }
+
+        li {
+            display:inline-block;
+
+            &.image {
+                display:block;
+                float:left;
+                margin-left: -35px;
+            }
+
+            .author_image {
+                width: 30px;
+                height: 30px;
+            }
+
+            &.fn {
+                font-weight: 600;
+            }
+
+            &.comment-date:before,
+            &.comment-date:after {
+                content: " · ";
+                color: $default-color-lighter;
+            }
+        }
+
     }
 
     li ul {
         padding-left: rhythm(1);
+        list-style:none;
     }
 }
 

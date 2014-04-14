@@ -1,762 +1,111 @@
-@charset "UTF-8";
-/* 
-Theme Name: Lab Notes
-Theme URI: http://github.com/scholarslab/labnotes
-Description: 
-Version: 1.0 
-Author: Jeremy Boggs 
-Author URI: http://scholarslab.org 
-License: Apache License, version 2.0
+/*
+Syntax error: 1.5em*px isn't a valid CSS value.
+        on line 547 of /Users/jeremy/Sites/scholarslab/wp-content/themes/labnotes/_sass/media/_screen.scss
+        from line 13 of /Users/jeremy/Sites/scholarslab/wp-content/themes/labnotes/_sass/style.scss
+
+Backtrace:
+/Users/jeremy/Sites/scholarslab/wp-content/themes/labnotes/_sass/media/_screen.scss:547
+/Users/jeremy/Sites/scholarslab/wp-content/themes/labnotes/_sass/style.scss:13
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/script/value/number.rb:263:in `to_s'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:367:in `visit_prop'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `map'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `map'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:479:in `visit_media'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `map'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:88:in `block in with_import'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:88:in `with_import'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/tree/root_node.rb:20:in `render'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/sass-3.3.4/lib/sass/engine.rb:274:in `render'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:171:in `block (2 levels) in compile'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:166:in `block in compile'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/logger.rb:46:in `red'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:165:in `compile'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:144:in `compile_if_required'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:129:in `block (2 levels) in run'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `each'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `block in run'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:126:in `run'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/compiler.rb:24:in `compile'
+/Users/jeremy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/forwardable.rb:183:in `compile'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:101:in `sass_modified'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:89:in `sass_callback'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/watch.rb:14:in `call'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/watch.rb:14:in `run_callback'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:69:in `block in listen_callback'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:66:in `each'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:66:in `listen_callback'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `call'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `report_changes'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/adapter.rb:313:in `poll_changed_directories'
+/Users/jeremy/.rvm/gems/ruby-2.1.0@labnotes-realign/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-@media screen {
-  html {
-    font-size: 125%;
-    line-height: 1.5em;
-  }
-
-  html {
-    background: rgba(0, 0, 0, 0.1);
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans Pro", sans-serif;
-    color: #5a5a5a;
-    color: rgba(90, 90, 90, 0.9);
-  }
-  body::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-  }
-  img#slab-logo {
-    max-height: 3em;
-    display: none;
-  }
-
-  a {
-    color: #5a5a5a;
-    color: rgba(90, 90, 90, 0.8);
-    -moz-transition: color 0.5s, background-color 0.5s;
-    -o-transition: color 0.5s, background-color 0.5s;
-    -webkit-transition: color 0.5s, background-color 0.5s;
-    transition: color 0.5s, background-color 0.5s;
-  }
-  a:visited {
-    color: #747474;
-  }
-  a:focus {
-    color: #414141;
-  }
-  a:hover {
-    color: #414141;
-  }
-  a:active {
-    color: #5a5a5a;
-  }
-  a:visited {
-    color: rgba(116, 116, 116, 0.8);
-  }
-  a:focus {
-    color: rgba(65, 65, 65, 0.8);
-  }
-  a:hover {
-    color: rgba(65, 65, 65, 0.8);
-  }
-  a:active {
-    color: rgba(90, 90, 90, 0.8);
-  }
-  a:before {
-    -moz-transition: color 0.5s;
-    -o-transition: color 0.5s;
-    -webkit-transition: color 0.5s;
-    transition: color 0.5s;
-  }
-  a img {
-    -moz-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-  }
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    text-decoration: none;
-  }
-
-  h1 {
-    font-weight: 200;
-    font-size: 2.25em;
-    line-height: 1.33333em;
-    line-height: 1.33333em;
-    margin: 0;
-    margin-bottom: 0.66667em;
-  }
-  .archive article h1, .blog article h1 {
-    font-size: 2em;
-    line-height: 1.5em;
-    line-height: 1.5em;
-    margin-bottom: 0.75em;
-  }
-}
-@media screen and (min-width: 600px) {
-  h1 {
-    font-size: 3em;
-    line-height: 1.5em;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media screen {
-  h2 {
-    font-size: 1.5em;
-    line-height: 2em;
-    margin-top: 2em;
-    font-weight: 600;
-  }
-  h1 + h2, h1 ~ * h2:first-child {
-    margin-top: 1em;
-  }
-
-  h3 {
-    font-size: 1.5em;
-    line-height: 2em;
-    color: rgba(90, 90, 90, 0.75);
-    font-weight: 200;
-    margin-top: 2em;
-  }
-  h2 + h3 {
-    margin-top: 1em;
-  }
-
-  h4 {
-    font-size: 1em;
-    line-height: 1.5em;
-    margin-top: 3em;
-  }
-  h3 + h4 {
-    margin-top: 1.5em;
-  }
-
-  h5 {
-    font-size: 1em;
-    line-height: 1.5em;
-    color: rgba(90, 90, 90, 0.5);
-    margin-top: 3em;
-  }
-  h4 + h5 {
-    margin-top: 1.5em;
-  }
-
-  h6 {
-    font-size: 1em;
-    line-height: 1.5em;
-    color: rgba(90, 90, 90, 0.75);
-    margin-top: 3em;
-  }
-  h5 + h6 {
-    margin-top: 1.5em;
-  }
-
-  h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
-    margin-top: 0 !important;
-  }
-
-  p {
-    margin: 1.5em 0;
-  }
-
-  blockquote {
-    font-size: 1em;
-    line-height: 1.5em;
-    line-height: 1.5em;
-    font-weight: 200;
-  }
-
-  ul {
-    list-style: disc;
-  }
-
-  ol {
-    list-style: decimal;
-  }
-
-  ul, ol {
-    padding: 0;
-    margin: 1.5em 0;
-  }
-  nav ul, nav ol {
-    margin-left: 0;
-  }
-  ul ul, ol ul {
-    list-style: circle;
-  }
-  ul ol, ol ol {
-    list-style: upper-alpha;
-  }
-  ul ul, ul ol, ol ul, ol ol {
-    margin: 0 0 0 1.5em;
-  }
-  ul ul ul, ul ol ul, ol ul ul, ol ol ul {
-    list-style: square;
-  }
-  ul ul ol, ul ol ol, ol ul ol, ol ol ol {
-    list-style: lower-alpha;
-  }
-
-  ::-moz-list-bullet,
-  ::-moz-list-number {
-    color: rgba(90, 90, 90, 0.5);
-  }
-
-  dl {
-    margin: 1.5em 0;
-  }
-
-  dt {
-    font-weight: 600;
-  }
-
-  dd {
-    margin-left: 5.26316%;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  th,
-  td {
-    padding: 1.5em 0.75em 0;
-    border-bottom-width: 0.05em;
-    border-bottom-style: solid;
-    padding-bottom: 1.45em;
-    border-color: rgba(90, 90, 90, 0.2);
-  }
-
-  th {
-    border-bottom-width: 0.15em;
-    border-bottom-style: solid;
-    padding-bottom: 1.35em;
-    text-align: left;
-  }
-
-  img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
-
-  code {
-    font-family: "Source Code Pro", monospace, monospace;
-    font-size: 0.8em;
-    line-height: 1.875em;
-    color: rgba(90, 90, 90, 0.75);
-  }
-
-  pre {
-    font-family: "Source Code Pro", monospace, monospace;
-    font-size: 0.8em;
-    line-height: 1.875em;
-    color: rgba(90, 90, 90, 0.75);
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap !important;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-  }
-
-  /**
-   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
-   */
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-
-  sup {
-    top: -0.5em;
-  }
-
-  sub {
-    bottom: -0.25em;
-  }
-
-  del {
-    color: rgba(90, 90, 90, 0.5);
-  }
-
-  ins {
-    text-decoration: none;
-    background: rgba(90, 90, 90, 0.75);
-  }
-
-  abbr,
-  acronym {
-    border-bottom: 1px dotted rgba(90, 90, 90, 0.5);
-  }
-
-  address {
-    font-style: normal;
-    margin: 1.5em 0;
-  }
-
-  br {
-    margin: 0;
-    line-height: 0;
-  }
-
-  hr {
-    border: none;
-    text-align: center;
-  }
-  hr:before {
-    display: block;
-    content: " · · · · · ";
-    color: rgba(90, 90, 90, 0.5);
-  }
-
-  textarea {
-    width: 100%;
-  }
-
-  strong,
-  b {
-    font-weight: 600;
-  }
-
-  em,
-  i {
-    font-style: italic;
-  }
-
-  /* Utility classes */
-  .visuallyhidden, .skip {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  #slab-vcard {
-    font-size: 0.8em;
-    line-height: 1.875em;
-    line-height: 1.40625em;
-  }
-
-  .author_image {
-    display: block;
-    width: 3em;
-    height: 3em;
-  }
-  .author_image img {
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
-  }
-
-  .alignnone {
-    margin: 5px 20px 20px 0;
-  }
-
-  .aligncenter,
-  div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-  }
-
-  .alignright {
-    float: right;
-    margin: 1.5em 0 1.5em 5.26316%;
-  }
-
-  .alignleft {
-    float: left;
-    margin: 1.5em 5.26316% 1.5em 0;
-  }
-
-  .aligncenter {
-    display: block;
-    margin: 1.5em auto;
-  }
-
-  a img.alignright {
-    float: right;
-    margin: 1.5em 0 1.5em 5.26316%;
-  }
-
-  a img.alignnone {
-    margin: 1.5em auto;
-  }
-
-  a img.alignleft {
-    float: left;
-    margin: 1.5em 5.26316% 1.5em 0;
-  }
-
-  a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .wp-caption {
-    max-width: 100%;
-    /* Image does not overflow the content area */
-  }
-  .wp-caption img {
-    margin-bottom: 0 !important;
-  }
-
-  .wp-caption p {
-    font-size: 0.75em;
-    line-height: 2em;
-    color: rgba(90, 90, 90, 0.75);
-    line-height: 2em;
-    margin-top: 0;
-  }
-
-  [role=banner],
-  [role=main],
-  [role=contentinfo] {
-    padding: 1.5em 5.26316%;
-  }
-}
-@media screen and (min-width: 600px) {
-  [role=banner],
-  [role=main],
-  [role=contentinfo] {
-    padding-left: 12.82051%;
-    padding-right: 12.82051%;
-  }
-}
-@media screen and (min-width: 940px) {
-  [role=banner],
-  [role=main],
-  [role=contentinfo] {
-    padding-left: 18.98734%;
-    padding-right: 18.98734%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  [role=banner],
-  [role=main],
-  [role=contentinfo] {
-    padding-left: 25.25253%;
-    padding-right: 25.25253%;
-  }
-}
-
-@media screen {
-  [role=banner] {
-    background-color: #fafafa;
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-
-  nav ul,
-  .menu ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.7em;
-    line-height: 2.14286em;
-    line-height: 2.14286em;
-  }
-  nav li,
-  .menu li {
-    display: inline;
-  }
-  nav li + li,
-  .menu li + li {
-    margin-left: 1.5em;
-  }
-  nav a,
-  .menu a {
-    text-decoration: none;
-  }
-
-  [role=main] {
-    background-color: #f4f4f4;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  .pagination {
-    text-align: justify;
-  }
-  .pagination:before, .pagination:after {
-    content: " ";
-    display: table;
-    width: 100%;
-  }
-  .pagination li {
-    display: inline-block;
-    float: left;
-  }
-  .pagination li + li {
-    float: right;
-  }
-  .pagination a {
-    border: 2px solid #ccc;
-    border-color: rgba(0, 0, 0, 0.1);
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    display: block;
-  }
-
-  article + article:before {
-    display: block;
-    content: " ";
-    height: 3em;
-    width: 100px;
-    border-top: 2px solid #ccc;
-    border-top-color: rgba(0, 0, 0, 0.1);
-    margin: 3em auto 0;
-  }
-
-  .gce-list li {
-    margin: 0;
-    padding: 1.5em 0;
-  }
-  .gce-list li + li {
-    border-top: 1px dotted #ccc;
-  }
-  .gce-list li p.date {
-    margin: 0;
-    font-weight: 200;
-  }
-  .gce-list li h2 {
-    margin: 0;
-  }
-  .gce-list li strong {
-    display: block;
-    margin-bottom: 3em;
-    font-weight: 200;
-    color: #666;
-  }
-
-  .post-meta {
-    font-size: 0.75em;
-    line-height: 2em;
-    line-height: 2em;
-  }
-
-  .commentlist {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-  }
-  .commentlist > li {
-    background: #fafafa;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-  }
-  .commentlist li ul {
-    padding-left: 1.5em;
-  }
-}
-@media screen and (min-width: 600px) {
-  body {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  body::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  [role=main] {
-    padding-top: 4.5em;
-  }
-  [role=main] blockquote {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin: -12.82051%;
-    padding: 12.82051%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  [role=main] .commentlist blockquote {
-    margin: 0 0 0 1.5em !important;
-    padding: 0 !important;
-  }
-}
-@media screen and (min-width: 940px) {
-  body {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  body::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  [role=main] blockquote,
-  [role=main] #homepage-blurb h1 {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin: -12.65823%;
-    padding: 12.65823%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  [role=main] #homepage-blurb h1 {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin: -18.98734%;
-    padding: 18.98734%;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-  }
-}
-@media print {
-  * {
-    background: transparent !important;
-    color: black !important;
-    /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  a, a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* Don't show links for images, or javascript/internal links */
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /* h5bp.com/t */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2, h3 {
-    page-break-after: avoid;
-  }
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: 1.5em*px isn't a valid CSS value.\A         on line 547 of /Users/jeremy/Sites/scholarslab/wp-content/themes/labnotes/_sass/media/_screen.scss\A         from line 13 of /Users/jeremy/Sites/scholarslab/wp-content/themes/labnotes/_sass/style.scss"; }
