@@ -71,7 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   html {
-    background: #404040;
+    background: rgba(0, 0, 0, 0.1);
     margin: 0;
     padding: 0;
   }
@@ -84,6 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 0;
     font-family: "Source Sans Pro", sans-serif;
     color: #5a5a5a;
+    color: rgba(90, 90, 90, 0.9);
   }
   body::after {
     content: " ";
@@ -102,23 +103,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   a {
-    color: #888888;
+    color: #5a5a5a;
+    color: rgba(90, 90, 90, 0.8);
     -moz-transition: color 0.5s, background-color 0.5s;
     -o-transition: color 0.5s, background-color 0.5s;
     -webkit-transition: color 0.5s, background-color 0.5s;
     transition: color 0.5s, background-color 0.5s;
   }
   a:visited {
-    color: #a2a2a2;
+    color: #747474;
   }
   a:focus {
-    color: #6f6f6f;
+    color: #414141;
   }
   a:hover {
-    color: #6f6f6f;
+    color: #414141;
   }
   a:active {
-    color: #888888;
+    color: #5a5a5a;
+  }
+  a:visited {
+    color: rgba(116, 116, 116, 0.8);
+  }
+  a:focus {
+    color: rgba(65, 65, 65, 0.8);
+  }
+  a:hover {
+    color: rgba(65, 65, 65, 0.8);
+  }
+  a:active {
+    color: rgba(90, 90, 90, 0.8);
   }
   a:before {
     -moz-transition: color 0.5s;
@@ -133,55 +147,57 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transition: opacity 0.5s;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
   }
 
   h1 {
     font-weight: 200;
-    font-size: 1.8em;
-    line-height: 1.66667em;
-    line-height: 1.66667em;
+    font-size: 2.25em;
+    line-height: 1.33333em;
+    line-height: 1.33333em;
+    margin: 0;
+    margin-bottom: 0.66667em;
   }
   .archive article h1, .blog article h1 {
-    font-size: 1.5em;
-    line-height: 2em;
-    line-height: 2em;
+    font-size: 2em;
+    line-height: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 0.75em;
   }
 }
 @media screen and (min-width: 600px) {
   h1 {
-    font-size: 3.15em;
-    line-height: 1.42857em;
-    line-height: 1.42857em;
-  }
-  .archive article h1, .blog article h1 {
-    font-size: 2.25em;
-    line-height: 1.33333em;
-    line-height: 1.33333em;
+    font-size: 3em;
+    line-height: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
   }
 }
 
 @media screen {
   h2 {
-    font-size: 1.2em;
-    line-height: 1.25em;
-    margin-top: 2.5em;
-    color: rgba(90, 90, 90, 0.5);
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-top: 2em;
+    font-weight: 600;
   }
   h1 + h2, h1 ~ * h2:first-child {
-    margin-top: 1.25em;
+    margin-top: 1em;
   }
 
   h3 {
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 1.5em;
+    line-height: 2em;
     color: rgba(90, 90, 90, 0.75);
-    font-weight: normal;
-    margin-top: 3em;
+    font-weight: 200;
+    margin-top: 2em;
   }
   h2 + h3 {
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 
   h4 {
@@ -196,7 +212,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   h5 {
     font-size: 1em;
     line-height: 1.5em;
-    color: rgba(90, 90, 90, 0.75);
+    color: rgba(90, 90, 90, 0.5);
     margin-top: 3em;
   }
   h4 + h5 {
@@ -213,7 +229,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 1.5em;
   }
 
-  h3 + *, h4 + *, h5 + *, h6 + * {
+  h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
     margin-top: 0 !important;
   }
 
@@ -222,9 +238,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   blockquote {
-    font-size: 1.2em;
-    line-height: 1.25em;
-    line-height: 1.875em;
+    font-size: 1em;
+    line-height: 1.5em;
+    line-height: 1.5em;
     font-weight: 200;
   }
 
@@ -238,7 +254,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   ul, ol {
     padding: 0;
-    margin: 1.5em 0 1.5em 1.5em;
+    margin: 1.5em 0;
   }
   nav ul, nav ol {
     margin-left: 0;
@@ -257,6 +273,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   ul ul ol, ul ol ol, ol ul ol, ol ol ol {
     list-style: lower-alpha;
+  }
+
+  ::-moz-list-bullet,
+  ::-moz-list-number {
+    color: rgba(90, 90, 90, 0.5);
+  }
+
+  dl {
+    margin: 1.5em 0;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin-left: 5.26316%;
   }
 
   table {
@@ -293,6 +326,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(90, 90, 90, 0.75);
   }
 
+  pre {
+    font-family: "Source Code Pro", monospace, monospace;
+    font-size: 0.8em;
+    line-height: 1.875em;
+    color: rgba(90, 90, 90, 0.75);
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
   del {
     color: rgba(90, 90, 90, 0.5);
   }
@@ -300,6 +364,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   ins {
     text-decoration: none;
     background: rgba(90, 90, 90, 0.75);
+  }
+
+  abbr,
+  acronym {
+    border-bottom: 1px dotted rgba(90, 90, 90, 0.5);
   }
 
   address {
@@ -356,14 +425,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .author_image {
     display: block;
-    float: left;
-    width: 47.36842%;
-    height: 47.36842%;
+    width: 3em;
+    height: 3em;
   }
   .author_image img {
-    -moz-border-radius: 47.36842%;
-    -webkit-border-radius: 47.36842%;
-    border-radius: 47.36842%;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
   }
 
   .alignnone {
@@ -461,34 +529,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media screen {
   [role=banner] {
     background-color: #fafafa;
+    background-color: rgba(255, 255, 255, 0.75);
   }
 
-  [role=contentinfo] {
-    background-color: #404040;
-    color: #fafafa;
-  }
-
-  nav ul {
+  nav ul,
+  .menu ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
-    word-spacing: 1.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.7em;
     line-height: 2.14286em;
     line-height: 2.14286em;
   }
-  nav li {
+  nav li,
+  .menu li {
     display: inline;
-    word-spacing: normal;
   }
-  nav a {
+  nav li + li,
+  .menu li + li {
+    margin-left: 1.5em;
+  }
+  nav a,
+  .menu a {
     text-decoration: none;
   }
 
   [role=main] {
     background-color: #f4f4f4;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .pagination {
+    text-align: justify;
+  }
+  .pagination:before, .pagination:after {
+    content: " ";
+    display: table;
+    width: 100%;
+  }
+  .pagination li {
+    display: inline-block;
+    float: left;
+  }
+  .pagination li + li {
+    float: right;
+  }
+  .pagination a {
+    border: 2px solid #ccc;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    display: block;
+  }
+
+  article + article:before {
+    display: block;
+    content: " ";
+    height: 3em;
+    width: 100px;
+    border-top: 2px solid #ccc;
+    border-top-color: rgba(0, 0, 0, 0.1);
+    margin: 3em auto 0;
   }
 
   .gce-list li {
@@ -513,10 +616,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   .post-meta {
-    font-size: 0.7em;
-    line-height: 2.14286em;
-    line-height: 2.14286em;
-    margin-bottom: 4.28571em;
+    font-size: 0.75em;
+    line-height: 2em;
+    line-height: 2em;
+  }
+
+  .commentlist {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .commentlist > li {
+    background: #fafafa;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  .commentlist li ul {
+    padding-left: 1.5em;
   }
 }
 @media screen and (min-width: 600px) {
@@ -542,6 +659,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 12.82051%;
     padding-left: 0;
     padding-right: 0;
+  }
+  [role=main] .commentlist blockquote {
+    margin: 0 0 0 1.5em !important;
+    padding: 0 !important;
   }
 }
 @media screen and (min-width: 940px) {

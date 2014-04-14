@@ -19,7 +19,7 @@ $susy: (
 );
 
 // Colors
-$base-color                     : #888;
+$base-color                     : rgb(90,90,90);
 
 $base-color-light               : lighten($base-color, 10%);
 $base-color-lighter             : lighten($base-color, 20%);
