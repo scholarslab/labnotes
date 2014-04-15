@@ -6,6 +6,7 @@ $grid: hide;
 
 html {
     background: rgba(black, 0.1);
+
     margin:0;
     padding:0;
 }
@@ -23,12 +24,6 @@ img {
     max-width:100%;
     max-height:100%;
     height:auto;
-
-    &#slab-logo {
-        max-height: rhythm(2);
-        display:none;
-    }
-
 }
 
 a {
@@ -96,6 +91,7 @@ h1 {
 
 h2 {
     @include adjust-font-size-to(30px);
+    @include adjust-leading-to(1, 30px);
     @include leader(2, 30px);
     font-weight:600;
 
@@ -107,13 +103,14 @@ h2 {
 }
 
 h3 {
-    @include adjust-font-size-to(30px);
+    @include adjust-font-size-to(25px);
+    @include adjust-leading-to(2, 25px);
     color: $default-color-light;
     font-weight:200;
-    @include leader(2, 30px);
+    @include leader(2, 25px);
 
     h2 + & {
-        @include leader(1, 30px);
+        @include leader(1, 25px);
     }
 }
 
@@ -228,12 +225,6 @@ td {
 th {
   @include trailing-border(3px);
   text-align:left;
-}
-
-img {
-  max-width:100%;
-  width:auto;
-  height:auto;
 }
 
 code {
@@ -423,25 +414,23 @@ a img.aligncenter {
 [role=main],
 [role=contentinfo] {
     padding: rhythm(1) gutter();
-
-    @include susy-breakpoint(600px, 8) {
-        @include pad(1);
-    }
-
-    @include susy-breakpoint(940px, 16) {
-        @include pad(3);
-    }
-
-    @include susy-breakpoint(1200px, 20) {
-        @include pad(5);
-    }
-
 }
 
 [role=banner] {
     background-color: #fafafa;
     background-color: rgba(white, 0.75);
 }
+
+#homelink {
+    display:block;
+    height: rhythm(1.5) !important;
+    margin-bottom: rhythm(0.5);
+
+    img {
+        vertical-align:middle;
+    }
+}
+
 
 nav,
 .menu {
@@ -460,6 +449,10 @@ nav,
 
         & + li {
             margin-left: rhythm();
+        }
+
+        ul {
+            display:none;
         }
     }
 
@@ -506,29 +499,31 @@ article + article:before {
     margin: rhythm(2) auto 0;
 }
 
-.gce-list li {
+.gce-list {
+    list-style:none;
+    li {
+        margin: 0;
+        padding: rhythm(1) 0;
 
-    margin: 0;
-    padding: rhythm(1) 0;
-    
-    & + li {
-        border-top: 1px dotted #ccc;
-    }
+        & + li {
+            border-top: 1px dotted #ccc;
+        }
 
-    p.date {
-        margin:0;
-        font-weight:200;
-    }
+        p.date {
+            margin:0;
+            font-weight:200;
+        }
 
-    h2 {
-        margin:0;
-    }
+        h2 {
+            margin:0;
+        }
 
-    strong {
-        display:block;
-        @include trailer(2);
-        font-weight:200;
-        color: #666;
+        strong {
+            display:block;
+            @include trailer(2);
+            font-weight:200;
+            color: #666;
+        }
     }
 
 }
@@ -544,7 +539,7 @@ article + article:before {
     margin-left:0;
 
     > li {
-        margin-bottom: rhythm(1, 20);
+        margin-bottom: rhythm(1, 20px);
     }
 
     .comment-content {
@@ -604,6 +599,12 @@ body {
     @include container($grid);
 }
 
+[role=banner],
+[role=main],
+[role=contentinfo] {
+    @include pad(1);
+}
+
 [role=main] {
     
     @include padding-leader(3);
@@ -632,26 +633,44 @@ body {
     @include container($grid);
 }
 
+a#homelink {
+    float:left;
+    width: span(2 of 10);
+    @include pull(3 of 10);
+}
+
+[role=banner],
+[role=main],
+[role=contentinfo] {
+    @include pad(3);
+}
+
 [role=main] {
 
-    blockquote,
-    #homepage-blurb h1 {
+    blockquote {
         @include bleed(2);
         padding-left:0;
         padding-right:0;
     }
 
-    #homepage-blurb h1 {
-        @include bleed(3);
-        padding-left:0;
-        padding-right:0;
-
-        text-align:center;
-    }
 
 }
 
 }
 
+@include susy-breakpoint('1200px', 20) {
+
+body {
+    @include container($grid);
+}
+
+[role=banner],
+[role=main],
+[role=contentinfo] {
+    @include pad(5);
+}
+
+
+}
 
 }
