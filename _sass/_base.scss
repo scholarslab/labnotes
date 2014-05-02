@@ -14,6 +14,7 @@ $default-transition-duration: .5s;
 
 // Susy
 $susy: (
+  columns: 12,
   gutters: 20px/80px,
   global-box-sizing: border-box
 );

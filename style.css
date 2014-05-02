@@ -152,11 +152,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   h1 {
     font-weight: 200;
-    font-size: 2.25em;
-    line-height: 1.33333em;
-    line-height: 1.33333em;
+    font-size: 2em;
+    line-height: 1.5em;
+    line-height: 1.5em;
     margin: 0;
-    margin-bottom: 0.66667em;
+    margin-bottom: 0.75em;
   }
   .archive article h1, .blog article h1 {
     font-size: 2em;
@@ -169,7 +169,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   h1 {
     font-size: 3em;
     line-height: 1.5em;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -180,6 +180,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 2em;
     line-height: 1em;
     margin-top: 2em;
+    margin-bottom: 1em;
     font-weight: 600;
   }
   h1 + h2, h1 ~ * h2:first-child {
@@ -287,7 +288,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   dd {
-    margin-left: 5.26316%;
+    margin-left: 1.69492%;
   }
 
   table {
@@ -428,23 +429,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   .alignnone {
-    margin: 5px 20px 20px 0;
+    margin: 1.5em 0;
   }
 
   .aligncenter,
   div.aligncenter {
     display: block;
-    margin: 5px auto 5px auto;
+    margin: 1.5em auto;
   }
 
   .alignright {
     float: right;
-    margin: 1.5em 0 1.5em 5.26316%;
+    margin: 1.5em 0 1.5em 1.69492%;
   }
 
   .alignleft {
     float: left;
-    margin: 1.5em 5.26316% 1.5em 0;
+    margin: 1.5em 1.69492% 1.5em 0;
   }
 
   .aligncenter {
@@ -454,18 +455,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   a img.alignright {
     float: right;
-    margin: 1.5em 0 1.5em 5.26316%;
+    margin: 1.5em 0 1.5em 1.69492%;
   }
-
   a img.alignnone {
     margin: 1.5em auto;
   }
-
   a img.alignleft {
     float: left;
-    margin: 1.5em 5.26316% 1.5em 0;
+    margin: 1.5em 1.69492% 1.5em 0;
   }
-
   a img.aligncenter {
     display: block;
     margin-left: auto;
@@ -479,7 +477,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .wp-caption img {
     margin-bottom: 0 !important;
   }
-
   .wp-caption p {
     font-size: 0.75em;
     line-height: 2em;
@@ -491,7 +488,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=banner],
   [role=main],
   [role=contentinfo] {
-    padding: 1.5em 5.26316%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 8.47458%;
+    padding-right: 8.47458%;
   }
 
   [role=banner] {
@@ -540,7 +540,278 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-color: #f4f4f4;
     background-color: rgba(255, 255, 255, 0.5);
   }
+  .singular [role=main] header {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -10.20408%;
+    margin-left: -10.20408%;
+    padding-right: 10.20408%;
+    padding-left: 10.20408%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header h1, .singular [role=main] header p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 8.47458%;
+    padding-right: 8.47458%;
+  }
+  .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
+    padding-top: 60px;
+  }
+  .singular [role=main] header h1:last-child, .singular [role=main] header p:last-child {
+    padding-bottom: 60px;
+  }
+  .singular [role=main] header h1 a, .singular [role=main] header p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  [role=main] #homepage-blurb {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -10.20408%;
+    margin-left: -10.20408%;
+    padding-right: 10.20408%;
+    padding-left: 10.20408%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+    padding-top: 0 !important;
+  }
+  [role=main] #homepage-blurb a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 8.47458%;
+    padding-right: 8.47458%;
+  }
+  [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
+    padding-top: 60px;
+  }
+  [role=main] #homepage-blurb h1:last-child, [role=main] #homepage-blurb p:last-child {
+    padding-bottom: 60px;
+  }
+  [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+  }
 
+  .people-list {
+    list-style: none;
+    margin-left: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -10.20408%;
+    margin-left: -10.20408%;
+    padding-right: 10.20408%;
+    padding-left: 10.20408%;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .people-list {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -25.64103%;
+    margin-left: -25.64103%;
+    padding-right: 25.64103%;
+    padding-left: 25.64103%;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 940px) {
+  .people-list {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -30.61224%;
+    margin-left: -30.61224%;
+    padding-right: 30.61224%;
+    padding-left: 30.61224%;
+    padding: 0;
+  }
+}
+@media screen {
+  .people-list li {
+    min-height: 7.5em;
+    background: rgba(0, 0, 0, 0.2);
+    width: 32.20339%;
+    float: left;
+  }
+  .people-list li:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .people-list li:nth-child(3n + 2) {
+    margin-left: 33.89831%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n + 3) {
+    margin-left: 67.79661%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n) {
+    width: 32.20339%;
+    float: left;
+  }
+  .people-list li:nth-child(3n):nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n):nth-child(3n + 2) {
+    margin-left: 33.89831%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n):nth-child(3n + 3) {
+    margin-left: 67.79661%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media screen and (min-width: 940px) {
+  .people-list li {
+    width: 24.05063%;
+    float: left;
+  }
+  .people-list li:nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .people-list li:nth-child(4n + 2) {
+    margin-left: 25.31646%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(4n + 3) {
+    margin-left: 50.63291%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(4n + 4) {
+    margin-left: 75.94937%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n) {
+    width: 24.05063%;
+    float: left;
+  }
+  .people-list li:nth-child(3n):nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .people-list li:nth-child(3n):nth-child(4n + 2) {
+    margin-left: 25.31646%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n):nth-child(4n + 3) {
+    margin-left: 50.63291%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(3n):nth-child(4n + 4) {
+    margin-left: 75.94937%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(4n) {
+    width: 24.05063%;
+    float: left;
+  }
+  .people-list li:nth-child(4n):nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(4n):nth-child(4n + 2) {
+    margin-left: 25.31646%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(4n):nth-child(4n + 3) {
+    margin-left: 50.63291%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .people-list li:nth-child(4n):nth-child(4n + 4) {
+    margin-left: 75.94937%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+
+@media screen {
   .pagination {
     text-align: justify;
   }
@@ -602,6 +873,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 0.75em;
     line-height: 2em;
     line-height: 2em;
+    margin-bottom: 0;
   }
 
   .commentlist {
@@ -647,6 +919,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 1.5em;
     list-style: none;
   }
+
+  [role=contentinfo] {
+    clear: both;
+  }
 }
 @media screen and (min-width: 600px) {
   body {
@@ -663,19 +939,128 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=banner],
   [role=main],
   [role=contentinfo] {
-    padding-left: 12.82051%;
-    padding-right: 12.82051%;
+    padding-left: 16.94915%;
+    padding-right: 16.94915%;
   }
 
-  [role=main] {
-    padding-top: 4.5em;
+  .singular [role=main] header {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -25.64103%;
+    margin-left: -25.64103%;
+    padding-right: 25.64103%;
+    padding-left: 25.64103%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header h1, .singular [role=main] header p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 16.94915%;
+    padding-right: 16.94915%;
+  }
+  .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
+    padding-top: 60px;
+  }
+  .singular [role=main] header h1:last-child, .singular [role=main] header p:last-child {
+    padding-bottom: 60px;
+  }
+  .singular [role=main] header h1 a, .singular [role=main] header p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  [role=main] #homepage-blurb {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -25.64103%;
+    margin-left: -25.64103%;
+    padding-right: 25.64103%;
+    padding-left: 25.64103%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 16.94915%;
+    padding-right: 16.94915%;
+  }
+  [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
+    padding-top: 60px;
+  }
+  [role=main] #homepage-blurb h1:last-child, [role=main] #homepage-blurb p:last-child {
+    padding-bottom: 60px;
+  }
+  [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
   }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -12.82051%;
-    padding: 12.82051%;
+    margin: -8.47458%;
+    padding: 8.47458%;
     padding-left: 0;
     padding-right: 0;
   }
@@ -718,6 +1103,118 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 0;
     padding-right: 0;
   }
+  .singular [role=main] header {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -30.61224%;
+    margin-left: -30.61224%;
+    padding-right: 30.61224%;
+    padding-left: 30.61224%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header h1, .singular [role=main] header p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 18.98734%;
+    padding-right: 18.98734%;
+  }
+  .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
+    padding-top: 60px;
+  }
+  .singular [role=main] header h1:last-child, .singular [role=main] header p:last-child {
+    padding-bottom: 60px;
+  }
+  .singular [role=main] header h1 a, .singular [role=main] header p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  [role=main] #homepage-blurb {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -30.61224%;
+    margin-left: -30.61224%;
+    padding-right: 30.61224%;
+    padding-left: 30.61224%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 18.98734%;
+    padding-right: 18.98734%;
+  }
+  [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
+    padding-top: 60px;
+  }
+  [role=main] #homepage-blurb h1:last-child, [role=main] #homepage-blurb p:last-child {
+    padding-bottom: 60px;
+  }
+  [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
 @media screen and (min-width: 1200px) {
   body {
@@ -736,6 +1233,119 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=contentinfo] {
     padding-left: 25.25253%;
     padding-right: 25.25253%;
+  }
+
+  .singular [role=main] header {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -51.02041%;
+    margin-left: -51.02041%;
+    padding-right: 51.02041%;
+    padding-left: 51.02041%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .singular [role=main] header h1, .singular [role=main] header p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 25.25253%;
+    padding-right: 25.25253%;
+  }
+  .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
+    padding-top: 60px;
+  }
+  .singular [role=main] header h1:last-child, .singular [role=main] header p:last-child {
+    padding-bottom: 60px;
+  }
+  .singular [role=main] header h1 a, .singular [role=main] header p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  [role=main] #homepage-blurb {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -51.02041%;
+    margin-left: -51.02041%;
+    padding-right: 51.02041%;
+    padding-left: 51.02041%;
+    padding: 15em 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/background.jpg");
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: local;
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding-left: 25.25253%;
+    padding-right: 25.25253%;
+  }
+  [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
+    padding-top: 60px;
+  }
+  [role=main] #homepage-blurb h1:last-child, [role=main] #homepage-blurb p:last-child {
+    padding-bottom: 60px;
+  }
+  [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
   }
 }
 @media print {

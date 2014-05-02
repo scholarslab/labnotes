@@ -1,8 +1,9 @@
 <?php get_header(); ?>
-<div id="articles">
+
 <?php if (is_search()): ?>
     <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'labnotes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 <?php endif; ?>
+
 <?php if (is_category()): ?>
     <header class="archive-header">
     <em class="deck">Category</em>
@@ -59,6 +60,5 @@
     <?php else: ?>
         <p>We couldn't find the posts you were looking for.</p>
     <?php endif; ?>
-    </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

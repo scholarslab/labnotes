@@ -1,27 +1,17 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
-
-  <h1><?php the_title(); ?></h1>
-  <?php echo get_person_image(); ?>
-  <div class="author-meta">
-  <ul>
-    <?php if ($email = antispambot($customFields['person_email'][0])): ?>
-    <li class="email"><a href="<?php echo 'mailto:'.$email; ?>" class="email"><?php echo $email; ?></a></li>
-    <?php endif; ?>
-    <?php if ($phone = $customFields['person_phone'][0]): ?>
-    <li class="tel"><?php echo labnotes_format_phone($phone); ?></li>
-    <?php endif; ?>
-    <?php if ($twitter = $customFields['person_twitter'][0]): ?>
-    <li class="twitter"><a href="http://twitter.com/<?php echo str_replace('@', '', $twitter); ?>" class="url"><?php echo '@'.$twitter; ?></a></li>
-    <?php endif; ?>
-    <?php if ($url = $customFields['person_url'][0]): ?><li><a href="<?php echo $url; ?>">Personal Site</a></li><?php endif; ?>
-  </ul>
-  </div>
-
-  <div class="entry-content">
-  <?php the_content(); ?>
+<header>
+    <h1><?php the_title(); ?></h1>
+    <?php if ( $title = $customFields['person_title'][0] ) : ?>
+    <p class="title"><?php echo $title; ?></p>
+<?php endif; ?>
+</header>
+<div class="entry-content">
+<?php the_content(); ?>
 
 <?php
 
@@ -52,6 +42,8 @@ if (have_posts()) : ?>
 <?php endif; ?>
 </div>
 
-<?php endwhile; endif; ?>
+<?php endwhile; ?>
+</article>
+<?php endif; ?>
 
 <?php get_footer(); ?>

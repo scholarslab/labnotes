@@ -35,8 +35,22 @@ if (have_posts()) : ?>
 <ul class="staff">
 <?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
-  <li class="vcard">
-    <a href="<?php the_permalink(); ?>"><?php echo get_person_image(); ?></a>
+<?php 
+		/* Get the background image attachment ID. */
+		$attachment_id = get_post_meta( get_the_ID(), '_custom_background_image_id', true );
+
+        echo $attachment_id;
+		/* If an attachment ID was found, get the image source. */
+		if ( !empty( $attachment_id ) ) {
+
+			$image = wp_get_attachment_image_src( $attachment_id, 'full' );
+
+            $imageUrl = !empty( $image ) && isset( $image[0] ) ? esc_url( $image[0] ) : '';
+
+        }
+?>
+
+    <li class="vcard" id=">
     <h3 class="fn"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     <?php if ($title = str_replace(' | ', '<br>',$customFields['person_title'][0])): ?>
     <p class="title"><?php echo $title; ?></p>

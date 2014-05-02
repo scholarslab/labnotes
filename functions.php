@@ -6,9 +6,97 @@
 add_post_type_support('page', 'excerpt');
 
 /**
- * Add theme support for post thumbnails.
+ * Add theme support for sundry things.
  */
-add_theme_support( 'post-thumbnails' );
+//add_theme_support( 'post-thumbnails' );
+
+$headerArgs = array(
+	'default-color' => 'ffffff',
+    'default-image' => get_template_directory_uri() . '/images/background.jpg',
+'wp-head-callback'       => 'labnotes_custom_background_cb'
+);
+add_theme_support( 'custom-background', $headerArgs );
+
+function labnotes_custom_background_cb() {
+    
+    // $background is the saved custom image, or the default image.
+    $background = set_url_scheme( get_background_image() );
+
+    // $color is the saved custom color.
+    // A default has to be specified in style.css. It will not be printed here.
+    $color = get_background_color();
+
+    if ( $color === get_theme_support( 'custom-background', 'default-color' ) ) {
+        $color = false;
+    }
+
+    if ( ! $background && ! $color )
+        return;
+
+    $style = $color ? "background-color: #$color;" : '';
+
+    if ( $background ) {
+        $image = " background-image: url('$background');";
+
+        $repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
+        
+        if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
+            $repeat = 'repeat';
+        
+        $repeat = " background-repeat: $repeat;";
+
+        $position = get_theme_mod( 'background_position_x', get_theme_support( 'custom-background', 'default-position-x' ) );
+        
+        if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
+            $position = 'left';
+        
+        $position = " background-position: top $position;";
+
+        $attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
+        if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
+            $attachment = 'scroll';
+        
+        $attachment = " background-attachment: $attachment;";
+
+        $style .= $image . $repeat . $position . $attachment;
+
+        $default_selector = 'body.custom-background.singular main header';
+        $selector = apply_filters('labnotes_custom_background_image', $default_selector);
+
+        $html = '<style type="text/css" id="custom-background-css">'
+              . $selector
+              . '{'
+              . trim($style)
+              . '}'
+              . '</style>';
+
+        echo $html;
+
+    }
+    
+}
+
+function labnotes_add_homepage_blurb_selector($selector) {
+    if (is_home()) {
+        $selector = '#homepage-blurb';
+    }
+    return $selector;
+}
+
+add_filter('labnotes_custom_background_image_selector', 'labnotes_add_homepage_blurb_selector');
+
+/**
+ * Adds singular to body class.
+ */
+function labnotes_singular_class($classes) {
+    global $post;
+    if (is_singular()) {
+        $classes[] = 'singular';
+    }
+	return $classes;
+}
+
+add_filter('body_class', 'labnotes_singular_class');
 
 /**
  * Filters page content to display a list of page children.
@@ -209,10 +297,10 @@ function labnotes_register_post_types() {
                 'singular_name' => __( 'Person' )
               ),
             'public' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes'),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-background'),
             'menu_position' => 20,
             'hierarchical' => false,
-            'has_archive' => false,
+            'has_archive' => true,
             'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'people')
         )
@@ -224,10 +312,10 @@ function labnotes_register_post_types() {
                 'singular_name' => __( 'Research Project' )
               ),
             'public' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt'),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt', 'custom-background'),
             'menu_position' => 20,
             'hierarchical' => false,
-            'has_archive' => false,
+            'has_archive' => true,
             'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'research')
         )
@@ -235,6 +323,35 @@ function labnotes_register_post_types() {
 }
 
 add_action( 'init', 'labnotes_register_post_types' );
+
+/**
+ * Updates the query on people post types.
+ *
+ * 1. Sets the posts_per_page to -1 to get all posts.
+ * 2. Orders alphabetically by family name.
+ * 3. Checks query variable for people-category value.
+ */
+function labnotes_pre_get_posts_people( $query ) {
+
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( is_post_type_archive( 'people' ) ) {
+        
+        if ($category = get_query_var('people-category')) {
+            $query->set( 'people-category', $category);
+        }
+
+        $query->set( 'posts_per_page', -1 );
+        $query->set( 'meta_key', 'person_family_name' );
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'order', 'asc' );
+        return;
+    }
+}
+
+add_action( 'pre_get_posts', 'labnotes_pre_get_posts_people', 1 );
+
 
 /**
  * Adds our post meta boxes for the 'sp_workshop' post type.
