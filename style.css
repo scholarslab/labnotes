@@ -495,6 +495,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=banner] {
+    padding: 0.75em 1.69492%;
     background-color: #fafafa;
     background-color: rgba(255, 255, 255, 0.75);
   }
@@ -504,6 +505,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 1.5em;
     border: none;
     outline: none;
+    opacity: 0.5;
   }
   #homelink img {
     vertical-align: middle;
@@ -520,6 +522,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
+    word-spacing: 1em;
     font-size: 0.7em;
     line-height: 2.14286em;
     line-height: 2.14286em;
@@ -527,6 +530,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   nav li,
   .menu li {
     display: inline;
+    word-spacing: auto;
   }
   nav li ul,
   .menu li ul {
@@ -540,6 +544,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=main] {
     background-color: #f4f4f4;
     background-color: rgba(255, 255, 255, 0.5);
+    /*.single-people & {*/
+    /*header {*/
+    /*padding-top: rhythm(8) !important;*/
+    /*}*/
+    /*}*/
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
@@ -557,7 +566,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.20408%;
     padding-right: 10.20408%;
     padding-left: 10.20408%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -569,7 +578,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
@@ -613,7 +621,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.20408%;
     padding-right: 10.20408%;
     padding-left: 10.20408%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -625,10 +633,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
-    padding-top: 0 !important;
   }
   [role=main] #homepage-blurb a {
     color: #333;
@@ -939,8 +945,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding-left: 8.47458%;
-    padding-right: 8.47458%;
+    padding: 1.5em;
   }
 
   [role=banner]:before, [role=banner]:after {
@@ -979,7 +984,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.64103%;
     padding-right: 25.64103%;
     padding-left: 25.64103%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -991,7 +996,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
@@ -1035,7 +1039,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.64103%;
     padding-right: 25.64103%;
     padding-left: 25.64103%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -1047,7 +1051,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
@@ -1140,7 +1143,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -30.61224%;
     padding-right: 30.61224%;
     padding-left: 30.61224%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -1152,7 +1155,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
@@ -1196,7 +1198,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -30.61224%;
     padding-right: 30.61224%;
     padding-left: 30.61224%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -1208,7 +1210,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
@@ -1275,7 +1276,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -51.02041%;
     padding-right: 51.02041%;
     padding-left: 51.02041%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -1287,7 +1288,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
@@ -1331,7 +1331,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -51.02041%;
     padding-right: 51.02041%;
     padding-left: 51.02041%;
-    padding: 15em 0 0;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/background.jpg");
@@ -1343,7 +1343,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-attachment: local;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }

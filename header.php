@@ -38,7 +38,7 @@
     <header role="banner">
 
         <a id="homelink" href="<?php bloginfo('url'); ?>" rel="home">
-        <img id="slab-logo" src="//static.scholarslab.org/images/logos/slab/slab-logo-red-125px.png" alt="<?php bloginfo('site_title'); ?>">
+        <img id="slab-logo" src="//static.scholarslab.org/images/logos/slab/slab-logo-black-125px.png" alt="<?php bloginfo('site_title'); ?>">
         </a>
 
         <?php

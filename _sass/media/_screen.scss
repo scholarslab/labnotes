@@ -415,6 +415,7 @@ a {
 }
 
 [role=banner] {
+    padding: rhythm(.5) gutter();
     background-color: #fafafa;
     background-color: rgba(white, 0.75);
 }
@@ -424,7 +425,7 @@ a {
     height: rhythm();
     border:none;
     outline:none;
-
+    opacity: 0.5;
     img {
         vertical-align:middle;
     }
@@ -441,13 +442,14 @@ nav,
         margin:0;
         text-transform:uppercase;
         letter-spacing: 1px;
+        word-spacing: 1em;
         @include adjust-font-size-to(14px);
         @include adjust-leading-to(1,14px);
     }
 
     li {
         display:inline;
-
+        word-spacing: auto;
         ul {
             display:none;
         }
@@ -468,9 +470,14 @@ nav,
         }
     }
 
+    /*.single-people & {*/
+        /*header {*/
+            /*padding-top: rhythm(8) !important;*/
+        /*}*/
+    /*}*/
+
     #homepage-blurb {
         @include fullbackground;
-        padding-top:0 !important;
     }
 
 }
@@ -657,7 +664,7 @@ body {
 
 [role=banner],
 [role=contentinfo] {
-    @include pad(1);
+    padding: rhythm(1);
 }
 
 [role=banner] {
