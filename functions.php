@@ -35,17 +35,23 @@ function labnotes_custom_background_cb() {
 
     $background_color = null;
 
+    $overlay_color = '255,255,255';
+
     if ($color) {
         $rgb = labnotes_hex2rgb($color);
         $rgb_string = implode($rgb, ',');
         $background_color = "background-color: #$color;"
-               . "background-color: rgba($rgb_string, 0.75);";
+            . "background-color: rgba($rgb_string, 0.75);";
+        $overlay_color = $rgb_string;
     }
 
     $style = $background_color ? $background_color : '';
 
     if ( $background ) {
-        $image = " background-image: url('$background');";
+        $image = " background-image: url('$background'); "
+               . " background-image: -moz-linear-gradient(left, rgba($overlay_color, 0.5), rgba($overlay_color, 0.5)), url('$background'); "
+               . "background-image: -webkit-linear-gradient(left, rgba($overlay_color, 0.5), rgba($overlay_color, 0.5)), url('$background');"
+               . "background-image: linear-gradient(to right, rgba($overlay_color, 0.5), rgba($overlay_color, 0.5)), url('$background');";
 
         $repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
         
@@ -77,13 +83,7 @@ function labnotes_custom_background_cb() {
               . '{'
               . trim($style)
               . '}'
-              . $selector . ' h1,'
-              . $selector . ' p,'
-              . $selector . ' ul'
-              . '{'
-              . $background_color
-              . '}'
-              . '</style>';
+               . '</style>';
 
         echo $html;
 

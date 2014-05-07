@@ -11,11 +11,10 @@
     @include bleed-y(rhythm());
     margin-bottom:0;
     @include bleed-x(span($columns of $context wide));
-    padding: 0;
     background-color: rgba(black, 0.2);
     background-image: url('images/background.jpg');
     @include background-image(
-        linear-gradient(left, rgba(white, 0.5), rgba(white, 0.5)),
+        linear-gradient(left, rgba(white, 0.75), rgba(white, 0.75)),
         url('images/background.jpg')
     );
     @include background-size(cover);
@@ -30,27 +29,4 @@
         color: rgba(black, 0.8);
     }
 
-    h1,p {
-        @include background-image(
-            linear-gradient(left, rgba(white, 0.5), rgba(white, 0.5))
-            );
-        color: #333;
-        color: rgba(black, 0.75);
-        margin:0;
-        padding-left: span($columns of $context + ($columns * 2) wide);
-        padding-right: span($columns of $context + ($columns * 2) wide);
-
-        &:first-child {
-            padding-top: $base-line-height * 2;
-        }
-
-        &:last-child {
-            padding-bottom: $base-line-height * 2;
-        }
-
-        a {
-            color: #333;
-            color: rgba(black, 0.75);
-        }
-    }
 }
