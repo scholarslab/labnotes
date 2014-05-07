@@ -467,7 +467,6 @@ nav,
     header {
         .singular & {
             @include fullbackground;
-            text-align:right;
             border:1px solid #ccc;
             border-width: 1px 0;
 
@@ -477,6 +476,7 @@ nav,
         }
 
         .single-people & {
+            text-align:right;
             :first-child {
                 padding-top: ($base-font-size * 12) !important;
             }
