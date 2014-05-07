@@ -501,17 +501,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   #homelink {
     display: block;
-    height: 2.25em !important;
-    margin-bottom: 0.75em;
+    height: 1.5em;
+    border: none;
+    outline: none;
   }
   #homelink img {
     vertical-align: middle;
   }
 
+  nav,
+  .menu {
+    display: block;
+  }
   nav ul,
   .menu ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -522,10 +527,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   nav li,
   .menu li {
     display: inline;
-  }
-  nav li + li,
-  .menu li + li {
-    margin-left: 1.5em;
   }
   nav li ul,
   .menu li ul {
@@ -937,12 +938,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=banner],
-  [role=main],
   [role=contentinfo] {
+    padding-left: 8.47458%;
+    padding-right: 8.47458%;
+  }
+
+  [role=banner]:before, [role=banner]:after {
+    content: " ";
+    display: table;
+    width: 100%;
+  }
+  [role=banner] #homelink {
+    width: 18.36735%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+  [role=banner] nav {
+    width: 79.59184%;
+    float: right;
+    text-align: right;
+  }
+
+  [role=main] {
     padding-left: 16.94915%;
     padding-right: 16.94915%;
   }
-
   .singular [role=main] header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -1082,18 +1102,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   a#homelink {
-    float: left;
-    width: 18.36735%;
-    margin-left: -30.61224%;
+    display: inline;
   }
 
   [role=banner],
-  [role=main],
   [role=contentinfo] {
+    padding-left: 6.32911%;
+    padding-right: 6.32911%;
+  }
+
+  [role=main] {
     padding-left: 18.98734%;
     padding-right: 18.98734%;
   }
-
   [role=main] blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -1229,12 +1250,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=banner],
-  [role=main],
   [role=contentinfo] {
+    padding-left: 5.05051%;
+    padding-right: 5.05051%;
+  }
+
+  [role=main] {
     padding-left: 25.25253%;
     padding-right: 25.25253%;
   }
-
   .singular [role=main] header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;

@@ -421,19 +421,23 @@ a {
 
 #homelink {
     display:block;
-    height: rhythm(1.5) !important;
-    margin-bottom: rhythm(0.5);
+    height: rhythm();
+    border:none;
+    outline:none;
 
     img {
         vertical-align:middle;
     }
+
 }
 
 nav,
 .menu {
+    display:block;
+    
     ul {
         list-style:none;
-        padding-left:0;
+        padding:0;
         margin:0;
         text-transform:uppercase;
         letter-spacing: 1px;
@@ -443,10 +447,6 @@ nav,
 
     li {
         display:inline;
-
-        & + li {
-            margin-left: rhythm();
-        }
 
         ul {
             display:none;
@@ -656,12 +656,25 @@ body {
 }
 
 [role=banner],
-[role=main],
 [role=contentinfo] {
-    @include pad(2);
+    @include pad(1);
+}
+
+[role=banner] {
+    @include clearfix;
+
+    #homelink {
+        @include span(2 of 10);
+    }
+
+    nav {
+        @include span(last 8 of 10);
+        text-align:right;
+    }
 }
 
 [role=main] {
+    @include pad(2);
     
     .singular & {
         header {
@@ -698,18 +711,17 @@ body {
 }
 
 a#homelink {
-    float:left;
-    width: span(2 of 10);
-    @include pull(3 of 10);
+    display:inline;
 }
 
 [role=banner],
-[role=main],
 [role=contentinfo] {
-    @include pad(3);
+    @include pad(1);
 }
 
 [role=main] {
+
+    @include pad(3);
 
     blockquote {
         @include bleed(2);
@@ -740,12 +752,12 @@ body {
 }
 
 [role=banner],
-[role=main],
 [role=contentinfo] {
-    @include pad(5);
+    @include pad(1);
 }
 
 [role=main] {
+    @include pad(5);
 
     .singular & {
         header {
