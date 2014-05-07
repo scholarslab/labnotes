@@ -5,7 +5,7 @@ $grid: hide;
 @include establish-baseline;
 
 html {
-    background: rgba(black, 0.1);
+    background: rgba(black, .1);
     margin:0;
     padding:0;
 }
@@ -16,7 +16,7 @@ body {
     padding:0;
     font-family: $default-font;
     color: $default-color;
-    color: rgba($default-color, 0.9);
+    color: rgba($default-color, .9);
 }
 
 img {
@@ -35,11 +35,11 @@ a {
     );
 
     @include link-colors(
-        rgba($link-color, 0.8),
-        rgba($link-hover-color, 0.8),
-        rgba($link-active-color, 0.8),
-        rgba($link-visited-color, 0.8),
-        rgba($link-focus-color, 0.8)
+        rgba($link-color, .8),
+        rgba($link-hover-color, .8),
+        rgba($link-active-color, .8),
+        rgba($link-visited-color, .8),
+        rgba($link-focus-color, .8)
     );
 
     @include transition(
@@ -214,7 +214,7 @@ table {
 
 th,
 td {
-  padding: rhythm(1) rhythm(0.5) 0;
+  padding: rhythm(1) rhythm(.5) 0;
   @include trailing-border(1px);
   border-color: rgba($default-color,.2);
 }
@@ -253,11 +253,11 @@ sup {
 }
 
 sup {
-    top: -0.5em;
+    top: -.5em;
 }
 
 sub {
-    bottom: -0.25em;
+    bottom: -.25em;
 }
 
 del {
@@ -290,7 +290,7 @@ hr {
   &:before {
     display:block;
     content: " · · · · · ";
-    color: rgba($default-color-light, 0.5);
+    color: rgba($default-color-light, .5);
   }
 }
 
@@ -326,7 +326,7 @@ i {
 
 #slab-vcard {
     @include adjust-font-size-to(16px);
-    @include adjust-leading-to(0.75,16px);
+    @include adjust-leading-to(.75,16px);
 }
 
 .author_image {
@@ -416,8 +416,9 @@ a {
 
 [role=banner] {
     padding: rhythm(.5) gutter();
-    background-color: #fafafa;
-    background-color: rgba(white, 0.75);
+    @include background(
+        white url('images/paper_3.png')
+    );
 }
 
 #homelink {
@@ -425,7 +426,7 @@ a {
     height: rhythm();
     border:none;
     outline:none;
-    opacity: 0.5;
+    opacity: .5;
     img {
         vertical-align:middle;
     }
@@ -462,7 +463,7 @@ nav,
 
 [role=main] {
     background-color: #f4f4f4;
-    background-color: rgba(white, 0.5);
+    background-color: rgba(white, .5);
 
     header {
         h1 {
@@ -514,7 +515,7 @@ nav,
 
     li {
         min-height: rhythm(5);
-        background:rgba(black, 0.2);
+        background:rgba(black, .2);
 
         @include gallery(4);        
         &:nth-child(3n) {
@@ -554,9 +555,9 @@ nav,
 
     a {
         border: 2px solid #ccc;
-        border-color: rgba(black, 0.1);
-        padding-left: rhythm(0.5);
-        padding-right: rhythm(0.5);
+        border-color: rgba(black, .1);
+        padding-left: rhythm(.5);
+        padding-right: rhythm(.5);
         display:block;
     }
 }
@@ -567,7 +568,7 @@ article + article:before {
     height:rhythm(2);
     width: 100px;
     border-top: 2px solid #ccc;
-    border-top-color: rgba(black, 0.1);
+    border-top-color: rgba(black, .1);
     margin: rhythm(2) auto 0;
 }
 
@@ -665,6 +666,15 @@ article + article:before {
 }
 
 [role=contentinfo] {
+    @include background-image(
+        linear-gradient(top, rgba(white, .5), rgba(white, .5)),
+        linear-gradient(top, rgba(white, .5), rgba(white, .5)),    
+        linear-gradient(top, rgba(black, .25), rgba(black, .25)),
+        url('images/wild_oliva.png')
+    );
+    color: #fff;
+    background-size: 1px 3px, 1px 6px, auto, auto;
+    background-repeat: repeat-x, repeat-x, repeat, repeat;
     clear:both;
 }
 

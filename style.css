@@ -343,11 +343,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   sup {
-    top: -0.5em;
+    top: -.5em;
   }
 
   sub {
-    bottom: -0.25em;
+    bottom: -.25em;
   }
 
   del {
@@ -496,8 +496,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner] {
     padding: 0.83333em 1.5544%;
-    background-color: #fafafa;
-    background-color: rgba(255, 255, 255, 0.75);
+    background: white url("images/paper_3.png");
   }
 
   #homelink {
@@ -505,7 +504,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 1.66667em;
     border: none;
     outline: none;
-    opacity: 0.5;
+    opacity: .5;
   }
   #homelink img {
     vertical-align: middle;
@@ -897,6 +896,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=contentinfo] {
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/wild_oliva.png");
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/wild_oliva.png");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/wild_oliva.png");
+    color: #fff;
+    background-size: 1px 3px, 1px 6px, auto, auto;
+    background-repeat: repeat-x, repeat-x, repeat, repeat;
     clear: both;
   }
 }
