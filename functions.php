@@ -33,7 +33,16 @@ function labnotes_custom_background_cb() {
     if ( ! $background && ! $color )
         return;
 
-    $style = $color ? "background-color: #$color;" : '';
+    $background_color = null;
+
+    if ($color) {
+        $rgb = labnotes_hex2rgb($color);
+        $rgb_string = implode($rgb, ',');
+        $background_color = "background-color: #$color;"
+               . "background-color: rgba($rgb_string, 0.75);";
+    }
+
+    $style = $background_color ? $background_color : '';
 
     if ( $background ) {
         $image = " background-image: url('$background');";
@@ -67,6 +76,12 @@ function labnotes_custom_background_cb() {
               . $selector
               . '{'
               . trim($style)
+              . '}'
+              . $selector . ' h1,'
+              . $selector . ' p,'
+              . $selector . ' ul'
+              . '{'
+              . $background_color
               . '}'
               . '</style>';
 
@@ -691,3 +706,11 @@ function tinymce_paste_options($init) {
 }
 
 if( is_admin() ) add_filter('tiny_mce_before_init', 'tinymce_paste_options');
+
+function labnotes_hex2rgb($color) {
+    list($r, $g, $b) = array($color[0].$color[1],
+                             $color[2].$color[3],
+                             $color[4].$color[5]);
+    $r = hexdec($r); $g = hexdec($g); $b = hexdec($b);
+    return array($r, $g, $b);
+}
