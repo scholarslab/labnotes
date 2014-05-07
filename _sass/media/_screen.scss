@@ -465,6 +465,10 @@ nav,
     background-color: rgba(white, 0.5);
 
     header {
+        h1 {
+            margin-bottom:0;
+        }
+
         .singular & {
             @include fullbackground;
             border:1px solid #ccc;
@@ -477,17 +481,10 @@ nav,
 
         .single-people & {
             text-align:right;
-            :first-child {
-                padding-top: ($base-font-size * 12) !important;
-            }
+            padding-top: rhythm(8);
         }
     }
 
-    /*.single-people & {*/
-        /*header {*/
-            /*padding-top: rhythm(8) !important;*/
-        /*}*/
-    /*}*/
 
     #homepage-blurb {
         @include fullbackground;
@@ -706,9 +703,7 @@ body {
         }
 
         .single-people & {
-            :first-child {
-                padding-top: ($base-font-size * 16) !important;
-            }
+            padding-top: rhythm(10);
         }
     }
 
@@ -767,9 +762,7 @@ a#homelink {
         }
 
         .single-people & {
-            :first-child {
-                padding-top: ($base-font-size * 20) !important;
-            }
+            padding-top: rhythm(16) !important;
         }
     }
 
@@ -802,9 +795,7 @@ body {
             @include fullbackground(5,10);
         }
         .single-people & {
-            :first-child {
-                padding-top: ($base-font-size * 24) !important;
-            }
+            padding-top: rhythm(20) !important;
         }
     }
 

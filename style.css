@@ -544,11 +544,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=main] {
     background-color: #f4f4f4;
     background-color: rgba(255, 255, 255, 0.5);
-    /*.single-people & {*/
-    /*header {*/
-    /*padding-top: rhythm(8) !important;*/
-    /*}*/
-    /*}*/
+  }
+  [role=main] header h1 {
+    margin-bottom: 0;
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
@@ -591,9 +589,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .single-people [role=main] header {
     text-align: right;
-  }
-  .single-people [role=main] header :first-child {
-    padding-top: 216px !important;
+    padding-top: 13.33333em;
   }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
@@ -975,8 +971,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .single-people [role=main] header :first-child {
-    padding-top: 288px !important;
+  .single-people [role=main] header {
+    padding-top: 16.66667em;
   }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
@@ -1097,8 +1093,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .single-people [role=main] header :first-child {
-    padding-top: 360px !important;
+  .single-people [role=main] header {
+    padding-top: 26.66667em !important;
   }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
@@ -1193,8 +1189,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .single-people [role=main] header :first-child {
-    padding-top: 432px !important;
+  .single-people [role=main] header {
+    padding-top: 33.33333em !important;
   }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
