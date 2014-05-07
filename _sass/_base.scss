@@ -5,7 +5,7 @@
 @import "mixins";
 
 // Compass
-$base-font-size: 20px;
+$base-font-size: 18px;
 $base-line-height: 30px;
 $grid-background-baseline-color: rgba(black,0.2); // Background color for Compass's vertical rhythm.
 $grid-background-column-color: rgba(black,0.05); // Background color for grid columns
@@ -15,7 +15,7 @@ $default-transition-duration: .5s;
 // Susy
 $susy: (
   columns: 12,
-  gutters: 20px/80px,
+  gutters: 18px/80px,
   global-box-sizing: border-box
 );
 

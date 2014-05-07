@@ -66,8 +66,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @media screen {
   html {
-    font-size: 125%;
-    line-height: 1.5em;
+    font-size: 112.5%;
+    line-height: 1.66667em;
   }
 
   html {
@@ -152,14 +152,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   h1 {
     font-weight: 200;
-    font-size: 2em;
+    font-size: 2.22222em;
     line-height: 1.5em;
     line-height: 1.5em;
     margin: 0;
     margin-bottom: 0.75em;
   }
   .archive article h1, .blog article h1 {
-    font-size: 2em;
+    font-size: 2.22222em;
     line-height: 1.5em;
     line-height: 1.5em;
     margin-bottom: 0.75em;
@@ -167,7 +167,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @media screen and (min-width: 600px) {
   h1 {
-    font-size: 3em;
+    font-size: 3.33333em;
     line-height: 1.5em;
     line-height: 1em;
     margin-bottom: 0.5em;
@@ -176,7 +176,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @media screen {
   h2 {
-    font-size: 1.5em;
+    font-size: 1.66667em;
     line-height: 2em;
     line-height: 1em;
     margin-top: 2em;
@@ -188,7 +188,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   h3 {
-    font-size: 1.25em;
+    font-size: 1.38889em;
     line-height: 1.2em;
     line-height: 2.4em;
     color: rgba(90, 90, 90, 0.75);
@@ -201,31 +201,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   h4 {
     font-size: 1em;
-    line-height: 1.5em;
-    margin-top: 3em;
+    line-height: 1.66667em;
+    margin-top: 3.33333em;
   }
   h3 + h4 {
-    margin-top: 1.5em;
+    margin-top: 1.66667em;
   }
 
   h5 {
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.66667em;
     color: rgba(90, 90, 90, 0.5);
-    margin-top: 3em;
+    margin-top: 3.33333em;
   }
   h4 + h5 {
-    margin-top: 1.5em;
+    margin-top: 1.66667em;
   }
 
   h6 {
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.66667em;
     color: rgba(90, 90, 90, 0.75);
-    margin-top: 3em;
+    margin-top: 3.33333em;
   }
   h5 + h6 {
-    margin-top: 1.5em;
+    margin-top: 1.66667em;
   }
 
   h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
@@ -233,11 +233,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   p {
-    margin: 1.5em 0;
+    margin: 1.66667em 0;
   }
 
   blockquote {
-    font-size: 1em;
+    font-size: 1.11111em;
     line-height: 1.5em;
     line-height: 1.5em;
     font-weight: 200;
@@ -253,7 +253,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   ul, ol {
     padding: 0;
-    margin: 1.5em 0;
+    margin: 1.66667em 0;
   }
   nav ul, nav ol {
     margin-left: 0;
@@ -265,7 +265,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     list-style: upper-alpha;
   }
   ul ul, ul ol, ol ul, ol ol {
-    margin: 0 0 0 1.5em;
+    margin: 0 0 0 1.66667em;
   }
   ul ul ul, ul ol ul, ol ul ul, ol ol ul {
     list-style: square;
@@ -280,7 +280,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   dl {
-    margin: 1.5em 0;
+    margin: 1.66667em 0;
   }
 
   dt {
@@ -288,7 +288,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   dd {
-    margin-left: 1.69492%;
+    margin-left: 1.5544%;
   }
 
   table {
@@ -298,30 +298,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   th,
   td {
-    padding: 1.5em 0.75em 0;
-    border-bottom-width: 0.05em;
+    padding: 1.66667em 0.83333em 0;
+    border-bottom-width: 0.05556em;
     border-bottom-style: solid;
-    padding-bottom: 1.45em;
+    padding-bottom: 1.61111em;
     border-color: rgba(90, 90, 90, 0.2);
   }
 
   th {
-    border-bottom-width: 0.15em;
+    border-bottom-width: 0.16667em;
     border-bottom-style: solid;
-    padding-bottom: 1.35em;
+    padding-bottom: 1.5em;
     text-align: left;
   }
 
   code {
     font-family: "Source Code Pro", monospace, monospace;
-    font-size: 0.8em;
+    font-size: 0.88889em;
     line-height: 1.875em;
     color: rgba(90, 90, 90, 0.75);
   }
 
   pre {
     font-family: "Source Code Pro", monospace, monospace;
-    font-size: 0.8em;
+    font-size: 0.88889em;
     line-height: 1.875em;
     color: rgba(90, 90, 90, 0.75);
     white-space: pre-wrap;
@@ -366,7 +366,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   address {
     font-style: normal;
-    margin: 1.5em 0;
+    margin: 1.66667em 0;
   }
 
   br {
@@ -411,58 +411,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   #slab-vcard {
-    font-size: 0.8em;
+    font-size: 0.88889em;
     line-height: 1.875em;
     line-height: 1.40625em;
   }
 
   .author_image {
     display: block;
-    width: 3em;
-    height: 3em;
+    width: 3.33333em;
+    height: 3.33333em;
   }
   .author_image img {
-    -moz-border-radius: 1.5em;
-    -webkit-border-radius: 1.5em;
-    border-radius: 1.5em;
+    -moz-border-radius: 1.66667em;
+    -webkit-border-radius: 1.66667em;
+    border-radius: 1.66667em;
     vertical-align: middle;
   }
 
   .alignnone {
-    margin: 1.5em 0;
+    margin: 1.66667em 0;
   }
 
   .aligncenter,
   div.aligncenter {
     display: block;
-    margin: 1.5em auto;
+    margin: 1.66667em auto;
   }
 
   .alignright {
     float: right;
-    margin: 1.5em 0 1.5em 1.69492%;
+    margin: 1.66667em 0 1.66667em 1.5544%;
   }
 
   .alignleft {
     float: left;
-    margin: 1.5em 1.69492% 1.5em 0;
+    margin: 1.66667em 1.5544% 1.66667em 0;
   }
 
   .aligncenter {
     display: block;
-    margin: 1.5em auto;
+    margin: 1.66667em auto;
   }
 
   a img.alignright {
     float: right;
-    margin: 1.5em 0 1.5em 1.69492%;
+    margin: 1.66667em 0 1.66667em 1.5544%;
   }
   a img.alignnone {
-    margin: 1.5em auto;
+    margin: 1.66667em auto;
   }
   a img.alignleft {
     float: left;
-    margin: 1.5em 1.69492% 1.5em 0;
+    margin: 1.66667em 1.5544% 1.66667em 0;
   }
   a img.aligncenter {
     display: block;
@@ -478,7 +478,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: 0 !important;
   }
   .wp-caption p {
-    font-size: 0.75em;
+    font-size: 0.83333em;
     line-height: 2em;
     color: rgba(90, 90, 90, 0.75);
     line-height: 2em;
@@ -488,21 +488,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=banner],
   [role=main],
   [role=contentinfo] {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    padding-left: 8.47458%;
-    padding-right: 8.47458%;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    padding-left: 8.46287%;
+    padding-right: 8.46287%;
   }
 
   [role=banner] {
-    padding: 0.75em 1.69492%;
+    padding: 0.83333em 1.5544%;
     background-color: #fafafa;
     background-color: rgba(255, 255, 255, 0.75);
   }
 
   #homelink {
     display: block;
-    height: 1.5em;
+    height: 1.66667em;
     border: none;
     outline: none;
     opacity: 0.5;
@@ -523,14 +523,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 1em;
-    font-size: 0.7em;
+    font-size: 0.77778em;
     line-height: 2.14286em;
     line-height: 2.14286em;
   }
   nav li,
   .menu li {
     display: inline;
-    word-spacing: auto;
+    word-spacing: normal;
   }
   nav li ul,
   .menu li ul {
@@ -554,18 +554,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.20408%;
-    margin-left: -10.20408%;
-    padding-right: 10.20408%;
-    padding-left: 10.20408%;
+    margin-right: -10.18711%;
+    margin-left: -10.18711%;
+    padding-right: 10.18711%;
+    padding-left: 10.18711%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -580,6 +580,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    text-align: right;
   }
   .singular [role=main] header a {
     color: #333;
@@ -592,8 +595,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 8.47458%;
-    padding-right: 8.47458%;
+    padding-left: 8.46287%;
+    padding-right: 8.46287%;
   }
   .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
     padding-top: 60px;
@@ -605,22 +608,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
   }
+  .singular [role=main] header :first-child {
+    padding-top: 216px !important;
+  }
+  .singular [role=main] header p, .singular [role=main] header ul {
+    font-weight: 200;
+  }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.20408%;
-    margin-left: -10.20408%;
-    padding-right: 10.20408%;
-    padding-left: 10.20408%;
+    margin-right: -10.18711%;
+    margin-left: -10.18711%;
+    padding-right: 10.18711%;
+    padding-left: 10.18711%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -635,6 +644,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
   }
   [role=main] #homepage-blurb a {
     color: #333;
@@ -647,8 +658,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 8.47458%;
-    padding-right: 8.47458%;
+    padding-left: 8.46287%;
+    padding-right: 8.46287%;
   }
   [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
     padding-top: 60px;
@@ -667,22 +678,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.20408%;
-    margin-left: -10.20408%;
-    padding-right: 10.20408%;
-    padding-left: 10.20408%;
+    margin-right: -10.18711%;
+    margin-left: -10.18711%;
+    padding-right: 10.18711%;
+    padding-left: 10.18711%;
     padding: 0;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 640px) {
   .people-list {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.64103%;
-    margin-left: -25.64103%;
-    padding-right: 25.64103%;
-    padding-left: 25.64103%;
+    margin-right: -25.58747%;
+    margin-left: -25.58747%;
+    padding-right: 25.58747%;
+    padding-left: 25.58747%;
     padding: 0;
   }
 }
@@ -691,18 +702,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -30.61224%;
-    margin-left: -30.61224%;
-    padding-right: 30.61224%;
-    padding-left: 30.61224%;
+    margin-right: -30.56133%;
+    margin-left: -30.56133%;
+    padding-right: 30.56133%;
+    padding-left: 30.56133%;
     padding: 0;
   }
 }
 @media screen {
   .people-list li {
-    min-height: 7.5em;
+    min-height: 8.33333em;
     background: rgba(0, 0, 0, 0.2);
-    width: 32.20339%;
+    width: 32.29706%;
     float: left;
   }
   .people-list li:nth-child(3n + 1) {
@@ -712,17 +723,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: 0;
   }
   .people-list li:nth-child(3n + 2) {
-    margin-left: 33.89831%;
+    margin-left: 33.85147%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(3n + 3) {
-    margin-left: 67.79661%;
+    margin-left: 67.70294%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(3n) {
-    width: 32.20339%;
+    width: 32.29706%;
     float: left;
   }
   .people-list li:nth-child(3n):nth-child(3n + 1) {
@@ -731,19 +742,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: none;
   }
   .people-list li:nth-child(3n):nth-child(3n + 2) {
-    margin-left: 33.89831%;
+    margin-left: 33.85147%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(3n):nth-child(3n + 3) {
-    margin-left: 67.79661%;
+    margin-left: 67.70294%;
     margin-right: -100%;
     clear: none;
   }
 }
 @media screen and (min-width: 940px) {
   .people-list li {
-    width: 24.05063%;
+    width: 24.12903%;
     float: left;
   }
   .people-list li:nth-child(4n + 1) {
@@ -753,22 +764,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: 0;
   }
   .people-list li:nth-child(4n + 2) {
-    margin-left: 25.31646%;
+    margin-left: 25.29032%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(4n + 3) {
-    margin-left: 50.63291%;
+    margin-left: 50.58065%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(4n + 4) {
-    margin-left: 75.94937%;
+    margin-left: 75.87097%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(3n) {
-    width: 24.05063%;
+    width: 24.12903%;
     float: left;
   }
   .people-list li:nth-child(3n):nth-child(4n + 1) {
@@ -778,22 +789,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: 0;
   }
   .people-list li:nth-child(3n):nth-child(4n + 2) {
-    margin-left: 25.31646%;
+    margin-left: 25.29032%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(3n):nth-child(4n + 3) {
-    margin-left: 50.63291%;
+    margin-left: 50.58065%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(3n):nth-child(4n + 4) {
-    margin-left: 75.94937%;
+    margin-left: 75.87097%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(4n) {
-    width: 24.05063%;
+    width: 24.12903%;
     float: left;
   }
   .people-list li:nth-child(4n):nth-child(4n + 1) {
@@ -802,17 +813,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: none;
   }
   .people-list li:nth-child(4n):nth-child(4n + 2) {
-    margin-left: 25.31646%;
+    margin-left: 25.29032%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(4n):nth-child(4n + 3) {
-    margin-left: 50.63291%;
+    margin-left: 50.58065%;
     margin-right: -100%;
     clear: none;
   }
   .people-list li:nth-child(4n):nth-child(4n + 4) {
-    margin-left: 75.94937%;
+    margin-left: 75.87097%;
     margin-right: -100%;
     clear: none;
   }
@@ -837,19 +848,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .pagination a {
     border: 2px solid #ccc;
     border-color: rgba(0, 0, 0, 0.1);
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    padding-left: 0.83333em;
+    padding-right: 0.83333em;
     display: block;
   }
 
   article + article:before {
     display: block;
     content: " ";
-    height: 3em;
+    height: 3.33333em;
     width: 100px;
     border-top: 2px solid #ccc;
     border-top-color: rgba(0, 0, 0, 0.1);
-    margin: 3em auto 0;
+    margin: 3.33333em auto 0;
   }
 
   .gce-list {
@@ -857,7 +868,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .gce-list li {
     margin: 0;
-    padding: 1.5em 0;
+    padding: 1.66667em 0;
   }
   .gce-list li + li {
     border-top: 1px dotted #ccc;
@@ -871,13 +882,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .gce-list li strong {
     display: block;
-    margin-bottom: 3em;
+    margin-bottom: 3.33333em;
     font-weight: 200;
     color: #666;
   }
 
   .post-meta {
-    font-size: 0.75em;
+    font-size: 0.83333em;
     line-height: 2em;
     line-height: 2em;
     margin-bottom: 0;
@@ -923,7 +934,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(90, 90, 90, 0.5);
   }
   .commentlist li ul {
-    padding-left: 1.5em;
+    padding-left: 1.66667em;
     list-style: none;
   }
 
@@ -931,7 +942,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 640px) {
   body {
     max-width: 100%;
     margin-left: auto;
@@ -945,7 +956,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding: 1.5em;
+    padding: 1.66667em;
   }
 
   [role=banner]:before, [role=banner]:after {
@@ -954,36 +965,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     width: 100%;
   }
   [role=banner] #homelink {
-    width: 18.36735%;
+    width: 18.50312%;
     float: left;
-    margin-right: 2.04082%;
+    margin-right: 1.8711%;
   }
   [role=banner] nav {
-    width: 79.59184%;
+    width: 79.62578%;
     float: right;
     text-align: right;
   }
 
   [role=main] {
-    padding-left: 16.94915%;
-    padding-right: 16.94915%;
+    padding-left: 16.92573%;
+    padding-right: 16.92573%;
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.64103%;
-    margin-left: -25.64103%;
-    padding-right: 25.64103%;
-    padding-left: 25.64103%;
+    margin-right: -25.58747%;
+    margin-left: -25.58747%;
+    padding-right: 25.58747%;
+    padding-left: 25.58747%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -1010,8 +1021,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 16.94915%;
-    padding-right: 16.94915%;
+    padding-left: 16.92573%;
+    padding-right: 16.92573%;
   }
   .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
     padding-top: 60px;
@@ -1023,22 +1034,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
   }
+  .singular [role=main] header :first-child {
+    padding-top: 288px !important;
+  }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.64103%;
-    margin-left: -25.64103%;
-    padding-right: 25.64103%;
-    padding-left: 25.64103%;
+    margin-right: -25.58747%;
+    margin-left: -25.58747%;
+    padding-right: 25.58747%;
+    padding-left: 25.58747%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -1065,8 +1079,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 16.94915%;
-    padding-right: 16.94915%;
+    padding-left: 16.92573%;
+    padding-right: 16.92573%;
   }
   [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
     padding-top: 60px;
@@ -1082,13 +1096,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -8.47458%;
-    padding: 8.47458%;
+    margin: -8.46287%;
+    padding: 8.46287%;
     padding-left: 0;
     padding-right: 0;
   }
   [role=main] .commentlist blockquote {
-    margin: 0 0 0 1.5em !important;
+    margin: 0 0 0 1.66667em !important;
     padding: 0 !important;
   }
 }
@@ -1110,20 +1124,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding-left: 6.32911%;
-    padding-right: 6.32911%;
+    padding-left: 6.32258%;
+    padding-right: 6.32258%;
   }
 
   [role=main] {
-    padding-left: 18.98734%;
-    padding-right: 18.98734%;
+    padding-left: 18.96774%;
+    padding-right: 18.96774%;
   }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -12.65823%;
-    padding: 12.65823%;
+    margin: -12.64516%;
+    padding: 12.64516%;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1131,18 +1145,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -30.61224%;
-    margin-left: -30.61224%;
-    padding-right: 30.61224%;
-    padding-left: 30.61224%;
+    margin-right: -30.56133%;
+    margin-left: -30.56133%;
+    padding-right: 30.56133%;
+    padding-left: 30.56133%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -1169,8 +1183,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 18.98734%;
-    padding-right: 18.98734%;
+    padding-left: 18.96774%;
+    padding-right: 18.96774%;
   }
   .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
     padding-top: 60px;
@@ -1182,22 +1196,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
   }
+  .singular [role=main] header :first-child {
+    padding-top: 360px !important;
+  }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -30.61224%;
-    margin-left: -30.61224%;
-    padding-right: 30.61224%;
-    padding-left: 30.61224%;
+    margin-right: -30.56133%;
+    margin-left: -30.56133%;
+    padding-right: 30.56133%;
+    padding-left: 30.56133%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -1224,8 +1241,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 18.98734%;
-    padding-right: 18.98734%;
+    padding-left: 18.96774%;
+    padding-right: 18.96774%;
   }
   [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
     padding-top: 60px;
@@ -1252,30 +1269,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding-left: 5.05051%;
-    padding-right: 5.05051%;
+    padding-left: 5.04634%;
+    padding-right: 5.04634%;
   }
 
   [role=main] {
-    padding-left: 25.25253%;
-    padding-right: 25.25253%;
+    padding-left: 25.23172%;
+    padding-right: 25.23172%;
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -51.02041%;
-    margin-left: -51.02041%;
-    padding-right: 51.02041%;
-    padding-left: 51.02041%;
+    margin-right: -50.93555%;
+    margin-left: -50.93555%;
+    padding-right: 50.93555%;
+    padding-left: 50.93555%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -1302,8 +1319,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 25.25253%;
-    padding-right: 25.25253%;
+    padding-left: 25.23172%;
+    padding-right: 25.23172%;
   }
   .singular [role=main] header h1:first-child, .singular [role=main] header p:first-child {
     padding-top: 60px;
@@ -1315,22 +1332,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
   }
+  .singular [role=main] header :first-child {
+    padding-top: 432px !important;
+  }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
     margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -51.02041%;
-    margin-left: -51.02041%;
-    padding-right: 51.02041%;
-    padding-left: 51.02041%;
+    margin-right: -50.93555%;
+    margin-left: -50.93555%;
+    padding-right: 50.93555%;
+    padding-left: 50.93555%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: url("images/background.jpg");
@@ -1357,8 +1377,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    padding-left: 25.25253%;
-    padding-right: 25.25253%;
+    padding-left: 25.23172%;
+    padding-right: 25.23172%;
   }
   [role=main] #homepage-blurb h1:first-child, [role=main] #homepage-blurb p:first-child {
     padding-top: 60px;

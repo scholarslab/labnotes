@@ -449,7 +449,7 @@ nav,
 
     li {
         display:inline;
-        word-spacing: auto;
+        word-spacing: normal;
         ul {
             display:none;
         }
@@ -467,6 +467,18 @@ nav,
     .singular & {
         header {
             @include fullbackground;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            text-align:right;
+
+            :first-child {
+                padding-top: ($base-font-size * 12) !important;
+            }
+
+            p,ul {
+                font-weight:200;
+            }
+
         }
     }
 
@@ -478,6 +490,8 @@ nav,
 
     #homepage-blurb {
         @include fullbackground;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;        
     }
 
 }
@@ -488,7 +502,7 @@ nav,
     @include bleed-x(span(1 of 10 wide));
     padding:0;
 
-    @include susy-breakpoint('600px', 12) {
+    @include susy-breakpoint('640px', 12) {
         @include bleed-x(span(2 of 8 wide));
         padding:0;
     }
@@ -655,7 +669,7 @@ article + article:before {
 }
 
 // Media query for 640px. Sets layout to 12 columns.
-@include susy-breakpoint('600px', 12) {
+@include susy-breakpoint('640px', 12) {
 
 
 body {
@@ -686,6 +700,11 @@ body {
     .singular & {
         header {
             @include fullbackground(2,8);
+            
+            :first-child {
+                padding-top: ($base-font-size * 16) !important;
+            }
+
         }
     }
 
@@ -739,6 +758,9 @@ a#homelink {
     .singular & {
         header {
             @include fullbackground(3,10);
+            :first-child {
+                padding-top: ($base-font-size * 20) !important;
+            }
 
         }
     }
@@ -769,6 +791,10 @@ body {
     .singular & {
         header {
             @include fullbackground(5,10);
+            :first-child {
+                padding-top: ($base-font-size * 24) !important;
+            }
+
         }
     }
 
