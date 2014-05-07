@@ -32,10 +32,10 @@
 
     h1,p {
         @include background-image(
-            linear-gradient(left, rgba(black, 0.5), rgba(black, 0.5))
+            linear-gradient(left, rgba(white, 0.5), rgba(white, 0.5))
             );
-        color: white;
-        color: rgba(white, 0.75);
+        color: #333;
+        color: rgba(black, 0.75);
         margin:0;
         padding-left: span($columns of $context + ($columns * 2) wide);
         padding-right: span($columns of $context + ($columns * 2) wide);
@@ -49,8 +49,8 @@
         }
 
         a {
-            color: white;
-            color: rgba(white, 0.75);
+            color: #333;
+            color: rgba(black, 0.75);
         }
     }
 }

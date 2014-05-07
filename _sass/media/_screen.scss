@@ -467,9 +467,9 @@ nav,
     .singular & {
         header {
             @include fullbackground;
-            padding-top: 5px !important;
-            padding-bottom: 5px !important;
             text-align:right;
+            border:1px solid #ccc;
+            border-width: 1px 0;
 
             :first-child {
                 padding-top: ($base-font-size * 12) !important;
@@ -490,8 +490,8 @@ nav,
 
     #homepage-blurb {
         @include fullbackground;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;        
+        border:1px solid #ccc;
+        border-width: 1px 0;
     }
 
 }

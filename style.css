@@ -580,20 +580,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
     text-align: right;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
   }
   .singular [role=main] header a {
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
   .singular [role=main] header h1, .singular [role=main] header p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 8.46287%;
     padding-right: 8.46287%;
@@ -605,8 +605,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   .singular [role=main] header h1 a, .singular [role=main] header p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
   .singular [role=main] header :first-child {
     padding-top: 216px !important;
@@ -644,19 +644,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
   }
   [role=main] #homepage-blurb a {
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
   [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 8.46287%;
     padding-right: 8.46287%;
@@ -668,8 +668,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
 
   .people-list {
@@ -1015,11 +1015,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
   }
   .singular [role=main] header h1, .singular [role=main] header p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 16.92573%;
     padding-right: 16.92573%;
@@ -1031,8 +1031,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   .singular [role=main] header h1 a, .singular [role=main] header p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
   .singular [role=main] header :first-child {
     padding-top: 288px !important;
@@ -1073,11 +1073,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
   }
   [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 16.92573%;
     padding-right: 16.92573%;
@@ -1089,8 +1089,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
@@ -1177,11 +1177,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
   }
   .singular [role=main] header h1, .singular [role=main] header p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 18.96774%;
     padding-right: 18.96774%;
@@ -1193,8 +1193,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   .singular [role=main] header h1 a, .singular [role=main] header p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
   .singular [role=main] header :first-child {
     padding-top: 360px !important;
@@ -1235,11 +1235,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
   }
   [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 18.96774%;
     padding-right: 18.96774%;
@@ -1251,8 +1251,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1313,11 +1313,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
   }
   .singular [role=main] header h1, .singular [role=main] header p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 25.23172%;
     padding-right: 25.23172%;
@@ -1329,8 +1329,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   .singular [role=main] header h1 a, .singular [role=main] header p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
   .singular [role=main] header :first-child {
     padding-top: 432px !important;
@@ -1371,11 +1371,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
   }
   [role=main] #homepage-blurb h1, [role=main] #homepage-blurb p {
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
     margin: 0;
     padding-left: 25.23172%;
     padding-right: 25.23172%;
@@ -1387,8 +1387,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 60px;
   }
   [role=main] #homepage-blurb h1 a, [role=main] #homepage-blurb p a {
-    color: white;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
+    color: rgba(0, 0, 0, 0.75);
   }
 }
 @media print {
