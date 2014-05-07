@@ -464,21 +464,22 @@ nav,
     background-color: #f4f4f4;
     background-color: rgba(white, 0.5);
 
-    .singular & {
-        header {
+    header {
+        .singular & {
             @include fullbackground;
             text-align:right;
             border:1px solid #ccc;
             border-width: 1px 0;
 
-            :first-child {
-                padding-top: ($base-font-size * 12) !important;
-            }
-
             p,ul {
                 font-weight:200;
             }
+        }
 
+        .single-people & {
+            :first-child {
+                padding-top: ($base-font-size * 12) !important;
+            }
         }
     }
 
@@ -492,6 +493,8 @@ nav,
         @include fullbackground;
         border:1px solid #ccc;
         border-width: 1px 0;
+        padding-top: rhythm(1);
+        padding-bottom: rhythm(1);
     }
 
 }
@@ -697,19 +700,22 @@ body {
 [role=main] {
     @include pad(2);
     
-    .singular & {
-        header {
+    header {
+        .singular & {
             @include fullbackground(2,8);
-            
+        }
+
+        .single-people & {
             :first-child {
                 padding-top: ($base-font-size * 16) !important;
             }
-
         }
     }
 
     #homepage-blurb {
-            @include fullbackground(2,8);
+        @include fullbackground(2,8);
+        padding-top: rhythm(2);
+        padding-bottom: rhythm(2);
     }
 
     blockquote {
@@ -755,19 +761,22 @@ a#homelink {
         padding-right:0;
     }
 
-    .singular & {
-        header {
+    header {
+        .singular & {
             @include fullbackground(3,10);
+        }
+
+        .single-people & {
             :first-child {
                 padding-top: ($base-font-size * 20) !important;
             }
-
         }
     }
 
     #homepage-blurb {
-            @include fullbackground(3,10);
-
+        @include fullbackground(3,10);
+        padding-top: rhythm(2);
+        padding-bottom: rhythm(2);
     }
 
 }
@@ -788,18 +797,21 @@ body {
 [role=main] {
     @include pad(5);
 
-    .singular & {
-        header {
+    header {
+        .singular & {
             @include fullbackground(5,10);
+        }
+        .single-people & {
             :first-child {
                 padding-top: ($base-font-size * 24) !important;
             }
-
         }
     }
 
     #homepage-blurb {
-            @include fullbackground(5,10);
+        @include fullbackground(5,10);
+        padding-top: rhythm(3);
+        padding-bottom: rhythm(3);
     }
 
 }

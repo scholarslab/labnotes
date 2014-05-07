@@ -587,11 +587,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .singular [role=main] header :first-child {
-    padding-top: 216px !important;
-  }
   .singular [role=main] header p, .singular [role=main] header ul {
     font-weight: 200;
+  }
+  .single-people [role=main] header :first-child {
+    padding-top: 216px !important;
   }
   [role=main] #homepage-blurb {
     -moz-box-sizing: content-box;
@@ -624,6 +624,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: rgba(0, 0, 0, 0.8);
     border: 1px solid #ccc;
     border-width: 1px 0;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
   }
   [role=main] #homepage-blurb a {
     color: #333;
@@ -971,7 +973,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .singular [role=main] header :first-child {
+  .single-people [role=main] header :first-child {
     padding-top: 288px !important;
   }
   [role=main] #homepage-blurb {
@@ -1003,6 +1005,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
+    padding-top: 3.33333em;
+    padding-bottom: 3.33333em;
   }
   [role=main] #homepage-blurb a {
     color: #333;
@@ -1091,7 +1095,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .singular [role=main] header :first-child {
+  .single-people [role=main] header :first-child {
     padding-top: 360px !important;
   }
   [role=main] #homepage-blurb {
@@ -1123,6 +1127,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
+    padding-top: 3.33333em;
+    padding-bottom: 3.33333em;
   }
   [role=main] #homepage-blurb a {
     color: #333;
@@ -1185,7 +1191,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  .singular [role=main] header :first-child {
+  .single-people [role=main] header :first-child {
     padding-top: 432px !important;
   }
   [role=main] #homepage-blurb {
@@ -1217,6 +1223,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: 50% 0;
     color: #333;
     color: rgba(0, 0, 0, 0.8);
+    padding-top: 5em;
+    padding-bottom: 5em;
   }
   [role=main] #homepage-blurb a {
     color: #333;
