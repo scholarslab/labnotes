@@ -561,7 +561,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.18711%;
     padding-right: 10.18711%;
     padding-left: 10.18711%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid #ccc;
+  }
+  .singular [role=main] header a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
   }
   .singular [role=main] header p, .singular [role=main] header ul {
     font-weight: 200;
@@ -585,9 +600,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.18711%;
     padding-right: 10.18711%;
     padding-left: 10.18711%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid #ccc;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
+    margin-bottom: 3.33333em !important;
+    /* Ensure there is no negative margin across media queries. */
+  }
+  [role=main] #homepage-blurb a {
+    color: #333;
+    color: rgba(0, 0, 0, 0.8);
   }
   [role=main] #blog-archives {
     -moz-box-sizing: content-box;

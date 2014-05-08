@@ -469,6 +469,7 @@ nav,
 
         .singular & {
             @include fullbleed;
+            @include fullbackground;
             border-bottom:1px solid #ccc;
 
             p,ul {
@@ -485,9 +486,11 @@ nav,
 
     #homepage-blurb {
         @include fullbleed;
+        @include fullbackground;
         border-bottom:1px solid #ccc;
         padding-top: rhythm(1);
         padding-bottom: rhythm(1);
+        margin-bottom:rhythm(2) !important; /* Ensure there is no negative margin across media queries. */
     }
 
     #blog-archives {
