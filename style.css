@@ -71,12 +71,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   html {
-    background: rgba(0, 0, 0, 0.1);
+    background: #eeeeee url("images/wild_oliva.png");
     margin: 0;
     padding: 0;
   }
 
   body {
+    background-color: #eee;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -585,7 +586,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-align: right;
     padding-top: 13.33333em;
   }
-  [role=main] #homepage-blurb {
+
+  #homepage-blurb,
+  #blog-archives {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -600,6 +603,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.25641%;
     padding-right: 10.25641%;
     padding-left: 10.25641%;
+  }
+
+  #homepage-blurb {
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -617,25 +623,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: 3.33333em !important;
     /* Ensure there is no negative margin across media queries. */
   }
-  [role=main] #homepage-blurb a {
+  #homepage-blurb a {
     color: #333;
     color: rgba(0, 0, 0, 0.8);
   }
-  [role=main] #blog-archives {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-top: -1.66667em;
-    margin-bottom: -1.66667em;
-    padding-top: 1.66667em;
-    padding-bottom: 1.66667em;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-right: -10.25641%;
-    margin-left: -10.25641%;
-    padding-right: 10.25641%;
-    padding-left: 10.25641%;
+
+  #blog-archives {
     background-color: rgba(0, 0, 0, 0.025);
     border-top: 1px solid #ccc;
     border-color: rgba(0, 0, 0, 0.05);
@@ -922,12 +915,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=contentinfo] {
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/wild_oliva.png");
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/wild_oliva.png");
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/wild_oliva.png");
+    background-image: url("images/wild_oliva.png");
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
     color: #fff;
-    background-size: 1px 3px, 1px 6px, auto, auto;
-    background-repeat: repeat-x, repeat-x, repeat, repeat;
+    background-size: auto;
+    background-size: 1px 3px, 1px 6px, auto;
+    background-repeat: repeat;
+    background-repeat: repeat-x, repeat-x, repeat;
     clear: both;
   }
 }

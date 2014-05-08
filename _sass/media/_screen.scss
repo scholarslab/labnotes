@@ -5,12 +5,15 @@ $grid: hide;
 @include establish-baseline;
 
 html {
-    background: rgba(black, .1);
+    @include background(
+        #eee url('images/wild_oliva.png')
+    );
     margin:0;
     padding:0;
 }
 
 body {
+    background-color: #eee;
     @include container($grid);
     margin:0;
     padding:0;
@@ -424,6 +427,7 @@ a {
     border:none;
     outline:none;
     opacity: .5;
+
     img {
         vertical-align:middle;
     }
@@ -483,24 +487,26 @@ nav,
         }
     }
 
+}
 
-    #homepage-blurb {
-        @include fullbleed;
-        @include fullbackground;
-        border-bottom:1px solid #ccc;
-        padding-top: rhythm(1);
-        padding-bottom: rhythm(1);
-        margin-bottom:rhythm(2) !important; /* Ensure there is no negative margin across media queries. */
-    }
+#homepage-blurb,
+#blog-archives {
+    @include fullbleed;
+}
 
-    #blog-archives {
-        @include fullbleed;
-        background-color: rgba(black, 0.025);
-        border-top:1px solid #ccc;
-        border-color: rgba(black, 0.05);
-        margin-top:0;        
-    }
+#homepage-blurb {
+    @include fullbackground;
+    border-bottom:1px solid #ccc;
+    padding-top: rhythm(1);
+    padding-bottom: rhythm(1);
+    margin-bottom:rhythm(2) !important; /* Ensure there is no negative margin across media queries. */
+}
 
+#blog-archives {
+    background-color: rgba(black, 0.025);
+    border-top:1px solid #ccc;
+    border-color: rgba(black, 0.05);
+    margin-top:0;        
 }
 
 
@@ -698,15 +704,17 @@ article {
 }
 
 [role=contentinfo] {
+    background-image: url('images/wild_oliva.png');
     @include background-image(
         linear-gradient(top, rgba(white, .5), rgba(white, .5)),
         linear-gradient(top, rgba(white, .5), rgba(white, .5)),    
-        linear-gradient(top, rgba(black, .25), rgba(black, .25)),
         url('images/wild_oliva.png')
     );
     color: #fff;
-    background-size: 1px 3px, 1px 6px, auto, auto;
-    background-repeat: repeat-x, repeat-x, repeat, repeat;
+    background-size: auto;
+    background-size: 1px 3px, 1px 6px, auto;
+    background-repeat:repeat;
+    background-repeat: repeat-x, repeat-x, repeat;
     clear:both;
 }
 
