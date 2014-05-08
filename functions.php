@@ -346,10 +346,14 @@ add_action( 'init', 'labnotes_register_post_types' );
  * 2. Orders alphabetically by family name.
  * 3. Checks query variable for people-category value.
  */
-function labnotes_pre_get_posts_people( $query ) {
+function labnotes_pre_get_posts( $query ) {
 
     if ( is_admin() || ! $query->is_main_query() )
         return;
+
+    if ( is_post_type_archive( array( 'research', 'people' ) ) ) {
+        $query->set( 'posts_per_page', -1 );
+    }
 
     if ( is_post_type_archive( 'people' ) ) {
         
@@ -357,7 +361,6 @@ function labnotes_pre_get_posts_people( $query ) {
             $query->set( 'people-category', $category);
         }
 
-        $query->set( 'posts_per_page', -1 );
         $query->set( 'meta_key', 'person_family_name' );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'order', 'asc' );
@@ -365,7 +368,7 @@ function labnotes_pre_get_posts_people( $query ) {
     }
 }
 
-add_action( 'pre_get_posts', 'labnotes_pre_get_posts_people', 1 );
+add_action( 'pre_get_posts', 'labnotes_pre_get_posts', 1 );
 
 
 /**
