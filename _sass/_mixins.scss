@@ -31,3 +31,21 @@
 
 }
 
+@mixin gridlist {
+    list-style:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+    & > * {
+        @include gallery(5 of 10);
+        margin-bottom: rhythm(1);
+
+        &:nth-child(2n) {
+            @include gallery(last 5 of 10);
+        }
+
+    }
+
+}
+

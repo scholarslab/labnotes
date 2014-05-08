@@ -503,47 +503,6 @@ nav,
 
 }
 
-.people-list {
-    list-style:none;
-    margin-left:0;
-    @include bleed-x(span(1 of 10 wide));
-    padding:0;
-
-    @include susy-breakpoint('640px', 12) {
-        @include bleed-x(span(2 of 8 wide));
-        padding:0;
-    }
-
-    @include susy-breakpoint('940px', 16) {
-        @include bleed-x(span(3 of 10 wide));
-        padding:0;
-    }
-
-    li {
-        min-height: rhythm(5);
-        background:rgba(black, .2);
-
-        @include gallery(4);        
-        &:nth-child(3n) {
-            @include gallery(last 4);
-        }
-
-        @include susy-breakpoint('940px', 16) {
-        
-        @include gallery(4);
-        
-        &:nth-child(3n) {
-            @include gallery(4);
-        }
-
-        &:nth-child(4n) {
-            @include gallery(last 4);
-        }
-
-        }
-    }
-    
-}
 
 .pagination {
     text-align:justify;
@@ -568,6 +527,32 @@ nav,
         padding-right: rhythm(.5);
         display:block;
     }
+}
+
+.research {
+    @include gridlist;
+
+    img {
+        @include box-sizing(border-box);
+        border: 5px solid #fff;
+    }
+
+    a {
+        text-decoration:none;
+    }
+
+    h2 {
+        @include adjust-font-size-to($base-font-size);
+        @include adjust-leading-to(1, $base-font-size);
+        margin:0;
+    }
+
+    p {
+        @include adjust-font-size-to(16px);
+        @include adjust-leading-to(.75, 16px);
+        margin:0;
+    }
+
 }
 
 article {
