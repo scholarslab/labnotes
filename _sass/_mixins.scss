@@ -47,5 +47,22 @@
 
     }
 
+    @include susy-breakpoint('940px', 16) {
+
+    @include fullbleed(2, 10);
+    padding-left:0;
+    padding-right:0;
+        & > * {
+            @include gallery(4 of 12);
+            &:nth-child(2n) {
+                @include gallery(4 of 12);
+            }
+
+            &:nth-child(3n) {
+                @include gallery(last 4 of 12);
+            }
+
+        }
+    }
 }
 
