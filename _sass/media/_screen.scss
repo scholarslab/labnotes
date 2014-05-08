@@ -468,7 +468,7 @@ nav,
         }
 
         .singular & {
-            @include fullbackground;
+            @include fullbleed;
             border-bottom:1px solid #ccc;
 
             p,ul {
@@ -484,10 +484,18 @@ nav,
 
 
     #homepage-blurb {
-        @include fullbackground;
+        @include fullbleed;
         border-bottom:1px solid #ccc;
         padding-top: rhythm(1);
         padding-bottom: rhythm(1);
+    }
+
+    #blog-archives {
+        @include fullbleed;
+        background-color: rgba(black, 0.025);
+        border-top:1px solid #ccc;
+        border-color: rgba(black, 0.05);
+        margin-top:0;        
     }
 
 }
@@ -537,6 +545,8 @@ nav,
 .pagination {
     text-align:justify;
     @include clearfix;
+    @include leader(2);
+    @include trailer(2);
 
     li {
         display:inline-block;
@@ -743,7 +753,7 @@ body {
     
     header {
         .singular & {
-            @include fullbackground(2,8);
+            @include fullbleed(2,8);
         }
 
         .single-people & {
@@ -751,8 +761,12 @@ body {
         }
     }
 
+    #homepage-blurb,
+    #blog-archives {
+        @include fullbleed(2,8);
+    }
+
     #homepage-blurb {
-        @include fullbackground(2,8);
         padding-top: rhythm(2);
         padding-bottom: rhythm(2);
     }
@@ -802,7 +816,7 @@ a#homelink {
 
     header {
         .singular & {
-            @include fullbackground(3,10);
+            @include fullbleed(3,10);
         }
 
         .single-people & {
@@ -810,8 +824,12 @@ a#homelink {
         }
     }
 
+    #homepage-blurb,
+    #blog-archives {
+        @include fullbleed(3,10);
+    }
+
     #homepage-blurb {
-        @include fullbackground(3,10);
         padding-top: rhythm(2);
         padding-bottom: rhythm(2);
     }
@@ -836,15 +854,19 @@ body {
 
     header {
         .singular & {
-            @include fullbackground(5,10);
+            @include fullbleed(5,10);
         }
         .single-people & {
             padding-top: rhythm(20) !important;
         }
     }
 
+    #homepage-blurb,
+    #blog-archives {
+        @include fullbleed(5,10);
+    }
+
     #homepage-blurb {
-        @include fullbackground(5,10);
         padding-top: rhythm(3);
         padding-bottom: rhythm(3);
     }

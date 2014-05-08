@@ -554,7 +554,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -562,24 +561,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.18711%;
     padding-right: 10.18711%;
     padding-left: 10.18711%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid #ccc;
-  }
-  .singular [role=main] header a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
   .singular [role=main] header p, .singular [role=main] header ul {
     font-weight: 200;
@@ -596,7 +578,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -604,26 +585,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.18711%;
     padding-right: 10.18711%;
     padding-left: 10.18711%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid #ccc;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
   }
-  [role=main] #homepage-blurb a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
+  [role=main] #blog-archives {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -10.18711%;
+    margin-left: -10.18711%;
+    padding-right: 10.18711%;
+    padding-left: 10.18711%;
+    background-color: rgba(0, 0, 0, 0.025);
+    border-top: 1px solid #ccc;
+    border-color: rgba(0, 0, 0, 0.05);
+    margin-top: 0;
   }
 
   .people-list {
@@ -786,6 +770,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media screen {
   .pagination {
     text-align: justify;
+    margin-top: 3.33333em;
+    margin-bottom: 3.33333em;
   }
   .pagination:before, .pagination:after {
     content: " ";
@@ -977,7 +963,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -985,28 +970,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.58747%;
     padding-right: 25.58747%;
     padding-left: 25.58747%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  .singular [role=main] header a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
   .single-people [role=main] header {
     padding-top: 16.66667em;
   }
-  [role=main] #homepage-blurb {
+  [role=main] #homepage-blurb,
+  [role=main] #blog-archives {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1014,7 +983,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1022,25 +990,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.58747%;
     padding-right: 25.58747%;
     padding-left: 25.58747%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb {
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
-  }
-  [role=main] #homepage-blurb a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
@@ -1099,7 +1052,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1107,28 +1059,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -30.56133%;
     padding-right: 30.56133%;
     padding-left: 30.56133%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  .singular [role=main] header a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
   .single-people [role=main] header {
     padding-top: 26.66667em !important;
   }
-  [role=main] #homepage-blurb {
+  [role=main] #homepage-blurb,
+  [role=main] #blog-archives {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1136,7 +1072,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1144,25 +1079,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -30.56133%;
     padding-right: 30.56133%;
     padding-left: 30.56133%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb {
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
-  }
-  [role=main] #homepage-blurb a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1195,7 +1115,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1203,28 +1122,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -50.93555%;
     padding-right: 50.93555%;
     padding-left: 50.93555%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  .singular [role=main] header a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
   .single-people [role=main] header {
     padding-top: 33.33333em !important;
   }
-  [role=main] #homepage-blurb {
+  [role=main] #homepage-blurb,
+  [role=main] #blog-archives {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1232,7 +1135,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: -1.66667em;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    margin-bottom: 0;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1240,25 +1142,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -50.93555%;
     padding-right: 50.93555%;
     padding-left: 50.93555%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url("images/background.jpg");
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("images/background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
+  }
+  [role=main] #homepage-blurb {
     padding-top: 5em;
     padding-bottom: 5em;
-  }
-  [role=main] #homepage-blurb a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
 }
 @media print {
