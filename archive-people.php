@@ -14,6 +14,9 @@ if ($category = get_query_var('people-category')) {
     <h1><?php echo $heading; ?></h1>
 </header>
 <?php if (have_posts()) : ?>
+<nav class="local">
+    <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'people-category')); ?>
+</nav>
 <ul class="people-list">
 <?php while( have_posts() ) : the_post(); ?>
 <li>

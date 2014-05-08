@@ -717,3 +717,12 @@ function labnotes_hex2rgb($color) {
     $r = hexdec($r); $g = hexdec($g); $b = hexdec($b);
     return array($r, $g, $b);
 }
+
+function labnotes_term_link($link, $term, $taxonomy) {
+    if ($taxonomy == 'people-category') {
+        $link = get_post_type_archive_link('people') . '?people-category='.$term->slug;
+    }  
+    return $link;
+}
+
+add_filter('term_link', 'labnotes_term_link', 10, 3);
