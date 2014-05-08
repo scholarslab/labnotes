@@ -288,7 +288,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   dd {
-    margin-left: 1.5544%;
+    margin-left: 2.12766%;
   }
 
   table {
@@ -438,12 +438,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .alignright {
     float: right;
-    margin: 1.66667em 0 1.66667em 1.5544%;
+    margin: 1.66667em 0 1.66667em 2.12766%;
   }
 
   .alignleft {
     float: left;
-    margin: 1.66667em 1.5544% 1.66667em 0;
+    margin: 1.66667em 2.12766% 1.66667em 0;
   }
 
   .aligncenter {
@@ -453,14 +453,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   a img.alignright {
     float: right;
-    margin: 1.66667em 0 1.66667em 1.5544%;
+    margin: 1.66667em 0 1.66667em 2.12766%;
   }
   a img.alignnone {
     margin: 1.66667em auto;
   }
   a img.alignleft {
     float: left;
-    margin: 1.66667em 1.5544% 1.66667em 0;
+    margin: 1.66667em 2.12766% 1.66667em 0;
   }
   a img.aligncenter {
     display: block;
@@ -488,12 +488,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=contentinfo] {
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    padding-left: 8.46287%;
-    padding-right: 8.46287%;
+    padding-left: 8.51064%;
+    padding-right: 8.51064%;
   }
 
   [role=banner] {
-    padding: 0.83333em 1.5544%;
+    padding: 0.83333em 2.12766%;
     border-bottom: 1px solid #ccc;
     background: white url("images/paper_3.png");
   }
@@ -557,10 +557,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.18711%;
-    margin-left: -10.18711%;
-    padding-right: 10.18711%;
-    padding-left: 10.18711%;
+    margin-right: -10.25641%;
+    margin-left: -10.25641%;
+    padding-right: 10.25641%;
+    padding-left: 10.25641%;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -596,10 +596,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.18711%;
-    margin-left: -10.18711%;
-    padding-right: 10.18711%;
-    padding-left: 10.18711%;
+    margin-right: -10.25641%;
+    margin-left: -10.25641%;
+    padding-right: 10.25641%;
+    padding-left: 10.25641%;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -632,10 +632,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.18711%;
-    margin-left: -10.18711%;
-    padding-right: 10.18711%;
-    padding-left: 10.18711%;
+    margin-right: -10.25641%;
+    margin-left: -10.25641%;
+    padding-right: 10.25641%;
+    padding-left: 10.25641%;
     background-color: rgba(0, 0, 0, 0.025);
     border-top: 1px solid #ccc;
     border-color: rgba(0, 0, 0, 0.05);
@@ -674,7 +674,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     overflow: hidden;
   }
   .research > * {
-    width: 49.06445%;
+    width: 48.71795%;
     float: left;
     margin-bottom: 1.66667em;
   }
@@ -685,12 +685,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: 0;
   }
   .research > *:nth-child(2n + 2) {
-    margin-left: 50.93555%;
+    margin-left: 51.28205%;
     margin-right: -100%;
     clear: none;
   }
   .research > *:nth-child(2n) {
-    width: 49.06445%;
+    width: 48.71795%;
     float: left;
   }
   .research > *:nth-child(2n):nth-child(2n + 1) {
@@ -699,7 +699,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: none;
   }
   .research > *:nth-child(2n):nth-child(2n + 2) {
-    margin-left: 50.93555%;
+    margin-left: 51.28205%;
     margin-right: -100%;
     clear: none;
   }
@@ -873,19 +873,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     width: 100%;
   }
   [role=banner] #homelink {
-    width: 18.50312%;
+    width: 17.94872%;
     float: left;
-    margin-right: 1.8711%;
+    margin-right: 2.5641%;
   }
   [role=banner] nav {
-    width: 79.62578%;
+    width: 79.48718%;
     float: right;
     text-align: right;
   }
 
   [role=main] {
-    padding-left: 16.92573%;
-    padding-right: 16.92573%;
+    padding-left: 17.02128%;
+    padding-right: 17.02128%;
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
@@ -898,10 +898,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.58747%;
-    margin-left: -25.58747%;
-    padding-right: 25.58747%;
-    padding-left: 25.58747%;
+    margin-right: -25.80645%;
+    margin-left: -25.80645%;
+    padding-right: 25.80645%;
+    padding-left: 25.80645%;
   }
   .single-people [role=main] header {
     padding-top: 16.66667em;
@@ -918,10 +918,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.58747%;
-    margin-left: -25.58747%;
-    padding-right: 25.58747%;
-    padding-left: 25.58747%;
+    margin-right: -25.80645%;
+    margin-left: -25.80645%;
+    padding-right: 25.80645%;
+    padding-left: 25.80645%;
   }
   [role=main] #homepage-blurb {
     padding-top: 3.33333em;
@@ -931,8 +931,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -8.46287%;
-    padding: 8.46287%;
+    margin: -8.51064%;
+    padding: 8.51064%;
     padding-left: 0;
     padding-right: 0;
   }
@@ -959,20 +959,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding-left: 6.32258%;
-    padding-right: 6.32258%;
+    padding-left: 6.34921%;
+    padding-right: 6.34921%;
   }
 
   [role=main] {
-    padding-left: 18.96774%;
-    padding-right: 18.96774%;
+    padding-left: 19.04762%;
+    padding-right: 19.04762%;
   }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -12.64516%;
-    padding: 12.64516%;
+    margin: -12.69841%;
+    padding: 12.69841%;
     padding-left: 0;
     padding-right: 0;
   }
@@ -987,10 +987,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -30.56133%;
-    margin-left: -30.56133%;
-    padding-right: 30.56133%;
-    padding-left: 30.56133%;
+    margin-right: -30.76923%;
+    margin-left: -30.76923%;
+    padding-right: 30.76923%;
+    padding-left: 30.76923%;
   }
   .single-people [role=main] header {
     padding-top: 26.66667em !important;
@@ -1007,10 +1007,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -30.56133%;
-    margin-left: -30.56133%;
-    padding-right: 30.56133%;
-    padding-left: 30.56133%;
+    margin-right: -30.76923%;
+    margin-left: -30.76923%;
+    padding-right: 30.76923%;
+    padding-left: 30.76923%;
   }
   [role=main] #homepage-blurb {
     padding-top: 3.33333em;
@@ -1031,13 +1031,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding-left: 5.04634%;
-    padding-right: 5.04634%;
+    padding-left: 5.06329%;
+    padding-right: 5.06329%;
   }
 
   [role=main] {
-    padding-left: 25.23172%;
-    padding-right: 25.23172%;
+    padding-left: 25.31646%;
+    padding-right: 25.31646%;
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
@@ -1050,10 +1050,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -50.93555%;
-    margin-left: -50.93555%;
-    padding-right: 50.93555%;
-    padding-left: 50.93555%;
+    margin-right: -51.28205%;
+    margin-left: -51.28205%;
+    padding-right: 51.28205%;
+    padding-left: 51.28205%;
   }
   .single-people [role=main] header {
     padding-top: 33.33333em !important;
@@ -1070,10 +1070,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -50.93555%;
-    margin-left: -50.93555%;
-    padding-right: 50.93555%;
-    padding-left: 50.93555%;
+    margin-right: -51.28205%;
+    margin-left: -51.28205%;
+    padding-right: 51.28205%;
+    padding-left: 51.28205%;
   }
   [role=main] #homepage-blurb {
     padding-top: 5em;
