@@ -412,6 +412,7 @@ a {
 
 [role=banner] {
     padding: rhythm(.5) gutter();
+    border-bottom:1px solid #ccc;
     @include background(
         white url('images/paper_3.png')
     );
@@ -468,8 +469,7 @@ nav,
 
         .singular & {
             @include fullbackground;
-            border:1px solid #ccc;
-            border-width: 1px 0;
+            border-bottom:1px solid #ccc;
 
             p,ul {
                 font-weight:200;
@@ -485,8 +485,7 @@ nav,
 
     #homepage-blurb {
         @include fullbackground;
-        border:1px solid #ccc;
-        border-width: 1px 0;
+        border-bottom:1px solid #ccc;
         padding-top: rhythm(1);
         padding-bottom: rhythm(1);
     }
