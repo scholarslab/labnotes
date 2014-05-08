@@ -331,14 +331,10 @@ i {
 
 .author_image {
     display:block;
-    width: rhythm(2);
-    height: rhythm(2);
-
     img {
-        @include border-radius(rhythm(1));
+        @include border-radius(50%);
         vertical-align:middle;
     }
-
 }
 
 .alignnone {
@@ -562,14 +558,53 @@ nav,
     }
 }
 
-article + article:before {
-    display:block;
-    content: " ";
-    height:rhythm(2);
-    width: 100px;
-    border-top: 2px solid #ccc;
-    border-top-color: rgba(black, .1);
-    margin: rhythm(2) auto 0;
+article {
+
+    footer {
+        @include leader(2);
+        @include trailer(2);
+        @include padding-leader(1);
+        @include padding-trailer(1);
+        border:1px solid #ccc;
+        border-width: 1px 0;
+
+        .author_image_link {
+            float:left;
+            display:block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .author-name,
+        .author-description {
+            margin-left: 90px !important;
+        }
+
+        p {
+            @include adjust-font-size-to(15px);
+            @include adjust-leading-to(0.75, 15px);
+            margin:0;
+
+            &.author-name {
+                font-weight:bold;
+
+                a {
+                    text-decoration:none;
+                }
+            }
+
+        }
+    }
+
+    & + article:before {
+        display:block;
+        content: " ";
+        height:rhythm(2);
+        width: 100px;
+        border-top: 2px solid #ccc;
+        border-top-color: rgba(black, .1);
+        margin: rhythm(2) auto 0;
+    }
 }
 
 .gce-list {

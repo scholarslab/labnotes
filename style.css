@@ -418,13 +418,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .author_image {
     display: block;
-    width: 3.33333em;
-    height: 3.33333em;
   }
   .author_image img {
-    -moz-border-radius: 1.66667em;
-    -webkit-border-radius: 1.66667em;
-    border-radius: 1.66667em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
     vertical-align: middle;
   }
 
@@ -810,6 +808,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
   }
 
+  article footer {
+    margin-top: 3.33333em;
+    margin-bottom: 3.33333em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+  }
+  article footer .author_image_link {
+    float: left;
+    display: block;
+    width: 80px;
+    height: 80px;
+  }
+  article footer .author-name,
+  article footer .author-description {
+    margin-left: 90px !important;
+  }
+  article footer p {
+    font-size: 0.83333em;
+    line-height: 2em;
+    line-height: 1.5em;
+    margin: 0;
+  }
+  article footer p.author-name {
+    font-weight: bold;
+  }
+  article footer p.author-name a {
+    text-decoration: none;
+  }
   article + article:before {
     display: block;
     content: " ";
