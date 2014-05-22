@@ -38,7 +38,7 @@
     <header role="banner">
 
         <a id="homelink" href="<?php bloginfo('url'); ?>" rel="home">
-        <img id="slab-logo" src="//static.scholarslab.org/images/logos/slab/slab-logo-black-125px.png" alt="<?php bloginfo('site_title'); ?>">
+        <?php include(get_stylesheet_directory() . '/images/slab-logo.svg'); ?>
         </a>
 
         <?php
@@ -51,7 +51,7 @@
             )
         );
         ?>
-        <?php /*
+        <?php
         // Our courtesy navigation.
         wp_nav_menu(
             array(
@@ -60,7 +60,7 @@
                 'container_class' => 'menu courtesy-nav',
                 'depth' => '1'
             )
-        );*/
+        );
         ?>
         <?php // get_search_form(); ?>
   </header>

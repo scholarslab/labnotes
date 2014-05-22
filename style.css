@@ -71,13 +71,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   html {
-    background: #eeeeee url("images/wild_oliva.png");
+    background: white url("images/wild_oliva.png");
     margin: 0;
     padding: 0;
   }
 
   body {
-    background-color: #eee;
+    background-color: #fff;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -93,7 +93,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 
-  img {
+  img,
+  svg {
     max-width: 100%;
     max-height: 100%;
     height: auto;
@@ -487,27 +488,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=banner],
   [role=main],
   [role=contentinfo] {
-    padding-top: 1.66667em;
-    padding-bottom: 1.66667em;
-    padding-left: 8.51064%;
-    padding-right: 8.51064%;
+    padding: 1.66667em;
   }
 
   [role=banner] {
-    padding: 0.83333em 2.12766%;
-    border-bottom: 1px solid #ccc;
-    background: white url("images/paper_3.png");
+    padding-top: 5em;
+    padding-bottom: 3.33333em;
   }
 
   #homelink {
     display: block;
-    height: 1.66667em;
     border: none;
     outline: none;
-    opacity: .5;
+    width: 50%;
+    position: relative;
   }
-  #homelink img {
-    vertical-align: middle;
+  #homelink svg {
+    display: inline-block;
+  }
+  #homelink:link path, #homelink:visited path {
+    fill: #b00;
+  }
+  #homelink:hover path, #homelink:focus path, #homelink:active path {
+    fill: #900;
   }
 
   nav,
@@ -519,7 +522,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     list-style: none;
     padding: 0;
     margin: 0;
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: 1px;
     word-spacing: 1em;
     font-size: 0.77778em;
@@ -538,6 +541,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   nav a,
   .menu a {
     text-decoration: none;
+  }
+  nav.courtesy-nav,
+  .menu.courtesy-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: auto !important;
+    background: rgba(0, 0, 0, 0.05);
+    padding-left: 1.66667em;
+    padding-right: 1.66667em;
+    text-align: right;
+  }
+  nav.courtesy-nav ul,
+  .menu.courtesy-nav ul {
+    text-transform: lowercase;
+    font-size: 0.66667em;
+    line-height: 2.5em;
+    line-height: 2.5em;
+    letter-spacing: normal;
+  }
+  nav.courtesy-nav a,
+  .menu.courtesy-nav a {
+    color: #5a5a5a;
+  }
+  nav.courtesy-nav a:visited,
+  .menu.courtesy-nav a:visited {
+    color: #747474;
+  }
+  nav.courtesy-nav a:focus,
+  .menu.courtesy-nav a:focus {
+    color: #414141;
+  }
+  nav.courtesy-nav a:hover,
+  .menu.courtesy-nav a:hover {
+    color: #414141;
+  }
+  nav.courtesy-nav a:active,
+  .menu.courtesy-nav a:active {
+    color: #5a5a5a;
   }
 
   [role=main] {
@@ -573,7 +616,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
     color: #333;
     color: rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid #ccc;
   }
   .singular [role=main] header a {
     color: #333;
@@ -617,7 +659,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
     color: #333;
     color: rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid #ccc;
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
     margin-bottom: 3.33333em !important;
@@ -914,6 +955,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     list-style: none;
   }
 
+  #areas-of-focus {
+    overflow: hidden;
+  }
+  #areas-of-focus section {
+    width: 23.80952%;
+    float: left;
+    background: #eee;
+  }
+  #areas-of-focus section:nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  #areas-of-focus section:nth-child(4n + 2) {
+    margin-left: 25.39683%;
+    margin-right: -100%;
+    clear: none;
+  }
+  #areas-of-focus section:nth-child(4n + 3) {
+    margin-left: 50.79365%;
+    margin-right: -100%;
+    clear: none;
+  }
+  #areas-of-focus section:nth-child(4n + 4) {
+    margin-left: 76.19048%;
+    margin-right: -100%;
+    clear: none;
+  }
+  #areas-of-focus section h1 {
+    font-size: 1em;
+    line-height: 1.66667em;
+    line-height: 1.66667em;
+    margin: 0;
+    font-weight: 700;
+  }
+  #areas-of-focus section p {
+    margin: 0;
+  }
+
   [role=contentinfo] {
     background-image: url("images/wild_oliva.png");
     background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
@@ -941,7 +1022,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding: 1.66667em;
+    padding: 5em 3.33333em 3.33333em;
   }
 
   [role=banner]:before, [role=banner]:after {
@@ -1036,8 +1117,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding-left: 6.34921%;
-    padding-right: 6.34921%;
+    padding-left: 12.69841%;
+    padding-right: 12.69841%;
+    padding-top: 5em;
   }
 
   [role=main] {
@@ -1110,6 +1192,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=contentinfo] {
     padding-left: 5.06329%;
     padding-right: 5.06329%;
+    padding-top: 5em;
   }
 
   [role=main] {
