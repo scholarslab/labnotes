@@ -14,13 +14,20 @@ if ($category = get_query_var('people-category')) {
     <h1><?php echo $heading; ?></h1>
 </header>
 <?php if (have_posts()) : ?>
-<nav class="local">
-    <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'people-category')); ?>
+<nav class="local-nav">
+    <?php
+$student_assistant = get_term_by('slug', 'student-assistant', 'people-category');
+$termId = $student_assistant->term_id;
+
+    wp_list_categories(array('title_li' => '', 'taxonomy' => 'people-category', 'exclude' => $termId )); ?>
 </nav>
 <ul class="people-list">
 <?php while( have_posts() ) : the_post(); ?>
 <li>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<a href="<?php the_permalink(); ?>">
+    <img src="<?php echo labnotes_people_image(); ?>" alt="" />
+    <?php the_title(); ?>
+</a>
 </li>
 <?php endwhile; ?>
 </ul>

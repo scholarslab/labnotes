@@ -18,7 +18,7 @@ $headerArgs = array(
 add_theme_support( 'custom-background', $headerArgs );
 
 function labnotes_custom_background_cb() {
-    
+
     // $background is the saved custom image, or the default image.
     $background = set_url_scheme( get_background_image() );
 
@@ -54,23 +54,23 @@ function labnotes_custom_background_cb() {
                . "background-image: linear-gradient(to right, rgba($overlay_color, 0.5), rgba($overlay_color, 0.5)), url('$background');";
 
         $repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
-        
+
         if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
             $repeat = 'repeat';
-        
+
         $repeat = " background-repeat: $repeat;";
 
         $position = get_theme_mod( 'background_position_x', get_theme_support( 'custom-background', 'default-position-x' ) );
-        
+
         if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
             $position = 'left';
-        
+
         $position = " background-position: top $position;";
 
         $attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
         if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
             $attachment = 'scroll';
-        
+
         $attachment = " background-attachment: $attachment;";
 
         $style .= $image . $repeat . $position . $attachment;
@@ -88,7 +88,30 @@ function labnotes_custom_background_cb() {
         echo $html;
 
     }
-    
+
+}
+
+/**
+ * Returns path to background image for a given post.
+ *
+ * @uses wp_get_attachment_image_src()
+ * @return string The URL for an image, or empty string.
+ */
+function labnotes_people_image( $size = 'full' ) {
+
+    global $post;
+
+    $image = '';
+
+    $attachment_id = get_post_meta( $post->ID, '_custom_background_image_id', true );
+
+    if ( $attachment_id ) {
+        $image = wp_get_attachment_image_src( $attachment_id, $size );
+        $image = $image[0]; // URL is the first element in the returned array.
+    }
+
+    return $image;
+
 }
 
 function labnotes_add_homepage_blurb_selector($selector) {
@@ -356,7 +379,7 @@ function labnotes_pre_get_posts( $query ) {
     }
 
     if ( is_post_type_archive( 'people' ) ) {
-        
+
         if ($category = get_query_var('people-category')) {
             $query->set( 'people-category', $category);
         }
@@ -377,7 +400,7 @@ add_action( 'pre_get_posts', 'labnotes_pre_get_posts', 1 );
 function labnotes_add_meta_boxes() {
   add_meta_box("wp-user-information", __('Personal Info'), "labnotes_people_meta_box", "people", "side", "high");
   add_meta_box("wp-user-information", __('Project Info'), "labnotes_research_meta_box", "research", "side", "high");
-  
+
 }
 
 add_action( 'admin_init', 'labnotes_add_meta_boxes');
@@ -416,7 +439,7 @@ function labnotes_people_meta_box(){
 
     $fields = labnotes_people_meta_fields();
 
-    $departmentOptions = labnotes_people_departments(); 
+    $departmentOptions = labnotes_people_departments();
 
 ?>
 
@@ -572,7 +595,7 @@ function get_person_image($postId = null, $options = array()) {
 
   $userEmail = $customFields['person_email'][0];
   $userId = $customFields['person_user_id'][0];
-  
+
   // If the post has a custom field for person_user_id.
   if($userId > 0) {
       $user = get_userdata($userId);
@@ -721,7 +744,7 @@ function labnotes_hex2rgb($color) {
 function labnotes_term_link($link, $term, $taxonomy) {
     if ($taxonomy == 'people-category') {
         $link = get_post_type_archive_link('people') . '?people-category='.$term->slug;
-    }  
+    }
     return $link;
 }
 

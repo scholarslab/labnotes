@@ -415,6 +415,7 @@ a {
 [role=banner] {
     padding-top: rhythm(3);
     padding-bottom: rhythm(2);
+    position:relative;
 }
 
 
@@ -502,6 +503,14 @@ nav,
         }
     }
 
+    &.local-nav {
+        margin-top: rhythm();
+        li + li:before {
+            content: " · ";
+            color: #ccc;
+            margin: 0 .25em;
+        }
+    }
 }
 
 [role=main] {
@@ -745,8 +754,8 @@ article {
 
 #areas-of-focus {
     overflow:hidden;
+
     section {
-        @include gallery(4 of 16);
         background: #eee;
 
         h1 {
@@ -760,6 +769,23 @@ article {
             margin:0;
         }
     }
+}
+
+.people-list {
+    list-style:none;
+    padding-left:0;
+
+    li {
+        @include gallery(4 of 12);
+        font-weight: 200;
+        @include adjust-font-size-to(20px);
+        margin-bottom:rhythm(1, 20px);
+    }
+
+    a {
+        text-decoration:none;
+    }
+
 }
 
 [role=contentinfo] {
