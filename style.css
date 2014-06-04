@@ -601,9 +601,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-color: #f4f4f4;
     background-color: rgba(255, 255, 255, 0.5);
   }
-  [role=main] header h1 {
-    margin-bottom: 0;
-  }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;

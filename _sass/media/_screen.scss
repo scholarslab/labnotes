@@ -519,9 +519,6 @@ nav,
     background-color: rgba(white, .5);
 
     header {
-        h1 {
-            margin-bottom:0;
-        }
 
         .singular & {
             @include fullbleed;
