@@ -71,7 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   html {
-    background: white url("images/wild_oliva.png");
+    background: #eeeeee;
     margin: 0;
     padding: 0;
   }
@@ -86,6 +86,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-family: "Source Sans Pro", sans-serif;
     color: #5a5a5a;
     color: rgba(90, 90, 90, 0.9);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
   }
   body::after {
     content: " ";
@@ -1032,6 +1035,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media screen and (min-width: 640px) {
+  html {
+    padding: 0.83333em;
+  }
+
   body {
     max-width: 100%;
     margin-left: auto;

@@ -6,7 +6,7 @@ $grid: hide;
 
 html {
     @include background(
-        #fff url('images/wild_oliva.png')
+        #eee
     );
     margin:0;
     padding:0;
@@ -20,6 +20,7 @@ body {
     font-family: $default-font;
     color: $default-color;
     color: rgba($default-color, .9);
+    @include box-shadow(0 0 10px rgba(black, .075));
 }
 
 img,
@@ -806,6 +807,9 @@ article {
 // Media query for 640px. Sets layout to 12 columns.
 @include susy-breakpoint('640px', 12) {
 
+html {
+    padding:rhythm(.5);
+}
 
 body {
     @include container($grid);
