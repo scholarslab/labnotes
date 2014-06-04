@@ -616,6 +616,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.25641%;
     padding-right: 10.25641%;
     padding-left: 10.25641%;
+    margin-bottom: 3.33333em;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -656,6 +657,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -10.25641%;
     padding-right: 10.25641%;
     padding-left: 10.25641%;
+    margin-bottom: 3.33333em;
   }
 
   #homepage-blurb {
@@ -765,6 +767,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -20.51282%;
     padding-right: 20.51282%;
     padding-left: 20.51282%;
+    margin-bottom: 3.33333em;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1080,6 +1083,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.80645%;
     padding-right: 25.80645%;
     padding-left: 25.80645%;
+    margin-bottom: 3.33333em;
   }
   .single-people [role=main] header {
     padding-top: 16.66667em;
@@ -1100,6 +1104,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.80645%;
     padding-right: 25.80645%;
     padding-left: 25.80645%;
+    margin-bottom: 3.33333em;
   }
   [role=main] #homepage-blurb {
     padding-top: 3.33333em;
@@ -1170,6 +1175,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -30.76923%;
     padding-right: 30.76923%;
     padding-left: 30.76923%;
+    margin-bottom: 3.33333em;
   }
   .single-people [role=main] header {
     padding-top: 26.66667em !important;
@@ -1190,6 +1196,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -30.76923%;
     padding-right: 30.76923%;
     padding-left: 30.76923%;
+    margin-bottom: 3.33333em;
   }
   [role=main] #homepage-blurb {
     padding-top: 3.33333em;
@@ -1234,6 +1241,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -51.28205%;
     padding-right: 51.28205%;
     padding-left: 51.28205%;
+    margin-bottom: 3.33333em;
   }
   .single-people [role=main] header {
     padding-top: 33.33333em !important;
@@ -1254,6 +1262,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -51.28205%;
     padding-right: 51.28205%;
     padding-left: 51.28205%;
+    margin-bottom: 3.33333em;
   }
   [role=main] #homepage-blurb {
     padding-top: 5em;

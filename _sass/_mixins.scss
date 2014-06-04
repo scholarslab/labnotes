@@ -10,6 +10,7 @@
 @mixin fullbleed($columns: 1, $context: 10) {
     @include bleed-y(rhythm());
     @include bleed-x(span($columns of $context wide));
+    margin-bottom: rhythm(2);
 }
 
 @mixin fullbackground($image: 'images/background.jpg') {
