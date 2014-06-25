@@ -10,7 +10,6 @@
 @mixin fullbleed($columns: 1, $context: 10) {
     @include bleed-y(rhythm());
     @include bleed-x(span($columns of $context wide));
-    margin-bottom: rhythm(2);
 }
 
 @mixin fullbackground($image: 'images/background.jpg') {
@@ -39,11 +38,11 @@
     overflow:hidden;
 
     & > * {
-        @include gallery(5 of 10);
+        @include gallery(4 of 12);
         margin-bottom: rhythm(1);
 
-        &:nth-child(2n) {
-            @include gallery(last 5 of 10);
+        &:nth-child(3n) {
+            @include gallery(last 4 of 12);
         }
 
     }
@@ -54,13 +53,13 @@
     padding-left:0;
     padding-right:0;
         & > * {
-            @include gallery(4 of 12);
-            &:nth-child(2n) {
-                @include gallery(4 of 12);
+            @include gallery(3 of 12);
+            &:nth-child(3n) {
+                @include gallery(3 of 12);
             }
 
-            &:nth-child(3n) {
-                @include gallery(last 4 of 12);
+            &:nth-child(4n) {
+                @include gallery(last 3 of 12);
             }
 
         }
