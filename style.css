@@ -956,9 +956,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   .post-meta {
-    font-size: 0.83333em;
-    line-height: 2em;
-    line-height: 2em;
+    font-size: 0.77778em;
+    line-height: 2.14286em;
+    line-height: 2.14286em;
+    font-weight: 500;
+    color: rgba(90, 90, 90, 0.5);
     margin-bottom: 0;
   }
 
@@ -1004,6 +1006,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .commentlist li ul {
     padding-left: 1.66667em;
     list-style: none;
+  }
+
+  .posts-list {
+    list-style: none;
+  }
+  .posts-list a {
+    text-decoration: none;
+  }
+  .posts-list .post-meta {
+    display: block;
   }
 
   #areas-of-focus {
@@ -1130,6 +1142,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=main] .commentlist blockquote {
     margin: 0 0 0 1.66667em !important;
     padding: 0 !important;
+  }
+
+  .posts-list .post-meta {
+    width: 38.46154%;
+    float: right;
+    margin-right: 0;
+    text-align: right;
   }
 }
 @media screen and (min-width: 940px) {

@@ -31,7 +31,7 @@ if (have_posts()) : ?>
 <ul class="posts-list">
 
 <?php while (have_posts()) : the_post(); ?>
-<li><a href="<?php echo the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a> <span class="post-meta"><?php the_time('F j, Y'); ?></span></li>
+<li><span class="post-meta"><?php the_time('F j, Y'); ?></span> <a href="<?php echo the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></li>
 <?php endwhile; ?>
 
 </ul>

@@ -663,6 +663,7 @@ article {
     margin-top: rhythm(2);
 }
 
+// Google Calendar Events generated list.
 .gce-list {
     list-style:none;
     li {
@@ -693,8 +694,10 @@ article {
 }
 
 .post-meta {
-    @include adjust-font-size-to(15px);
-    @include adjust-leading-to(1, 15px);
+    @include adjust-font-size-to(14px);
+    @include adjust-leading-to(1, 14px);
+    font-weight:500;
+    color: $default-color-lighter;
     margin-bottom:0;
 }
 
@@ -753,6 +756,18 @@ article {
     li ul {
         padding-left: rhythm(1);
         list-style:none;
+    }
+}
+
+.posts-list {
+    list-style:none;
+
+    a {
+        text-decoration:none;
+    }
+
+    .post-meta {
+        display:block;
     }
 }
 
@@ -853,6 +868,14 @@ body {
         padding: 0 !important;
     }
 
+}
+
+.posts-list {
+
+    .post-meta {
+        @include span(last 4 of 10);
+        text-align:right;
+    }
 }
 
 
