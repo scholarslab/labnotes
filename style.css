@@ -293,7 +293,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   dd {
-    margin-left: 2.12766%;
+    margin-left: 1.81818%;
   }
 
   table {
@@ -443,12 +443,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .alignright {
     float: right;
-    margin: 1.66667em 0 1.66667em 2.12766%;
+    margin: 1.66667em 0 1.66667em 1.81818%;
   }
 
   .alignleft {
     float: left;
-    margin: 1.66667em 2.12766% 1.66667em 0;
+    margin: 1.66667em 1.81818% 1.66667em 0;
   }
 
   .aligncenter {
@@ -458,14 +458,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   a img.alignright {
     float: right;
-    margin: 1.66667em 0 1.66667em 2.12766%;
+    margin: 1.66667em 0 1.66667em 1.81818%;
   }
   a img.alignnone {
     margin: 1.66667em auto;
   }
   a img.alignleft {
     float: left;
-    margin: 1.66667em 2.12766% 1.66667em 0;
+    margin: 1.66667em 1.81818% 1.66667em 0;
   }
   a img.aligncenter {
     display: block;
@@ -491,11 +491,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=banner],
   [role=main],
   [role=contentinfo] {
-    padding: 1.66667em;
+    padding: 1.66667em 7.27273%;
   }
 
   [role=banner] {
-    padding-top: 5em;
+    padding-top: 3.33333em;
     padding-bottom: 3.33333em;
     position: relative;
   }
@@ -612,10 +612,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.25641%;
-    margin-left: -10.25641%;
-    padding-right: 10.25641%;
-    padding-left: 10.25641%;
+    margin-right: -8.51064%;
+    margin-left: -8.51064%;
+    padding-right: 8.51064%;
+    padding-left: 8.51064%;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -652,10 +652,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -10.25641%;
-    margin-left: -10.25641%;
-    padding-right: 10.25641%;
-    padding-left: 10.25641%;
+    margin-right: -8.51064%;
+    margin-left: -8.51064%;
+    padding-right: 8.51064%;
+    padding-left: 8.51064%;
   }
 
   #homepage-blurb {
@@ -769,25 +769,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media screen and (min-width: 940px) {
-  .research,
-  .people-list {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-top: -1.66667em;
-    margin-bottom: -1.66667em;
-    padding-top: 1.66667em;
-    padding-bottom: 1.66667em;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-right: -20.51282%;
-    margin-left: -20.51282%;
-    padding-right: 20.51282%;
-    padding-left: 20.51282%;
-    padding-left: 0;
-    padding-right: 0;
-  }
   .research > *,
   .people-list > * {
     width: 23.40426%;
@@ -946,6 +927,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 3.33333em auto 0;
   }
 
+  .singular .entry-content {
+    margin-top: 3.33333em;
+  }
+
   .gce-list {
     list-style: none;
   }
@@ -1090,8 +1075,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=main] {
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
+    padding-left: 14.54545%;
+    padding-right: 14.54545%;
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
@@ -1104,10 +1089,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.80645%;
-    margin-left: -25.80645%;
-    padding-right: 25.80645%;
-    padding-left: 25.80645%;
+    margin-right: -20.51282%;
+    margin-left: -20.51282%;
+    padding-right: 20.51282%;
+    padding-left: 20.51282%;
   }
   .single-people [role=main] header {
     padding-top: 16.66667em;
@@ -1124,10 +1109,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin-right: -25.80645%;
-    margin-left: -25.80645%;
-    padding-right: 25.80645%;
-    padding-left: 25.80645%;
+    margin-right: -20.51282%;
+    margin-left: -20.51282%;
+    padding-right: 20.51282%;
+    padding-left: 20.51282%;
   }
   [role=main] #homepage-blurb {
     padding-top: 3.33333em;
@@ -1137,8 +1122,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -8.51064%;
-    padding: 8.51064%;
+    margin: -7.27273%;
+    padding: 7.27273%;
     padding-left: 0;
     padding-right: 0;
   }

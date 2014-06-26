@@ -7,7 +7,8 @@
   }
 }
 
-@mixin fullbleed($columns: 1, $context: 10) {
+@mixin fullbleed($columns: 1, $layout: 14) {
+    $context: $layout - ($columns * 2);
     @include bleed-y(rhythm());
     @include bleed-x(span($columns of $context wide));
 }
@@ -49,9 +50,7 @@
 
     @include susy-breakpoint('940px', 16) {
 
-    @include fullbleed(2, 10);
-    padding-left:0;
-    padding-right:0;
+
         & > * {
             @include gallery(3 of 12);
             &:nth-child(3n) {

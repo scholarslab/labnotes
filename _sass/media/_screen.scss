@@ -410,11 +410,11 @@ a {
 [role=banner],
 [role=main],
 [role=contentinfo] {
-    padding: rhythm(1);
+    padding: rhythm() span(1 of 14 wide);
 }
 
 [role=banner] {
-    padding-top: rhythm(3);
+    padding-top: rhythm(2);
     padding-bottom: rhythm(2);
     position:relative;
 }
@@ -659,6 +659,10 @@ article {
     }
 }
 
+.singular .entry-content {
+    margin-top: rhythm(2);
+}
+
 .gce-list {
     list-style:none;
     li {
@@ -787,7 +791,7 @@ article {
 }
 
 // Media query for 640px. Sets layout to 12 columns.
-@include susy-breakpoint('640px', 12) {
+@include susy-breakpoint('640px', 14) {
 
 html {
     padding:rhythm(.5);
@@ -820,7 +824,7 @@ body {
 
     header {
         .singular & {
-            @include fullbleed(2,8);
+            @include fullbleed(2,14);
         }
 
         .single-people & {
@@ -830,7 +834,7 @@ body {
 
     #homepage-blurb,
     #blog-archives {
-        @include fullbleed(2,8);
+        @include fullbleed(2,14);
     }
 
     #homepage-blurb {
@@ -884,7 +888,7 @@ a#homelink {
 
     header {
         .singular & {
-            @include fullbleed(3,10);
+            @include fullbleed(3,16);
         }
 
         .single-people & {
@@ -894,7 +898,7 @@ a#homelink {
 
     #homepage-blurb,
     #blog-archives {
-        @include fullbleed(3,10);
+        @include fullbleed(3,16);
     }
 
     #homepage-blurb {
