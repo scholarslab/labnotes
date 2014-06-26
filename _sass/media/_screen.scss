@@ -6,14 +6,14 @@ $grid: hide;
 
 html {
     @include background(
-        #eee
+        #d6d6d6
     );
     margin:0;
     padding:0;
 }
 
 body {
-    background-color: #fff;
+    background-color: white;
     @include container($grid);
     margin:0;
     padding:0;
@@ -415,8 +415,11 @@ a {
 
 [role=banner] {
     padding-top: rhythm(2);
-    padding-bottom: rhythm(2);
+    padding-bottom: rhythm(1);
     position:relative;
+    text-align:center;
+    border-bottom:1px solid #ccc;
+    border-color: rgba(black, .1);
 }
 
 
@@ -425,6 +428,9 @@ a {
     border:none;
     outline:none;
     width: 50%;
+    max-width: 150px;
+    margin-left: auto;
+    margin-right:auto;
     position:relative;
     svg {
         display:inline-block;
@@ -482,9 +488,11 @@ nav,
         left:0;
         width: auto !important;
         background: rgba(black, 0.05);
+        border-bottom: 1px solid #ccc;
+        border-color: rgba(black, .05);
         padding-left: rhythm(1);
         padding-right: rhythm(1);
-        text-align:right;
+        text-align:center;
 
         ul {
             text-transform:lowercase;
@@ -515,8 +523,8 @@ nav,
 }
 
 [role=main] {
-    background-color: #f4f4f4;
-    background-color: rgba(white, .5);
+    background-color: #f9f9f9;
+    background-color: rgba(black, .0175);
 
     header {
 
@@ -818,7 +826,7 @@ body {
 
 [role=banner],
 [role=contentinfo] {
-    padding: rhythm(3) rhythm(2) rhythm(2);
+    padding: rhythm(2) span(1 of 16 wide) rhythm(1);
 }
 
 [role=banner] {
@@ -831,6 +839,10 @@ body {
     nav {
         @include span(last 9 of 12);
         text-align:right;
+
+        &.courtesy-nav {
+            text-align:right;
+        }
     }
 }
 
@@ -891,12 +903,6 @@ body {
 
 a#homelink {
     display:inline;
-}
-
-[role=banner],
-[role=contentinfo] {
-    padding-top: rhythm(3);
-
 }
 
 [role=main] {

@@ -71,13 +71,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   html {
-    background: #eeeeee;
+    background: #d6d6d6;
     margin: 0;
     padding: 0;
   }
 
   body {
-    background-color: #fff;
+    background-color: white;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -496,8 +496,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner] {
     padding-top: 3.33333em;
-    padding-bottom: 3.33333em;
+    padding-bottom: 1.66667em;
     position: relative;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-color: rgba(0, 0, 0, 0.1);
   }
 
   #homelink {
@@ -505,6 +508,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border: none;
     outline: none;
     width: 50%;
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
   }
   #homelink svg {
@@ -554,9 +560,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     left: 0;
     width: auto !important;
     background: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ccc;
+    border-color: rgba(0, 0, 0, 0.05);
     padding-left: 1.66667em;
     padding-right: 1.66667em;
-    text-align: right;
+    text-align: center;
   }
   nav.courtesy-nav ul,
   .menu.courtesy-nav ul {
@@ -598,8 +606,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=main] {
-    background-color: #f4f4f4;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.0175);
   }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
@@ -1077,7 +1085,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=banner],
   [role=contentinfo] {
-    padding: 5em 3.33333em 3.33333em;
+    padding: 3.33333em 6.34921% 1.66667em;
   }
 
   [role=banner]:before, [role=banner]:after {
@@ -1094,6 +1102,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     width: 74.46809%;
     float: right;
     margin-right: 0;
+    text-align: right;
+  }
+  [role=banner] nav.courtesy-nav {
     text-align: right;
   }
 
@@ -1176,11 +1187,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   a#homelink {
     display: inline;
-  }
-
-  [role=banner],
-  [role=contentinfo] {
-    padding-top: 5em;
   }
 
   [role=main] {
