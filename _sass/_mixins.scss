@@ -48,17 +48,20 @@
 
     }
 
-    @include susy-breakpoint('940px', 16) {
+
+    @include susy-breakpoint('940px', 18) {
+        @include bleed-x(span(2 of 12 wide));
+        padding:0;
 
 
         & > * {
-            @include gallery(3 of 12);
+            @include gallery(4 of 16);
             &:nth-child(3n) {
-                @include gallery(3 of 12);
+                @include gallery(4 of 16);
             }
 
             &:nth-child(4n) {
-                @include gallery(last 3 of 12);
+                @include gallery(last 4 of 16);
             }
 
         }

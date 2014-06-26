@@ -806,7 +806,7 @@ article {
 }
 
 // Media query for 640px. Sets layout to 12 columns.
-@include susy-breakpoint('640px', 14) {
+@include susy-breakpoint('640px', 16) {
 
 html {
     padding:rhythm(.5);
@@ -825,11 +825,11 @@ body {
     @include clearfix;
 
     #homelink {
-        @include span(2 of 10);
+        @include span(3 of 12);
     }
 
     nav {
-        @include span(last 8 of 10);
+        @include span(last 9 of 12);
         text-align:right;
     }
 }
@@ -839,7 +839,7 @@ body {
 
     header {
         .singular & {
-            @include fullbleed(2,14);
+            @include fullbleed(2,16);
         }
 
         .single-people & {
@@ -882,8 +882,8 @@ body {
 }
 
 
-// Media query for 940px. Sets layout to 16 columns.
-@include susy-breakpoint('940px', 16) {
+// Media query for 940px. Sets layout to 18 columns.
+@include susy-breakpoint('940px', 18) {
 
 body {
     @include container($grid);
@@ -911,7 +911,7 @@ a#homelink {
 
     header {
         .singular & {
-            @include fullbleed(3,16);
+            @include fullbleed(3,18);
         }
 
         .single-people & {
@@ -921,7 +921,7 @@ a#homelink {
 
     #homepage-blurb,
     #blog-archives {
-        @include fullbleed(3,16);
+        @include fullbleed(3,18);
     }
 
     #homepage-blurb {
@@ -933,7 +933,7 @@ a#homelink {
 
 }
 
-@include susy-breakpoint('1200px', 20) {
+@include susy-breakpoint('1200px', 18) {
 
 body {
     @include container($grid);
