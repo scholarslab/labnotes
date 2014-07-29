@@ -693,8 +693,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-top: 1px solid #ccc;
     border-color: rgba(0, 0, 0, 0.05);
     margin-top: 0;
+    overflow: hidden;
   }
+}
+@media screen and (min-width: 480px) {
+  #blog-archives > div {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  #blog-archives > div:last-child {
+    width: 48.93617%;
+    float: right;
+    margin-right: 0;
+  }
+}
 
+@media screen and (min-width: 480px) and (min-width: 940px) {
+  #blog-archives > div div {
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+  }
+  #blog-archives > div div:last-child {
+    width: 47.82609%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media screen {
   .pagination {
     text-align: justify;
     margin-top: 3.33333em;
@@ -1148,6 +1176,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
   }
+  [role=main] #blog-archives {
+    padding-left: 8.51064%;
+    padding-right: 8.51064%;
+  }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -1237,6 +1269,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=main] #homepage-blurb {
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
+  }
+  [role=main] #blog-archives {
+    padding-left: 8.51064%;
+    padding-right: 8.51064%;
   }
 }
 @media screen and (min-width: 1200px) {

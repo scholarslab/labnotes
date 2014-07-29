@@ -565,6 +565,30 @@ nav,
     border-top:1px solid #ccc;
     border-color: rgba(black, 0.05);
     margin-top:0;
+    overflow:hidden;
+
+    @include susy-breakpoint('480px', 16) {
+
+    & > div {
+        @include span(6 of 12);
+
+        &:last-child {
+           @include span(last 6 of 12);
+        }
+
+        @include susy-breakpoint('940px', 18) {
+
+        div {
+            @include span(3 of 6);
+            &:last-child {
+                @include span(last 3 of 6);
+            }
+        }
+
+        }
+
+    }
+}
 }
 
 
@@ -868,6 +892,11 @@ body {
         padding-bottom: rhythm(2);
     }
 
+    #blog-archives {
+        padding-left:span(1 wide of 12);
+        padding-right:span(1 wide of 12);
+    }
+
     blockquote {
         @include bleed(1);
         padding-left:0;
@@ -934,6 +963,10 @@ a#homelink {
         padding-bottom: rhythm(2);
     }
 
+    #blog-archives {
+        padding-left:span(1 wide of 12);
+        padding-right:span(1 wide of 12);
+    }
 }
 
 }
