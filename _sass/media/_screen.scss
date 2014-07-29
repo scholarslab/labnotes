@@ -6,7 +6,7 @@ $grid: hide;
 
 html {
     @include background(
-        #d6d6d6
+        #f0f0f0
     );
     margin:0;
     padding:0;
@@ -20,7 +20,6 @@ body {
     font-family: $default-font;
     color: $default-color;
     color: rgba($default-color, .9);
-    @include box-shadow(0 0 10px rgba(black, .075));
 }
 
 img,
@@ -82,9 +81,13 @@ h1 {
         @include trailer(1, 40px);
     }
 
+    .singular & a {
+        background: white;
+    }
+
     @include susy-breakpoint(600px, 8) {
         @include adjust-font-size-to(60px);
-        @include adjust-leading-to(2,60px);
+        @include adjust-leading-to(3,60px);
         @include trailer(1, 60px);
     }
 
@@ -815,10 +818,6 @@ article {
 
 // Media query for 640px. Sets layout to 12 columns.
 @include susy-breakpoint('640px', 16) {
-
-html {
-    padding:rhythm(.5);
-}
 
 body {
     @include container($grid);
