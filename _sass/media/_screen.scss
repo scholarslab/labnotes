@@ -5,9 +5,7 @@ $grid: hide;
 @include establish-baseline;
 
 html {
-    @include background(
-        #f0f0f0
-    );
+    background: #f0f0f0;
     margin:0;
     padding:0;
 }
