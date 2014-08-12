@@ -1,5 +1,7 @@
 $grid: hide;
 
+@import "media/navigation";
+
 @media screen {
 
 @include establish-baseline;
@@ -415,26 +417,35 @@ a {
 }
 
 [role=banner] {
-    padding-top: rhythm(2);
-    padding-bottom: rhythm(1);
+    padding-top:0;
+    padding-bottom:0;
     position:relative;
     text-align:center;
     border-bottom:1px solid #ccc;
     border-color: rgba(black, .1);
+    @include clearfix;
 }
 
 
 #homelink {
-    display:block;
+    display:inline-block;
     border:none;
     outline:none;
+    content: " ";
     width: 50%;
     max-width: 150px;
     margin-left: auto;
     margin-right:auto;
     position:relative;
+
     svg {
-        display:inline-block;
+        max-width:100%;
+        height: auto;
+        width: auto;
+        vertical-align:middle;
+        padding:0;
+        margin:0;
+        max-height: $base-line-height;
     }
 
     &:link,
@@ -454,8 +465,7 @@ a {
 
 }
 
-nav,
-.menu {
+nav {
     display:block;
 
     ul {
@@ -463,15 +473,13 @@ nav,
         padding:0;
         margin:0;
         text-transform:lowercase;
-        letter-spacing: 1px;
-        word-spacing: 1em;
-        @include adjust-font-size-to(14px);
-        @include adjust-leading-to(1,14px);
+        letter-spacing:1px;
+        @include adjust-font-size-to(16px);
+        @include adjust-leading-to(2,16px);
     }
 
     li {
-        display:inline;
-        word-spacing: normal;
+        display:inline-block;
 
         ul {
             display:none;
@@ -480,37 +488,8 @@ nav,
 
     a {
         text-decoration:none;
-    }
+        display:block;
 
-    &.courtesy-nav {
-        position:absolute;
-        top:0;
-        right:0;
-        left:0;
-        width: auto !important;
-        background: rgba(black, 0.05);
-        border-bottom: 1px solid #ccc;
-        border-color: rgba(black, .05);
-        padding-left: rhythm(1);
-        padding-right: rhythm(1);
-        text-align:center;
-
-        ul {
-            text-transform:lowercase;
-            @include adjust-font-size-to(12px);
-            @include adjust-leading-to(1,12px);
-            letter-spacing:normal;
-        }
-
-        a {
-            @include link-colors(
-                $link-color,
-                $link-hover-color,
-                $link-active-color,
-                $link-visited-color,
-                $link-focus-color
-            );
-        }
     }
 
     &.local-nav {
@@ -838,32 +817,30 @@ article {
     clear:both;
 }
 
-// Media query for 680px. Sets layout to 12 columns.
-@include susy-breakpoint('680px', 16) {
+// Media query for 700px. Sets layout to 16 columns.
+@include susy-breakpoint('700px', 16) {
 
 body {
     @include container($grid);
 }
 
-[role=banner],
-[role=contentinfo] {
-    padding: rhythm(2) span(1 of 16 wide) rhythm(1);
-}
-
 [role=banner] {
     @include clearfix;
+    @include pad(1);
 
     #homelink {
-        @include span(3 of 12);
+        @include span(3 of 14);
+        text-align:left;
     }
 
     nav {
-        @include span(last 9 of 12);
+        @include span(last 10 of 14);
         text-align:right;
 
-        &.courtesy-nav {
-            text-align:right;
+        .current-menu-item a {
+            border-bottom: 5px solid $link-color;
         }
+
     }
 }
 
@@ -916,6 +893,9 @@ body {
     }
 }
 
+[role=contentinfo] {
+    padding: rhythm(2) span(1 of 16 wide) rhythm(1);
+}
 
 }
 
@@ -927,8 +907,18 @@ body {
     @include container($grid);
 }
 
-a#homelink {
-    display:inline;
+[role=banner] {
+    @include pad(3);
+}
+
+#homelink {
+    display:block;
+}
+
+#homelink,
+.js #homelink,
+nav a {
+    @include adjust-leading-to(4,16px);
 }
 
 [role=main] {
@@ -975,7 +965,6 @@ body {
     @include container($grid);
 }
 
-[role=banner],
 [role=contentinfo] {
     padding-top: rhythm(3);
 }

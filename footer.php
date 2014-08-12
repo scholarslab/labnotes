@@ -28,5 +28,7 @@
         <?php wp_footer(); ?>
 
     </footer>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/menu.js"></script>
+
 </body>
 </html>

@@ -27,6 +27,8 @@
           ]);
         </script>
 
+        <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/responsive-nav.min.js"></script>
+
         <?php wp_head(); ?>
 
     </head>
@@ -40,28 +42,18 @@
         <a id="homelink" href="<?php bloginfo('url'); ?>" rel="home">
         <?php include(get_stylesheet_directory() . '/images/slab-logo.svg'); ?>
         </a>
-
+        <nav>
         <?php
         // Our main navigation.
         wp_nav_menu(
             array(
                 'theme_location' => 'header',
-                'container' => 'nav',
+                'container' => 'div',
                 'container_class' => 'menu main-nav',
             )
         );
         ?>
-        <?php
-        // Our courtesy navigation.
-        wp_nav_menu(
-            array(
-                'theme_location' => 'courtesy',
-                'container' => 'nav',
-                'container_class' => 'menu courtesy-nav',
-                'depth' => '1'
-            )
-        );
-        ?>
+</nav>
         <?php // get_search_form(); ?>
   </header>
 

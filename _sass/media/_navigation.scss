@@ -1,0 +1,156 @@
+/* CSS for responsive-nav.js by @viljamis */
+
+/**
+ * Responsive-nav.js adds 'js' to the HTML class attribute.
+ */
+.js {
+
+    /* Button to activate the navigation */
+    .nav-toggle {
+        position:relative;
+        text-decoration:none;
+        float:right;
+        display:block;
+        @include adjust-font-size-to(16px);
+        @include adjust-leading-to(2,16px);
+        padding-left: rhythm(.5,16px);
+        padding-right: rhythm(.5,16px);
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        vertical-align:middle;
+        background: transparent;
+
+        &:hover {
+            color: #333;
+            background: rgba(black,.0125);
+        }
+
+        /* Active state and class */
+        &:active,
+        &.active {
+            background: rgba(black,.025);
+        }
+
+    }
+
+    /* Link to home with SVG logo. */
+    #homelink {
+        float:left;
+        display:block;
+        max-width: 100px;
+        @include adjust-font-size-to(16px);
+        @include adjust-leading-to(2, 16px);
+        vertical-align:middle;
+    }
+
+    nav {
+        float:none;
+        clear:right;
+        width:100%;
+        text-align:left;
+        margin:0;
+        padding:0;
+
+        &.closed {
+            clip: rect(0 0 0 0);
+            max-height: 0;
+            display: block;
+            overflow: hidden;
+            zoom: 1;
+            clear:both;
+            width: 100%;
+        }
+
+        /* Open the navigation element */
+        &.opened  {
+            max-height: 9999px;
+            background: rgba(black,.025);
+        }
+
+        ul {
+            @include adjust-leading-to(1,16px);
+        }
+
+        li {
+            display:block;
+        }
+
+        a {
+            display:block;
+            text-decoration:none;
+            padding-left:rhythm(.25, 16px);
+            padding-right:rhythm(.25, 16px);
+            box-sizing: border-box;
+
+            &:focus {
+                outline:0;
+            }
+
+            &:link,
+            &:visited {
+                color: $link-color;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba(black,.05);
+                color: $link-active-color;
+            }
+        }
+    }
+}
+
+.disable-pointer-events {
+    pointer-events: none !important;
+}
+
+
+// Media query for 680px. Sets layout to 16 columns.
+@include susy-breakpoint('700px', 16) {
+
+.js {
+
+    .nav-toggle {
+        display:none;
+    }
+
+    nav.closed,
+    nav.opened{
+        float:right;
+        clear:right;
+        background: transparent !important;
+        width: inherit;
+        text-align:right;
+        position:inherit;
+        max-height:none;
+    }
+
+}
+
+nav a {
+    background: transparent !important;
+}
+
+.js nav.closed,
+.js nav.opened,
+nav {
+
+    background: transparent;
+
+    li {
+        display:inline-block !important;
+    }
+
+    ul {
+        @include adjust-leading-to(2,16px);
+    }
+
+    }
+}
+
