@@ -13,8 +13,6 @@
         display:block;
         @include adjust-font-size-to(16px);
         @include adjust-leading-to(2,16px);
-        padding-left: rhythm(.5,16px);
-        padding-right: rhythm(.5,16px);
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         -webkit-touch-callout: none;
         -webkit-user-select: none;
