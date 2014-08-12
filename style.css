@@ -1095,7 +1095,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 680px) {
   body {
     max-width: 100%;
     margin-left: auto;

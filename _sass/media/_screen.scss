@@ -838,8 +838,8 @@ article {
     clear:both;
 }
 
-// Media query for 640px. Sets layout to 12 columns.
-@include susy-breakpoint('640px', 16) {
+// Media query for 680px. Sets layout to 12 columns.
+@include susy-breakpoint('680px', 16) {
 
 body {
     @include container($grid);
