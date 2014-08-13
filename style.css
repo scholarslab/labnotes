@@ -64,134 +64,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* CSS for responsive-nav.js by @viljamis */
-/**
- * Responsive-nav.js adds 'js' to the HTML class attribute.
- */
-.js {
-  /* Button to activate the navigation */
-  /* Link to home with SVG logo. */
-}
-.js .nav-toggle {
-  position: relative;
-  text-decoration: none;
-  float: right;
-  display: block;
-  font-size: 0.88889em;
-  line-height: 1.875em;
-  line-height: 3.75em;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  background: transparent;
-  /* Active state and class */
-}
-.js .nav-toggle:hover {
-  color: #333;
-  background: rgba(0, 0, 0, 0.0125);
-}
-.js .nav-toggle:active, .js .nav-toggle.active {
-  background: rgba(0, 0, 0, 0.025);
-}
-.js #homelink {
-  float: left;
-  display: block;
-  max-width: 100px;
-  font-size: 0.88889em;
-  line-height: 1.875em;
-  line-height: 3.75em;
-  vertical-align: middle;
-}
-.js nav {
-  float: none;
-  clear: right;
-  width: 100%;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  /* Open the navigation element */
-}
-.js nav.closed {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-  clear: both;
-  width: 100%;
-}
-.js nav.opened {
-  max-height: 9999px;
-  background: rgba(0, 0, 0, 0.025);
-}
-.js nav ul {
-  line-height: 1.875em;
-}
-.js nav li {
-  display: block;
-}
-.js nav a {
-  display: block;
-  text-decoration: none;
-  padding-left: 0.46875em;
-  padding-right: 0.46875em;
-  box-sizing: border-box;
-}
-.js nav a:focus {
-  outline: 0;
-}
-.js nav a:link, .js nav a:visited {
-  color: #990000;
-}
-.js nav a:hover, .js nav a:focus, .js nav a:active {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #990000;
-}
-
-.disable-pointer-events {
-  pointer-events: none !important;
-}
-
-@media (min-width: 700px) {
-  .js .nav-toggle {
-    display: none;
-  }
-  .js nav.closed,
-  .js nav.opened {
-    float: right;
-    clear: right;
-    background: transparent !important;
-    width: inherit;
-    text-align: right;
-    position: inherit;
-    max-height: none;
-  }
-
-  nav a {
-    background: transparent !important;
-  }
-
-  .js nav.closed,
-  .js nav.opened,
-  nav {
-    background: transparent;
-  }
-  .js nav.closed li,
-  .js nav.opened li,
-  nav li {
-    display: inline-block !important;
-  }
-  .js nav.closed ul,
-  .js nav.opened ul,
-  nav ul {
-    line-height: 3.75em;
-  }
-}
 @media screen {
   html {
     font-size: 112.5%;
@@ -695,6 +567,118 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0 .25em;
   }
 
+  /* CSS for responsive-nav.js by @viljamis */
+  /**
+   * Responsive-nav.js adds 'js' to the HTML class attribute.
+   */
+  .js {
+    /* Button to activate the navigation */
+    /* Link to home with SVG logo. */
+  }
+  .js .nav-toggle {
+    position: relative;
+    text-decoration: none;
+    float: right;
+    display: block;
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    line-height: 3.75em;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    background: transparent;
+    /* Active state and class */
+  }
+  .js .nav-toggle:hover {
+    color: #333;
+    background: rgba(0, 0, 0, 0.0125);
+  }
+  .js .nav-toggle:active, .js .nav-toggle.active {
+    background: rgba(0, 0, 0, 0.025);
+  }
+  .js #homelink {
+    float: left;
+    display: block;
+    max-width: 120px;
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    line-height: 3.75em;
+    vertical-align: middle;
+  }
+  .js nav {
+    float: none;
+    clear: right;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /* Open the navigation element */
+  }
+  .js nav.closed {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+    clear: both;
+  }
+  .js nav.opened {
+    max-height: 9999px;
+  }
+  .js nav ul {
+    line-height: 1.875em;
+  }
+  .js nav li {
+    display: block;
+  }
+  .js nav a {
+    display: block;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -8.51064%;
+    margin-left: -8.51064%;
+    padding-right: 8.51064%;
+    padding-left: 8.51064%;
+    padding-top: 0.9375em;
+    padding-bottom: 0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .js nav a:focus {
+    outline: 0;
+  }
+  .js nav a:link, .js nav a:visited {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #990000;
+  }
+  .js nav a:hover, .js nav a:focus, .js nav a:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #990000;
+  }
+  .js nav li:first-child a {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .disable-pointer-events {
+    pointer-events: none !important;
+  }
+
   [role=main] {
     background-color: #f9f9f9;
     background-color: rgba(0, 0, 0, 0.0175);
@@ -1185,7 +1169,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
   body {
     max-width: 100%;
     margin-left: auto;
@@ -1220,6 +1204,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   [role=banner] nav .current-menu-item a {
     border-bottom: 5px solid #990000;
+  }
+
+  .js .nav-toggle {
+    display: none;
+  }
+  .js nav.closed,
+  .js nav.opened {
+    float: right;
+    clear: right;
+    background: transparent !important;
+    width: inherit;
+    text-align: right;
+    position: inherit;
+    max-height: none;
+  }
+  .js nav a {
+    background: transparent !important;
+    border: none;
+    margin: 0;
+    padding: 0 0.375em;
+  }
+
+  .js nav.closed,
+  .js nav.opened,
+  nav {
+    background: transparent;
+  }
+  .js nav.closed li,
+  .js nav.opened li,
+  nav li {
+    display: inline-block !important;
+  }
+  .js nav.closed ul,
+  .js nav.opened ul,
+  nav ul {
+    line-height: 3.75em;
   }
 
   [role=main] {
@@ -1307,21 +1327,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 
-  [role=banner] {
-    padding-left: 16.90141%;
-    padding-right: 16.90141%;
-  }
-
-  #homelink {
-    display: block;
-  }
-
-  #homelink,
-  .js #homelink,
-  nav a {
-    line-height: 7.5em;
-  }
-
+  /*[role=banner] {*/
+  /*@include pad(3);*/
+  /*}*/
+  /*#homelink,*/
+  /*.js #homelink,*/
+  /*nav a {*/
+  /*@include adjust-leading-to(4,16px);*/
+  /*}*/
   [role=main] {
     padding-left: 16.90141%;
     padding-right: 16.90141%;
