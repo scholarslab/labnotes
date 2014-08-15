@@ -738,6 +738,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 8.51064%;
     padding-bottom: 0;
     padding-top: 0;
+    max-height: 700px;
     display: table;
     width: 100%;
   }
