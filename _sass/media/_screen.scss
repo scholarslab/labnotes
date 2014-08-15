@@ -337,6 +337,11 @@ i {
 
 .author_image {
     display:block;
+
+    #wpadminbar & {
+        display:inline !important; /* Make sure the image in the admin bar stays put.*/
+    }
+
     img {
         @include border-radius(50%);
         vertical-align:middle;

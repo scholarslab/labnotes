@@ -424,6 +424,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .author_image {
     display: block;
   }
+  #wpadminbar .author_image {
+    display: inline !important;
+    /* Make sure the image in the admin bar stays put.*/
+  }
   .author_image img {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
