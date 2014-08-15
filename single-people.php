@@ -5,10 +5,12 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
 <header>
+    <div>
     <h1><?php the_title(); ?></h1>
     <?php if ( $title = $customFields['person_title'][0] ) : ?>
     <p class="title"><?php echo $title; ?></p>
 <?php endif; ?>
+    </div>
 </header>
 <div class="entry-content">
 <?php the_content(); ?>

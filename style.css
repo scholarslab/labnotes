@@ -71,13 +71,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   html {
-    background: #f0f0f0;
     margin: 0;
     padding: 0;
   }
 
   body {
-    background-color: white;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -503,8 +501,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 0;
     position: relative;
     text-align: center;
-    border-bottom: 1px solid #ccc;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid white;
+    border-color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.9);
   }
   [role=banner]:before, [role=banner]:after {
     content: " ";
@@ -533,7 +532,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     max-height: 30px;
   }
   #homelink:link path, #homelink:visited path {
-    fill: #b00;
+    fill: #710;
   }
   #homelink:hover path, #homelink:focus path, #homelink:active path {
     fill: #900;
@@ -561,6 +560,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   nav a {
     text-decoration: none;
     display: block;
+    color: white;
+    color: rgba(119, 17, 0, 0.8);
   }
   nav.local-nav {
     margin-top: 1.66667em;
@@ -669,11 +670,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .js nav a:link, .js nav a:visited {
     background-color: rgba(0, 0, 0, 0.05);
-    color: #990000;
   }
   .js nav a:hover, .js nav a:focus, .js nav a:active {
     background-color: rgba(0, 0, 0, 0.1);
-    color: #990000;
   }
   .js nav li:first-child a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -684,10 +683,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=main] {
-    background-color: #f9f9f9;
-    background-color: rgba(0, 0, 0, 0.0175);
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.975);
+  }
+  .home [role=main] {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-image: -moz-linear-gradient(left, rgba(119, 17, 0, 0.85), rgba(119, 17, 0, 0.85)), url("images/background.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(119, 17, 0, 0.85), rgba(119, 17, 0, 0.85)), url("images/background.jpg");
+    background-image: linear-gradient(to right, rgba(119, 17, 0, 0.85), rgba(119, 17, 0, 0.85)), url("images/background.jpg");
+    color: white;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .home [role=main] a {
+    color: white;
+    color: rgba(255, 255, 255, 0.9);
   }
   .singular [role=main] header {
+    position: relative;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -702,68 +720,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.51064%;
     padding-right: 8.51064%;
     padding-left: 8.51064%;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 0;
+    padding-top: 0;
+    display: table;
+    width: 100%;
   }
-  .singular [role=main] header a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
+  .singular [role=main] header div {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+  .singular [role=main] header h1, .singular [role=main] header p, .singular [role=main] header ul {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -8.51064%;
+    margin-left: -8.51064%;
+    padding-right: 8.51064%;
+    padding-left: 8.51064%;
+    background: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .singular [role=main] header p, .singular [role=main] header ul {
     font-weight: 200;
-  }
-  .single-people [role=main] header {
-    text-align: right;
-    padding-top: 13.33333em;
-  }
-
-  #homepage-blurb,
-  #blog-archives {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-top: -1.66667em;
-    margin-bottom: -1.66667em;
-    padding-top: 1.66667em;
     padding-bottom: 1.66667em;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-right: -8.51064%;
-    margin-left: -8.51064%;
-    padding-right: 8.51064%;
-    padding-left: 8.51064%;
-  }
-
-  #homepage-blurb {
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/background.jpg");
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
-    padding-top: 1.66667em;
-    padding-bottom: 1.66667em;
-    margin-bottom: 3.33333em !important;
-    /* Ensure there is no negative margin across media queries. */
-  }
-  #homepage-blurb a {
-    color: #333;
-    color: rgba(0, 0, 0, 0.8);
   }
 
   #blog-archives {
@@ -1143,33 +1132,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
   }
 
-  #areas-of-focus {
-    overflow: hidden;
+  /* Home page specific styles */
+  .home #homepage-blurb h1 {
+    text-align: center;
+    font-size: 2.22222em;
+    line-height: 1.5em;
+    line-height: 1.125em;
   }
-  #areas-of-focus section {
-    background: #eee;
-  }
-  #areas-of-focus section h1 {
+  .home #areas-of-focus section h1 {
     font-size: 1em;
     line-height: 1.66667em;
     line-height: 1.66667em;
     margin: 0;
     font-weight: 700;
   }
-  #areas-of-focus section p {
+  .home #areas-of-focus section p {
     margin: 0;
   }
 
   [role=contentinfo] {
-    background-image: url("images/wild_oliva.png");
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/wild_oliva.png");
-    color: #fff;
-    background-size: auto;
-    background-size: 1px 3px, 1px 6px, auto;
-    background-repeat: repeat;
-    background-repeat: repeat-x, repeat-x, repeat;
+    border-top: 1px solid #ccc;
     clear: both;
   }
 }
@@ -1207,7 +1189,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-align: right;
   }
   [role=banner] nav .current-menu-item a {
-    border-bottom: 5px solid #990000;
+    border-bottom: 5px solid white;
   }
 
   .js .nav-toggle {
@@ -1250,6 +1232,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 12.69841%;
     padding-right: 12.69841%;
   }
+  [role=main] #homepage-blurb {
+    padding-top: 1.66667em;
+  }
   .singular [role=main] header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -1266,10 +1251,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 17.02128%;
     padding-left: 17.02128%;
   }
-  .single-people [role=main] header {
-    padding-top: 16.66667em;
-  }
-  [role=main] #homepage-blurb,
   [role=main] #blog-archives {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -1285,12 +1266,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -17.02128%;
     padding-right: 17.02128%;
     padding-left: 17.02128%;
-  }
-  [role=main] #homepage-blurb {
-    padding-top: 3.33333em;
-    padding-bottom: 3.33333em;
-  }
-  [role=main] #blog-archives {
     padding-left: 8.51064%;
     padding-right: 8.51064%;
   }
@@ -1368,10 +1343,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 25.53191%;
     padding-left: 25.53191%;
   }
-  .single-people [role=main] header {
-    padding-top: 26.66667em !important;
-  }
-  [role=main] #homepage-blurb,
   [role=main] #blog-archives {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -1387,12 +1358,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.53191%;
     padding-right: 25.53191%;
     padding-left: 25.53191%;
-  }
-  [role=main] #homepage-blurb {
-    padding-top: 3.33333em;
-    padding-bottom: 3.33333em;
-  }
-  [role=main] #blog-archives {
     padding-left: 8.51064%;
     padding-right: 8.51064%;
   }
@@ -1411,14 +1376,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   [role=contentinfo] {
     padding-top: 5em;
-  }
-
-  .single-people [role=main] header {
-    padding-top: 33.33333em !important;
-  }
-  [role=main] #homepage-blurb {
-    padding-top: 5em;
-    padding-bottom: 5em;
   }
 }
 @media print {
