@@ -80,7 +80,7 @@ function labnotes_custom_background_cb() {
 
         $style .= $image . $repeat . $position . $attachment . $size;
 
-        $default_selector = 'html, main header';
+        $default_selector = 'html, .singular main header';
         $selector = apply_filters('labnotes_custom_background_image', $default_selector);
 
         $html = '<style type="text/css" id="custom-background-css">'
