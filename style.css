@@ -620,8 +620,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: right;
     width: 100%;
     text-align: left;
-    margin: 0;
-    padding: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -8.51064%;
+    margin-left: -8.51064%;
+    padding-right: 8.51064%;
+    padding-left: 8.51064%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     /* Open the navigation element */
   }
   .js nav.closed {
@@ -643,6 +659,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .js nav a {
     display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -657,13 +676,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.51064%;
     padding-right: 8.51064%;
     padding-left: 8.51064%;
-    padding-top: 0.9375em;
-    padding-bottom: 0.9375em;
     margin-top: 0;
     margin-bottom: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 0.46875em;
+    padding-bottom: 0.46875em;
   }
   .js nav a:focus {
     outline: 0;

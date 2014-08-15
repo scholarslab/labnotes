@@ -558,9 +558,11 @@ nav {
         clear:right;
         width:100%;
         text-align:left;
-        margin:0;
-        padding:0;
-
+        @include fullbleed;
+        margin-top:0;
+        margin-bottom:0;
+        padding-top:0;
+        padding-bottom:0;
         &.closed {
             clip: rect(0 0 0 0);
             max-height: 0;
@@ -585,15 +587,15 @@ nav {
 
         a {
             display:block;
-            @include fullbleed;
-            padding-top:rhythm(.5, 16px);
-            padding-bottom: rhythm(.5, 16px);
-            margin-top:0;
-            margin-bottom:0;
             text-decoration:none;
             box-sizing: border-box;
             border-bottom: 1px solid rgba(black,.1);
-
+            @include fullbleed;
+            margin-top:0;
+            margin-bottom:0;
+            padding-top: rhythm(.25, 16px);
+            padding-bottom: rhythm(.25, 16px);
+            
             &:focus {
                 outline:0;
             }
