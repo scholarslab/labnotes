@@ -9,7 +9,6 @@
     <a href="<?php the_permalink(); ?>" class="permalink">
     <h2><?php the_title(); ?></h2>
     <?php the_post_thumbnail('full'); ?>
-    <div class="excerpt"><?php the_excerpt(); ?></div>
     </a>
 </li>
 <?php endwhile; ?>
