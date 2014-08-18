@@ -731,6 +731,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 0 !important;
     padding-top: 0 !important;
     max-height: 700px;
+    min-height: 400px;
     display: table;
     width: 100%;
     border-bottom: 1px solid #ccc;
@@ -1157,6 +1158,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=contentinfo] {
     border-top: 1px solid #ccc;
     clear: both;
+    background: #fff;
   }
 }
 @media screen and (min-width: 720px) {
@@ -1315,7 +1317,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=contentinfo] {
-    padding: 3.33333em 6.34921% 1.66667em;
+    padding: 1.66667em 6.34921%;
   }
 }
 @media screen and (min-width: 940px) {
@@ -1407,10 +1409,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     content: " ";
     display: block;
     clear: both;
-  }
-
-  [role=contentinfo] {
-    padding-top: 5em;
   }
 }
 @media print {

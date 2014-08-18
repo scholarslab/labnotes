@@ -634,6 +634,7 @@ nav {
             padding-bottom:0 !important;
             padding-top:0 !important;
             max-height: 700px;
+            min-height:400px;
             display: table;
             width:100%;
             border-bottom: 1px solid #ccc;
@@ -941,6 +942,7 @@ article {
 [role=contentinfo] {
     border-top:1px solid #ccc;
     clear:both;
+    background: #fff;
 }
 
 // Media query for 720px. Sets layout to 16 columns.
@@ -1061,7 +1063,7 @@ nav {
 }
 
 [role=contentinfo] {
-    padding: rhythm(2) span(1 of 16 wide) rhythm(1);
+    padding: rhythm(1) span(1 of 16 wide);
 }
 
 }
@@ -1120,10 +1122,6 @@ body {
 
 body {
     @include container($grid);
-}
-
-[role=contentinfo] {
-    padding-top: rhythm(3);
 }
 
 }
