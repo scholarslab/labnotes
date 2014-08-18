@@ -102,7 +102,6 @@ $alumniArgs = array(
         )
     ),
     'meta_query' => array(
-        'relation' => 'AND',
         array(
             'key' => 'person_family_name',
             'compare' => 'EXISTS'
