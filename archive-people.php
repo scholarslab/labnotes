@@ -90,22 +90,33 @@ if (have_posts()) : ?>
 
 $alumniArgs = array(
     'meta_query' => array(
-        'key' => 'person_status',
-        'value' => 'current',
-        'compare' => 'NOT'
-    ),
-    'tax_query' => array(
+        'relation' => 'OR',
         array(
-        'taxonomy' => 'people-category',
-        'field' => 'slug',
-        'terms' => array('2014-2015-praxis-fellow', '2014-2015'),
-        'operator' => 'NOT IN',
+            'key' => 'person_status',
+            'value' => 'current',
+            'compare' => '!='
         ),
-    )
+        array(
+            'key' => 'person_status',
+            'compare' => 'NOT EXISTS'
+        )
+    ),
+    'meta_query' => array(
+        'relation' => 'AND',
+        array(
+            'key' => 'person_family_name',
+            'compare' => 'EXISTS'
+        )
+    ),
+    'post_type' => 'people',
+    'posts_per_page' => -1,
+    'meta_key' => 'person_family_name',
+    'orderby' => 'meta_value',
+    'order' => 'asc'
 );
 
-$alumniArgs = array_merge($defaultArgs, $alumniArgs);
-query_posts($alumniArgs);
+$foo = query_posts($alumniArgs);
+
 if (have_posts()) : ?>
 <h2>Alumni</h2>
 <ul class="people-list">
