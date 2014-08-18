@@ -9,9 +9,7 @@ $staffArgs = array_merge($defaultArgs, array('people-category' => 'staff'));
 
 $studentAssistantArgs = array_merge($defaultArgs, array('people-category' => 'student-assistant'));
 
-$gradFellowArgs = array_merge($defaultArgs, array('people-category' => 'graduate-fellow, praxis-fellow'));
-
-$praxisFellowArgs = array_merge($defaultArgs, array('people-category' => 'praxis-fellow'));
+$currentFellowArgs = array_merge($defaultArgs, array('people-category' => '2013-2014-praxis-fellow, 2013-2014-graduate-fellow'));
 
 ?>
 
@@ -71,9 +69,45 @@ if (have_posts()) : ?>
 
 <?php
 
-query_posts($gradFellowArgs);
+query_posts($currentFellowArgs);
 if (have_posts()) : ?>
-<h2>Graduate Fellows</h2>
+<h2>Current Fellows</h2>
+<ul class="people-list">
+<?php while( have_posts() ) : the_post(); ?>
+<li>
+<a href="<?php the_permalink(); ?>">
+    <img src="<?php echo labnotes_people_image(); ?>" alt="" />
+    <?php the_title(); ?>
+</a>
+</li>
+<?php endwhile; ?>
+</ul>
+<?php endif; ?>
+<?php wp_reset_query(); ?>
+
+<?php
+
+
+$alumniArgs = array(
+    'meta_query' => array(
+        'key' => 'person_status',
+        'value' => 'current',
+        'compare' => '!='
+    ),
+    'tax_query' => array(
+        array(
+        'taxonomy' => 'people-category',
+        'field' => 'slug',
+        'terms' => array('2014-2015-praxis-fellow', '2014-2015-graduate-fellow'),
+        'operator' => 'NOT IN',
+        ),
+    )
+);
+
+$alumniArgs = array_merge($defaultArgs, $alumniArgs);
+query_posts($alumniArgs);
+if (have_posts()) : ?>
+<h2>Alumni</h2>
 <ul class="people-list">
 <?php while( have_posts() ) : the_post(); ?>
 <li>
