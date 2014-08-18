@@ -9,7 +9,7 @@ $staffArgs = array_merge($defaultArgs, array('people-category' => 'staff'));
 
 $studentAssistantArgs = array_merge($defaultArgs, array('people-category' => 'student-assistant'));
 
-$currentFellowArgs = array_merge($defaultArgs, array('people-category' => '2013-2014-praxis-fellow, 2013-2014-graduate-fellow'));
+$currentFellowArgs = array_merge($defaultArgs, array('people-category' => '2013-2014-praxis-fellow, 2013-2014'));
 
 ?>
 
@@ -98,7 +98,7 @@ $alumniArgs = array(
         array(
         'taxonomy' => 'people-category',
         'field' => 'slug',
-        'terms' => array('2014-2015-praxis-fellow', '2014-2015-graduate-fellow'),
+        'terms' => array('2014-2015-praxis-fellow', '2014-2015'),
         'operator' => 'NOT IN',
         ),
     )
