@@ -7,6 +7,7 @@ $grid: hide;
 html {
     margin:0;
     padding:0;
+    border-top: 10px solid #333;
 }
 
 body {
@@ -422,8 +423,8 @@ a {
     padding-bottom:0;
     position:relative;
     text-align:center;
-    border-bottom:1px solid white;
-    border-color: rgba(white, .75);
+    border-bottom:1px solid #ccc;
+    border-color: rgba(black, .125);
     @include clearfix;
     background: rgba(white,.9);
 }
@@ -553,7 +554,7 @@ nav {
         vertical-align:middle;
     }
 
-    nav {
+    [role=banner] nav {
         float:none;
         clear:right;
         width:100%;
@@ -595,7 +596,7 @@ nav {
             margin-bottom:0;
             padding-top: rhythm(.25, 16px);
             padding-bottom: rhythm(.25, 16px);
-            
+
             &:focus {
                 outline:0;
             }
@@ -629,14 +630,14 @@ nav {
 
     .home & {
         @include fullbackground;
-    }   
+    }
     header {
 
         .singular & {
             position:relative;
             @include fullbleed;
-            padding-bottom:0;
-            padding-top:0;
+            padding-bottom:0 !important;
+            padding-top:0 !important;
             max-height: 700px;
             display: table;
             width:100%;
@@ -648,14 +649,14 @@ nav {
             h1,p,ul {
                 @include fullbleed;
                 background: white;
-                padding-top:0;
+                padding-top:10px;
                 padding-bottom:0;
                 margin-top:0;
                 margin-bottom:0;
             }
             p,ul {
                 font-weight:200;
-                padding-bottom:rhythm(1);                
+                padding-bottom:rhythm(1);
             }
         }
     }
@@ -911,7 +912,7 @@ article {
 
 /* Home page specific styles */
 .home {
-    
+
     #homepage-blurb {
         h1 {
             text-align:center;
@@ -948,7 +949,8 @@ body {
     @include container($grid);
 }
 
-[role=banner] {
+[role=banner],
+.js [role=banner] {
     @include clearfix;
     @include pad(1);
 
@@ -959,16 +961,16 @@ body {
 
     nav {
         @include span(last 10 of 14);
-        text-align:right;
+
+        li {
+            display:inline-block;
+        }
 
         .current-menu-item a {
             border-bottom: 5px solid white;
         }
 
     }
-}
-
-.js {
 
     .nav-toggle {
         display:none;
@@ -1001,10 +1003,8 @@ body {
 nav {
 
     background: transparent;
-
-    li {
-        display:inline-block !important;
-    }
+    margin:0;
+    padding:0;
 
     ul {
         @include adjust-leading-to(2,16px);
@@ -1023,6 +1023,14 @@ nav {
     header {
         .singular & {
             @include fullbleed(2,16);
+
+            h1,p,ul {
+                @include fullbleed(2,16);
+                padding-top:10px;
+                padding-bottom:0;
+                margin-top:0;
+                margin-bottom:0;
+            }
         }
     }
 
@@ -1090,6 +1098,15 @@ body {
     header {
         .singular & {
             @include fullbleed(3,18);
+
+            h1,p,ul {
+                @include fullbleed(3,18);
+                padding-top:10px;
+                padding-bottom:0;
+                margin-top:0;
+                margin-bottom:0;
+            }
+
         }
     }
 

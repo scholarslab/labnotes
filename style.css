@@ -73,6 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   html {
     margin: 0;
     padding: 0;
+    border-top: 10px solid #333;
   }
 
   body {
@@ -501,8 +502,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 0;
     position: relative;
     text-align: center;
-    border-bottom: 1px solid white;
-    border-color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid #ccc;
+    border-color: rgba(0, 0, 0, 0.125);
     background: rgba(255, 255, 255, 0.9);
   }
   [role=banner]:before, [role=banner]:after {
@@ -615,7 +616,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 3.75em;
     vertical-align: middle;
   }
-  .js nav {
+  .js [role=banner] nav {
     float: none;
     clear: right;
     width: 100%;
@@ -640,7 +641,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 0;
     /* Open the navigation element */
   }
-  .js nav.closed {
+  .js [role=banner] nav.closed {
     clip: rect(0 0 0 0);
     max-height: 0;
     display: block;
@@ -648,16 +649,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     zoom: 1;
     clear: both;
   }
-  .js nav.opened {
+  .js [role=banner] nav.opened {
     max-height: 9999px;
   }
-  .js nav ul {
+  .js [role=banner] nav ul {
     line-height: 1.875em;
   }
-  .js nav li {
+  .js [role=banner] nav li {
     display: block;
   }
-  .js nav a {
+  .js [role=banner] nav a {
     display: block;
     text-decoration: none;
     box-sizing: border-box;
@@ -681,16 +682,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-top: 0.46875em;
     padding-bottom: 0.46875em;
   }
-  .js nav a:focus {
+  .js [role=banner] nav a:focus {
     outline: 0;
   }
-  .js nav a:link, .js nav a:visited {
+  .js [role=banner] nav a:link, .js [role=banner] nav a:visited {
     background-color: rgba(0, 0, 0, 0.05);
   }
-  .js nav a:hover, .js nav a:focus, .js nav a:active {
+  .js [role=banner] nav a:hover, .js [role=banner] nav a:focus, .js [role=banner] nav a:active {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .js nav li:first-child a {
+  .js [role=banner] nav li:first-child a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -736,8 +737,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.51064%;
     padding-right: 8.51064%;
     padding-left: 8.51064%;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
     max-height: 700px;
     display: table;
     width: 100%;
@@ -762,7 +763,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 8.51064%;
     padding-left: 8.51064%;
     background: white;
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -1184,36 +1185,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 
-  [role=banner] {
+  [role=banner],
+  .js [role=banner] {
     padding-left: 6.34921%;
     padding-right: 6.34921%;
   }
-  [role=banner]:before, [role=banner]:after {
+  [role=banner]:before, [role=banner]:after,
+  .js [role=banner]:before,
+  .js [role=banner]:after {
     content: " ";
     display: table;
     width: 100%;
   }
-  [role=banner] #homelink {
+  [role=banner] #homelink,
+  .js [role=banner] #homelink {
     width: 20%;
     float: left;
     margin-right: 1.81818%;
     text-align: left;
   }
-  [role=banner] nav {
+  [role=banner] nav,
+  .js [role=banner] nav {
     width: 70.90909%;
     float: right;
     margin-right: 0;
-    text-align: right;
   }
-  [role=banner] nav .current-menu-item a {
+  [role=banner] nav li,
+  .js [role=banner] nav li {
+    display: inline-block;
+  }
+  [role=banner] nav .current-menu-item a,
+  .js [role=banner] nav .current-menu-item a {
     border-bottom: 5px solid white;
   }
-
-  .js .nav-toggle {
+  [role=banner] .nav-toggle,
+  .js [role=banner] .nav-toggle {
     display: none;
   }
-  .js nav.closed,
-  .js nav.opened {
+  [role=banner] nav.closed,
+  [role=banner] nav.opened,
+  .js [role=banner] nav.closed,
+  .js [role=banner] nav.opened {
     float: right;
     clear: right;
     background: transparent !important;
@@ -1222,7 +1234,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: inherit;
     max-height: none;
   }
-  .js nav a {
+  [role=banner] nav a,
+  .js [role=banner] nav a {
     background: transparent !important;
     border: none;
     margin: 0;
@@ -1233,11 +1246,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .js nav.opened,
   nav {
     background: transparent;
-  }
-  .js nav.closed li,
-  .js nav.opened li,
-  nav li {
-    display: inline-block !important;
+    margin: 0;
+    padding: 0;
   }
   .js nav.closed ul,
   .js nav.opened ul,
@@ -1267,6 +1277,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -17.02128%;
     padding-right: 17.02128%;
     padding-left: 17.02128%;
+  }
+  .singular [role=main] header h1, .singular [role=main] header p, .singular [role=main] header ul {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -17.02128%;
+    margin-left: -17.02128%;
+    padding-right: 17.02128%;
+    padding-left: 17.02128%;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   [role=main] #blog-archives {
     -moz-box-sizing: content-box;
@@ -1359,6 +1389,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.53191%;
     padding-right: 25.53191%;
     padding-left: 25.53191%;
+  }
+  .singular [role=main] header h1, .singular [role=main] header p, .singular [role=main] header ul {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -25.53191%;
+    margin-left: -25.53191%;
+    padding-right: 25.53191%;
+    padding-left: 25.53191%;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   [role=main] #blog-archives {
     -moz-box-sizing: content-box;
