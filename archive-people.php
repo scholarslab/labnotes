@@ -88,38 +88,15 @@ if (have_posts()) : ?>
 <?php
 
 
-$alumniArgs = array(
-    'meta_query' => array(
-        'relation' => 'OR',
-        array(
-            'key' => 'person_status',
-            'value' => 'current',
-            'compare' => '!='
-        ),
-        array(
-            'key' => 'person_status',
-            'compare' => 'NOT EXISTS'
-        )
-    ),
-    'meta_query' => array(
-        array(
-            'key' => 'person_family_name',
-            'compare' => 'EXISTS'
-        )
-    ),
-    'post_type' => 'people',
-    'posts_per_page' => -1,
-    'meta_key' => 'person_family_name',
-    'orderby' => 'meta_value',
-    'order' => 'asc'
-);
-
-$foo = query_posts($alumniArgs);
-
 if (have_posts()) : ?>
 <h2>Alumni</h2>
 <ul class="people-list">
 <?php while( have_posts() ) : the_post(); ?>
+<?php
+
+    $status = get_post_meta( $post->ID, 'person_status', true);
+if(is_null($status) || $status == 'current') continue;
+?>
 <li>
 <a href="<?php the_permalink(); ?>">
     <?php the_title(); ?>
