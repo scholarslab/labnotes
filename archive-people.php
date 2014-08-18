@@ -1,19 +1,21 @@
 <?php get_header(); ?>
 
-<header>
 <?php
-if ($category = get_query_var('people-category')) {
 
-    $heading = ucwords(str_replace('-', ' ', $category));
+$defaultArgs = array('post_type' => 'people', 'posts_per_page' => -1, 'meta_key' => 'person_family_name', 'orderby' => 'meta_value', 'order' => 'asc');
 
-} else {
-   $heading = 'People';
-}
+// Merge the  and $staff args into our defaults.
+$staffArgs = array_merge($defaultArgs, array('people-category' => 'staff'));
 
 ?>
-    <h1><?php echo $heading; ?></h1>
+<header>
+    <h1>People</h1>
 </header>
-<?php if (have_posts()) : ?>
+
+<?php
+query_posts($staffArgs);
+if (have_posts()) : ?>
+<h2><?php echo single_cat_title(); ?></h2>
 <ul class="people-list">
 <?php while( have_posts() ) : the_post(); ?>
 <li>
@@ -25,4 +27,7 @@ if ($category = get_query_var('people-category')) {
 <?php endwhile; ?>
 </ul>
 <?php endif; ?>
+<?php wp_reset_query(); ?>
+
+
 <?php get_footer(); ?>

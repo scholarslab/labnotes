@@ -421,7 +421,8 @@ function labnotes_people_meta_fields() {
     'person_family_name',
     'person_given_name',
     'person_degree',
-    'person_department'
+    'person_department',
+    'person_status'
   );
 }
 
@@ -444,17 +445,27 @@ function labnotes_people_meta_box(){
 
     $fields = labnotes_people_meta_fields();
 
-    $departmentOptions = labnotes_people_departments();
+    $statusOptions = array('current' => 'Current', 'not_current' => 'Not Current');
 
 ?>
 
-<?php foreach ($fields as $field): if ($field == 'person_user_id' || $field == 'person_category' || $field == 'person_department') continue; ?>
+<?php foreach ($fields as $field): if ($field == 'person_user_id' || $field == 'person_category' || $field == 'person_status') continue; ?>
     <p><label for="<?php echo $field; ?>"><?php echo ucwords(str_replace('_', ' ', str_replace('person_', ' ', $field))); ?></label></p>
     <p><input type="text" value="<?php echo @$custom[$field][0]; ?>" name="<?php echo $field; ?>" /></p>
 <?php endforeach; ?>
 
     <p><label for="person_user_id">User</label></p>
     <p><?php wp_dropdown_users(array('show_option_none' => 'No User', 'name' => 'person_user_id', 'selected' => @$custom['person_user_id'][0])); ?></p>
+
+    <p><label for="person_status">Status</label></p>
+    <p>
+      <select name="person_status">
+      <option>Choose a Status</option>
+      <?php foreach ($statusOptions as $name => $label): ?>
+      <option value="<?php echo $name; ?>"<?php if (@$custom['person_status'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
+      <?php endforeach; ?>
+      </select>
+    </p>
 
 <?php
 }
