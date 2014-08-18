@@ -23,7 +23,7 @@
     background-position:top center;
     background-attachment:fixed;
     @include background-image(
-        linear-gradient(left, rgba(#710, .85), rgba(#710, .85)),
+        linear-gradient(left, rgba($hero-color, .85), rgba($hero-color, .85)),
         url($image)
     );
 

@@ -82,6 +82,13 @@ h1 {
         @include padding-leader(1,40px);
         @include padding-trailer(1,40px);
     }
+
+    .home article & {
+        @include adjust-font-size-to(25px);
+        @include adjust-leading-to(2,25px);
+        @include trailer(1, 25px);
+
+    }
 }
 
 h2 {
@@ -448,7 +455,7 @@ a {
     &:link,
     &:visited {
         path {
-            fill: #710;
+            fill: $link-color;
         }
     }
 
@@ -456,7 +463,7 @@ a {
     &:focus,
     &:active {
         path {
-            fill: #900;
+            fill: $link-hover-color;
         }
     }
 
@@ -723,10 +730,54 @@ nav {
     }
 }
 
+.home .widgets {
+    border-top: 1px solid #fff;
+    border-top-color: rgba(white, 0.5);
+    @include clearfix;
+    padding-top: rhythm();
+    overflow:hidden;
+
+    @include susy-breakpoint('720px', 16) {
+
+        & > * {
+            @include gallery(6 of 12);
+            margin-bottom: rhythm(1);
+
+            &:nth-child(2n) {
+                @include gallery(last 6 of 12);
+            }
+
+        }
+    }
+
+    @include susy-breakpoint('940px', 18) {
+        @include bleed-x(span(2 of 12 wide));
+        padding-left:0;
+        padding-right:0;
+
+        & > * {
+            @include gallery(4 of 16);
+            &:nth-child(2n) {
+                @include gallery(4 of 16);
+            }
+
+            &:nth-child(4n) {
+                @include gallery(last 4 of 16);
+            }
+
+        }
+    }
+
+}
+
 .research,
 .people-list {
     @include gridlist;
+}
 
+.research,
+.people-list,
+.home .widgets {
     img {
         @include box-sizing(border-box);
         border: 1px solid #e9e9e9;
@@ -738,14 +789,12 @@ nav {
     }
 
     h2 {
-        @include adjust-font-size-to($base-font-size);
-        @include adjust-leading-to(1, $base-font-size);
+        @include adjust-font-size-to(24px);
+        @include adjust-leading-to(1, 24px);
         margin:0;
     }
 
     p {
-        @include adjust-font-size-to(16px);
-        @include adjust-leading-to(.75, 16px);
         margin:0;
     }
 

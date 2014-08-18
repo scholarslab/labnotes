@@ -15,7 +15,9 @@
 <?php endwhile; endif; ?>
 </section>
 
+<div class="widgets">
 <?php dynamic_sidebar( 'homepage-widget-area' ); ?>
+</div>
 
 <section id="latest-writing">
     <h1>Latest Posts</h1>

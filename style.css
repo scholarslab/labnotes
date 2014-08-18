@@ -100,36 +100,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   a {
-    color: #990000;
-    color: rgba(153, 0, 0, 0.8);
+    color: #771100;
+    color: rgba(119, 17, 0, 0.8);
     -moz-transition: color 0.5s, background-color 0.5s;
     -o-transition: color 0.5s, background-color 0.5s;
     -webkit-transition: color 0.5s, background-color 0.5s;
     transition: color 0.5s, background-color 0.5s;
   }
   a:visited {
-    color: #cc0000;
+    color: #771100;
   }
   a:focus {
-    color: #660000;
+    color: #440a00;
   }
   a:hover {
-    color: #660000;
+    color: #440a00;
   }
   a:active {
-    color: #990000;
+    color: #771100;
   }
   a:visited {
-    color: rgba(204, 0, 0, 0.8);
+    color: rgba(119, 17, 0, 0.8);
   }
   a:focus {
-    color: rgba(102, 0, 0, 0.8);
+    color: rgba(68, 10, 0, 0.8);
   }
   a:hover {
-    color: rgba(102, 0, 0, 0.8);
+    color: rgba(68, 10, 0, 0.8);
   }
   a:active {
-    color: rgba(153, 0, 0, 0.8);
+    color: rgba(119, 17, 0, 0.8);
   }
   a:before {
     -moz-transition: color 0.5s;
@@ -168,6 +168,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .singular main header h1 {
     padding-top: 0.75em;
     padding-bottom: 0.75em;
+  }
+  .home article h1 {
+    font-size: 1.38889em;
+    line-height: 1.2em;
+    line-height: 2.4em;
+    margin-bottom: 1.2em;
   }
 
   h2 {
@@ -524,10 +530,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     max-height: 30px;
   }
   #homelink:link path, #homelink:visited path {
-    fill: #710;
+    fill: #771100;
   }
   #homelink:hover path, #homelink:focus path, #homelink:active path {
-    fill: #900;
+    fill: #440a00;
   }
 
   nav {
@@ -820,6 +826,139 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
   }
 
+  .home .widgets {
+    border-top: 1px solid #fff;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    padding-top: 1.66667em;
+    overflow: hidden;
+  }
+  .home .widgets:before, .home .widgets:after {
+    content: " ";
+    display: table;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 720px) {
+  .home .widgets > * {
+    width: 48.93617%;
+    float: left;
+    margin-bottom: 1.66667em;
+  }
+  .home .widgets > *:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .home .widgets > *:nth-child(2n + 2) {
+    margin-left: 51.06383%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(2n) {
+    width: 48.93617%;
+    float: left;
+  }
+  .home .widgets > *:nth-child(2n):nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(2n):nth-child(2n + 2) {
+    margin-left: 51.06383%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media screen and (min-width: 940px) {
+  .home .widgets {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -17.02128%;
+    margin-left: -17.02128%;
+    padding-right: 17.02128%;
+    padding-left: 17.02128%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home .widgets > * {
+    width: 23.80952%;
+    float: left;
+  }
+  .home .widgets > *:nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .home .widgets > *:nth-child(4n + 2) {
+    margin-left: 25.39683%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(4n + 3) {
+    margin-left: 50.79365%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(4n + 4) {
+    margin-left: 76.19048%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(2n) {
+    width: 23.80952%;
+    float: left;
+  }
+  .home .widgets > *:nth-child(2n):nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .home .widgets > *:nth-child(2n):nth-child(4n + 2) {
+    margin-left: 25.39683%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(2n):nth-child(4n + 3) {
+    margin-left: 50.79365%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(2n):nth-child(4n + 4) {
+    margin-left: 76.19048%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(4n) {
+    width: 23.80952%;
+    float: left;
+  }
+  .home .widgets > *:nth-child(4n):nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(4n):nth-child(4n + 2) {
+    margin-left: 25.39683%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(4n):nth-child(4n + 3) {
+    margin-left: 50.79365%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .home .widgets > *:nth-child(4n):nth-child(4n + 4) {
+    margin-left: 76.19048%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+
+@media screen {
   .research,
   .people-list {
     list-style: none;
@@ -978,9 +1117,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: none;
   }
 }
+
 @media screen {
   .research img,
-  .people-list img {
+  .people-list img,
+  .home .widgets img {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -988,21 +1129,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 3px;
   }
   .research a,
-  .people-list a {
+  .people-list a,
+  .home .widgets a {
     text-decoration: none;
   }
   .research h2,
-  .people-list h2 {
-    font-size: 1em;
-    line-height: 1.66667em;
-    line-height: 1.66667em;
+  .people-list h2,
+  .home .widgets h2 {
+    font-size: 1.33333em;
+    line-height: 1.25em;
+    line-height: 1.25em;
     margin: 0;
   }
   .research p,
-  .people-list p {
-    font-size: 0.88889em;
-    line-height: 1.875em;
-    line-height: 1.40625em;
+  .people-list p,
+  .home .widgets p {
     margin: 0;
   }
 

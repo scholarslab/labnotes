@@ -76,7 +76,7 @@ function labnotes_custom_background_cb() {
         //if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
             //$attachment = 'fixed';
         
-        $attachment = " background-attachment: fixed;";
+        $attachment = " background-attachment: scroll;";
 
         $style .= $image . $repeat . $position . $attachment . $size;
 
