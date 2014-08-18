@@ -9,7 +9,7 @@ $staffArgs = array_merge($defaultArgs, array('people-category' => 'staff'));
 
 $studentAssistantArgs = array_merge($defaultArgs, array('people-category' => 'student-assistant'));
 
-$currentFellowArgs = array_merge($defaultArgs, array('people-category' => '2013-2014-praxis-fellow, 2013-2014'));
+$currentFellowArgs = array_merge($defaultArgs, array('people-category' => '2014-2015-praxis-fellow, 2014-2015'));
 
 ?>
 
@@ -92,7 +92,7 @@ $alumniArgs = array(
     'meta_query' => array(
         'key' => 'person_status',
         'value' => 'current',
-        'compare' => '!='
+        'compare' => 'NOT'
     ),
     'tax_query' => array(
         array(
