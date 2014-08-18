@@ -78,16 +78,10 @@ h1 {
         @include trailer(1, 40px);
     }
 
-    .singular & a {
-        background: white;
+    .singular main header & {
+        @include padding-leader(1,40px);
+        @include padding-trailer(1,40px);
     }
-
-    @include susy-breakpoint(600px, 8) {
-        @include adjust-font-size-to(60px);
-        @include adjust-leading-to(3,60px);
-        @include trailer(1, 60px);
-    }
-
 }
 
 h2 {
@@ -631,6 +625,7 @@ nav {
     .home & {
         @include fullbackground;
     }
+
     header {
 
         .singular & {
@@ -641,23 +636,29 @@ nav {
             max-height: 700px;
             display: table;
             width:100%;
+            border-bottom: 1px solid #ccc;
+
             div {
                 display:table-cell;
                 vertical-align:bottom;
             }
 
             h1,p,ul {
-                @include fullbleed;
-                background: white;
-                padding-top:10px;
-                padding-bottom:0;
+                @include fullbleed(1,14,false);
                 margin-top:0;
                 margin-bottom:0;
+                background: white;
             }
-            p,ul {
+
+            p,ul,.title {
                 font-weight:200;
                 padding-bottom:rhythm(1);
             }
+
+            h1 {
+                border-top: 1px solid #ccc;
+            }
+
         }
     }
 
@@ -1025,9 +1026,7 @@ nav {
             @include fullbleed(2,16);
 
             h1,p,ul {
-                @include fullbleed(2,16);
-                padding-top:10px;
-                padding-bottom:0;
+                @include fullbleed(2,16, false);
                 margin-top:0;
                 margin-bottom:0;
             }
@@ -1100,9 +1099,7 @@ body {
             @include fullbleed(3,18);
 
             h1,p,ul {
-                @include fullbleed(3,18);
-                padding-top:10px;
-                padding-bottom:0;
+                @include fullbleed(3,18,false);
                 margin-top:0;
                 margin-bottom:0;
             }
