@@ -65,7 +65,7 @@ if (have_posts()) : ?>
 <?php while( have_posts() ) : the_post(); ?>
 <?php
      $status = get_post_meta( $post->ID, 'person_status', true);
-if(is_null($status) || $status == 'current') continue;
+if($status == 'current') continue;
 ?>
 <li>
 <a href="<?php the_permalink(); ?>">
