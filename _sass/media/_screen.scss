@@ -83,6 +83,27 @@ h1 {
         @include padding-leader(1,40px);
         @include padding-trailer(1,40px);
 
+        &:before,
+        &:after {
+            display:block;
+            content: " ";
+            height:rhythm(2, 56px);
+            width: 100px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            border-color: rgba(black, .1);
+        }
+
+        &:before {
+            border-width: 0 0 2px;
+            margin-bottom: rhythm(1, 56px);
+        }
+
+        &:after {
+            border-width: 2px 0 0;
+            margin-top: rhythm(1, 56px);
+        }
+
         @include susy-breakpoint('480px', 16) {
             @include adjust-font-size-to(56px);
             @include adjust-leading-to(2,56px);
@@ -90,26 +111,6 @@ h1 {
             @include padding-leader(2,56px);
             @include padding-trailer(2,56px);
 
-            &:before,
-            &:after {
-                display:block;
-                content: " ";
-                height:rhythm(2, 56px);
-                width: 100px;
-                margin: 0 auto;
-                border: 2px solid #ccc;
-                border-color: rgba(black, .1);
-            }
-
-            &:before {
-                border-width: 0 0 2px;
-                margin-bottom: rhythm(1, 56px);
-            }
-
-            &:after {
-                border-width: 2px 0 0;
-                margin-top: rhythm(1, 56px);
-            }
         }
     }
 
