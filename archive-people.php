@@ -51,7 +51,9 @@ if (have_posts()) : ?>
 <?php while( have_posts() ) : the_post(); ?>
 <li>
 <a href="<?php the_permalink(); ?>">
-    <img src="<?php echo labnotes_custom_background_image_src(); ?>" alt="" />
+    <?php if ($image = labnotes_custom_background_image_src()) : ?>
+    <img src="<?php echo $image; ?>" alt="" />
+    <?php endif; ?>
     <?php the_title(); ?>
 </a>
 </li>
