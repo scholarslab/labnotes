@@ -78,7 +78,8 @@ h1 {
         @include trailer(1, 40px);
     }
 
-    .singular main header & {
+    .singular main header &,
+    main > header & {
         @include padding-leader(1,40px);
         @include padding-trailer(1,40px);
 
@@ -700,6 +701,10 @@ nav {
 
         .singular.single-people & {
             max-height: 1200px;
+
+            @include susy-breakpoint(480px, 16) {
+                min-height: 900px;
+            }
         }
 
     }
