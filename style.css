@@ -736,8 +736,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 8.51064%;
     padding-bottom: 0 !important;
     padding-top: 0 !important;
-    max-height: 1400px;
-    min-height: 400px;
+    max-height: 2000px;
+    min-height: 500px;
     display: table;
     width: 100%;
     border-bottom: 1px solid #ccc;
