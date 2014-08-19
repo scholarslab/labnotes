@@ -38,7 +38,7 @@ if (have_posts()) : ?>
 <?php while( have_posts() ) : the_post(); ?>
 <li>
 <a href="<?php the_permalink(); ?>">
-    <img src="<?php echo labnotes_people_image(); ?>" alt="" />
+    <img src="<?php echo labnotes_custom_background_image_src(); ?>" alt="" />
     <?php the_title(); ?>
 </a>
 </li>
@@ -58,7 +58,7 @@ if (have_posts()) : ?>
 <?php while( have_posts() ) : the_post(); ?>
 <li>
 <a href="<?php the_permalink(); ?>">
-    <img src="<?php echo labnotes_people_image(); ?>" alt="" />
+    <img src="<?php echo labnotes_custom_background_image_src(); ?>" alt="" />
     <?php the_title(); ?>
 </a>
 </li>
@@ -76,7 +76,7 @@ if (have_posts()) : ?>
 <?php while( have_posts() ) : the_post(); ?>
 <li>
 <a href="<?php the_permalink(); ?>">
-    <img src="<?php echo labnotes_people_image(); ?>" alt="" />
+    <img src="<?php echo labnotes_custom_background_image_src(); ?>" alt="" />
     <?php the_title(); ?>
 </a>
 </li>

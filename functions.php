@@ -1,132 +1,18 @@
 <?php
 
-/**
- * Adds theme support for page excerpts.
- */
+require_once('inc/helpers.php');
+require_once('inc/comments.php');
+require_once('inc/custom_background.php');
+require_once('inc/custom_post_types.php');
+
+
+// Post type support.
 add_post_type_support('page', 'excerpt');
 
-/**
- * Add theme support for sundry things.
- */
-//add_theme_support( 'post-thumbnails' );
 
-$headerArgs = array(
-	'default-color' => 'ffffff',
-    'default-image' => get_template_directory_uri() . '/images/background.jpg',
-    'wp-head-callback'       => 'labnotes_custom_background_cb'
-);
+// Theme support.
+add_theme_support( 'post-thumbnails' );
 
-add_theme_support( 'custom-background', $headerArgs );
-
-function labnotes_custom_background_cb() {
-
-    // $background is the saved custom image, or the default image.
-    $background = set_url_scheme( get_background_image() );
-
-    // $color is the saved custom color.
-    // A default has to be specified in style.css. It will not be printed here.
-    $color = get_background_color();
-
-    if ( $color === get_theme_support( 'custom-background', 'default-color' ) ) {
-        $color = false;
-    }
-
-    if ( ! $background && ! $color )
-        return;
-
-    $background_color = null;
-
-    $overlay_color = '#292929';
-
-    if ($color) {
-        $rgb = labnotes_hex2rgb($color);
-        $rgb_string = implode($rgb, ',');
-        $background_color = "background-color: #$color;"
-                          . "background-color: rgba($rgb_string, 0.75);";
-        $overlay_color = $rgb_string;
-    }
-
-    $style = $background_color ? $background_color : '';
-
-    if ( $background ) {
-        $image = " background-image: url('$background'); "
-               . " background-image: -moz-linear-gradient(left, rgba($overlay_color, 0.95), rgba($overlay_color, 0.95)), url('$background'); "
-               . "background-image: -webkit-linear-gradient(left, rgba($overlay_color, 0.95), rgba($overlay_color, 0.95)), url('$background');"
-               . "background-image: linear-gradient(left, rgba($overlay_color, 0.95), rgba($overlay_color, 0.95)), url('$background');";
-
-        $repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
-
-        //if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
-            //$repeat = 'no-repeat';
-
-        $repeat = " background-repeat: no-repeat;";
-
-        $position = get_theme_mod( 'background_position_x', get_theme_support( 'custom-background', 'default-position-x' ) );
-
-        //if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
-            //$position = '50%';
-
-        $position = " background-position: top center;";
-
-        $size = " -moz-background-size: cover;"
-              . " -webkit-background-size:cover;"
-              . " background-size: cover;";
-
-        //$attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
-        //if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
-            //$attachment = 'fixed';
-        
-        $attachment = " background-attachment: scroll;";
-
-        $style .= $image . $repeat . $position . $attachment . $size;
-
-        $default_selector = 'html, .singular main header';
-        $selector = apply_filters('labnotes_custom_background_image', $default_selector);
-
-        $html = '<style type="text/css" id="custom-background-css">'
-              . $selector
-              . '{'
-              . trim($style)
-              . '}'
-               . '</style>';
-
-        echo $html;
-
-    }
-
-}
-
-/**
- * Returns path to background image for a given post.
- *
- * @uses wp_get_attachment_image_src()
- * @return string The URL for an image, or empty string.
- */
-function labnotes_people_image( $size = 'full' ) {
-
-    global $post;
-
-    $image = '';
-
-    $attachment_id = get_post_meta( $post->ID, '_custom_background_image_id', true );
-
-    if ( $attachment_id ) {
-        $image = wp_get_attachment_image_src( $attachment_id, $size );
-        $image = $image[0]; // URL is the first element in the returned array.
-    }
-
-    return $image;
-
-}
-
-function labnotes_add_homepage_blurb_selector($selector) {
-    if (is_home()) {
-        $selector = '#homepage-blurb';
-    }
-    return $selector;
-}
-
-add_filter('labnotes_custom_background_image_selector', 'labnotes_add_homepage_blurb_selector');
 
 /**
  * Adds singular to body class.
@@ -141,44 +27,6 @@ function labnotes_singular_class($classes) {
 
 add_filter('body_class', 'labnotes_singular_class');
 
-/**
- * Filters page content to display a list of page children.
- *
- * Checks to see if a custom post meta field called 'show children' is set to
- * true.
- */
-function labnotes_display_page_children($content)
-{
-    global $post;
-
-    if (get_post_meta($post->ID, 'show_children', 'true') == true) {
-        $html = '';
-
-        $args = array(
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'post_parent' => $post->ID,
-            'orderby' => 'menu_order',
-            'order' => 'ASC',
-            'nopaging' => true,
-        );
-
-        query_posts($args);
-        if (have_posts()) {
-            $html = '<ul class="page-children labnotes-page-children">';
-            while (have_posts()) {
-                the_post();
-                $html .= '<li><a href="'.get_permalink(get_the_ID()).'" class="permalink">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
-            }
-            $html .= '</ul>';
-        }
-        $content = $content . $html;
-        wp_reset_query();
-    }
-    return $content;
-}
-
-// add_filter('the_content', 'labnotes_display_page_children');
 
 /**
  * Filters the 'excerpt_more' to provide a 'Continue reading' link. Currently
@@ -194,6 +42,7 @@ function labnotes_excerpt_more($more) {
 
 add_filter('excerpt_more', 'labnotes_excerpt_more');
 
+
 /**
  * Register our navigation menus
  */
@@ -207,117 +56,12 @@ register_nav_menus( array(
 
 }
 
+
 /**
- * Returns users ordered by a given key.
- *
- * @param string The meta_key to order by. Default is 'last_name'.
- * @param string The sort direction. Default is ASC.
- * @todo Add parameter to skip users with specific IDs
- * @todo Add parameter to skip users with an empty last name.
+ * Template for search form.
  */
-function labnotes_get_users_order_by_usermeta($metaKey = 'last_name', $sortDir = 'ASC')
-{
-  global $wpdb;
-
-  $select = "SELECT * FROM $wpdb->users
-             INNER JOIN $wpdb->usermeta ON ($wpdb->users.ID = $wpdb->usermeta.user_id)
-             WHERE $wpdb->usermeta.meta_key = '$metaKey'
-             ORDER BY $wpdb->usermeta.meta_value $sortDir";
-
-  $users = $wpdb->get_results($select);
-
-  return $users;
-}
-
-function labnotes_comment( $comment, $args, $depth ) {
-    $GLOBALS['comment'] = $comment;
-    switch ( $comment->comment_type ) :
-        case 'pingback' :
-        case 'trackback' :
-    ?>
-
-        <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'labnotes' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'labnotes' ), '<span class="edit-link">', '</span>' ); ?></p>
-
-    <?php
-        break;
-        default :
-    ?>
-
-        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-            <article id="comment-<?php comment_ID(); ?>" class="comment">
-                <ul class="comment-meta">
-                    <li class="image"><?php echo get_avatar( $comment, '60' ); ?></li>
-                    <li class="fn"><?php comment_author_link(); ?></li>
-                    <li class="comment-date">
-                        <?php
-                        printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-                        esc_url( get_comment_link( $comment->comment_ID ) ),
-                        get_comment_time( 'c' ),
-                        get_comment_date()
-                        );
-                        ?>
-                    </li>
-                    <?php edit_comment_link( __( 'Edit this Comment' ), '<li class="edit-link">', '</li>' ); ?>
-                    <li class="reply-link">
-                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'labnotes' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-                    </li>
-                </ul>
-                <div class="comment-content">
-                <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
-                <?php endif; ?>
-                <?php comment_text(); ?>
-            </div>
-        </article>
-
-        <?php
-        break;
-    endswitch;
-}
-
-add_action( 'show_user_profile', 'labnotes_edit_extra_profile_fields' );
-add_action( 'edit_user_profile', 'labnotes_edit_extra_profile_fields' );
-
-function labnotes_edit_extra_profile_fields( $user ) { ?>
-
-    <h3>Extra User Information</h3>
-
-    <table class="form-table">
-
-        <tr>
-            <th><label for="twitter">Twitter</label></th>
-
-            <td>
-                <input type="text" name="twitter" id="twitter" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description">Please enter your Twitter username.</span>
-            </td>
-        </tr>
-        <tr>
-            <th><label for="title">Title</label></th>
-
-            <td>
-                <input type="text" name="title" id="title" value="<?php echo esc_attr( get_the_author_meta( 'title', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description">Please enter your job title.</span>
-            </td>
-        </tr>
-    </table>
-<?php }
-
-add_action( 'personal_options_update', 'labnotes_save_extra_profile_fields' );
-add_action( 'edit_user_profile_update', 'labnotes_save_extra_profile_fields' );
-
-function labnotes_save_extra_profile_fields( $user_id ) {
-
-    if ( !current_user_can( 'edit_user', $user_id ) )
-        return false;
-
-    update_usermeta( $user_id, 'twitter', $_POST['twitter'] );
-    update_usermeta( $user_id, 'title', $_POST['title'] );
-
-}
-
 function labnotes_search_form($html) {
+
     $html = '<form role="search" method="get" id="search" action="' . home_url( '/' ) . '" >'
           . '<label for="s">' . __('Search for') . '</label>'
           . '<input type="search" value="' . get_search_query() . '" name="s" id="s" />'
@@ -325,259 +69,15 @@ function labnotes_search_form($html) {
           . '</form>';
 
     return $html;
+
 }
 
 add_filter( 'get_search_form', 'labnotes_search_form' );
 
+
 /**
- * Custom Post Type for People
+ * Register theme widgets.
  */
-function labnotes_register_post_types() {
-    register_post_type( 'people',
-        array(
-            'labels' => array(
-                'name' => __( 'People' ),
-                'singular_name' => __( 'Person' )
-              ),
-            'public' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-background'),
-            'menu_position' => 20,
-            'hierarchical' => false,
-            'has_archive' => true,
-            'show_in_nav_menus' => true,
-            'rewrite' => array('slug' => 'people')
-        )
-      );
-    register_post_type( 'research',
-        array(
-            'labels' => array(
-                'name' => __( 'Research' ),
-                'singular_name' => __( 'Research Project' )
-              ),
-            'public' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt', 'custom-background'),
-            'menu_position' => 20,
-            'hierarchical' => false,
-            'has_archive' => true,
-            'show_in_nav_menus' => true,
-            'rewrite' => array('slug' => 'research')
-        )
-    );
-}
-
-add_action( 'init', 'labnotes_register_post_types' );
-
-/**
- * Updates the query on people post types.
- *
- * 1. Sets the posts_per_page to -1 to get all posts.
- * 2. Orders alphabetically by family name.
- * 3. Checks query variable for people-category value.
- */
-function labnotes_pre_get_posts( $query ) {
-
-    if ( is_admin() || ! $query->is_main_query() )
-        return;
-
-    if ( is_post_type_archive( array( 'research', 'people' ) ) ) {
-        $query->set( 'posts_per_page', -1 );
-    }
-
-    if ( is_post_type_archive( 'people' ) ) {
-
-        if ($category = get_query_var('people-category')) {
-            $query->set( 'people-category', $category);
-        }
-
-        $query->set( 'meta_key', 'person_family_name' );
-        $query->set( 'orderby', 'meta_value' );
-        $query->set( 'order', 'asc' );
-        return;
-    }
-}
-
-add_action( 'pre_get_posts', 'labnotes_pre_get_posts', 1 );
-
-
-/**
- * Adds our post meta boxes for the 'sp_workshop' post type.
- */
-function labnotes_add_meta_boxes() {
-  add_meta_box("wp-user-information", __('Personal Info'), "labnotes_people_meta_box", "people", "side", "high");
-  add_meta_box("wp-user-information", __('Project Info'), "labnotes_research_meta_box", "research", "side", "high");
-
-}
-
-add_action( 'admin_init', 'labnotes_add_meta_boxes');
-
-function labnotes_people_meta_fields() {
-  return array(
-    'person_title',
-    'person_email',
-    'person_phone',
-    'person_twitter',
-    'person_url',
-    'person_user_id',
-    'person_family_name',
-    'person_given_name',
-    'person_degree',
-    'person_department',
-    'person_status'
-  );
-}
-
-function labnotes_people_departments() {
-  return array(
-      'administration' => 'Administration',
-      'reseach_and_development' => 'Research & Development',
-      'public_service' => 'Outreach & Public Service',
-      'gis_data' => 'Geospatial Information and Data Services',
-      'its_research' => 'ITS Research Computing'
-  );
-}
-
-/**
- * Meta box for personal information.
- */
-function labnotes_people_meta_box(){
-    global $post;
-    $custom = get_post_custom($post->ID);
-
-    $fields = labnotes_people_meta_fields();
-
-    $statusOptions = array('current' => 'Current', 'not_current' => 'Not Current');
-
-?>
-
-<?php foreach ($fields as $field): if ($field == 'person_user_id' || $field == 'person_category' || $field == 'person_status') continue; ?>
-    <p><label for="<?php echo $field; ?>"><?php echo ucwords(str_replace('_', ' ', str_replace('person_', ' ', $field))); ?></label></p>
-    <p><input type="text" value="<?php echo @$custom[$field][0]; ?>" name="<?php echo $field; ?>" /></p>
-<?php endforeach; ?>
-
-    <p><label for="person_user_id">User</label></p>
-    <p><?php wp_dropdown_users(array('show_option_none' => 'No User', 'name' => 'person_user_id', 'selected' => @$custom['person_user_id'][0])); ?></p>
-
-    <p><label for="person_status">Status</label></p>
-    <p>
-      <select name="person_status">
-      <option>Choose a Status</option>
-      <?php foreach ($statusOptions as $name => $label): ?>
-      <option value="<?php echo $name; ?>"<?php if (@$custom['person_status'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
-      <?php endforeach; ?>
-      </select>
-    </p>
-
-<?php
-}
-
-function labnotes_research_meta_fields() {
-  return array(
-    'research_url',
-    'research_status'
-  );
-}
-
-/**
- * Meta box for personal information.
- */
-function labnotes_research_meta_box(){
-    global $post;
-    $custom = get_post_custom($post->ID);
-
-    $fields = labnotes_people_meta_fields();
-
-    $statusOptions = array('current' => 'Current Research', 'archived' => 'Past Research');
-
-?>
-
-    <p><label for="research_url">Project URL</label></p>
-    <p><input type="text" value="<?php echo @$custom['research_url'][0]; ?>" name="research_url" /></p>
-
-    <p><label for="research_status">Status</label></p>
-    <p>
-      <select name="research_status">
-      <option>Choose a Status</option>
-      <?php foreach ($statusOptions as $name => $label): ?>
-      <option value="<?php echo $name; ?>"<?php if (@$custom['research_status'][0] == $name) echo ' selected="selected"'; ?>><?php echo $label; ?></option>
-      <?php endforeach; ?>
-      </select>
-    </p>
-
-<?php
-}
-
-/**
-* Saves our custom post metadata. Used on the 'save_post' hook.
-*/
-function labnotes_save_post(){
-  global $post;
-
-  if ( 'people' == @$_POST['post_type'] ) {
-    $fields = labnotes_people_meta_fields();
-    foreach ($fields as $field) {
-      if ( array_key_exists($field, $_POST)) {
-          update_post_meta($post->ID, $field, $_POST[$field]);
-      }
-    }
-  }
-
-  if ( 'research' == @$_POST['post_type'] ) {
-    $fields = labnotes_research_meta_fields();
-    foreach ($fields as $field) {
-      if ( array_key_exists($field, $_POST)) {
-          update_post_meta($post->ID, $field, $_POST[$field]);
-      }
-    }
-  }
-
-}
-
-add_action( 'save_post','labnotes_save_post');
-
-add_action( 'init', 'create_people_taxonomies', 0 );
-
-function create_people_taxonomies() {
-
-  $labels = array(
-    'name' => _x( 'People Categories', 'taxonomy general name' ),
-    'singular_name' => _x( 'People Category', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search People Categories' ),
-    'all_items' => __( 'All People Categories' ),
-    'parent_item' => __( 'Parent People Category' ),
-    'parent_item_colon' => __( 'Parent People Category:' ),
-    'edit_item' => __( 'Edit People Category' ),
-    'update_item' => __( 'Update People Category' ),
-    'add_new_item' => __( 'Add New People Category' ),
-    'new_item_name' => __( 'New People Category Name' ),
-    'menu_name' => __( 'People Categories' ),
-  );
-
-  register_taxonomy('people-category',array('people'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'people-category' ),
-  ));
-}
-
-/**
- * Formats a phone number.
- */
-function labnotes_format_phone($number) {
-
-  $string = "$number is not a valid number.";
-
-  $number = preg_replace("/[^0-9]/", "", $number);
-
-  if (strlen($number) == 10) {
-      $string = preg_replace("/([0-9]{3})([0-9]{3})([0-9]{4})/", "$1.$2.$3", $number);
-  }
-
-  return $string;
-}
-
-// Register widgets.
 function labnotes_widgets_init() {
     $beforeTitle = '<h2>';
     $afterTitle = '</h2>';
@@ -594,6 +94,7 @@ function labnotes_widgets_init() {
 }
 
 add_action('widgets_init', 'labnotes_widgets_init');
+
 
 function get_person_image($postId = null, $options = array()) {
   global $post;
@@ -628,140 +129,97 @@ function get_person_image($postId = null, $options = array()) {
   return '<span class="person_image">' . $html . '</span>';
 }
 
-add_shortcode('labnotes_people', 'labnotes_people_query');
+/**
+ * Adds the post slug to the body class.
+ */
+function labnotes_add_slug_to_body_class($classes) {
 
-function labnotes_people_query($attrs) {
-  extract(
-    shortcode_atts(
-      array(
-        'category' => 'staff',
-      ),
-      $attrs
-    )
-  );
-
-  $params = array(
-    'post_type' => 'people',
-    'posts_per_page' => '-1',
-    'meta_key' => 'person_family_name',
-    'orderby' => 'meta_value',
-    'order' => 'asc',
-    'people-category' => $attrs['category']
-  );
-
-  query_posts($params);
-  $html = '';
-  if (have_posts()) {
-        $html = '<ul class="people graduate_fellows">';
-        while (have_posts()) {
-          the_post();
-          $id = get_the_ID();
-            $html .= '<li class="vcard">'
-                   . '<a href="'. get_permalink($id) .'">'
-                   . get_person_image($id)
-                   . get_the_title($id)
-                   .'</a>'
-                   . '</li>';
-        }
-        $html = $html . '</ul>';
+    if (!is_front_page()) {
+        global $post;
+        $classes[] = $post->post_name;
     }
 
-  wp_reset_query();
-  return html_entity_decode($html);
-}
+    return $classes;
 
-function labnotes_add_slug_to_body_class($classes) {
-  if (!is_front_page()) {
-    global $post;
-    $classes[] = $post->post_name;
-  }
-  return $classes;
 }
 
 add_filter('body_class', 'labnotes_add_slug_to_body_class');
+
 
 /**
  * If the content is empty for a Person post, see if there is an associated user
  * and set the content to the user's bio field.
  */
-function user_bio_the_content($content) {
-  if (is_singular('people') && empty($content)) {
-    if ($user = get_userdata(get_post_meta(get_the_ID(), 'person_user_id', true))) {
-      $content = $user->user_description;
-    }
-  }
+function labnotes_user_bio_for_content($content) {
 
-  return $content;
+    if (is_singular('people') && empty($content)) {
+        if ($user = get_userdata(get_post_meta(get_the_ID(), 'person_user_id', true))) {
+            $content = $user->user_description;
+        }
+    }
+
+    return $content;
+
 }
 
-add_filter('the_content', 'user_bio_the_content');
+add_filter('the_content', 'labnotes_user_bio_for_content');
 
+
+/**
+ * Returns the link for a person post type. Used to filter the author_link output.
+ */
 function people_author_link($link, $author_id, $author_nicename) {
-    $args = array(
-      'post_type' => 'people',
-      'meta_key' => 'person_user_id',
-      'meta_value' => $author_id
-    );
 
-    $people = get_posts($args);
-    $person = reset($people);
-    if ($person) {
-      $link = get_permalink($person->ID);
+    if ($person = labnotes_get_person_by_user_id($author_id)) {
+        $link = get_permalink($person->ID);
     }
+
     return $link;
+
 }
 
 add_filter( 'author_link', 'people_author_link', 10, 3);
 
 
-function filter_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
+function filter_get_avatar($avatar, $id, $size, $default, $alt) {
 
-    if (is_numeric($id_or_email)) {
-      $args = array(
-        'post_type' => 'people',
-        'meta_key' => 'person_user_id',
-        'meta_value' => $id_or_email
-      );
-
-      $people = get_posts($args);
-      $person = reset($people);
-      if ($person) {
+    if ($person = labnotes_get_person_by_user_id($id)) {
         if (has_post_thumbnail($person->ID)) {
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $person->ID ), 'thumbnail' );
-          $avatar = '<img src="'.$image[0].'" class="avatar" alt="'.$alt.'">';
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $person->ID ), 'thumbnail' );
+            $avatar = '<img src="'.$image[0].'" class="avatar" alt="'.$alt.'">';
         }
-      }
     }
+
     return '<span class="author_image">' . $avatar . '</span>';
 
 }
 
 add_filter( 'get_avatar', 'filter_get_avatar', 10, 5);
 
+
 /**
  * Safe Pasting for TinyMCE (automatically clean up MS Word HTML)
  * http://www.kevinleary.net/clean-up-microsoft-word-pasted-html-tinymce/
  */
 function tinymce_paste_options($init) {
-  $init['paste_auto_cleanup_on_paste'] = true;
-  return $init;
+    $init['paste_auto_cleanup_on_paste'] = true;
+    return $init;
 }
 
 if( is_admin() ) add_filter('tiny_mce_before_init', 'tinymce_paste_options');
 
-function labnotes_hex2rgb($color) {
-    list($r, $g, $b) = array($color[0].$color[1],
-                             $color[2].$color[3],
-                             $color[4].$color[5]);
-    $r = hexdec($r); $g = hexdec($g); $b = hexdec($b);
-    return array($r, $g, $b);
-}
 
+/**
+ * Creates link for people category terms.
+ */
 function labnotes_term_link($link, $term, $taxonomy) {
+
     if ($taxonomy == 'people-category') {
         $link = get_post_type_archive_link('people') . '?people-category='.$term->slug;
     }
+
     return $link;
+
 }
 
 add_filter('term_link', 'labnotes_term_link', 10, 3);
