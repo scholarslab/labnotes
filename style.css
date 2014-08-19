@@ -793,6 +793,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .singular [role=main] header p, .singular [role=main] header ul, .singular [role=main] header .title {
     font-weight: 200;
     padding-bottom: 1.66667em;
+    text-align: center;
   }
   .singular.single-people [role=main] header {
     max-height: 1200px;
@@ -803,8 +804,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     min-height: 900px;
   }
 }
-
 @media screen {
+  [role=main] header p, [role=main] header ul, [role=main] header .post-meta, [role=main] header .title {
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.11111em;
+    line-height: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+  }
+
   #blog-archives {
     background-color: rgba(0, 0, 0, 0.025);
     border-top: 1px solid #ccc;
@@ -1252,13 +1261,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: 3.33333em;
     font-weight: 200;
     color: #666;
-  }
-
-  .post-meta {
-    font-weight: 500;
-    color: rgba(90, 90, 90, 0.5);
-    margin-bottom: 0;
-    text-align: center;
   }
 
   .commentlist {

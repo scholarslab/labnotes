@@ -696,6 +696,7 @@ nav {
             p,ul,.title {
                 font-weight:200;
                 padding-bottom:rhythm(1);
+                text-align:center;
             }
 
         }
@@ -707,6 +708,15 @@ nav {
                 min-height: 900px;
             }
         }
+
+        p,ul,.post-meta, .title {
+            text-align:center;
+            font-weight:200;
+            @include adjust-font-size-to(20px);
+            @include adjust-leading-to(1,20px);
+            margin:0;
+        }
+
 
     }
 
@@ -921,13 +931,6 @@ article {
         }
     }
 
-}
-
-.post-meta {
-    font-weight:500;
-    color: $default-color-lighter;
-    margin-bottom:0;
-    text-align:center;
 }
 
 .commentlist {
