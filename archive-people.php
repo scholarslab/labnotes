@@ -93,8 +93,7 @@ if (have_posts()) : ?>
 <ul class="people-list">
 <?php while( have_posts() ) : the_post(); ?>
 <?php
-    $status = get_post_meta( $post->ID, 'person_status', true);
-    if(is_null($status) || $status == 'current' || in_category(array('2014-2015', '2014-2015-praxis-fellow'))) continue;
+if(is_null($status) || $status == 'current' || has_term(array('2014-2015', '2014-2015-praxis-fellow'), 'people-category')) continue;
 ?>
 <li>
 <a href="<?php the_permalink(); ?>">
