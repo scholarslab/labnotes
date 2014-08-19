@@ -45,7 +45,31 @@
 	?>
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'labnotes' ); ?></p>
 	<?php endif; ?>
+    
+<?php
 
-	<?php comment_form(); ?>
+$commenter = wp_get_current_commenter();
+$req = get_option( 'require_name_email' );
+$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
+$aria_req = ( $req ? " aria-required='true'" : '' );
+
+$comment_notes_before = '<div class="comment-notes"><p>'
+                      . __( 'Your email address will not be published.' )
+                      . ( $req ? $required_text : '' )
+                      . '</p><p>'
+                      . sprintf(
+                        __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ),
+                            ' <code>' . allowed_tags() . '</code>'
+                        )
+                      . '</p></div>';
+
+$args = array(
+    'comment_notes_before' => $comment_notes_before,
+    'comment_notes_after' => ''
+);
+
+comment_form($args);
+
+?>
 
 </div><!-- #comments -->

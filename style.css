@@ -1239,6 +1239,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 3.33333em;
   }
 
+  #respond {
+    border-top: 1px solid #ccc;
+  }
+  #respond h3 {
+    margin-top: 0;
+  }
+  #respond input[type=text],
+  #respond textarea {
+    border: 1px solid #999;
+    border-color: rgba(0, 0, 0, 0.25);
+    font-family: "Source Sans Pro", sans-serif !important;
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    padding-left: 0.46875em;
+    padding-right: 0.46875em;
+  }
+  #respond input[type=text] {
+    width: 45%;
+  }
+  #respond label {
+    display: block;
+  }
+  #respond .required {
+    color: #710;
+  }
+}
+@media screen and (min-width: 700px) {
+  #respond .comment-notes {
+    float: right;
+    width: 45%;
+  }
+}
+@media screen {
+  #respond .comment-notes p {
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    line-height: 1.875em;
+  }
+  #respond .comment-notes p:first-child {
+    margin-top: 0;
+  }
+  #respond .comment-notes code {
+    display: block;
+  }
+
   .gce-list {
     list-style: none;
   }

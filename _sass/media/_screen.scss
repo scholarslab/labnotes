@@ -903,6 +903,60 @@ article {
     margin-top: rhythm(2);
 }
 
+#respond {
+
+    h3 {
+        margin-top:0;
+    }
+
+    border-top: 1px solid #ccc;
+
+    input[type=text],
+    textarea {
+        border: 1px solid #999;
+        border-color: rgba(black,.25);
+        font-family: $default-font !important;
+        @include adjust-font-size-to(16px);
+        padding-left: rhythm(.25, 16px);
+        padding-right: rhythm(.25, 16px);
+    }
+
+    input[type=text] {
+        width: 45%;
+    }
+
+    label {
+        display:block;
+    }
+
+    .required {
+        color: #710;
+    }
+
+    .comment-notes {
+        @include susy-breakpoint(700px, 16) {
+            float:right;
+            width: 45%;
+        }
+        p {
+            @include adjust-font-size-to(16px);
+            @include adjust-leading-to(1, 16px);
+
+            &:first-child {
+                margin-top:0;
+            }
+
+        }
+
+        code {
+            display:block;
+        }
+
+
+    }
+
+}
+
 // Google Calendar Events generated list.
 .gce-list {
     list-style:none;
