@@ -1339,7 +1339,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background: #fff;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 800px) {
   body {
     max-width: 100%;
     margin-left: auto;

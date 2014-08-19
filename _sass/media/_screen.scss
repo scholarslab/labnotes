@@ -1032,8 +1032,8 @@ article {
     background: #fff;
 }
 
-// Media query for 720px. Sets layout to 16 columns.
-@include susy-breakpoint('720px', 16) {
+// Media query for 800px. Sets layout to 16 columns.
+@include susy-breakpoint('800px', 16) {
 
 body {
     @include container($grid);
