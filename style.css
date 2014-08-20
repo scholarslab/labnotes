@@ -814,21 +814,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0;
   }
 
-  #blog-archives {
+  #blog-archives,
+  #recent-activity {
     background-color: rgba(0, 0, 0, 0.025);
     border-top: 1px solid #ccc;
     border-color: rgba(0, 0, 0, 0.05);
     margin-top: 0;
     overflow: hidden;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: -1.66667em;
+    margin-bottom: -1.66667em;
+    padding-top: 1.66667em;
+    padding-bottom: 1.66667em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-right: -8.51064%;
+    margin-left: -8.51064%;
+    padding-right: 8.51064%;
+    padding-left: 8.51064%;
   }
 }
 @media screen and (min-width: 480px) {
-  #blog-archives > div {
+  #blog-archives > div,
+  #recent-activity > div {
     width: 48.93617%;
     float: left;
     margin-right: 2.12766%;
   }
-  #blog-archives > div:last-child {
+  #blog-archives > div:last-child,
+  #recent-activity > div:last-child {
     width: 48.93617%;
     float: right;
     margin-right: 0;
@@ -836,13 +853,66 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @media screen and (min-width: 480px) and (min-width: 940px) {
-  #blog-archives > div div {
+  #blog-archives > div div,
+  #recent-activity > div div {
     width: 47.82609%;
     float: left;
     margin-right: 4.34783%;
   }
-  #blog-archives > div div:last-child {
+  #blog-archives > div div:last-child,
+  #recent-activity > div div:last-child {
     width: 47.82609%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media screen {
+  #recent-activity {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.975);
+    color: #5a5a5a;
+  }
+  #recent-activity a {
+    color: #771100;
+    color: rgba(119, 17, 0, 0.8);
+  }
+  #recent-activity a:visited {
+    color: #771100;
+  }
+  #recent-activity a:focus {
+    color: #440a00;
+  }
+  #recent-activity a:hover {
+    color: #440a00;
+  }
+  #recent-activity a:active {
+    color: #771100;
+  }
+  #recent-activity a:visited {
+    color: rgba(119, 17, 0, 0.8);
+  }
+  #recent-activity a:focus {
+    color: rgba(68, 10, 0, 0.8);
+  }
+  #recent-activity a:hover {
+    color: rgba(68, 10, 0, 0.8);
+  }
+  #recent-activity a:active {
+    color: rgba(119, 17, 0, 0.8);
+  }
+  #recent-activity h1 {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 600px) {
+  #recent-activity section {
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  #recent-activity section:last-child {
+    width: 48.71795%;
     float: right;
     margin-right: 0;
   }
@@ -1237,6 +1307,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .singular .entry-content {
     margin-top: 3.33333em;
+    margin-bottom: 5em;
   }
 
   #respond {
@@ -1502,7 +1573,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 0;
     margin-bottom: 0;
   }
-  [role=main] #blog-archives {
+  [role=main] #blog-archives,
+  [role=main] #recent-activity {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1605,7 +1677,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 0;
     margin-bottom: 0;
   }
-  [role=main] #blog-archives {
+  [role=main] #blog-archives,
+  [role=main] #recent-activity {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;

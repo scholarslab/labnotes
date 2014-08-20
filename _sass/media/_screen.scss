@@ -722,12 +722,15 @@ nav {
 
 }
 
-#blog-archives {
+#blog-archives,
+#recent-activity {
     background-color: rgba(black, 0.025);
     border-top:1px solid #ccc;
     border-color: rgba(black, 0.05);
     margin-top:0;
     overflow:hidden;
+
+    @include fullbleed();
 
     @include susy-breakpoint('480px', 16) {
 
@@ -754,6 +757,45 @@ nav {
     }
 }
 
+#recent-activity {
+    background-color: white;
+    background-color: rgba(white, .975);
+    color: $default-color;
+
+    a {
+    @include link-colors(
+        $link-color,
+        $link-hover-color,
+        $link-active-color,
+        $link-visited-color,
+        $link-focus-color
+    );
+
+    @include link-colors(
+        rgba($link-color, .8),
+        rgba($link-hover-color, .8),
+        rgba($link-active-color, .8),
+        rgba($link-visited-color, .8),
+        rgba($link-focus-color, .8)
+    );
+    }
+
+    h1 {
+        text-align:left;
+    }
+
+    @include susy-breakpoint(600px, 16) {
+
+    section {
+        @include span(5 of 10);
+
+        &:last-child {
+        @include span(last 5 of 10);
+        }
+    }
+
+    }
+}
 
 .pagination {
     text-align:justify;
@@ -901,6 +943,7 @@ article {
 
 .singular .entry-content {
     margin-top: rhythm(2);
+    margin-bottom: rhythm(3);
 }
 
 #respond {
@@ -1180,7 +1223,8 @@ nav {
         }
     }
 
-    #blog-archives {
+    #blog-archives,
+    #recent-activity {
         @include fullbleed(2,16);
         padding-left:span(1 wide of 12);
         padding-right:span(1 wide of 12);
@@ -1254,7 +1298,8 @@ body {
         }
     }
 
-    #blog-archives {
+    #blog-archives,
+    #recent-activity {
         @include fullbleed(3,18);
         padding-left:span(1 wide of 12);
         padding-right:span(1 wide of 12);
