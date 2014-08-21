@@ -7,28 +7,29 @@
 
         <title><?php bloginfo('site_title'); ?></title>
 
-        <!-- Stylesheets -->
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700|Source+Code+Pro:400' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-
         <!-- Feeds -->
         <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom feed" href="<?php bloginfo('atom_url'); ?>">
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS feed" href="<?php bloginfo('rss2_url'); ?>">
 
-        <!-- Modernizr and Friends -->
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/modernizr.min.js"></script>
-        <script>
-          Modernizr.load([
-            {
-              test: Modernizr.mq(),
-              nope: ['<?php echo get_stylesheet_directory_uri(); ?>/javascripts/respond.min.js',
-              '<?php echo get_stylesheet_directory_uri(); ?>/javascripts/selectivizr.min.js']
-            }
-          ]);
-        </script>
+        <!-- Stylesheets -->
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700|Source+Code+Pro:400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/responsive-nav.min.js"></script>
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/headroom.min.js"></script>
+        <!-- Modernizr and Friends -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+        <script>
+        Modernizr.load([
+        {
+            test: Modernizr.mq(),
+            nope: [
+                '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js',
+                '//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js'
+            ]
+        }
+        ]);
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/responsive-nav.js/1.0.32/responsive-nav.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.6.0/headroom.min.js"></script>
 
         <?php wp_head(); ?>
 
