@@ -75,6 +75,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0;
     padding: 0;
     border-top: 10px solid #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    background-image: url("http://i.imgur.com/oavv3DC.jpg");
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
+    background-attachment: fixed;
   }
 
   body {
@@ -797,47 +805,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.51064%;
     padding-right: 8.51064%;
     padding-left: 8.51064%;
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-    max-height: 700px;
-    min-height: 500px;
-    display: table;
-    width: 100%;
-  }
-  .singular [role=main] header div {
-    display: table-cell;
-    vertical-align: bottom;
-  }
-  .singular [role=main] header h1, .singular [role=main] header p, .singular [role=main] header ul {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-right: -8.51064%;
-    margin-left: -8.51064%;
-    padding-right: 8.51064%;
-    padding-left: 8.51064%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.975);
-  }
-  .singular [role=main] header p, .singular [role=main] header ul, .singular [role=main] header .title {
-    font-weight: 200;
-    padding-bottom: 1.66667em;
-    text-align: center;
+    padding: 0 !important;
   }
   .singular.single-people [role=main] header {
-    max-height: 1200px;
+    background-image: none !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: top center !important;
   }
-}
-@media screen and (min-width: 480px) {
-  .singular.single-people [role=main] header {
-    min-height: 800px;
-  }
-}
-@media screen {
   [role=main] header p, [role=main] header ul, [role=main] header .post-meta, [role=main] header .title {
     text-align: center;
     font-weight: 200;
@@ -1455,10 +1432,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-top: 1px solid #ccc;
     clear: both;
     background-color: #363636;
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("images/squared_metal.png");
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("images/squared_metal.png");
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("images/squared_metal.png");
-    background-size: cover, auto;
+    background-image: url("http://i.imgur.com/oavv3DC.jpg");
+    background-attachment: fixed;
     text-align: center;
   }
 }
@@ -1759,17 +1734,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 17.02128%;
     padding-left: 17.02128%;
   }
-  .singular [role=main] header h1, .singular [role=main] header p, .singular [role=main] header ul {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-right: -17.02128%;
-    margin-left: -17.02128%;
-    padding-right: 17.02128%;
-    padding-left: 17.02128%;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
   [role=main] #blog-archives,
   [role=main] #recent-activity {
     -moz-box-sizing: content-box;
@@ -1850,17 +1814,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.53191%;
     padding-right: 25.53191%;
     padding-left: 25.53191%;
-  }
-  .singular [role=main] header h1, .singular [role=main] header p, .singular [role=main] header ul {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    margin-right: -25.53191%;
-    margin-left: -25.53191%;
-    padding-right: 25.53191%;
-    padding-left: 25.53191%;
-    margin-top: 0;
-    margin-bottom: 0;
   }
   [role=main] #blog-archives,
   [role=main] #recent-activity {

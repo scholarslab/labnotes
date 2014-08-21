@@ -10,6 +10,12 @@ html {
     margin:0;
     padding:0;
     border-top: 10px solid #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    background-image: url('http://i.imgur.com/oavv3DC.jpg');
+    @include box-shadow(0 0 20px rgba(black,.125));
+    background-attachment:fixed;
 }
 
 body {
@@ -19,6 +25,7 @@ body {
     font-family: $default-font;
     color: $default-color;
     color: rgba($default-color, .9);
+
 }
 
 img,
@@ -705,47 +712,18 @@ nav {
     }
 
     header {
-
         .singular & {
             position:relative;
             @include fullbleed;
-            padding-bottom:0 !important;
-            padding-top:0 !important;
-            max-height: 700px;
-            min-height:500px;
-            display: table;
-            width:100%;
-
-            div {
-                display:table-cell;
-                vertical-align:bottom;
-            }
-
-            h1,p,ul {
-                @include fullbleed(1,14,false);
-                margin-top:0;
-                margin-bottom:0;
-                padding-top:0;
-                padding-bottom:0;
-                background-color: white;
-                background-color: rgba(white, .975);
-
-            }
-
-            p,ul,.title {
-                font-weight:200;
-                padding-bottom:rhythm(1);
-                text-align:center;
-            }
-
+            padding:0 !important;
         }
 
         .singular.single-people & {
-            max-height: 1200px;
+            background-image: none !important;
+            @include background-size(cover !important);
+            background-position: top center !important;
 
-            @include susy-breakpoint(480px, 16) {
-                min-height: 800px;
-            }
+
         }
 
         p,ul,.post-meta, .title {
@@ -1132,10 +1110,9 @@ article {
     clear:both;
     background-color: #363636;
     @include background-image(
-        linear-gradient(left, rgba(black,.75), rgba(black, .75)),
-        url('images/squared_metal.png')
+        url('http://i.imgur.com/oavv3DC.jpg')
     );
-    background-size: cover, auto;
+    background-attachment: fixed;
     text-align:center;
 
     @include susy-breakpoint('800px', 16) {
@@ -1416,12 +1393,6 @@ nav {
 
         header {
             @include fullbleed(2,16);
-
-            h1,p,ul {
-                @include fullbleed(2,16, false);
-                margin-top:0;
-                margin-bottom:0;
-            }
         }
     }
 
@@ -1478,13 +1449,6 @@ body {
 
         header {
             @include fullbleed(3,18);
-
-            h1,p,ul {
-                @include fullbleed(3,18,false);
-                margin-top:0;
-                margin-bottom:0;
-            }
-
         }
     }
 

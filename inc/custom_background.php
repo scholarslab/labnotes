@@ -2,7 +2,9 @@
 
 $custom_background_args = array(
 	'default-color' => 'ffffff',
-    'default-image' => get_template_directory_uri() . '/images/background.jpg',
+    'default-image' => 'http://i.imgur.com/oavv3DC.jpg',
+    'default-repeat' => 'no-repeat',
+    'default-position-x' => 'center',
     'wp-head-callback'       => 'labnotes_custom_background_cb'
 );
 
@@ -74,7 +76,7 @@ function labnotes_custom_background_cb() {
 
         $style .= $image . $repeat . $position . $attachment . $size;
 
-        $default_selector = 'html, .singular main header';
+        $default_selector = '.singular main header';
         $selector = apply_filters('labnotes_custom_background_image', $default_selector);
 
         $html = '<style type="text/css" id="custom-background-css">'

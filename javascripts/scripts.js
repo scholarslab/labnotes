@@ -5,19 +5,18 @@ var nav = responsiveNav(
     }
 );
 
-jQuery(function($){
-    var header, windowHeight, adminBarHeight, bannerHeight, headerHeight;
+//jQuery(function($){
+    //var header, windowHeight, adminBarHeight, bannerHeight, headerHeight;
 
-    header = $('.singular [role=main] article header');
-    $(header).wrapInner('<div>');
+    //header = $('.singular [role=main] article header');
 
-    adminBarHeight = $('#wpadminbar').height();
-    bannerHeight = $('[role=banner]').height();
+    //adminBarHeight = $('#wpadminbar').height();
+    //bannerHeight = $('[role=banner]').height();
 
-    $(window).bind("load resize", function(){
-        winHeight = $(window).height();
+    //$(window).bind("load resize", function(){
+        //winHeight = $(window).height();
 
-        headerHeight = winHeight - (adminBarHeight + bannerHeight);
-        $(header).css({'height':headerHeight});
-    });
-});
+        //headerHeight = winHeight - (adminBarHeight + bannerHeight);
+        //$(header).css({'min-height':headerHeight});
+    //});
+//});

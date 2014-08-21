@@ -5,6 +5,11 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
 <header>
+    <?php if ($image = labnotes_custom_background_image_src()) : ?>
+    <div class="person-image">
+    <img src="<?php echo $image; ?>" alt="" />
+</div>
+    <?php endif; ?>
     <h1><?php the_title(); ?></h1>
     <?php if ( $title = $customFields['person_title'][0] ) : ?>
     <p class="title"><?php echo $title; ?></p>
