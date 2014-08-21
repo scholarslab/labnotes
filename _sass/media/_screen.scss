@@ -716,6 +716,11 @@ nav {
             position:relative;
             @include fullbleed;
             padding:0 !important;
+
+            .custom-background {
+                height: 200px;
+            }
+
         }
 
         .singular.single-people & {

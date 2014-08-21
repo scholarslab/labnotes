@@ -807,6 +807,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 8.51064%;
     padding: 0 !important;
   }
+  .singular [role=main] header .custom-background {
+    height: 200px;
+  }
   .singular.single-people [role=main] header {
     background-image: none !important;
     -moz-background-size: cover !important;

@@ -18,6 +18,9 @@
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header>
+                <?php if (is_singular()): ?>
+                <div class="custom-background"></div>
+                <?php endif; ?>                
                     <?php if(is_page() && $post->post_parent != 0 && $parent = get_page($post->post_parent)): ?>
                     <em class="deck"><?php echo $parent->post_title; ?></em>
                     <?php endif; ?>
