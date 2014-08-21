@@ -79,12 +79,6 @@ h1 {
     margin:0;
     @include trailer(1, 40px);
     text-align:center;
-    .archive article &,
-    .blog article & {
-        @include adjust-font-size-to(40px);
-        @include adjust-leading-to(2,40px);
-        @include trailer(1, 40px);
-    }
 
     .singular main header &,
     main > header & {
@@ -122,6 +116,9 @@ h1 {
         }
     }
 
+    .archive main > header & {
+        padding: 0 !important;
+    }
 
     .home article & {
         @include adjust-font-size-to(25px);
@@ -136,8 +133,9 @@ h2 {
     @include adjust-leading-to(1, 30px);
     @include leader(2, 30px);
     @include trailer(1, 30px);
-    font-weight:600;
+    font-weight:200;
 
+    header + &,
     h1 + &,
     h1 ~ * &:first-child {
         @include leader(1, 30px);
@@ -150,11 +148,8 @@ h3 {
     @include adjust-leading-to(2, 25px);
     color: $default-color-light;
     font-weight:200;
-    @include leader(2, 25px);
+    @include leader(1, 25px);
 
-    h2 + & {
-        @include leader(1, 25px);
-    }
 }
 
 h4 {
@@ -495,10 +490,10 @@ a {
 [role=banner] {
     position:relative;
     text-align:center;
-    border-bottom:1px solid #ccc;
-    border-color: rgba(black, .125);
+    border-bottom:1px solid #999;
+    border-color: rgba(black, .25);
     @include clearfix;
-    background: rgba(white,.9);
+    background-color:white;
 }
 
 
@@ -700,7 +695,10 @@ nav {
     background-color: white;
     background-color: rgba(white, .975);
     padding-top: rhythm(1);
-    padding-bottom: rhythm(1);
+
+    .singular & {
+        padding-bottom: rhythm(1);
+    }
 
     .home & {
         @include fullbackground;

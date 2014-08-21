@@ -168,12 +168,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-bottom: 0.75em;
     text-align: center;
   }
-  .archive article h1, .blog article h1 {
-    font-size: 2.22222em;
-    line-height: 1.5em;
-    line-height: 1.5em;
-    margin-bottom: 0.75em;
-  }
   .singular main header h1, main > header h1 {
     padding-top: 0.75em;
     padding-bottom: 0.75em;
@@ -207,6 +201,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media screen {
+  .archive main > header h1 {
+    padding: 0 !important;
+  }
   .home article h1 {
     font-size: 1.38889em;
     line-height: 1.2em;
@@ -220,9 +217,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 1em;
     margin-top: 2em;
     margin-bottom: 1em;
-    font-weight: 600;
+    font-weight: 200;
   }
-  h1 + h2, h1 ~ * h2:first-child {
+  header + h2, h1 + h2, h1 ~ * h2:first-child {
     margin-top: 1em;
   }
 
@@ -232,9 +229,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 2.4em;
     color: rgba(90, 90, 90, 0.75);
     font-weight: 200;
-    margin-top: 2.4em;
-  }
-  h2 + h3 {
     margin-top: 1.2em;
   }
 
@@ -564,9 +558,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   [role=banner] {
     position: relative;
     text-align: center;
-    border-bottom: 1px solid #ccc;
-    border-color: rgba(0, 0, 0, 0.125);
-    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #999;
+    border-color: rgba(0, 0, 0, 0.25);
+    background-color: white;
   }
   [role=banner]:before, [role=banner]:after {
     content: " ";
@@ -765,6 +759,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-color: white;
     background-color: rgba(255, 255, 255, 0.975);
     padding-top: 1.66667em;
+  }
+  .singular [role=main] {
     padding-bottom: 1.66667em;
   }
   .home [role=main] {
