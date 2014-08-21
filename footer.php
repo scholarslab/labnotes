@@ -57,7 +57,7 @@
 <a class="url facebook" href="https://www.facebook.com/scholarslab"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
 </li>
 <li>
-<a class="url github" href="http://github.com/scholarslab/"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a>
+<a class="url github" href="http://github.com/scholarslab/"><i class="fa fa-git" aria-hidden="true"></i><span>Github</span></a>
 </li>
 <li><a class="url google" href="https://plus.google.com/114472010795641313811">
 <i class="fa fa-google" aria-hidden="true"></i><span>Google</span></a>
