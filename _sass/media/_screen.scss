@@ -1,5 +1,7 @@
 $grid: hide;
 
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
 @media screen {
 
 @include establish-baseline;
@@ -55,6 +57,12 @@ a {
     img {
         @include single-transition(opacity);
     }
+
+    i,
+    input[type=submit] {
+        @include single-transition(background-color);
+    }
+
 }
 
 #{headings()} {
@@ -262,6 +270,38 @@ th {
   text-align:left;
 }
 
+input[type=text],
+input[type=email],
+textarea,
+input[type=submit] {
+    border: 1px solid #999;
+    border-color: rgba(black,.25);
+    font-family: $default-font !important;
+    @include adjust-font-size-to(16px);
+    padding-left: rhythm(.25, 16px);
+    padding-right: rhythm(.25, 16px);
+}
+
+input[type=submit] {
+    @include background-image(
+        linear-gradient(top, rgba(white,.25), transparent),
+        linear-gradient(bottom, rgba(black,.075), transparent)
+        );
+    background-color: #900;
+    color: #fff;
+
+    @include border-radius(5px);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #b00;
+        cursor:pointer;
+    }
+
+}
+
+
 code {
   font-family: $code-font;
   @include adjust-font-size-to(16px);
@@ -448,12 +488,11 @@ a {
 [role=banner],
 [role=main],
 [role=contentinfo] {
-    padding: rhythm() span(1 of 14 wide);
+    padding-left: span(1 of 14 wide);
+    padding-right: span(1 of 14 wide);
 }
 
 [role=banner] {
-    padding-top:0;
-    padding-bottom:0;
     position:relative;
     text-align:center;
     border-bottom:1px solid #ccc;
@@ -660,6 +699,8 @@ nav {
 [role=main] {
     background-color: white;
     background-color: rgba(white, .975);
+    padding-top: rhythm(1);
+    padding-bottom: rhythm(1);
 
     .home & {
         @include fullbackground;
@@ -705,7 +746,7 @@ nav {
             max-height: 1200px;
 
             @include susy-breakpoint(480px, 16) {
-                min-height: 900px;
+                min-height: 800px;
             }
         }
 
@@ -946,6 +987,7 @@ article {
     margin-bottom: rhythm(3);
 }
 
+/* Comment Form */
 #respond {
 
     h3 {
@@ -953,16 +995,6 @@ article {
     }
 
     border-top: 1px solid #ccc;
-
-    input[type=text],
-    textarea {
-        border: 1px solid #999;
-        border-color: rgba(black,.25);
-        font-family: $default-font !important;
-        @include adjust-font-size-to(16px);
-        padding-left: rhythm(.25, 16px);
-        padding-right: rhythm(.25, 16px);
-    }
 
     input[type=text] {
         width: 45%;
@@ -996,36 +1028,6 @@ article {
         }
 
 
-    }
-
-}
-
-// Google Calendar Events generated list.
-.gce-list {
-    list-style:none;
-    li {
-        margin: 0;
-        padding: rhythm(1) 0;
-
-        & + li {
-            border-top: 1px dotted #ccc;
-        }
-
-        p.date {
-            margin:0;
-            font-weight:200;
-        }
-
-        h2 {
-            margin:0;
-        }
-
-        strong {
-            display:block;
-            @include trailer(2);
-            font-weight:200;
-            color: #666;
-        }
     }
 
 }
@@ -1130,8 +1132,209 @@ article {
 [role=contentinfo] {
     border-top:1px solid #ccc;
     clear:both;
-    background: #fff;
+    background-color: #363636;
+    @include background-image(
+        linear-gradient(left, rgba(black,.75), rgba(black, .75)),
+        url('images/squared_metal.png')
+    );
+    background-size: cover, auto;
+    text-align:center;
+
+    @include susy-breakpoint('800px', 16) {
+        padding: 0 span(1 of 16 wide);
+    }
+
+    .menu ul {
+        margin-bottom:0;
+        list-style:none;
+
+        li {
+            display:inline-block;
+        }
+
+    }
+
+    a {
+        text-decoration:none;
+
+        &:link,
+        &:visited {
+            color: #bbb;
+            color: rgba(white, .5);
+
+            i {
+                background-color: #292929;
+                background-color: rgba(black,.25);
+            }
+
+            svg path {
+                fill: #bbb;
+                fill: rgba(white, .5);
+            }
+
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: #eee;
+            color: rgba(white, .9);
+
+            i {
+                background-color: #222;
+                background-color: rgba(black,.5);
+            }
+
+            svg path {
+                fill: #eee;
+                fill: rgba(white, .9);
+            }
+
+        }
+    }
+
 }
+
+#slab-link,
+#uva-library-link {
+  content: " ";
+  display:inline-block;
+  vertical-align:middle;
+  max-width: 250px;
+  margin:0;
+  padding: 5px 10px;
+
+  svg {
+      vertical-align:middle;
+  }
+
+}
+
+#slab-link {
+    max-width:130px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    @include susy-breakpoint(580px, 16) {
+    display:inline-block;
+    border-right: 1px solid #777;
+    padding-right: 20px;
+
+    }
+}
+
+#newsletter {
+    @include fullbleed();
+    background-color: #ddd;
+    background-color: rgba(white,0.95);
+    background-image: url('images/squared_metal.png');
+    margin-top:0;
+    margin-bottom:rhythm(1);
+    color: #777;
+    color: rgba(black, 0.7);
+    border-bottom:1px solid #ccc;
+    text-align:center;
+    h2,p {
+        font-weight:200;
+        margin-top:0;
+        text-align:center;
+    }
+
+    h2, p, form {
+        max-width: 500px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    label, input {
+        display:inline;
+    }
+
+    label {
+        @extend .visuallyhidden;
+    }
+
+    @include susy-breakpoint('800px', 16) {
+
+    @include fullbleed(1,16);
+    padding-top:rhythm(2);
+    padding-bottom: rhythm(2);
+    margin-top:0;
+    margin-bottom:rhythm(2);
+
+    }
+
+}
+
+.vcard {
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(1,16px);
+    margin:0;
+    @include padding-leader(1,16px);
+    @include padding-trailer(1,16px);
+
+    @include susy-breakpoint('800px', 16) {
+
+    @include padding-trailer(2,16px);
+
+    }
+
+    .org {
+        @extend .visuallyhidden;
+    }
+
+    .street-address,
+    .tel {
+        display:block;
+    }
+
+    @include susy-breakpoint(600px, 16) {
+
+    .street-address,
+    .tel {
+        display:inline;
+    }
+
+    .street-address:after {
+        content: ",";
+    }
+
+    .tel {
+        &:before {
+            content: " · ";
+            color: #666;
+            margin: 0 .25em;
+        }
+    }
+
+    }
+}
+
+
+.social {
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-top: rhythm(1,16px);
+
+    li {
+        display:inline-block;
+    }
+
+    span {
+        @extend .visuallyhidden;
+    }
+
+    i {
+        @include adjust-font-size-to(28px);
+        @include adjust-leading-to(2,28px);
+        width:rhythm(2,28px);
+        height:rhythm(2,28px);
+        @include border-radius(50%);
+    }
+
+}
+
 
 // Media query for 800px. Sets layout to 16 columns.
 @include susy-breakpoint('800px', 16) {
@@ -1207,12 +1410,13 @@ nav {
 [role=main] {
     @include pad(2);
 
-    #homepage-blurb {
-        padding-top: rhythm(1);
-    }
+    padding-top: rhythm(2);
+    padding-bottom: rhythm(2);
 
-    header {
-        .singular & {
+    .singular & {
+        padding-top: rhythm(1);
+
+        header {
             @include fullbleed(2,16);
 
             h1,p,ul {
@@ -1251,12 +1455,9 @@ nav {
     }
 }
 
-[role=contentinfo] {
-    padding: rhythm(1) span(1 of 16 wide);
 }
 
 }
-
 
 // Media query for 940px. Sets layout to 18 columns.
 @include susy-breakpoint('940px', 18) {
@@ -1264,16 +1465,6 @@ nav {
 body {
     @include container($grid);
 }
-
-/*[role=banner] {*/
-    /*@include pad(3);*/
-/*}*/
-
-/*#homelink,*/
-/*.js #homelink,*/
-/*nav a {*/
-    /*@include adjust-leading-to(4,16px);*/
-/*}*/
 
 [role=main] {
 
@@ -1285,8 +1476,9 @@ body {
         padding-right:0;
     }
 
-    header {
-        .singular & {
+    .singular & {
+
+        header {
             @include fullbleed(3,18);
 
             h1,p,ul {
@@ -1304,16 +1496,6 @@ body {
         padding-left:span(1 wide of 12);
         padding-right:span(1 wide of 12);
     }
-}
-
-}
-
-@include susy-breakpoint('1200px', 18) {
-
-body {
-    @include container($grid);
-}
-
 }
 
 }

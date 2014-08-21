@@ -48,27 +48,29 @@ function labnotes_custom_background_cb() {
 
         $repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
 
-        //if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
-            //$repeat = 'no-repeat';
+        if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
+            $repeat = 'no-repeat';
 
-        $repeat = " background-repeat: no-repeat;";
+        $size = '';
+        if ($repeat == 'no-repeat')
+            $size = " -moz-background-size: cover;"
+                  . " -webkit-background-size:cover;"
+                  . " background-size: cover;";
+
+        $repeat = " background-repeat: $repeat;";
 
         $position = get_theme_mod( 'background_position_x', get_theme_support( 'custom-background', 'default-position-x' ) );
 
-        //if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
-            //$position = '50%';
+        if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
+            $position = '50%';
 
-        $position = " background-position: top center;";
+        $position = " background-position: top $position;";
 
-        $size = " -moz-background-size: cover;"
-              . " -webkit-background-size:cover;"
-              . " background-size: cover;";
+        $attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
+        if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
+            $attachment = 'scroll';
 
-        //$attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
-        //if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
-            //$attachment = 'fixed';
-
-        $attachment = " background-attachment: scroll;";
+        $attachment = " background-attachment: $attachment;";
 
         $style .= $image . $repeat . $position . $attachment . $size;
 
