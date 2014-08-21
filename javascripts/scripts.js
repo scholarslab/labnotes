@@ -5,6 +5,13 @@ var nav = responsiveNav(
     }
 );
 
+// grab an element
+var myElement = document.querySelector("#banner");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement);
+// initialise
+headroom.init();
+
 //jQuery(function($){
     //var header, windowHeight, adminBarHeight, bannerHeight, headerHeight;
 

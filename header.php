@@ -28,6 +28,7 @@
         </script>
 
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/responsive-nav.min.js"></script>
+        <script src="<?php echo get_stylesheet_directory_uri(); ?>/javascripts/headroom.min.js"></script>
 
         <?php wp_head(); ?>
 
@@ -37,7 +38,7 @@
 
     <a href="#main" class="skip">Skip to main content</a>
 
-    <header role="banner">
+    <header role="banner" id="banner">
 
         <a id="homelink" href="<?php bloginfo('url'); ?>" rel="home">
         <?php include(get_stylesheet_directory() . '/images/slab-logo.svg'); ?>

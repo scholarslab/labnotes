@@ -74,7 +74,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   html {
     margin: 0;
     padding: 0;
-    border-top: 10px solid #333;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #f9f9f9;
@@ -89,6 +88,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: "Source Sans Pro", sans-serif;
@@ -564,16 +564,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=banner] {
-    position: relative;
     text-align: center;
     border-bottom: 1px solid #999;
     border-color: rgba(0, 0, 0, 0.25);
     background-color: white;
+    border-top: 10px solid #333;
   }
   [role=banner]:before, [role=banner]:after {
     content: " ";
     display: table;
     width: 100%;
+  }
+
+  .headroom {
+    -moz-transition: -moz-transform 200ms linear;
+    -o-transition: -o-transform 200ms linear;
+    -webkit-transition: -webkit-transform 200ms linear;
+    transition: "transform" 200ms linear;
+  }
+
+  .headroom--pinned {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .headroom--unpinned {
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  .headroom--not-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1200px;
+  }
+  .admin-bar .headroom--not-top {
+    top: 32px;
   }
 
   #homelink {
@@ -1686,7 +1720,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: right;
     clear: right;
     background: transparent !important;
-    width: inherit;
     text-align: right;
     position: inherit;
     max-height: none;

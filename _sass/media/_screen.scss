@@ -9,7 +9,6 @@ $grid: hide;
 html {
     margin:0;
     padding:0;
-    border-top: 10px solid #333;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #f9f9f9;
@@ -20,6 +19,7 @@ html {
 
 body {
     @include container($grid);
+    position:relative;
     margin:0;
     padding:0;
     font-family: $default-font;
@@ -495,14 +495,37 @@ a {
 }
 
 [role=banner] {
-    position:relative;
     text-align:center;
     border-bottom:1px solid #999;
     border-color: rgba(black, .25);
     @include clearfix;
     background-color:white;
+    border-top: 10px solid #333;
 }
 
+.headroom {
+    @include single-transition('transform', 200ms, linear);
+}
+
+.headroom--pinned {
+    @include translateY(0);
+}
+.headroom--unpinned {
+    @include translateY(-100%);
+}
+
+.headroom--not-top {
+    position:fixed;
+    top:0;
+
+    .admin-bar & {
+        top:32px;
+    }
+
+    width: 100%;
+    @include box-sizing('border-box');
+    max-width: 1200px;
+}
 
 #homelink {
     display:inline-block;
@@ -1355,7 +1378,6 @@ body {
         float:right;
         clear:right;
         background: transparent !important;
-        width: inherit;
         text-align:right;
         position:inherit;
         max-height:none;
