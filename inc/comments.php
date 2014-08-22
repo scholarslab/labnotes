@@ -21,7 +21,7 @@ function labnotes_comment( $comment, $args, $depth ) {
         <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
             <article id="comment-<?php comment_ID(); ?>" class="comment">
                 <ul class="comment-meta">
-                    <li class="image"><?php echo get_avatar( get_comment_ID(), '60' ); ?></li>
+                    <li class="image"><?php echo get_avatar($comment, '60'); ?></li>
                     <li class="fn"><?php comment_author_link(); ?></li>
                     <li class="comment-date">
                         <?php
