@@ -17,17 +17,8 @@
 
         <!-- Modernizr and Friends -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-        <script>
-        Modernizr.load([
-        {
-            test: Modernizr.mq(),
-            nope: [
-                '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js',
-                '//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js'
-            ]
-        }
-        ]);
-        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/responsive-nav.js/1.0.32/responsive-nav.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.6.0/headroom.min.js"></script>
 
