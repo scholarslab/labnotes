@@ -600,6 +600,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .headroom--not-top {
     position: fixed;
     top: 0;
+    z-index: 10000;
     width: 100%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
