@@ -101,7 +101,7 @@ function labnotes_get_person_by_user_id($id) {
 
     $person = false;
 
-    if ($id) {
+    if (is_integer($id)) {
 
         $args = array(
             'post_type' => 'people',
