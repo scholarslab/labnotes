@@ -335,6 +335,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   table {
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
   }
 
   th,
