@@ -37,12 +37,14 @@ foreach ( $myposts as $post ) :
     </article>
 <?php endforeach;
 wp_reset_postdata(); ?>
+<a class="all" href="/writing/">See all our posts.</a>
 </section>
 <section id="upcoming-events">
 <h1>Upcoming Events</h1>
 <?php if(shortcode_exists('events_list')): ?>
 <?php echo do_shortcode('[events_list limit="5"]'); ?>
 <?php endif; ?>
+<a class="all" href="/events/">See all our events.</a>
 </section>
 </div>
 <?php get_footer(); ?>

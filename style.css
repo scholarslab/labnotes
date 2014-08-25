@@ -993,6 +993,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
   }
 
+  .all {
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 1.66667em;
+  }
+
   .home .widgets {
     border-top: 1px solid #fff;
     border-top-color: rgba(255, 255, 255, 0.5);

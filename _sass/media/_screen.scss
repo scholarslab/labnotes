@@ -869,6 +869,13 @@ nav {
     }
 }
 
+.all {
+    text-decoration:none;
+    font-weight:bold;
+    display:block;
+    margin-top: rhythm();
+}
+
 .home .widgets {
     border-top: 1px solid #fff;
     border-top-color: rgba(white, 0.5);
