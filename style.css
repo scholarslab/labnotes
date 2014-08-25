@@ -1314,6 +1314,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0;
   }
 
+  .em-search-wrapper {
+    display: none;
+  }
+
   article footer {
     margin-top: 3.33333em;
     margin-bottom: 3.33333em;
