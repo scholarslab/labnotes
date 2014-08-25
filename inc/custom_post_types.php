@@ -143,27 +143,44 @@ add_action( 'save_post','labnotes_save_post');
  */
 function create_people_taxonomies() {
 
-  $labels = array(
-    'name' => _x( 'People Categories', 'taxonomy general name' ),
-    'singular_name' => _x( 'People Category', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search People Categories' ),
-    'all_items' => __( 'All People Categories' ),
-    'parent_item' => __( 'Parent People Category' ),
-    'parent_item_colon' => __( 'Parent People Category:' ),
-    'edit_item' => __( 'Edit People Category' ),
-    'update_item' => __( 'Update People Category' ),
-    'add_new_item' => __( 'Add New People Category' ),
-    'new_item_name' => __( 'New People Category Name' ),
-    'menu_name' => __( 'People Categories' ),
-  );
+    $taxonomies = array(
+        'people' => array(
+            'name' => _x( 'People Categories', 'taxonomy general name' ),
+            'singular_name' => _x( 'People Category', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Search People Categories' ),
+            'all_items' => __( 'All People Categories' ),
+            'parent_item' => __( 'Parent People Category' ),
+            'parent_item_colon' => __( 'Parent People Category:' ),
+            'edit_item' => __( 'Edit People Category' ),
+            'update_item' => __( 'Update People Category' ),
+            'add_new_item' => __( 'Add New People Category' ),
+            'new_item_name' => __( 'New People Category Name' ),
+            'menu_name' => __( 'People Categories' ),
+        ),
+        'research' => array(
+            'name' => _x( 'Research Categories', 'taxonomy general name' ),
+            'singular_name' => _x( 'Research Category', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Search Research Categories' ),
+            'all_items' => __( 'All Research Categories' ),
+            'parent_item' => __( 'Parent Research Category' ),
+            'parent_item_colon' => __( 'Parent Research Category:' ),
+            'edit_item' => __( 'Edit Research Category' ),
+            'update_item' => __( 'Update Research Category' ),
+            'add_new_item' => __( 'Add New Research Category' ),
+            'new_item_name' => __( 'New Research Category Name' ),
+            'menu_name' => __( 'Research Categories' ),
+        )
+    );
 
-  register_taxonomy('people-category',array('people'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'people-category' ),
-  ));
+    foreach($taxonomies as $name => $labels) {
+        register_taxonomy($name.'-category',array($name), array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => $name.'-category' ),
+        ));
+    }
 }
 
 add_action( 'init', 'create_people_taxonomies', 0 );
@@ -179,7 +196,7 @@ function labnotes_pre_get_posts( $query ) {
 
     if ( is_admin() || ! $query->is_main_query() )
         return;
-    
+
     if ( is_post_type_archive( array( 'research', 'people' ) ) ) {
         $query->set( 'posts_per_page', -1 );
     }
