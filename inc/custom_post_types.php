@@ -180,7 +180,7 @@ function labnotes_pre_get_posts( $query ) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
     
-    if ( is_post_type_archive( array( 'research', 'people', 'event' ) ) ) {
+    if ( is_post_type_archive( array( 'research', 'people' ) ) ) {
         $query->set( 'posts_per_page', -1 );
     }
 
