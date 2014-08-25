@@ -40,7 +40,7 @@ wp_reset_postdata(); ?>
 </section>
 <section id="upcoming-events">
 <h1>Upcoming Events</h1>
-<?php if(is_plugin_active('events-manager')): ?>
+<?php if(shortcode_exists('events_list')): ?>
 <?php echo do_shortcode('[events_list limit="5"]'); ?>
 <?php endif; ?>
 </section>
