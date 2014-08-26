@@ -21,7 +21,7 @@
 
 <div id="recent-activity">
 <section id="latest-posts">
-    <h1>Latest Posts</h1>
+    <h1>Latest Labnotes</h1>
 <?php
 global $post;
 $args = array( 'posts_per_page' => 3);
