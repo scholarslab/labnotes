@@ -5,6 +5,7 @@ $grid: hide;
 @media screen {
 
 @include establish-baseline;
+@include border-box-sizing;
 
 html {
     margin:0;
@@ -211,7 +212,7 @@ ol {
 
 ul,ol {
   padding:0;
-  margin: rhythm(1) 0;
+  margin: rhythm(1) rhythm(.5);
 
   nav & {
     margin-left:0;
@@ -525,7 +526,6 @@ a {
     }
 
     width: 100%;
-    @include box-sizing('border-box');
     max-width: 1200px;
 }
 
@@ -688,7 +688,6 @@ nav {
         a {
             display:block;
             text-decoration:none;
-            box-sizing: border-box;
             border-bottom: 1px solid rgba(black,.1);
             @include fullbleed;
             margin-top:0;
@@ -925,7 +924,6 @@ nav {
 .people-list,
 .home .widgets {
     img {
-        @include box-sizing(border-box);
         border: 1px solid #e9e9e9;
         padding: 3px;
     }
@@ -942,6 +940,32 @@ nav {
 
     p {
         margin:0;
+    }
+
+}
+
+.graduate-fellowships {
+
+    #fellowships {
+        @include clearfix;
+        @include fullbleed;
+
+        h2 {
+            margin-top:0;
+            padding-top:0;
+        }
+
+    }
+
+    .fellowship {
+        @include span(6 of 12);
+        padding: rhythm(1);
+        background: #eee;
+        background: rgba(black, .05);
+
+        &:last-child {
+            @include span(last 6 of 12);
+        }
     }
 
 }
@@ -1437,7 +1461,8 @@ nav {
     }
 
     #blog-archives,
-    #recent-activity {
+    #recent-activity,
+    #fellowships {
         @include fullbleed(2,16);
         padding-left:span(1 wide of 12);
         padding-right:span(1 wide of 12);
@@ -1493,7 +1518,8 @@ body {
     }
 
     #blog-archives,
-    #recent-activity {
+    #recent-activity,
+    #fellowships {
         @include fullbleed(3,18);
         padding-left:span(1 wide of 12);
         padding-right:span(1 wide of 12);
