@@ -8,7 +8,9 @@ require_once('inc/custom_post_types.php');
 
 // Post type support.
 add_post_type_support('page', 'excerpt');
-
+add_post_type_support('event', 'custom-background');
+add_post_type_support('event-recurring', 'custom-background');
+add_post_type_support('location', 'custom-background');
 
 // Theme support.
 add_theme_support( 'post-thumbnails' );
