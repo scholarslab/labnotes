@@ -13,7 +13,38 @@
     <h1><?php the_title(); ?></h1>
     <?php if ( $title = $customFields['person_title'][0] ) : ?>
     <p class="title"><?php echo $title; ?></p>
-<?php endif; ?>
+    <?php endif; ?>
+
+    <p class="contacts">
+    <?php if ($email = $customFields['person_email'][0]): ?>
+    <a class="email" href="mailto://<?php echo antispambot($email); ?>">
+        <i class="fa fa-envelope"></i>
+        <?php echo antispambot($email); ?>
+    </a>
+    <?php endif; ?>
+
+    <?php if ($phone = $customFields['person_phone'][0]): ?>
+    <span class="phone">
+        <i class="fa fa-phone"></i>
+        <?php echo $phone; ?>
+    </span>
+    <?php endif; ?>
+
+    <?php if ($url = $customFields['person_url'][0]): ?>
+    <a class="url" href="<?php echo $url; ?>">
+        <i class="fa fa-external-link"></i>
+        Website
+    </a>
+    <?php endif; ?>
+
+    <?php if ($twitter = $customFields['person_twitter'][0]): ?>
+    <a class="twitter" href="http://twitter.com/<?php echo $twitter; ?>">
+        <i class="fa fa-twitter"></i>
+        Twitter
+    </a>
+    <?php endif; ?>
+
+    </p>
 </header>
 <div class="entry-content">
 <?php the_content(); ?>

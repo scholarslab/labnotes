@@ -755,8 +755,6 @@ nav {
             background-image: none !important;
             @include background-size(cover !important);
             background-position: top center !important;
-
-
         }
 
         p,ul,.post-meta, .title {
@@ -765,6 +763,20 @@ nav {
             @include adjust-font-size-to(20px);
             @include adjust-leading-to(1,20px);
             margin:0;
+        }
+        .contacts {
+            @include adjust-font-size-to(16px);
+            margin-top: rhythm(1,16px) !important;
+
+            a, span {
+                color: $default-color-light;
+                text-decoration:none;
+                padding-right: rhythm(.5);
+
+                &:last-child {
+                    margin-right:0;
+                }
+            }
         }
 
 
@@ -871,9 +883,11 @@ nav {
             @include adjust-font-size-to(16px);
             font-weight: 200;
         }
+
     }
 
 }
+
 
 .category-description p {
     color: $default-color-light;
