@@ -1830,6 +1830,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 3.33333em;
   }
 
+  .posts-list {
+    margin-left: 0;
+  }
   .posts-list .post-meta {
     width: 37.5%;
     float: right;

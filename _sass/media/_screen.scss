@@ -1528,6 +1528,8 @@ nav {
 
 .posts-list {
 
+    margin-left:0;
+
     .post-meta {
         @include span(last 4 of 10);
         text-align:right;
