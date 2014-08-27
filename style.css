@@ -83,7 +83,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     max-width: 1200px;
     margin: 0 auto;
     background-color: #f9f9f9;
-    background-image: url("http://i.imgur.com/oavv3DC.jpg");
+    background-image: url("images/chalkboard.jpg");
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.125);
@@ -1413,7 +1413,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-top: 1px solid #ccc;
     clear: both;
     background-color: #363636;
-    background-image: url("http://i.imgur.com/oavv3DC.jpg");
+    background-image: url("images/chalkboard.jpg");
     background-attachment: fixed;
     text-align: center;
   }
