@@ -739,6 +739,14 @@ nav {
 
             .custom-background {
                 height: 200px;
+
+                @media (min-width: 800px) and (min-height: 600px) {
+                    height: 350px;
+                }
+                @media (min-width: 1200px) and (min-height: 600px) {
+                    height: 450px;
+                }
+
             }
 
         }

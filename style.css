@@ -830,6 +830,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .singular [role=main] header .custom-background {
     height: 200px;
   }
+}
+@media screen and (min-width: 800px) and (min-height: 600px) {
+  .singular [role=main] header .custom-background {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-height: 600px) {
+  .singular [role=main] header .custom-background {
+    height: 450px;
+  }
+}
+@media screen {
   .singular.single-people [role=main] header {
     background-image: none !important;
     -moz-background-size: cover !important;
