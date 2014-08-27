@@ -1143,6 +1143,10 @@ article {
     a {
         text-decoration:none;
         font-weight:500;
+        &.all {
+            font-weight: bold;
+        }
+
     }
 
     @include susy-breakpoint(600px, 16) {

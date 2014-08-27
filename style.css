@@ -1424,6 +1424,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-decoration: none;
     font-weight: 500;
   }
+  .home .widgets a.all {
+    font-weight: bold;
+  }
 }
 @media screen and (min-width: 600px) {
   .home .widgets > div {
