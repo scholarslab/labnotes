@@ -1356,6 +1356,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .commentlist .social-twitter:last-child:before {
     content: " and ";
   }
+  .commentlist .pingback:first-child:before,
+  .commentlist .trackback:first-child:before,
+  .commentlist .social-twitter:first-child:before {
+    content: "" !important;
+  }
 
   .posts-list {
     list-style: none;

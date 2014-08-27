@@ -1117,6 +1117,11 @@ article {
         &:last-child:before {
             content: " and ";
         }
+
+        &:first-child:before {
+            content: "" !important;
+        }
+
     }
 
 }
