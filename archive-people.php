@@ -55,7 +55,7 @@ if (have_posts()) : ?>
     <img src="<?php echo $image; ?>" alt="" />
     <?php endif; ?>
     <?php the_title(); ?>
-    <?php if ($title = get_post_meta( $post->ID, 'person_title', true)): ?>
+    <?php if ( ( has_term('staff', 'people-category') || has_term('student-assistant', 'people-category') ) && $title = $customFields['person_title'][0] ) : ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
     <?php if ($category == '2014-2015-praxis-fellow, 2014-2015') echo labnotes_get_person_programs(); ?>
