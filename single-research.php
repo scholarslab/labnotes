@@ -2,10 +2,10 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php $customFields = get_post_custom(); ?>
-  <em class="deck">Research</em>
+<header>
   <h1><?php the_title(); ?></h1>
+</header>
   <div class="entry-content">
-
   <?php the_content(); ?>
   </div>
 <?php endwhile; endif; ?>
