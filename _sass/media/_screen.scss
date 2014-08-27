@@ -131,8 +131,7 @@ h1 {
     .home article & {
         @include adjust-font-size-to(25px);
         @include adjust-leading-to(2,25px);
-        @include trailer(1, 25px);
-
+        @include trailer(0, 25px);
     }
 }
 
@@ -971,6 +970,12 @@ article {
         border-top-color: rgba(black, .1);
         margin: rhythm(2) auto 0;
     }
+
+    .home & + article:before {
+        margin: rhythm(1) auto 0;
+        height: rhythm(1);
+    }
+
 }
 
 .singular .entry-content {
@@ -1160,6 +1165,18 @@ article {
         }
     }
 
+    }
+}
+
+#latest-posts {
+    p {
+        margin:0;
+    }
+
+    .post-meta {
+        margin:0;
+        font-weight:200;
+        color: $default-color-light;
     }
 }
 

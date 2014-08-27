@@ -222,7 +222,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 1.38889em;
     line-height: 1.2em;
     line-height: 2.4em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0em;
   }
 
   h2 {
@@ -1233,6 +1233,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-top-color: rgba(0, 0, 0, 0.1);
     margin: 3.33333em auto 0;
   }
+  .home article + article:before {
+    margin: 1.66667em auto 0;
+    height: 1.66667em;
+  }
 
   .singular .entry-content {
     margin-top: 3.33333em;
@@ -1445,6 +1449,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @media screen {
+  #latest-posts p {
+    margin: 0;
+  }
+  #latest-posts .post-meta {
+    margin: 0;
+    font-weight: 200;
+    color: rgba(90, 90, 90, 0.75);
+  }
+
   /* Footer styles */
   [role=contentinfo] {
     border-top: 1px solid #ccc;
