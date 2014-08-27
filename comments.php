@@ -16,26 +16,48 @@
 		endif;
 	?>
 
+
+    <?php
+
+    $defaultArgs = array('post_id' => $post->ID, 'count' => true);
+
+    $realComments = get_comments(array_merge($defaultArgs, array('type' => 'comment')));
+    $tweets = get_comments(array_merge($defaultArgs, array('social-twitter')));
+    $pings = get_comments(array_merge($defaultArgs, array('type' => 'pings')));
+    ?>
+
 	<?php if ( have_comments() ) : ?>
-		<h2 id="comments-title">
-			<?php
-				printf( _n( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'labnotes' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
 
-		<ol class="commentlist">
-		<?php wp_list_comments( array( 'callback' => 'labnotes_comment' ) ); ?>
-		</ol>
+        <?php if ($realComments): ?>
+        <section id="default">
+            <h2 class="comments-title">Comments</h2>
+            <ol class="commentlist">
+            <?php wp_list_comments('callback=labnotes_comment&type=comment'); ?>
+            </ol>
+        </section>
+        <?php endif; ?>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav">
-            <ul>
-			<li class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'labnotes' ) ); ?></li>
-			<li class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'labnotes' ) ); ?></li>
-			</ul>
-		</nav>
-		<?php endif; // check for comment navigation ?>
+        <?php if ($tweets): ?>
+        <section id="tweetbacks">
+            <h2 class="comments-title">Tweets</h2>
+            <p class="commentlist">
+            <?php wp_list_comments(array(
+
+                'callback' => 'labnotes_comment',
+                'type' => 'social-twitter'
+            )); ?>
+            </p>
+        </section>
+        <?php endif; ?>
+
+        <?php if ($pings): ?>
+        <section id="pingbacks">
+            <h2 class="comments-title">Pingbacks</h2>
+            <p class="commentlist">
+            <?php wp_list_comments('callback=labnotes_comment&type=pings'); ?>
+            </p>
+        </section>
+        <?php endif; ?>
 
 	<?php
 		/* If there are no comments and comments are closed, let's leave a little note, shall we?
@@ -45,7 +67,7 @@
 	?>
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'labnotes' ); ?></p>
 	<?php endif; ?>
-    
+
 <?php
 
 $commenter = wp_get_current_commenter();

@@ -1097,6 +1097,28 @@ article {
         padding-left: rhythm(1);
         list-style:none;
     }
+
+    .pingback,
+    .trackback,
+    .social-twitter {
+        a {
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        &:after {
+            content: ",";
+        }
+
+        &:last-child:after {
+            content: "";
+        }
+
+        &:last-child:before {
+            content: " and ";
+        }
+    }
+
 }
 
 .posts-list {

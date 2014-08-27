@@ -1335,6 +1335,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 1.66667em;
     list-style: none;
   }
+  .commentlist .pingback a,
+  .commentlist .trackback a,
+  .commentlist .social-twitter a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .commentlist .pingback:after,
+  .commentlist .trackback:after,
+  .commentlist .social-twitter:after {
+    content: ",";
+  }
+  .commentlist .pingback:last-child:after,
+  .commentlist .trackback:last-child:after,
+  .commentlist .social-twitter:last-child:after {
+    content: "";
+  }
+  .commentlist .pingback:last-child:before,
+  .commentlist .trackback:last-child:before,
+  .commentlist .social-twitter:last-child:before {
+    content: " and ";
+  }
 
   .posts-list {
     list-style: none;

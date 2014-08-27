@@ -8,18 +8,17 @@ function labnotes_comment( $comment, $args, $depth ) {
     switch ( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' :
+        case 'social-twitter':
     ?>
 
-        <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'labnotes' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'labnotes' ), '<span class="edit-link">', '</span>' ); ?></p>
+        <span <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?></span>
 
     <?php
         break;
         default :
-    ?>
+?>
 
-        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-            <article id="comment-<?php comment_ID(); ?>" class="comment">
+        <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
                 <ul class="comment-meta">
                     <li class="image"><?php echo get_avatar($comment, '60'); ?></li>
                     <li class="fn"><?php comment_author_link(); ?></li>
