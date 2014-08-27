@@ -1126,6 +1126,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0;
   }
 
+  .category-description p {
+    color: rgba(90, 90, 90, 0.75);
+    font-weight: 200;
+  }
+
   .graduate-fellowships #fellowships {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
