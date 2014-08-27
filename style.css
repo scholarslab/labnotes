@@ -351,6 +351,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-bottom-style: solid;
     padding-bottom: 1.61111em;
     border-color: rgba(90, 90, 90, 0.2);
+    vertical-align: top;
+  }
+  .home .events-table th, .home .events-table
+  td {
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    padding: 0.46875em;
+  }
+  .home .events-table th:first-of-type, .home .events-table
+  td:first-of-type {
+    width: 30%;
+    color: rgba(90, 90, 90, 0.75);
   }
 
   th {
@@ -358,6 +370,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-bottom-style: solid;
     padding-bottom: 1.5em;
     text-align: left;
+    font-weight: 600;
   }
 
   input[type=text],
