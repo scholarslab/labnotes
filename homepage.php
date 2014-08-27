@@ -24,7 +24,7 @@
     <h1>Latest Labnotes</h1>
 <?php
 global $post;
-$args = array( 'posts_per_page' => 3);
+$args = array( 'posts_per_page' => 2);
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) :
   setup_postdata( $post ); ?>
