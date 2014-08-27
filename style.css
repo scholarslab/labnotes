@@ -1450,6 +1450,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #recent-activity h1 {
     text-align: left;
   }
+  #recent-activity section:last-child {
+    padding-top: 1.66667em;
+    margin-top: 1.66667em;
+    border-top: 1px dotted #ccc;
+  }
 }
 @media screen and (min-width: 600px) {
   #recent-activity section {
@@ -1461,6 +1466,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     width: 47.91667%;
     float: right;
     margin-right: 0;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
   }
 }
 
