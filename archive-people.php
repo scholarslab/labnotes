@@ -55,6 +55,9 @@ if (have_posts()) : ?>
     <img src="<?php echo $image; ?>" alt="" />
     <?php endif; ?>
     <?php the_title(); ?>
+    <?php if ($title = get_post_meta( $post->ID, 'person_title', true)): ?>
+    <p class="title"><?php echo $title; ?></p>
+    <?php endif; ?>
 </a>
 </li>
 <?php endwhile; ?>

@@ -865,6 +865,12 @@ nav {
 
     p {
         margin:0;
+
+        &.title {
+            color: $default-color-light;
+            @include adjust-font-size-to(16px);
+            font-weight: 200;
+        }
     }
 
 }

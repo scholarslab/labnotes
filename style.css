@@ -1125,6 +1125,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .people-list p {
     margin: 0;
   }
+  .research p.title,
+  .people-list p.title {
+    color: rgba(90, 90, 90, 0.75);
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    font-weight: 200;
+  }
 
   .category-description p {
     color: rgba(90, 90, 90, 0.75);
