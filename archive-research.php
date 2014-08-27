@@ -2,7 +2,7 @@
 
 <?php
 
-$defaultArgs = array('post_type' => 'research', 'posts_per_page' => -1);
+$defaultArgs = array('post_type' => 'research', 'posts_per_page' => -1, 'orderby' => 'menu_order');
 
 $researchCategories = array(
     'scholars-lab',
