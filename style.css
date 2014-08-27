@@ -291,7 +291,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   ul {
-    list-style: disc;
+    list-style: circle;
   }
 
   ol {
@@ -300,13 +300,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   ul, ol {
     padding: 0;
-    margin: 1.66667em 0.83333em;
+    margin: 1.66667em 0 1.66667em 1.66667em;
   }
   nav ul, nav ol {
     margin-left: 0;
   }
   ul ul, ol ul {
-    list-style: circle;
+    list-style: disc;
   }
   ul ol, ol ol {
     list-style: upper-alpha;

@@ -203,7 +203,7 @@ blockquote {
 }
 
 ul {
-  list-style:disc;
+  list-style:circle;
 }
 
 ol {
@@ -212,14 +212,14 @@ ol {
 
 ul,ol {
   padding:0;
-  margin: rhythm(1) rhythm(.5);
+  margin: rhythm(1) 0 rhythm(1) rhythm(1);
 
   nav & {
     margin-left:0;
   }
 
   ul {
-    list-style: circle;
+    list-style: disc;
   }
 
   ol {
