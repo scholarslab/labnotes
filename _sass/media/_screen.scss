@@ -130,7 +130,7 @@ h1 {
 
     .home article & {
         @include adjust-font-size-to(25px);
-        @include adjust-leading-to(2,25px);
+        @include adjust-leading-to(1,25px);
         @include trailer(0, 25px);
     }
 }
