@@ -15,40 +15,8 @@
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
 
-    <?php
+    <?php echo labnotes_get_person_programs(); ?>
 
-    $category_type = 'people-category';
-
-    $grad_programs = array('Graduate Fellow','Praxis Fellow');
-
-    foreach ($grad_programs as $program) {
-        $term = get_term_by('name', $program, $category_type);
-
-        if ( has_term($program, $category_type) ) {
-            
-            $html = $program;
-         
-            $years = get_terms($category_type, array('child_of' => $term->term_id));
-
-            if ($years) {
-                
-                $year_array = array();
-
-                foreach ($years as $year) {
-                    if (has_term($year->term_id, $category_type)) {
-                        $year_array[] = $year->name;
-                    }
-                }
-
-                $year_string = implode($year_array, ', ');
-
-                $html = $html . ', '.$year_string;
-            }
-
-            echo '<p class="title">'.$html.'</p>';
-        }
-    }
-    ?>
     <p class="contacts">
     <?php if ($email = $customFields['person_email'][0]): ?>
     <a class="email" href="mailto://<?php echo antispambot($email); ?>">

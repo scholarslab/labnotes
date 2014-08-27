@@ -153,3 +153,47 @@ function labnotes_custom_background_image_src( $size = 'full' ) {
     return $image_src;
 
 }
+
+/**
+ * Returns graduate program categories adn year.
+ *
+ * @return string HTML.
+ */
+function labnotes_get_person_programs() {
+    global $post;
+
+    $category_type = 'people-category';
+
+    $grad_programs = array('Graduate Fellow','Praxis Fellow');
+
+    $html = '';
+
+    foreach ($grad_programs as $program) {
+        $term = get_term_by('name', $program, $category_type);
+
+        if ( has_term($program, $category_type, $post->ID) ) {
+
+            $years = get_terms($category_type, array('child_of' => $term->term_id));
+
+            if ($years) {
+
+                $year_array = array();
+
+                foreach ($years as $year) {
+                    if (has_term($year->term_id, $category_type, $post->ID)) {
+                        $year_array[] = $year->name;
+                    }
+                }
+
+                $year_string = implode($year_array, ', ');
+
+                $program_string = $program . ', '.$year_string;
+            }
+
+            $html .= '<p class="title">'.$program_string.'</p>';
+        }
+    }
+
+    return $html;
+}
+
