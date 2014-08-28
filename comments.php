@@ -22,7 +22,7 @@
     $defaultArgs = array('post_id' => $post->ID, 'count' => true);
 
     $realComments = get_comments(array_merge($defaultArgs, array('type' => 'comment')));
-    $tweets = get_comments(array_merge($defaultArgs, array('social-twitter')));
+    $tweets = get_comments(array_merge($defaultArgs, array('type' => 'social-twitter')));
     $pings = get_comments(array_merge($defaultArgs, array('type' => 'pings')));
 
 
