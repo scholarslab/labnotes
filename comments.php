@@ -22,7 +22,7 @@
     $defaultArgs = array('post_id' => $post->ID, 'count' => true);
 
     $realComments = get_comments(array_merge($defaultArgs, array('type' => 'comment')));
-    $tweets = get_comments(array_merge($defaultArgs, array('type' => 'social-twitter')));
+    $tweets = get_comments(array_merge($defaultArgs, array('type' => array('social-twitter', 'social-twitter-rt'))));
     $pings = get_comments(array_merge($defaultArgs, array('type' => 'pings')));
 
 
@@ -32,7 +32,7 @@
 
         <?php if ($realComments): ?>
         <section id="default">
-        <h2 class="comments-title"><?php echo count($realComments); ?> Comments</h2>
+        <h2 class="comments-title"><?php echo $realComments; ?> Comments</h2>
             <ol class="commentlist">
             <?php wp_list_comments('callback=labnotes_comment&type=comment'); ?>
             </ol>
@@ -41,7 +41,7 @@
 
         <?php if ($tweets): ?>
         <section id="tweetbacks">
-        <h2 class="comments-title"><?php echo count($tweets); ?> Tweets</h2>
+        <h2 class="comments-title"><?php echo $tweets; ?> Tweets</h2>
             <p class="commentlist">
             <?php wp_list_comments(array(
 
