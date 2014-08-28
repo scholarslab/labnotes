@@ -655,10 +655,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     fill: #440a00;
   }
 
-  nav {
+  #banner nav {
     display: block;
   }
-  nav ul {
+  #banner nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -668,25 +668,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 1.875em;
     line-height: 3.75em;
   }
-  nav li {
+  #banner nav li {
     display: inline-block;
   }
-  nav li ul {
+  #banner nav li ul {
     display: none;
   }
-  nav a {
+  #banner nav a {
     text-decoration: none;
     display: block;
     color: white;
     color: rgba(119, 17, 0, 0.8);
   }
-  nav.local-nav {
-    margin-top: 1.66667em;
-  }
-  nav.local-nav li + li:before {
-    content: " · ";
-    color: #ccc;
-    margin: 0 .25em;
+  #banner nav.local-navigation li {
+    display: block;
   }
 
   /* CSS for responsive-nav.js by @viljamis */
@@ -839,6 +834,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 8.62069%;
     padding-left: 8.62069%;
     padding: 0 !important;
+    margin-bottom: 0;
   }
   .singular [role=main] header .custom-background {
     height: 200px;
@@ -939,6 +935,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @media screen {
+  #blog-archives {
+    margin-top: 0;
+  }
+
+  .local-navigation {
+    border-top: 1px solid #ccc;
+  }
+  .local-navigation ul {
+    list-style: none;
+    margin-top: 0;
+  }
+  .local-navigation a {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding: 0.41667em;
+  }
+  .local-navigation a:hover, .local-navigation a:focus, .local-navigation a:active {
+    background-color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
   .pagination {
     text-align: justify;
     margin-top: 3.33333em;
@@ -1252,8 +1271,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   .singular .entry-content {
-    margin-top: 3.33333em;
-    margin-bottom: 5em;
+    margin: 0;
+  }
+  .singular .entry-content :first-child {
+    margin-top: 0;
   }
 
   /* Comment Form */
@@ -1783,14 +1804,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .js nav.closed,
   .js nav.opened,
-  nav {
+  #banner nav {
     background: transparent;
     margin: 0;
     padding: 0;
   }
   .js nav.closed ul,
   .js nav.opened ul,
-  nav ul {
+  #banner nav ul {
     line-height: 3.75em;
   }
 
@@ -1818,6 +1839,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -17.24138%;
     padding-right: 17.24138%;
     padding-left: 17.24138%;
+    margin-bottom: 0;
   }
   [role=main] blockquote {
     -moz-box-sizing: content-box;
@@ -1856,9 +1878,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 8.62069%;
   }
 
+  #blog-archives {
+    margin-top: 0;
+    clear: both;
+  }
+
   #homepage-blurb {
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
+  }
+
+  .page.page-parent .local-navigation,
+  .page.page-child .local-navigation {
+    width: 26.47059%;
+    float: right;
+    margin-right: 0;
+    margin-right: -8.62069%;
+  }
+  .page.page-parent .entry-content,
+  .page.page-child .entry-content {
+    width: 85.29412%;
+    float: left;
+    margin-right: 2.94118%;
+    margin-left: -8.62069%;
   }
 
   .posts-list {
@@ -1911,6 +1953,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.86207%;
     padding-right: 25.86207%;
     padding-left: 25.86207%;
+    margin-bottom: 0;
   }
 
   #blog-archives,
@@ -1936,9 +1979,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 8.62069%;
   }
 
+  .page.page-parent .local-navigation,
+  .page.page-child .local-navigation {
+    width: 39.65517%;
+    float: right;
+    margin-right: 0;
+    margin-right: -17.24138%;
+  }
+  .page.page-parent .entry-content,
+  .page.page-child .entry-content {
+    width: 82.75862%;
+    float: left;
+    margin-right: 3.44828%;
+    margin-left: -17.24138%;
+  }
+
   #homepage-blurb {
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
+  }
+
+  #blog-archives {
+    margin-top: 0;
   }
 }
 @media print {

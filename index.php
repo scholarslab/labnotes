@@ -6,7 +6,6 @@
 
 <?php if (is_category()): ?>
     <header class="archive-header">
-    <em class="deck">Category</em>
     <h1 class="page-title"><?php echo single_cat_title( '', false); ?></h1>
     <?php if ( category_description() ) : // Show an optional category description ?>
 	<div class="archive-meta"><?php echo wpautop(category_description()); ?></div>
@@ -21,9 +20,6 @@
                 <?php if (is_singular()): ?>
                 <div class="custom-background"></div>
                 <?php endif; ?>                
-                    <?php if(is_page() && $post->post_parent != 0 && $parent = get_page($post->post_parent)): ?>
-                    <em class="deck"><?php echo $parent->post_title; ?></em>
-                    <?php endif; ?>
                     <h1><a href="<?php the_permalink(); ?>" rel="permalink" title="Permanent link for <?php the_title(); ?>"><?php the_title(); ?></a></h1>
                 <?php if (is_single() || is_home() || is_archive()): ?>
                     <p class="post-meta">By <?php the_author(); ?> &middot; <?php the_time('F j, Y'); ?> &middot; <?php the_category(', '); ?></p>
@@ -49,8 +45,8 @@
                         <?php endif; ?>
                     </footer>
                 <?php endif; ?>
+                <?php if (is_page()): echo labnotes_display_page_children(); endif; ?>
             </article>
-            <?php if(is_single()): comments_template(); endif; ?>
         <?php endwhile; ?>
         <?php if (!is_page()): ?>
         <nav class="pagination">
@@ -62,6 +58,7 @@
             </ul>
         </nav>
         <?php endif; ?>
+        
     <?php else: ?>
         <p>We couldn't find the posts you were looking for.</p>
     <?php endif; ?>

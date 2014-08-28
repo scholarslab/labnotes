@@ -62,37 +62,37 @@ function labnotes_meta_fields($type = null) {
  * Checks to see if a custom post meta field called 'show children' is set to
  * true.
  */
-function labnotes_display_page_children($content) {
+function labnotes_display_page_children() {
 
     global $post;
 
-    if (get_post_meta($post->ID, 'show_children', 'true') == true) {
-        $html = '';
+    $html = '';
 
-        $args = array(
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'post_parent' => $post->ID,
-            'orderby' => 'menu_order',
-            'order' => 'ASC',
-            'nopaging' => true,
-        );
+    $parent_id = 0;
 
-        query_posts($args);
-        if (have_posts()) {
-            $html = '<ul class="page-children labnotes-page-children">';
-            while (have_posts()) {
-                the_post();
-                $html .= '<li><a href="'.get_permalink(get_the_ID()).'" class="permalink">'.get_the_title().'</a> – '.get_the_excerpt().'</li>';
-            }
-            $html .= '</ul>';
-        }
-        $content = $content . $html;
-        wp_reset_query();
+    if(!$post->post_parent){
+        // will display the subpages of this top level page
+        $parent_id = $post->ID;
+        $children = wp_list_pages("title_li=&child_of=".$parent_id."&echo=0");
     }
-    return $content;
-}
+    else {
 
+        if($post->ancestors) {
+            // now you can get the the top ID of this page
+            // wp is putting the ids DESC, thats why the top level ID is the last one
+            $ancestors = get_post_ancestors($post->ID);
+            $parent_id = end($ancestors);
+            $children = wp_list_pages("title_li=&child_of=".$parent_id."&include=&echo=0");
+        }
+    }
+
+    if ($children) {
+        $parent = wp_list_pages("title_li=&include=".$parent_id."&echo=0");
+        $html = '<nav class="local-navigation"><ul>'.$parent.$children.'</ul></nav>';
+    }
+
+    return $html;
+}
 
 /**
  * Returns a specific people post type by user ID.
