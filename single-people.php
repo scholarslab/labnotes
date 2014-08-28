@@ -11,7 +11,7 @@
     </div>
     <?php endif; ?>
     <h1><?php the_title(); ?></h1>
-    <?php if ( $title = $customFields['person_title'][0] ) : ?>
+    <?php if ( ( has_term('staff', 'people-category') || has_term('student-assistant', 'people-category') ) && $title = $customFields['person_title'][0] ) : ?>
     <p class="title"><?php echo $title; ?></p>
     <?php endif; ?>
 
