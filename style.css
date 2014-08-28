@@ -1539,6 +1539,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-top: 1px solid #ccc;
     clear: both;
     background-color: #363636;
+    color: #ccc;
+    letter-spacing: .05em;
     background-image: url("images/chalkboard.jpg");
     background-attachment: fixed;
     text-align: center;
@@ -1561,28 +1563,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-decoration: none;
   }
   [role=contentinfo] a:link, [role=contentinfo] a:visited {
-    color: #bbb;
-    color: rgba(255, 255, 255, 0.5);
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.75);
   }
   [role=contentinfo] a:link i, [role=contentinfo] a:visited i {
     background-color: #292929;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #999;
   }
   [role=contentinfo] a:link svg path, [role=contentinfo] a:visited svg path {
-    fill: #bbb;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #ccc;
+    fill: rgba(255, 255, 255, 0.75);
   }
   [role=contentinfo] a:hover, [role=contentinfo] a:focus, [role=contentinfo] a:active {
-    color: #eee;
+    color: #f0f0f0;
     color: rgba(255, 255, 255, 0.9);
   }
   [role=contentinfo] a:hover i, [role=contentinfo] a:focus i, [role=contentinfo] a:active i {
     background-color: #222;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
   }
   [role=contentinfo] a:hover svg path, [role=contentinfo] a:focus svg path, [role=contentinfo] a:active svg path {
-    fill: #eee;
-    fill: rgba(255, 255, 255, 0.9);
+    fill: #fff;
   }
 
   #slab-link,

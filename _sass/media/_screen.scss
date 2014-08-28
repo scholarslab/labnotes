@@ -1271,6 +1271,8 @@ article {
     border-top:1px solid #ccc;
     clear:both;
     background-color: #363636;
+    color: #ccc;
+    letter-spacing: .05em;
     @include background-image(
         url('images/chalkboard.jpg')
     );
@@ -1296,17 +1298,18 @@ article {
 
         &:link,
         &:visited {
-            color: #bbb;
-            color: rgba(white, .5);
+            color: #ccc;
+            color: rgba(white, .75);
 
             i {
                 background-color: #292929;
-                background-color: rgba(black,.25);
+                background-color: rgba(black,.35);
+                color: #999;
             }
 
             svg path {
-                fill: #bbb;
-                fill: rgba(white, .5);
+                fill: #ccc;
+                fill: rgba(white, .75);
             }
 
         }
@@ -1314,17 +1317,17 @@ article {
         &:hover,
         &:focus,
         &:active {
-            color: #eee;
+            color: #f0f0f0;
             color: rgba(white, .9);
 
             i {
                 background-color: #222;
-                background-color: rgba(black,.5);
+                background-color: rgba(black,.75);
+                color: #fff;
             }
 
             svg path {
-                fill: #eee;
-                fill: rgba(white, .9);
+                fill: #fff;
             }
 
         }
