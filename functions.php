@@ -37,7 +37,7 @@ add_filter('body_class', 'labnotes_singular_class');
 function labnotes_excerpt_more($more) {
   global $post;
   if ($post->post_type == 'post') {
-    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">More.</a>';
+    $more = '&hellip;. <a href="'. get_permalink($post->ID) . '">Continue reading<span class="skip"> &#8220;'.get_the_title($post->ID).'&#8221;</span>.</a>';
   }
   return $more;
 }
