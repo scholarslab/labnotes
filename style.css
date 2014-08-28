@@ -1653,6 +1653,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #newsletter label, #newsletter input {
     display: inline;
   }
+  #newsletter [name=_mc4wp_required_but_not_really] {
+    display: none !important;
+  }
 }
 @media screen and (min-width: 800px) {
   #newsletter {

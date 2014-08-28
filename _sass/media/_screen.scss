@@ -1391,6 +1391,10 @@ article {
         @extend .visuallyhidden;
     }
 
+    [name=_mc4wp_required_but_not_really] {
+        display:none !important;
+    }
+
     @include susy-breakpoint('800px', 16) {
 
     @include fullbleed(1,16);
@@ -1553,7 +1557,7 @@ body {
 
         header {
             @include fullbleed(2,16);
-            margin-bottom:0;            
+            margin-bottom:0;
         }
     }
 
@@ -1598,7 +1602,7 @@ body {
     }
     .entry-content {
         @include span(12 of 14);
-        margin-left: -(span(1 wide of 12));        
+        margin-left: -(span(1 wide of 12));
     }
 }
 
@@ -1636,7 +1640,7 @@ body {
 
         header {
             @include fullbleed(3,18);
-            margin-bottom:0;            
+            margin-bottom:0;
         }
     }
 
