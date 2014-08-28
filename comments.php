@@ -18,13 +18,13 @@
 
 
     <?php
-
-    $defaultArgs = array('post_id' => $post->ID, 'count' => true);
+    $defaultArgs = array('post_id' => $post->ID);
 
     $realComments = get_comments(array_merge($defaultArgs, array('type' => 'comment')));
-    $tweets = get_comments(array_merge($defaultArgs, array('type' => array('social-twitter', 'social-twitter-rt'))));
+    $tweets = get_comments(array_merge($defaultArgs, array('type' => 'social-twitter')));
+    $retweets = get_comments(array_merge($defaultArgs, array('type' => 'social-twitter-rt')));
+    $tweets = array_merge($tweets, $retweets);
     $pings = get_comments(array_merge($defaultArgs, array('type' => 'pings')));
-
 
     ?>
 
@@ -32,22 +32,18 @@
 
         <?php if ($realComments): ?>
         <section id="default">
-        <h2 class="comments-title"><?php echo $realComments; ?> Comments</h2>
+        <h2 class="comments-title"><?php echo count($realComments); ?> Comments</h2>
             <ol class="commentlist">
-            <?php wp_list_comments('callback=labnotes_comment&type=comment'); ?>
+            <?php wp_list_comments('callback=labnotes_comment', $realComments); ?>
             </ol>
         </section>
         <?php endif; ?>
 
         <?php if ($tweets): ?>
         <section id="tweetbacks">
-        <h2 class="comments-title"><?php echo $tweets; ?> Tweets</h2>
+        <h2 class="comments-title"><?php echo count($tweets); ?> Tweets</h2>
             <p class="commentlist">
-            <?php wp_list_comments(array(
-
-                'callback' => 'labnotes_comment',
-                'type' => 'social-twitter'
-            )); ?>
+<?php wp_list_comments('callback=labnotes_comment', $tweets); ?>
             </p>
         </section>
         <?php endif; ?>
@@ -56,7 +52,7 @@
         <section id="pingbacks">
             <h2 class="comments-title">Pingbacks</h2>
             <p class="commentlist">
-            <?php wp_list_comments('callback=labnotes_comment&type=pings'); ?>
+            <?php wp_list_comments('callback=labnotes_comment', $pings); ?>
             </p>
         </section>
         <?php endif; ?>

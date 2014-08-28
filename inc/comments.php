@@ -9,6 +9,7 @@ function labnotes_comment( $comment, $args, $depth ) {
         case 'pingback' :
         case 'trackback' :
         case 'social-twitter':
+        case 'social-twitter-rt':
     ?>
 
         <span <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?></span>
