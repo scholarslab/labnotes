@@ -1909,6 +1909,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
   }
 
+  .supplies {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 3.33333em;
+    -webkit-column-gap: 3.33333em;
+    column-gap: 3.33333em;
+  }
+  .supplies li,
+  .supplies li ul {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
   .posts-list {
     margin-left: 0;
   }

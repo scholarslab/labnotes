@@ -1609,6 +1609,19 @@ body {
     }
 }
 
+.supplies {
+    @include column-count(2);
+    @include column-gap(rhythm(2));
+
+    li,
+    li ul {
+        @include break-inside(avoid);
+        @include column-break-inside(avoid);
+
+    }
+
+}
+
 .posts-list {
 
     margin-left:0;
