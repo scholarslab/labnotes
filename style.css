@@ -1209,19 +1209,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-top: 0;
   }
   .graduate-fellowships .fellowship {
-    width: 48.27586%;
-    float: left;
-    margin-right: 3.44828%;
     padding: 1.66667em;
     background: #eee;
     background: rgba(0, 0, 0, 0.05);
+  }
+}
+@media screen and (min-width: 700px) {
+  .graduate-fellowships .fellowship {
+    width: 48.27586%;
+    float: left;
+    margin-right: 3.44828%;
   }
   .graduate-fellowships .fellowship:last-child {
     width: 48.27586%;
     float: right;
     margin-right: 0;
   }
+}
 
+@media screen {
   .em-search-wrapper {
     display: none;
   }
@@ -1863,9 +1869,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   #blog-archives,
   #recent-activity,
-  #fellowships,
   #homepage-blurb,
-  .home .widgets {
+  .home .widgets,
+  .graduate-fellowships #fellowships {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1919,9 +1925,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .supplies li,
   .supplies li ul {
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    break-inside: avoid;
     break-inside: avoid;
     -webkit-column-break-inside: avoid;
     break-inside: avoid;
@@ -1982,9 +1985,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   #blog-archives,
   #recent-activity,
-  #fellowships,
   #homepage-blurb,
-  .home .widgets {
+  .home .widgets,
+  .graduate-fellowships #fellowships {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -2016,6 +2019,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: left;
     margin-right: 3.44828%;
     margin-left: -17.24138%;
+  }
+
+  .graduate-fellowships #fellowships .fellowship {
+    width: 48.52941%;
+    float: left;
+    margin-right: 2.94118%;
+  }
+  .graduate-fellowships #fellowships .fellowship:last-child {
+    width: 48.52941%;
+    float: right;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   #homepage-blurb {

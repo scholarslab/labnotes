@@ -948,14 +948,18 @@ a {
     }
 
     .fellowship {
-        @include span(6 of 12);
         padding: rhythm(1);
         background: #eee;
         background: rgba(black, .05);
 
+        @include susy-breakpoint(700px, 14) {
+        @include span(6 of 12);
+
         &:last-child {
             @include span(last 6 of 12);
         }
+    }
+
     }
 
 }
@@ -1579,7 +1583,7 @@ body {
 
 #blog-archives,
 #recent-activity,
-#fellowships,
+.graduate-fellowships #fellowships,
 #homepage-blurb,
 .home .widgets {
     @include fullbleed(2,16);
@@ -1616,7 +1620,6 @@ body {
     li,
     li ul {
         @include break-inside(avoid);
-        @include column-break-inside(avoid);
 
     }
 
@@ -1664,7 +1667,7 @@ body {
 
 #blog-archives,
 #recent-activity,
-#fellowships,
+.graduate-fellowships #fellowships,
 #homepage-blurb,
 .home .widgets {
     @include fullbleed(3,18);
@@ -1685,6 +1688,14 @@ body {
     }
 }
 
+.graduate-fellowships #fellowships .fellowship {
+    @include span(7 of 14);
+
+    &:last-child {
+        @include span(last 7 of 14);
+        margin-left:0;
+    }
+}
 
 #homepage-blurb {
     padding-top: rhythm(2);
