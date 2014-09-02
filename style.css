@@ -727,7 +727,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 3.75em;
     vertical-align: middle;
   }
-  .js [role=banner] nav {
+  .js #banner nav {
     float: none;
     clear: right;
     width: 100%;
@@ -752,7 +752,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 0;
     /* Open the navigation element */
   }
-  .js [role=banner] nav.closed {
+  .js #banner nav.closed {
     clip: rect(0 0 0 0);
     max-height: 0;
     display: block;
@@ -760,16 +760,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     zoom: 1;
     clear: both;
   }
-  .js [role=banner] nav.opened {
+  .js #banner nav.opened {
     max-height: 9999px;
   }
-  .js [role=banner] nav ul {
+  .js #banner nav ul {
     line-height: 1.875em;
   }
-  .js [role=banner] nav li {
+  .js #banner nav li {
     display: block;
   }
-  .js [role=banner] nav a {
+  .js #banner nav a {
     display: block;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -792,16 +792,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-top: 0.46875em;
     padding-bottom: 0.46875em;
   }
-  .js [role=banner] nav a:focus {
+  .js #banner nav a:focus {
     outline: 0;
   }
-  .js [role=banner] nav a:link, .js [role=banner] nav a:visited {
+  .js #banner nav a:link, .js #banner nav a:visited {
     background-color: rgba(0, 0, 0, 0.05);
   }
-  .js [role=banner] nav a:hover, .js [role=banner] nav a:focus, .js [role=banner] nav a:active {
+  .js #banner nav a:hover, .js #banner nav a:focus, .js #banner nav a:active {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .js [role=banner] nav li:first-child a {
+  .js #banner nav li:first-child a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -1758,47 +1758,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 
-  [role=banner],
-  .js [role=banner] {
+  #banner,
+  .js #banner {
     padding-left: 6.41026%;
     padding-right: 6.41026%;
   }
-  [role=banner]:before, [role=banner]:after,
-  .js [role=banner]:before,
-  .js [role=banner]:after {
+  #banner:before, #banner:after,
+  .js #banner:before,
+  .js #banner:after {
     content: " ";
     display: table;
     width: 100%;
   }
-  [role=banner] #homelink,
-  .js [role=banner] #homelink {
+  #banner #homelink,
+  .js #banner #homelink {
     width: 19.11765%;
     float: left;
     margin-right: 2.94118%;
     text-align: left;
   }
-  [role=banner] nav,
-  .js [role=banner] nav {
+  #banner nav,
+  .js #banner nav {
     width: 70.58824%;
     float: right;
     margin-right: 0;
   }
-  [role=banner] nav li,
-  .js [role=banner] nav li {
+  #banner nav li,
+  .js #banner nav li {
     display: inline-block;
   }
-  [role=banner] nav .current-menu-item a,
-  .js [role=banner] nav .current-menu-item a {
+  #banner nav .current-menu-item a,
+  .js #banner nav .current-menu-item a {
     border-bottom: 5px solid white;
   }
-  [role=banner] .nav-toggle,
-  .js [role=banner] .nav-toggle {
+  #banner .nav-toggle,
+  .js #banner .nav-toggle {
     display: none;
   }
-  [role=banner] nav.closed,
-  [role=banner] nav.opened,
-  .js [role=banner] nav.closed,
-  .js [role=banner] nav.opened {
+  #banner nav.closed,
+  #banner nav.opened,
+  .js #banner nav.closed,
+  .js #banner nav.opened {
     float: right;
     clear: right;
     background: transparent !important;
@@ -1806,8 +1806,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: inherit;
     max-height: none;
   }
-  [role=banner] nav a,
-  .js [role=banner] nav a {
+  #banner nav a,
+  .js #banner nav a {
     background: transparent !important;
     border: none;
     margin: 0;
@@ -1869,9 +1869,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   #blog-archives,
   #recent-activity,
+  .graduate-fellowships #fellowships,
   #homepage-blurb,
-  .home .widgets,
-  .graduate-fellowships #fellowships {
+  .home .widgets {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1985,9 +1985,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   #blog-archives,
   #recent-activity,
+  .graduate-fellowships #fellowships,
   #homepage-blurb,
-  .home .widgets,
-  .graduate-fellowships #fellowships {
+  .home .widgets {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;

@@ -664,7 +664,7 @@ a {
         vertical-align:middle;
     }
 
-    [role=banner] nav {
+    #banner nav {
         float:none;
         clear:right;
         width:100%;
@@ -1491,8 +1491,8 @@ body {
     @include container($grid);
 }
 
-[role=banner],
-.js [role=banner] {
+#banner,
+.js #banner {
     @include clearfix;
     @include pad(1);
 
