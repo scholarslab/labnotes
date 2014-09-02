@@ -1,6 +1,6 @@
     </main>
 
-<footer role="contentinfo">
+<footer role="contentinfo" id="contentinfo">
 
     <?php if (function_exists('mc4wp_form')): ?>
     <div id="newsletter">

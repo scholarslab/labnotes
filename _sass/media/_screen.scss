@@ -501,14 +501,14 @@ a {
     }
 }
 
-[role=banner],
-[role=main],
-[role=contentinfo] {
+#banner,
+#main,
+#contentinfo {
     padding-left: span(1 of 14 wide);
     padding-right: span(1 of 14 wide);
 }
 
-[role=banner] {
+#banner {
     text-align:center;
     border-bottom:1px solid #999;
     border-color: rgba(black, .25);
@@ -733,7 +733,7 @@ a {
     pointer-events: none !important;
 }
 
-[role=main] {
+#main {
     background-color: white;
     background-color: rgba(white, .975);
     padding-top: rhythm(1);
@@ -1271,7 +1271,7 @@ article {
 
 
 /* Footer styles */
-[role=contentinfo] {
+#contentinfo {
     border-top:1px solid #ccc;
     clear:both;
     background-color: #363636;
@@ -1554,7 +1554,7 @@ body {
 }
 
 
-[role=main] {
+#main {
     @include pad(2);
     padding-top: rhythm(2);
     padding-bottom: rhythm(2);
@@ -1646,7 +1646,7 @@ body {
     @include container($grid);
 }
 
-[role=main] {
+#main {
     @include pad(3);
 
     blockquote {

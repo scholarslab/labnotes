@@ -577,8 +577,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   [role=banner],
-  [role=main],
-  [role=contentinfo] {
+  #main,
+  #contentinfo {
     padding-left: 7.35294%;
     padding-right: 7.35294%;
   }
@@ -809,15 +809,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     pointer-events: none !important;
   }
 
-  [role=main] {
+  #main {
     background-color: white;
     background-color: rgba(255, 255, 255, 0.975);
     padding-top: 1.66667em;
   }
-  .singular [role=main] {
+  .singular #main {
     padding-bottom: 1.66667em;
   }
-  .singular [role=main] header {
+  .singular #main header {
     position: relative;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -836,22 +836,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 0 !important;
     margin-bottom: 0;
   }
-  .singular [role=main] header .custom-background {
+  .singular #main header .custom-background {
     height: 200px;
   }
 }
 @media screen and (min-width: 800px) and (min-height: 600px) {
-  .singular [role=main] header .custom-background {
+  .singular #main header .custom-background {
     height: 350px;
   }
 }
 @media screen and (min-width: 1200px) and (min-height: 600px) {
-  .singular [role=main] header .custom-background {
+  .singular #main header .custom-background {
     height: 450px;
   }
 }
 @media screen {
-  .singular.single-people [role=main] header {
+  .singular.single-people #main header {
     background-image: none !important;
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
@@ -859,7 +859,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover !important;
     background-position: top center !important;
   }
-  [role=main] header p, [role=main] header ul, [role=main] header .post-meta, [role=main] header .title {
+  #main header p, #main header ul, #main header .post-meta, #main header .title {
     text-align: center;
     font-weight: 200;
     font-size: 1.11111em;
@@ -867,17 +867,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 1.5em;
     margin: 0;
   }
-  [role=main] header .contacts {
+  #main header .contacts {
     font-size: 0.88889em;
     line-height: 1.875em;
     margin-top: 1.875em !important;
   }
-  [role=main] header .contacts a, [role=main] header .contacts span {
+  #main header .contacts a, #main header .contacts span {
     color: rgba(90, 90, 90, 0.75);
     text-decoration: none;
     padding-right: 0.83333em;
   }
-  [role=main] header .contacts a:last-child, [role=main] header .contacts span:last-child {
+  #main header .contacts a:last-child, #main header .contacts span:last-child {
     margin-right: 0;
   }
 
@@ -1541,7 +1541,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   /* Footer styles */
-  [role=contentinfo] {
+  #contentinfo {
     border-top: 1px solid #ccc;
     clear: both;
     background-color: #363636;
@@ -1553,44 +1553,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media screen and (min-width: 800px) {
-  [role=contentinfo] {
+  #contentinfo {
     padding: 0 6.41026%;
   }
 }
 @media screen {
-  [role=contentinfo] .menu ul {
+  #contentinfo .menu ul {
     margin-bottom: 0;
     list-style: none;
   }
-  [role=contentinfo] .menu ul li {
+  #contentinfo .menu ul li {
     display: inline-block;
   }
-  [role=contentinfo] a {
+  #contentinfo a {
     text-decoration: none;
   }
-  [role=contentinfo] a:link, [role=contentinfo] a:visited {
+  #contentinfo a:link, #contentinfo a:visited {
     color: #ccc;
     color: rgba(255, 255, 255, 0.75);
   }
-  [role=contentinfo] a:link i, [role=contentinfo] a:visited i {
+  #contentinfo a:link i, #contentinfo a:visited i {
     background-color: #292929;
     background-color: rgba(0, 0, 0, 0.35);
     color: #999;
   }
-  [role=contentinfo] a:link svg path, [role=contentinfo] a:visited svg path {
+  #contentinfo a:link svg path, #contentinfo a:visited svg path {
     fill: #ccc;
     fill: rgba(255, 255, 255, 0.75);
   }
-  [role=contentinfo] a:hover, [role=contentinfo] a:focus, [role=contentinfo] a:active {
+  #contentinfo a:hover, #contentinfo a:focus, #contentinfo a:active {
     color: #f0f0f0;
     color: rgba(255, 255, 255, 0.9);
   }
-  [role=contentinfo] a:hover i, [role=contentinfo] a:focus i, [role=contentinfo] a:active i {
+  #contentinfo a:hover i, #contentinfo a:focus i, #contentinfo a:active i {
     background-color: #222;
     background-color: rgba(0, 0, 0, 0.75);
     color: #fff;
   }
-  [role=contentinfo] a:hover svg path, [role=contentinfo] a:focus svg path, [role=contentinfo] a:active svg path {
+  #contentinfo a:hover svg path, #contentinfo a:focus svg path, #contentinfo a:active svg path {
     fill: #fff;
   }
 
@@ -1827,16 +1827,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 3.75em;
   }
 
-  [role=main] {
+  #main {
     padding-left: 12.82051%;
     padding-right: 12.82051%;
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
   }
-  .singular [role=main] {
+  .singular #main {
     padding-top: 1.66667em;
   }
-  .singular [role=main] header {
+  .singular #main header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1853,7 +1853,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 17.24138%;
     margin-bottom: 0;
   }
-  [role=main] blockquote {
+  #main blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1862,7 +1862,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 0;
     padding-right: 0;
   }
-  [role=main] .commentlist blockquote {
+  #main .commentlist blockquote {
     margin: 0 0 0 1.66667em !important;
     padding: 0 !important;
   }
@@ -1952,11 +1952,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     clear: both;
   }
 
-  [role=main] {
+  #main {
     padding-left: 17.04545%;
     padding-right: 17.04545%;
   }
-  [role=main] blockquote {
+  #main blockquote {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -1965,7 +1965,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 0;
     padding-right: 0;
   }
-  .singular [role=main] header {
+  .singular #main header {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
