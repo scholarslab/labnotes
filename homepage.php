@@ -21,7 +21,7 @@
 
 <div id="recent-activity">
 <section id="latest-posts">
-    <h1>Latest Labnotes</h1>
+    <h1>Latest Blog Posts</h1>
 <?php
 global $post;
 $args = array( 'posts_per_page' => 2);
@@ -40,7 +40,8 @@ wp_reset_postdata(); ?>
 <a class="all" href="/writing/">See all our posts.</a>
 </section>
 <section id="upcoming-events">
-<h1>Upcoming Events</h1>
+<h1>Community Events</h1>
+<p>We host a popular lecture series, highlight graduate student and faculty research, and offer hands-on workshops that enhance teaching and research.</p>
 <?php if(shortcode_exists('events_list')): ?>
 <?php echo do_shortcode('[events_list limit="5"]'); ?>
 <?php endif; ?>
