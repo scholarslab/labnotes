@@ -36,18 +36,17 @@
         <span class="skip">Home</span>
         <?php include(get_stylesheet_directory() . '/images/slab-logo.svg'); ?>
         </a>
-        <nav>
+        <nav id="primary-navigation" role="navigation">
         <?php
         // Our main navigation.
         wp_nav_menu(
             array(
                 'theme_location' => 'header',
-                'container' => 'div',
-                'container_class' => 'menu main-nav',
+                'container' => ''
             )
         );
         ?>
-</nav>
+        </nav>
         <?php // get_search_form(); ?>
   </header>
 

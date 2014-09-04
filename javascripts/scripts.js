@@ -1,5 +1,5 @@
 var nav = responsiveNav(
-    "header nav",
+    "#primary-navigation",
     {
         label: "☰ Menu"
     }
