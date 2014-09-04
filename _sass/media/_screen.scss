@@ -8,10 +8,9 @@ $grid: hide;
 @include border-box-sizing;
 
 html {
-    margin:0;
+    margin: 0 auto;
     padding:0;
     max-width: 1200px;
-    margin: 0 auto;
     background-color: #f9f9f9;
     background-image: url('images/chalkboard.jpg');
     @include box-shadow(0 0 20px rgba(black,.125));
@@ -23,10 +22,6 @@ body {
     position:relative;
     margin:0;
     padding:0;
-    font-family: $default-font;
-    color: $default-color;
-    color: rgba($default-color, .9);
-
 }
 
 img,
@@ -34,471 +29,6 @@ svg {
     max-width:100%;
     max-height:100%;
     height:auto;
-}
-
-a {
-    @include link-colors(
-        $link-color,
-        $link-hover-color,
-        $link-active-color,
-        $link-visited-color,
-        $link-focus-color
-    );
-
-    @include link-colors(
-        rgba($link-color, .8),
-        rgba($link-hover-color, .8),
-        rgba($link-active-color, .8),
-        rgba($link-visited-color, .8),
-        rgba($link-focus-color, .8)
-    );
-
-    @include transition(
-        color $default-transition-duration,
-        background-color $default-transition-duration
-    );
-
-    &:before {
-        @include single-transition(color);
-    }
-
-    img {
-        @include single-transition(opacity);
-    }
-
-    i,
-    input[type=submit] {
-        @include single-transition(background-color);
-    }
-
-}
-
-#{headings()} {
-    margin:0;
-    a {
-        text-decoration:none;
-    }
-}
-
-h1 {
-    font-weight: 200;
-    @include adjust-font-size-to(40px);
-    @include adjust-leading-to(2,40px);
-    margin:0;
-    @include trailer(1, 40px);
-    text-align:center;
-
-    .singular main header &,
-    main > header & {
-        @include padding-leader(1,40px);
-        @include padding-trailer(1,40px);
-
-        &:before,
-        &:after {
-            display:block;
-            content: " ";
-            height:rhythm(2, 56px);
-            width: 100px;
-            margin: 0 auto;
-            border: 2px solid #ccc;
-            border-color: rgba(black, .1);
-        }
-
-        &:before {
-            border-width: 0 0 2px;
-            margin-bottom: rhythm(1, 56px);
-        }
-
-        &:after {
-            border-width: 2px 0 0;
-            margin-top: rhythm(1, 56px);
-        }
-
-        @include susy-breakpoint('480px', 16) {
-            @include adjust-font-size-to(56px);
-            @include adjust-leading-to(2,56px);
-            margin:0;
-            @include padding-leader(2,56px);
-            @include padding-trailer(2,56px);
-
-        }
-    }
-
-    .archive main > header & {
-        padding: 0 !important;
-    }
-
-    .home article & {
-        @include adjust-font-size-to(25px);
-        @include adjust-leading-to(1,25px);
-        @include trailer(0, 25px);
-    }
-}
-
-h2 {
-    @include adjust-font-size-to(30px);
-    @include adjust-leading-to(1, 30px);
-    @include leader(2, 30px);
-    @include trailer(1, 30px);
-    font-weight:200;
-
-    header + &,
-    h1 + &,
-    h1 ~ * &:first-child {
-        @include leader(1, 30px);
-    }
-
-}
-
-h3 {
-    @include adjust-font-size-to(25px);
-    @include adjust-leading-to(2, 25px);
-    color: $default-color-light;
-    font-weight:200;
-    @include leader(1, 25px);
-
-}
-
-h4 {
-    @include adjust-font-size-to($base-font-size);
-    @include leader(2);
-    h3 + & {
-        @include leader(1);
-    }
-}
-
-h5 {
-    @include adjust-font-size-to($base-font-size);
-    color: $default-color-lighter;
-    @include leader(2);
-    h4 + & {
-        @include leader(1);
-    }
-}
-
-h6 {
-    @include adjust-font-size-to($base-font-size);
-    color: $default-color-light;
-    @include leader(2);
-    h5 + & {
-        @include leader(1);
-    }
-}
-
-#{headings(2,6)} {
-    + * {
-        margin-top:0 !important;
-    }
-}
-
-p {
-    margin: rhythm(1) 0;
-}
-
-blockquote {
-    @include adjust-font-size-to(20px);
-    @include adjust-leading-to(1,20px);
-    font-weight: 200;
-}
-
-ul {
-  list-style:circle;
-}
-
-ol {
-  list-style:decimal;
-}
-
-ul,ol {
-  padding:0;
-  margin: rhythm(1) 0 rhythm(1) rhythm(1);
-
-  nav & {
-    margin-left:0;
-  }
-
-  ul {
-    list-style: disc;
-  }
-
-  ol {
-    list-style: upper-alpha;
-  }
-
-  ul, ol {
-    margin: 0 0 0 rhythm(1);
-
-    ul {
-      list-style:square;
-    }
-
-    ol {
-      list-style:lower-alpha;
-    }
-  }
-}
-
-::-moz-list-bullet,
-::-moz-list-number {
-    color: $default-color-lighter;
-}
-
-dl {
-    margin: rhythm(1) 0;
-}
-
-dt {
-    font-weight:600;
-}
-
-dd {
-    margin-left: gutter();
-}
-
-table {
-  border-collapse:collapse;
-  border-spacing:0;
-  width: 100%;
-}
-
-th,
-td {
-  padding: rhythm(1) rhythm(.5) 0;
-  @include trailing-border(1px);
-  border-color: rgba($default-color,.2);
-  vertical-align:top;
-  .home .events-table & {
-      @include adjust-font-size-to(16px);
-      padding: rhythm(.25, 16px);
-
-      &:first-of-type {
-          width: 30%;
-          color: $default-color-light;
-      }
-
-  }
-
-}
-
-th {
-  @include trailing-border(3px);
-  text-align:left;
-  font-weight: 600;
-}
-
-input[type=text],
-input[type=email],
-textarea,
-input[type=submit] {
-    border: 1px solid #999;
-    border-color: rgba(black,.25);
-    font-family: $default-font !important;
-    @include adjust-font-size-to(16px);
-    padding-left: rhythm(.25, 16px);
-    padding-right: rhythm(.25, 16px);
-}
-
-input[type=submit] {
-    @include background-image(
-        linear-gradient(top, rgba(white,.25), transparent),
-        linear-gradient(bottom, rgba(black,.075), transparent)
-        );
-    background-color: #900;
-    color: #fff;
-
-    @include border-radius(5px);
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: #b00;
-        cursor:pointer;
-    }
-
-}
-
-
-code {
-  font-family: $code-font;
-  @include adjust-font-size-to(16px);
-  color: $code-color;
-}
-
-pre {
-    font-family: $code-font;
-    @include adjust-font-size-to(16px);
-    color: $code-color;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap !important;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -.5em;
-}
-
-sub {
-    bottom: -.25em;
-}
-
-del {
-  color: $default-color-lighter;
-}
-
-ins {
-  text-decoration:none;
-  background: $ins-color;
-}
-
-abbr,
-acronym {
-    border-bottom: 1px dotted $default-color-lighter;
-}
-
-address {
-  font-style:normal;
-  margin: rhythm(1) 0;
-}
-
-br {
-  margin:0;
-  line-height:0;
-}
-
-hr {
-  border:none;
-  text-align:center;
-  &:before {
-    display:block;
-    content: " · · · · · ";
-    color: rgba($default-color-light, .5);
-  }
-}
-
-textarea {
-    width: 100%;
-}
-
-strong,
-b {
-    font-weight: 600;
-}
-
-em,
-i {
-    font-style:italic;
-}
-
-/* Utility classes */
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.skip {
-    @extend .visuallyhidden;
-}
-
-#slab-vcard {
-    @include adjust-font-size-to(16px);
-    @include adjust-leading-to(.75,16px);
-}
-
-.author_image {
-    display:block;
-
-    #wpadminbar & {
-        display:inline !important; /* Make sure the image in the admin bar stays put.*/
-    }
-
-    img {
-        @include border-radius(50%);
-        vertical-align:middle;
-    }
-}
-
-.alignnone {
-    margin: rhythm() 0;
-}
-
-.aligncenter,
-div.aligncenter {
-    display: block;
-    margin: rhythm() auto;
-}
-
-.alignright {
-    float: right;
-    margin: rhythm() 0 rhythm() gutter();
-}
-
-.alignleft {
-    float: left;
-    margin: rhythm() gutter() rhythm() 0;
-}
-
-.aligncenter {
-    display: block;
-    margin: rhythm() auto;
-}
-
-a {
-    img {
-        &.alignright {
-            float: right;
-            margin: rhythm() 0 rhythm() gutter();
-        }
-
-        &.alignnone {
-            margin: rhythm() auto;
-        }
-
-        &.alignleft {
-            float: left;
-            margin: rhythm() gutter() rhythm() 0;
-        }
-
-        &.aligncenter {
-            display: block;
-            margin-left: auto;
-            margin-right: auto
-        }
-    }
-}
-
-
-.wp-caption {
-    max-width: 100%; /* Image does not overflow the content area */
-
-    img {
-        margin-bottom:0 !important;
-    }
-
-    p {
-        @include adjust-font-size-to(15px);
-        color: $default-color-light;
-        @include adjust-leading-to(1, 15px);
-        margin-top:0;
-    }
 }
 
 #banner,
@@ -517,30 +47,6 @@ a {
     border-top: 10px solid #333;
 }
 
-.headroom {
-    @include single-transition('transform', 200ms, linear);
-}
-
-.headroom--pinned {
-    @include translateY(0);
-}
-.headroom--unpinned {
-    @include translateY(-100%);
-}
-
-.headroom--not-top {
-    position:fixed;
-    top:0;
-    z-index:10000;
-
-    .admin-bar & {
-        top:32px;
-    }
-
-    width: 100%;
-    max-width: 1200px;
-}
-
 #homelink {
     display:inline-block;
     border:none;
@@ -551,6 +57,9 @@ a {
     margin-left: auto;
     margin-right:auto;
     position:relative;
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(2, 16px);
+    vertical-align:middle;
 
     svg {
         max-width:100%;
@@ -577,9 +86,13 @@ a {
         }
     }
 
+    .js & {
+        float:left;
+        margin:0;
+    }
 }
 
-#banner nav {
+#primary-navigation {
     display:block;
 
     ul {
@@ -589,7 +102,7 @@ a {
         text-transform:lowercase;
         letter-spacing:1px;
         @include adjust-font-size-to(16px);
-        @include adjust-leading-to(2,16px);
+        @include adjust-leading-to(1,16px);
     }
 
     li {
@@ -603,134 +116,69 @@ a {
     a {
         text-decoration:none;
         display:block;
-        color:white;
+        color:#710;
         color: rgba(#710, .8);
+        padding:0 rhythm(.2,16px);
     }
 
-    &.local-navigation {
+    @include susy-breakpoint(1px 800px, 16) {
 
-        li {
-            display:block;
+        .js & {
+            li {
+                display:block !important;
+
+                a {
+                    border-top: 1px solid rgba(black,.1);
+                    @include fullbleed;
+                    margin-top:0;
+                    margin-bottom:0;
+                    padding-top: rhythm(.25, 16px);
+                    padding-bottom: rhythm(.25, 16px);
+
+                    &:focus {
+                        outline:0;
+                    }
+
+                    &:link,
+                    &:visited {
+                        background-color: rgba(black,.05);
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background-color: rgba(black,.1);
+                    }
+                }
+            }
         }
-
     }
-}
 
-/* CSS for responsive-nav.js by @viljamis */
-
-/**
- * Responsive-nav.js adds 'js' to the HTML class attribute.
- */
-.js {
-
-    /* Button to activate the navigation */
-    .nav-toggle {
-        position:relative;
-        text-decoration:none;
-        float:right;
-        display:block;
-        @include adjust-font-size-to(16px);
-        @include adjust-leading-to(2,16px);
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-        vertical-align:middle;
+    @include susy-breakpoint(800px, 16) {
         background: transparent;
-
-        &:hover {
-            color: #333;
-            background: rgba(black,.0125);
-        }
-
-        /* Active state and class */
-        &:active,
-        &.active {
-            background: rgba(black,.025);
-        }
-
-    }
-
-    /* Link to home with SVG logo. */
-    #homelink {
-        float:left;
-        display:block;
-        max-width: 120px;
-        @include adjust-font-size-to(16px);
-        @include adjust-leading-to(2, 16px);
-        vertical-align:middle;
-    }
-
-    #banner nav {
-        float:none;
+        margin:0;
+        padding:0;
+        @include span(last 10 of 14);
+        text-align:right;
         clear:right;
-        width:100%;
-        text-align:left;
-        @include fullbleed;
-        margin-top:0;
-        margin-bottom:0;
-        padding-top:0;
-        padding-bottom:0;
-        &.closed {
-            clip: rect(0 0 0 0);
-            max-height: 0;
-            display: block;
-            overflow: hidden;
-            zoom: 1;
-            clear:both;
-        }
-
-        /* Open the navigation element */
-        &.opened  {
-            max-height: 9999px;
-        }
 
         ul {
-            @include adjust-leading-to(1,16px);
+            @include adjust-leading-to(2,16px);
         }
 
         li {
-            display:block;
+            display:inline-block;
         }
 
         a {
-            display:block;
-            text-decoration:none;
-            border-bottom: 1px solid rgba(black,.1);
-            @include fullbleed;
-            margin-top:0;
-            margin-bottom:0;
-            padding-top: rhythm(.25, 16px);
-            padding-bottom: rhythm(.25, 16px);
-
-            &:focus {
-                outline:0;
-            }
-
-            &:link,
-            &:visited {
-                background-color: rgba(black,.05);
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: rgba(black,.1);
-            }
-        }
-
-        li:first-child a {
-            border-top: 1px solid rgba(black,.1);
+            background: transparent !important;
+            border:none;
+            margin:0;
+            padding:0 rhythm(.2,16px);
         }
 
     }
-}
 
-.disable-pointer-events {
-    pointer-events: none !important;
 }
 
 #main {
@@ -859,39 +307,6 @@ a {
 
     }
 }
-
-.pagination {
-    text-align:justify;
-    @include clearfix;
-    @include leader(2);
-    @include trailer(2);
-
-    li {
-        display:inline-block;
-        float:left;
-
-        & + li {
-            float:right;
-        }
-
-    }
-
-    a {
-        border: 2px solid #ccc;
-        border-color: rgba(black, .1);
-        padding-left: rhythm(.5);
-        padding-right: rhythm(.5);
-        display:block;
-    }
-}
-
-.all {
-    text-decoration:none;
-    font-weight:bold;
-    display:block;
-    margin-top: rhythm();
-}
-
 
 .research,
 .people-list {
@@ -1491,68 +906,15 @@ body {
     @include container($grid);
 }
 
-#banner,
-.js #banner {
+#banner {
     @include clearfix;
     @include pad(1);
-
-    #homelink {
-        @include span(3 of 14);
-        text-align:left;
-    }
-
-    nav {
-        @include span(last 10 of 14);
-
-        li {
-            display:inline-block;
-        }
-
-        .current-menu-item a {
-            border-bottom: 5px solid white;
-        }
-
-    }
-
-    .nav-toggle {
-        display:none;
-    }
-
-    nav.closed,
-    nav.opened{
-        float:right;
-        clear:right;
-        background: transparent !important;
-        text-align:right;
-        position:inherit;
-        max-height:none;
-    }
-
-    nav a {
-        background: transparent !important;
-        border:none;
-        margin:0;
-        padding:0 rhythm(.2,16px);
-    }
-
-
 }
 
-
-.js nav.closed,
-.js nav.opened,
-#banner nav {
-
-    background: transparent;
-    margin:0;
-    padding:0;
-
-    ul {
-        @include adjust-leading-to(2,16px);
-    }
-
+#homelink {
+    @include span(3 of 14);
+    text-align:left;
 }
-
 
 #main {
     @include pad(2);
@@ -1637,8 +999,6 @@ body {
 
 }
 
-}
-
 // Media query for 940px. Sets layout to 18 columns.
 @include susy-breakpoint('940px', 18) {
 
@@ -1705,5 +1065,15 @@ body {
 #blog-archives {
     margin-top:0;
 }
+
+}
+
+@import "../lib/links";
+@import "../lib/typography";
+@import "../lib/tables";
+@import "../lib/forms";
+@import "../lib/classes";
+@import "../vendor/headroom";
+@import "../vendor/responsive-nav";
 
 }

@@ -47,6 +47,7 @@
                 <?php endif; ?>
                 <?php if (is_page()): echo labnotes_display_page_children(); endif; ?>
             </article>
+            <?php if(is_single()): comments_template(); endif; ?>
         <?php endwhile; ?>
         <?php if (!is_page()): ?>
         <nav class="pagination">
