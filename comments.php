@@ -29,6 +29,11 @@
     ?>
 
 	<?php if ( have_comments() ) : ?>
+        I have comments.
+
+        <li>Real Comments: <?php echo count($realComments); ?></li>
+        <li>Tweets: <?php echo count($tweets); ?></li>
+        <li>Pings: <?php echo count($pings); ?></li>
 
         <?php if ($realComments): ?>
         <section id="default">
