@@ -37,7 +37,7 @@ foreach ( $myposts as $post ) :
     </article>
 <?php endforeach;
 wp_reset_postdata(); ?>
-<a class="all" href="/writing/">See all our posts.</a>
+<a class="all" href="/archives/">See all our posts.</a>
 </section>
 <section id="upcoming-events">
 <h1>Community Events</h1>
