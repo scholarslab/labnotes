@@ -36,7 +36,7 @@ a {
 }
 
 #{headings()} {
-    a {
+    a, a:link {
         text-decoration:none;
     }
 }

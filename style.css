@@ -849,7 +849,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: white;
     color: rgba(255, 255, 255, 0.9);
   }
-  #homepage-blurb a {
+  #homepage-blurb a, #homepage-blurb a:link {
     color: white;
     color: rgba(255, 255, 255, 0.9);
   }
@@ -1459,7 +1459,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transition: background-color 0.5s;
   }
 
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  h1 a, h1 a:link, h2 a, h2 a:link, h3 a, h3 a:link, h4 a, h4 a:link, h5 a, h5 a:link, h6 a, h6 a:link {
     text-decoration: none;
   }
 
