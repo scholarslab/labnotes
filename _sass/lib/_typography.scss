@@ -1,7 +1,7 @@
 body {
     font-family: $default-font;
-    color: $default-color;
-    color: rgba($default-color, .9);
+    color: $base-color;
+    color: rgba($base-color, .9);
 }
 
 #{headings()} {
@@ -81,7 +81,7 @@ h2 {
 h3 {
     @include adjust-font-size-to(25px);
     @include adjust-leading-to(2, 25px);
-    color: $default-color-light;
+    color: $base-color-light;
     font-weight:200;
     @include leader(1, 25px);
 
@@ -97,7 +97,7 @@ h4 {
 
 h5 {
     @include adjust-font-size-to($base-font-size);
-    color: $default-color-lighter;
+    color: $base-color-lighter;
     @include leader(2);
     h4 + & {
         @include leader(1);
@@ -106,7 +106,7 @@ h5 {
 
 h6 {
     @include adjust-font-size-to($base-font-size);
-    color: $default-color-light;
+    color: $base-color-light;
     @include leader(2);
     h5 + & {
         @include leader(1);
@@ -168,7 +168,7 @@ ul,ol {
 
 ::-moz-list-bullet,
 ::-moz-list-number {
-    color: $default-color-lighter;
+    color: $base-color-lighter;
 }
 
 dl {
@@ -220,7 +220,7 @@ sub {
 }
 
 del {
-  color: $default-color-lighter;
+  color: $base-color-lighter;
 }
 
 ins {
@@ -240,7 +240,7 @@ i {
 
 abbr,
 acronym {
-    border-bottom: 1px dotted $default-color-lighter;
+    border-bottom: 1px dotted $base-color-lighter;
 }
 
 address {
@@ -259,7 +259,7 @@ hr {
   &:before {
     display:block;
     content: " · · · · · ";
-    color: rgba($default-color-light, .5);
+    color: rgba($base-color-light, .5);
   }
 }
 

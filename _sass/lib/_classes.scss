@@ -117,7 +117,7 @@ div.aligncenter {
 
     p {
         @include adjust-font-size-to(15px);
-        color: $default-color-light;
+        color: $base-color-light;
         @include adjust-leading-to(1, 15px);
         margin-top:0;
     }

@@ -228,7 +228,7 @@ svg {
             margin-top: rhythm(1,16px) !important;
 
             a, span {
-                color: $default-color-light;
+                color: $base-color-light;
                 text-decoration:none;
                 padding-right: rhythm(.5);
 
@@ -334,7 +334,7 @@ svg {
         margin:0;
 
         &.title {
-            color: $default-color-light;
+            color: $base-color-light;
             @include adjust-font-size-to(16px);
             font-weight: 200;
         }
@@ -345,7 +345,7 @@ svg {
 
 
 .category-description p {
-    color: $default-color-light;
+    color: $base-color-light;
     font-weight:200;
 }
 
@@ -537,7 +537,7 @@ article {
             &.comment-date:before,
             &.comment-date:after {
                 content: " · ";
-                color: $default-color-lighter;
+                color: $base-color-lighter;
             }
         }
 
@@ -605,7 +605,7 @@ article {
     border: 1px solid #ccc;
     border-width: 1px 0;
     background-color: #fafafa;
-    color: $default-color;
+    color: $base-color;
     @include clearfix;
     @include fullbleed;
     h2 {
@@ -680,7 +680,7 @@ article {
     .post-meta {
         margin:0;
         font-weight:200;
-        color: $default-color-light;
+        color: $base-color-light;
     }
 }
 
