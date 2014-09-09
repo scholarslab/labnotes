@@ -1823,12 +1823,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .pagination li + li {
     float: right;
   }
-  .pagination a {
+  .pagination a, .pagination a:link {
     border: 2px solid #ccc;
     border-color: rgba(0, 0, 0, 0.1);
-    padding-left: 0.83333em;
-    padding-right: 0.83333em;
+    padding: 0.41667em 0.83333em;
     display: block;
+    text-decoration: none;
   }
 
   .alignnone {
