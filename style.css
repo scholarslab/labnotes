@@ -839,6 +839,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
+    *zoom: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#D9771100', endColorstr='#D9771100');
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#D9771100', endColorstr='#D9771100');
+    background-image: url("images/background.jpg");
     background-image: -moz-linear-gradient(left, rgba(119, 17, 0, 0.85), rgba(119, 17, 0, 0.85)), url("images/background.jpg");
     background-image: -webkit-linear-gradient(left, rgba(119, 17, 0, 0.85), rgba(119, 17, 0, 0.85)), url("images/background.jpg");
     background-image: linear-gradient(to right, rgba(119, 17, 0, 0.85), rgba(119, 17, 0, 0.85)), url("images/background.jpg");
