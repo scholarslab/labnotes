@@ -20,3 +20,10 @@ needs to look like this:
      }
 }
 ```
+
+After this file exists, you can deploy the theme with the following
+comand:
+
+```shell
+$ grunt deploy
+```
