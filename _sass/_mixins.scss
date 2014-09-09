@@ -17,12 +17,12 @@
     @include bleed-x(span($columns of $context wide));
 }
 
-@mixin fullbackground($image: 'images/background.jpg') {
+@mixin fullbackground($image: 'images/background.jpg', $overlay-color: $hero-color, $alpha: .85) {
     @include background-size(cover);
     background-repeat: no-repeat;
     background-position:top center;
     background-attachment:fixed;
-    $gradient-color: rgba($hero-color, .85);
+    $gradient-color: rgba($overlay-color, $alpha);
 
     // For IE 9
     @include ie-filter-gradient($gradient-color, $gradient-color);
