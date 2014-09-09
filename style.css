@@ -691,7 +691,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .singular .entry-content {
     margin: 0;
   }
-  .singular .entry-content :first-child {
+  .singular .entry-content > p:first-of-type {
     margin-top: 0;
   }
 
