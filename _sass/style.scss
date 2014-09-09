@@ -8,7 +8,18 @@ Author URI: http://scholarslab.org
 License: Apache License, version 2.0
 */
 
-@import "base";
+// Compass - http://compass-style.org/
+@import "compass";
 @import "compass/reset";
+
+// Susy - http://susy.oddbird.net
+@import "susy";
+
+// Breakpoint - http://breakpoint-sass.com/
+@import "breakpoint";
+
+// Custom
+@import "variables";
+@import "mixins";
 @import "media/screen";
 @import "media/print";
