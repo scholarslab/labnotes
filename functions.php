@@ -166,6 +166,24 @@ function labnotes_user_bio_for_content($content) {
 
 add_filter('the_content', 'labnotes_user_bio_for_content');
 
+/**
+ * Filter user_description to use People post excerpt or content.
+ *
+ * @uses wp_trim_words()
+ * @return string The content.
+ */
+function labnotes_people_content_for_user_description($content, $author_id) {
+
+    if ($person = labnotes_get_person_by_user_id($author_id)) {
+        if ($person->post_content != "") {
+            $content = $person->post_excerpt ? $person->post_excerpt : wp_trim_words($person->post_content);
+        }
+    }
+
+    return $content;
+}
+
+add_filter('get_the_author_user_description', 'labnotes_people_content_for_user_description', 10, 2);
 
 /**
  * Returns the link for a person post type. Used to filter the author_link output.

@@ -4,37 +4,39 @@
  * Custom Post Type for People
  */
 function labnotes_register_post_types() {
-    register_post_type( 'people',
-        array(
+
+    $defaults = array(
+        'public' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt', 'custom-background'),
+        'menu_position' => 20,
+        'hierarchical' => false,
+        'has_archive' => true,
+        'show_in_nav_menus' => true
+    );
+
+    $post_types = array(
+        'people' => array(
             'labels' => array(
                 'name' => __( 'People' ),
                 'singular_name' => __( 'Person' )
               ),
-            'public' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-background'),
-            'menu_position' => 20,
-            'hierarchical' => false,
-            'has_archive' => true,
-            'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'people')
-        )
-    );
-
-    register_post_type( 'research',
-        array(
+        ),
+        'research' => array(
             'labels' => array(
                 'name' => __( 'Research' ),
                 'singular_name' => __( 'Research Project' )
               ),
-            'public' => true,
-            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt', 'custom-background'),
-            'menu_position' => 20,
-            'hierarchical' => false,
-            'has_archive' => true,
-            'show_in_nav_menus' => true,
             'rewrite' => array('slug' => 'research')
         )
     );
+
+
+    foreach ($post_types as $name => $args) {
+        $args = array_merge($args, $defaults);
+        register_post_type($name, $args);
+    }
+
 }
 
 add_action( 'init', 'labnotes_register_post_types' );
