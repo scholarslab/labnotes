@@ -243,3 +243,30 @@ function labnotes_term_link($link, $term, $taxonomy) {
 }
 
 add_filter('term_link', 'labnotes_term_link', 10, 3);
+
+/**
+ * Filters wp_title
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+function labnotes_wp_title( $title, $sep ) {
+    if ( is_feed() ) {
+        return $title;
+    }
+
+    global $page, $paged;
+
+    // Add a page number if necessary:
+    if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+        $title .= sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) ) . " $sep ";
+    }
+
+    // Add the blog name
+    $title .= get_bloginfo( 'name', 'display' );
+
+    return $title;
+}
+
+add_filter( 'wp_title', 'labnotes_wp_title', 10, 2 );
