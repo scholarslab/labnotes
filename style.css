@@ -1766,6 +1766,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 1.875em;
     padding-left: 0.46875em;
     padding-right: 0.46875em;
+    line-height: 1.875em;
+    min-height: 1.875em;
   }
 
   input[type=submit] {

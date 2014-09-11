@@ -8,6 +8,8 @@ input[type=submit] {
     @include adjust-font-size-to(16px);
     padding-left: rhythm(.25, 16px);
     padding-right: rhythm(.25, 16px);
+    @include adjust-leading-to(1,16px);
+    min-height: rhythm(1, 16px);
 }
 
 input[type=submit] {
