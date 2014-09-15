@@ -379,10 +379,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @media screen {
-  #blog-archives {
-    margin-top: 0;
-  }
-
   .local-navigation {
     border-top: 1px solid #ccc;
   }
@@ -689,7 +685,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   .singular .entry-content {
-    margin: 0;
+    margin: 0 0 1.66667em;
   }
   .singular .entry-content > p:first-of-type {
     margin-top: 0;
@@ -704,6 +700,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   #respond input[type=text] {
     width: 45%;
+  }
+  #respond input[type=submit] {
+    margin-bottom: 1.875em;
   }
   #respond label {
     display: block;

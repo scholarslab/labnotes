@@ -279,10 +279,6 @@ svg {
     }
 }
 
-#blog-archives {
-    margin-top:0;
-}
-
 .local-navigation {
     border-top:1px solid #ccc;
 
@@ -439,7 +435,7 @@ article {
 }
 
 .singular .entry-content {
-    margin:0;
+    margin:0 0 rhythm(1);
     > p {
         &:first-of-type {
             margin-top:0;
@@ -459,6 +455,10 @@ article {
 
     input[type=text] {
         width: 45%;
+    }
+
+    input[type=submit] {
+        @include trailer(1,16px);
     }
 
     label {
