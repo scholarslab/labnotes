@@ -1483,8 +1483,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-align: center;
   }
   .singular main header h1, main > header h1 {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
+    padding: 0.75em 7.35294%;
   }
   .singular main header h1:before, .singular main header h1:after, main > header h1:before, main > header h1:after {
     display: block;

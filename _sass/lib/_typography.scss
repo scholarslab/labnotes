@@ -18,8 +18,7 @@ h1 {
 
     .singular main header &,
     main > header & {
-        @include padding-leader(1,40px);
-        @include padding-trailer(1,40px);
+        padding: rhythm(1,40px) span(1 of 14 wide);
 
         &:before,
         &:after {
