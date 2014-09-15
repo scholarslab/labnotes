@@ -212,6 +212,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0.46875em;
@@ -277,6 +278,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
     padding: 0 !important;
     margin-bottom: 0;
   }
@@ -346,6 +348,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
   }
 }
 @media screen and (min-width: 480px) {
@@ -606,6 +609,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
   }
   .graduate-fellowships #fellowships:before, .graduate-fellowships #fellowships:after {
     content: " ";
@@ -831,6 +835,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -878,6 +883,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
   }
   .home .widgets:before, .home .widgets:after {
     content: " ";
@@ -1055,6 +1061,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
     background-color: #ddd;
     background-color: rgba(255, 255, 255, 0.95);
     background-image: url("images/squared_metal.png");
@@ -1098,6 +1105,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -7.35294%;
     padding-right: 7.35294%;
     padding-left: 7.35294%;
+    position: relative;
     padding-top: 3.33333em;
     padding-bottom: 3.33333em;
     margin-top: 0;
@@ -1215,6 +1223,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -17.24138%;
     padding-right: 17.24138%;
     padding-left: 17.24138%;
+    position: relative;
     margin-bottom: 0;
   }
   #main blockquote {
@@ -1250,6 +1259,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -17.24138%;
     padding-right: 17.24138%;
     padding-left: 17.24138%;
+    position: relative;
     padding-left: 8.62069%;
     padding-right: 8.62069%;
   }
@@ -1344,6 +1354,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.86207%;
     padding-right: 25.86207%;
     padding-left: 25.86207%;
+    position: relative;
     margin-bottom: 0;
   }
 
@@ -1366,6 +1377,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -25.86207%;
     padding-right: 25.86207%;
     padding-left: 25.86207%;
+    position: relative;
     padding-left: 8.62069%;
     padding-right: 8.62069%;
   }
@@ -1991,6 +2003,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-left: -8.62069%;
     padding-right: 8.62069%;
     padding-left: 8.62069%;
+    position: relative;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;

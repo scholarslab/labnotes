@@ -15,6 +15,7 @@
     }
 
     @include bleed-x(span($columns of $context wide));
+    position:relative;
 }
 
 @mixin fullbackground($image: 'images/background.jpg', $overlay-color: $hero-color, $alpha: .85) {
