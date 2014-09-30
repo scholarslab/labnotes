@@ -22,7 +22,7 @@
                 <?php endif; ?>
                     <h1><a href="<?php the_permalink(); ?>" rel="permalink" title="Permanent link for <?php the_title(); ?>"><?php the_title(); ?></a></h1>
                 <?php if (is_singular('post') || is_home() || is_archive()): ?>
-                    <p class="post-meta">By <?php the_author(); ?> &middot; <?php the_time('F j, Y'); ?> &middot; <?php the_category(', '); ?></p>
+                    <p class="post-meta">By <?php the_author(); ?> &middot; <?php the_time('F j, Y'); ?></p>
                 <?php endif; ?>
                 </header>
                 <div class="entry-content">
