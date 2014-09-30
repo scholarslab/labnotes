@@ -223,6 +223,11 @@ svg {
             @include adjust-leading-to(1,20px);
             margin:0;
         }
+
+        .post-meta {
+            margin-bottom: rhythm(1);
+        }
+
         .contacts {
             @include adjust-font-size-to(16px);
             margin-top: rhythm(1,16px) !important;

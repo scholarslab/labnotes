@@ -313,6 +313,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     line-height: 1.5em;
     margin: 0;
   }
+  #main header .post-meta {
+    margin-bottom: 1.66667em;
+  }
   #main header .contacts {
     font-size: 0.88889em;
     line-height: 1.875em;
