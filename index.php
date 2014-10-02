@@ -17,7 +17,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header>
-                <?php if (is_single()): ?>
+                <?php if (is_singular(array('post', 'page'))): ?>
                 <div class="custom-background"></div>
                 <?php endif; ?>
                     <h1><a href="<?php the_permalink(); ?>" rel="permalink" title="Permanent link for <?php the_title(); ?>"><?php the_title(); ?></a></h1>
