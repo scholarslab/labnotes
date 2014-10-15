@@ -1804,7 +1804,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   /* Utility classes */
-  .visuallyhidden, #newsletter label, .vcard .org, .social span, .skip {
+  .visuallyhidden, #newsletter label, .vcard .org, .social span, .skip,
+  .audible {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;

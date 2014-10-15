@@ -33,7 +33,7 @@
     <header role="banner" id="banner">
 
         <a id="homelink" href="<?php bloginfo('url'); ?>" rel="home">
-        <span class="skip">Home</span>
+        <span class="audible">Scholars&#8217; Lab Home Page</span>
         <?php include(get_stylesheet_directory() . '/images/slab-logo.svg'); ?>
         </a>
         <nav id="primary-navigation" role="navigation">

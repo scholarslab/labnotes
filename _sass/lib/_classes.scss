@@ -10,7 +10,8 @@
     width: 1px;
 }
 
-.skip {
+.skip,
+.audible {
     @extend .visuallyhidden;
 }
 
