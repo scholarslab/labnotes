@@ -198,7 +198,7 @@ function people_author_link($link, $author_id, $author_nicename) {
 
 }
 
-add_filter( 'author_link', 'people_author_link', 10, 3);
+add_filter( 'author_link', 'people_author_link', 11, 3);
 
 
 function filter_get_avatar($avatar, $id, $size, $default, $alt) {
