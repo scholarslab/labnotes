@@ -837,18 +837,18 @@ article {
 
 }
 
+.license {
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(1,16px);
+    margin-top:0;
+}
+
 .vcard {
     @include adjust-font-size-to(16px);
     @include adjust-leading-to(1,16px);
     margin:0;
     @include padding-leader(1,16px);
     @include padding-trailer(1,16px);
-
-    @include susy-breakpoint('800px', 16) {
-
-    @include padding-trailer(2,16px);
-
-    }
 
     .org {
         @extend .visuallyhidden;

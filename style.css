@@ -1117,6 +1117,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @media screen {
+  .license {
+    font-size: 0.88889em;
+    line-height: 1.875em;
+    line-height: 1.875em;
+    margin-top: 0;
+  }
+
   .vcard {
     font-size: 0.88889em;
     line-height: 1.875em;
@@ -1125,13 +1132,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-top: 1.875em;
     padding-bottom: 1.875em;
   }
-}
-@media screen and (min-width: 800px) {
-  .vcard {
-    padding-bottom: 3.75em;
-  }
-}
-@media screen {
   .vcard .street-address,
   .vcard .tel {
     display: block;
