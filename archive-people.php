@@ -7,7 +7,8 @@ $defaultArgs = array('post_type' => 'people', 'posts_per_page' => -1, 'meta_key'
 $currentCategories = array(
     'staff' => 'Staff',
     'student-assistant' => 'Student Assistants',
-    '2014-2015-praxis-fellow, 2014-2015' => 'Gradute Fellows'
+    '2014-2015-praxis-fellow, 2014-2015' => 'Gradute Fellows',
+    '2015-lami' => 'LAMI Fellows'
 );
 
 ?>
