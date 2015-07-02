@@ -8,7 +8,7 @@ $currentCategories = array(
     'staff' => 'Staff',
     'student-assistant' => 'Student Assistants',
     '2014-2015-praxis-fellow, 2014-2015' => 'Gradute Fellows',
-    '2015-lami' => 'LAMI Fellows'
+    '2015-lami-fellow' => 'LAMI Fellows'
 );
 
 ?>
