@@ -19,7 +19,7 @@
 
     <p class="contacts">
     <?php if ($email = $customFields['person_email'][0]): ?>
-    <a class="email" href="mailto://<?php echo antispambot($email); ?>">
+    <a class="email" href="mailto:<?php echo antispambot($email); ?>">
         <i class="fa fa-envelope"></i>
         <?php echo antispambot($email); ?>
     </a>
