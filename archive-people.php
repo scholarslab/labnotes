@@ -6,9 +6,9 @@ $defaultArgs = array('post_type' => 'people', 'posts_per_page' => -1, 'meta_key'
 
 $currentCategories = array(
     'staff' => 'Staff',
-    'student-assistant' => 'Student Assistants',
-    '2015-2016-praxis-fellow, 2015-2016' => 'Graduate Fellows',
-    '2015-lami-fellow' => 'LAMI Fellows'
+    'student-assistant, makerspace-technologist' => 'Makerspace Technologists',
+    '2016-2017-praxis-fellow, 2016-2017' => 'Graduate Fellows',
+    '2016-lami-fellow' => 'LAMI Fellows'
 );
 
 ?>
