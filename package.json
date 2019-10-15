@@ -19,7 +19,7 @@
     "grunt-env": "^0.4.1",
     "grunt-rsync": "^0.6.2",
     "matchdep": "~0.1.2",
-    "bower": "~1.2.8"
+    "bower": "~1.8.8"
 
   }
 }
